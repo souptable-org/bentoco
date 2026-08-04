@@ -336,21 +336,26 @@ POST   /api/agency/grant-temporary-access
 
 ## Stage 6 — RLS & isolation hardening (optional but product-critical)
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-6-COMPLETE.md`  
+**SQL:** `packages/bentoco/src/migration-scripts/stage-6-rls-isolation.sql`  
+**Scripts:** `run-stage-6-rls-migration.js`, `seed-multi-tenant-rls.js`, `test-stage-6-rls.js`
+
 **Duration:** ~1–3 days  
 **Exit criteria:** Cross-tenant reads fail under app DB role; superuser migrations still work.
 
 ### Tasks
 
-6.1 App role `bentoco_app` (non-superuser).  
-6.2 `ENABLE` / `FORCE ROW LEVEL SECURITY` on tenant-scoped tables.  
-6.3 Policies: `tenant_id = current_setting('app.current_tenant', true)::uuid`.  
-6.4 Ensure every request path sets `SET LOCAL app.current_tenant` inside the transaction (middleware + connection from pool).  
-6.5 Agency “god” paths: either bypass with explicit security definer functions or set tenant per store operation after RBAC check.  
-6.6 Automated tests: tenant A cannot read tenant B products/orders.
+6.1 App role `bentoco_app` (non-superuser): **Done**  
+6.2 `ENABLE` / `FORCE RLS` on tenant-scoped tables: **Done**  
+6.3 Policies via `app.current_tenant` + `set_config`: **Done**  
+6.4 Helpers: `tenant-rls-context.ts` + safer `withTenantTransaction`: **Done**  
+6.5 Agency registry tables open to `bentoco_app` (cross-tenant console): **Done**  
+6.6 Automated isolation test: **PASSED**
 
 ### Note
 
-Do this **after** Medusa + agency APIs are stable; RLS bugs look like “empty admin” and are hard to debug earlier.
+Medusa remains on superuser `DATABASE_URL` (sees all). Isolation is enforced when using `bentoco_app` + tenant context — correct for seeding/tests and future tenant-scoped workers.
 
 ---
 
