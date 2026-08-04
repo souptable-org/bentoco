@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectConfig: {
     databaseUrl:
       process.env.DATABASE_URL ||
-      "postgres://postgres:postgres@localhost:5432/bentoco_medusa",
+      "postgres://postgres:postgres@localhost:5432/bentoco",
     http: {
       jwtSecret: process.env.JWT_SECRET || "supersecret_bentoco_jwt",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret_bentoco_cookie",

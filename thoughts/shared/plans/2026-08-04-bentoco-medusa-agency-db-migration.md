@@ -101,12 +101,15 @@ backups/bentoco_medusa_20260804-114036.dump      # gitignored binary
 
 ## Stage 1 — Config & single-DB foundation (Medusa only)
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-1-COMPLETE.md`
+
 **Duration:** ~1–2 hours  
 **Exit criteria:** `DATABASE_URL` → `bentoco`; full migrations + links succeed; Medusa boots; health + unauthenticated probe work.
 
 ### Tasks
 
-1.1 Point env at the product DB name:
+1.1 Point env at the product DB name: **Done**
 
 ```env
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/bentoco
@@ -118,51 +121,40 @@ DATABASE_URL=postgres://postgres:postgres@localhost:5432/bentoco
 - `adminCors` / `authCors` including `http://localhost:7001`  
 - `admin.disable: true` while Vite admin is separate  
 
-1.3 Reset `bentoco` public schema (only after Stage 0 backup):
+1.3 Reset `bentoco` public schema (only after Stage 0 backup): **Done** (DROP DATABASE + CREATE)
 
-```sql
--- Conceptual: DROP/CREATE database bentoco OR drop all public objects
-```
+1.4 Run **full** migrations (do **not** skip links): **Done** — links synced (incl. `publishable_api_key_sales_channel`)
 
-1.4 Run **full** migrations (do **not** skip links):
+1.5 Create Medusa admin user: **Done**
 
 ```bash
-npx medusa db:migrate
+npx medusa user -e admin@bentoco.com -p supersecret
 ```
 
-1.5 Create Medusa admin user:
+1.6 Start real API: **Done** — `medusa develop` on `:9000`
 
-```bash
-npx medusa user -e admin@bentoco.com -p <secure-password>
-```
+1.7 Smoke tests: **All passed**
 
-1.6 Start real API:
-
-```bash
-npx medusa develop --no-lint -p 9000
-```
-
-1.7 Smoke tests:
-
-| Call | Expect |
+| Call | Result |
 |------|--------|
-| `GET /health` | 200 (Medusa, not only stub) |
-| `POST /auth/user/emailpass` | token/session for admin |
-| `GET /admin/stores` | 200 with auth (not 404) |
+| `GET /health` | 200 `OK` |
+| `POST /auth/user/emailpass` | 200 + JWT |
+| `GET /admin/stores` | 200 (default store) |
+| `GET /admin/users/me` | 200 `admin@bentoco.com` |
 
 1.8 Retire temporary DB when stable:
 
-- Stop using `bentoco_medusa` for day-to-day  
-- Optional: drop later after confidence period  
+- Day-to-day uses **`bentoco`** now  
+- `bentoco_medusa` optional to drop later  
 
 ### Risks
 
-- Link tables missing if `--skip-links` used again → defaults/user create fail.  
-- Port 9000 still occupied by stub → kill stub first.
+- Link tables missing if `--skip-links` used again → defaults/user create fail. **Avoided.**  
+- Port 9000 still occupied by stub → kill stub first. **Done.**
 
 ### Deliverable
 
-Merchant admin can log in against **empty-but-valid** Medusa on DB `bentoco`.
+Merchant admin can log in against **empty-but-valid** Medusa on DB `bentoco`. **Met.**
 
 ---
 
