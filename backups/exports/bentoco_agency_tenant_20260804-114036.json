@@ -1,0 +1,910 @@
+{
+  "exported_at": "2026-08-04T06:10:51.129Z",
+  "source_database": "bentoco",
+  "purpose": "Stage 0 portable restore of multi-tenant + agency prototype data",
+  "tables": {
+    "agency": [
+      {
+        "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "name": "PixelCraft Digital Agency",
+        "subdomain": "pixelcraft",
+        "unique_uid": "AGENCY-849201",
+        "owner_email": "admin@bentoco.com",
+        "created_at": "2026-07-31T11:17:44.268Z",
+        "updated_at": "2026-07-31T11:17:44.268Z",
+        "master_uid": "AGENCY-849201",
+        "owner_id": null
+      }
+    ],
+    "agency_store_access": [
+      {
+        "id": "bd5b0b35-230d-45a1-b4be-0020f689ee5f",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "wovetow337@ayable.com",
+        "status": "PENDING",
+        "invite_token": "33d71ef9d687bc8df503e9b5c12668e45c8cd82f5bb556e2dd5810a245a05b67",
+        "token_expires_at": "2026-08-02T12:33:41.222Z",
+        "invited_at": "2026-07-31T12:33:41.224Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-07-31T12:33:41.224Z",
+        "updated_at": "2026-07-31T12:33:41.224Z"
+      },
+      {
+        "id": "08d15b94-9781-458c-8f6f-64b38a02cca4",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "wovetow337@ayable.com",
+        "status": "PENDING",
+        "invite_token": "823bc53e984c340f421d03669dd85b27ffb06f913a4585c4547dbec740d9b3d3",
+        "token_expires_at": "2026-08-02T12:36:21.659Z",
+        "invited_at": "2026-07-31T12:36:21.661Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-07-31T12:36:21.661Z",
+        "updated_at": "2026-07-31T12:36:21.661Z"
+      },
+      {
+        "id": "15d21469-9677-4bb9-905e-b1652f0efa7e",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "sister95@ethereal.email",
+        "status": "ACTIVE",
+        "invite_token": null,
+        "token_expires_at": "2026-08-05T08:30:53.425Z",
+        "invited_at": "2026-08-03T08:30:53.426Z",
+        "confirmed_at": "2026-08-03T08:31:29.553Z",
+        "revoked_at": null,
+        "created_at": "2026-08-03T08:30:53.426Z",
+        "updated_at": "2026-08-03T08:30:53.426Z"
+      },
+      {
+        "id": "622eb876-8651-4a6c-b295-73d4131bf8d2",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "studio@123.com",
+        "status": "PENDING",
+        "invite_token": "9ae7a72419f22024055cbd3aeac81df2d2617de4b3e77108bd5d4e8e0f491205",
+        "token_expires_at": "2026-08-05T09:35:12.213Z",
+        "invited_at": "2026-08-03T09:35:12.219Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T09:35:12.219Z",
+        "updated_at": "2026-08-03T09:35:12.219Z"
+      },
+      {
+        "id": "167baef2-d29a-4474-9095-1416df83c04b",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "StupidStudio@123.com",
+        "status": "PENDING",
+        "invite_token": "b262623385020655458d45dbd3e2d566dd33582676cb9170d504cad8e46e349a",
+        "token_expires_at": "2026-08-05T09:37:41.387Z",
+        "invited_at": "2026-08-03T09:37:41.391Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T09:37:41.391Z",
+        "updated_at": "2026-08-03T09:37:41.391Z"
+      },
+      {
+        "id": "33a8ab9d-7159-492f-9fbb-f1fc850b1c37",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "StupidStudio@123.com",
+        "status": "PENDING",
+        "invite_token": "bb3703074c53a6fffb2e2bfde01d4fd25d657b031ed438ab557a35d75aeeac3e",
+        "token_expires_at": "2026-08-05T09:39:13.493Z",
+        "invited_at": "2026-08-03T09:39:13.493Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T09:39:13.493Z",
+        "updated_at": "2026-08-03T09:39:13.493Z"
+      },
+      {
+        "id": "ab7c0a04-584a-4724-b336-5aaab4cfa399",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "StudioMerchat@123.in",
+        "status": "PENDING",
+        "invite_token": "1e33e0a7afc5215f24c8cc84f7f714b75b9928fd1cc4b49347602509bd8131be",
+        "token_expires_at": "2026-08-05T09:41:32.157Z",
+        "invited_at": "2026-08-03T09:41:32.159Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T09:41:32.159Z",
+        "updated_at": "2026-08-03T09:41:32.159Z"
+      },
+      {
+        "id": "1eb5d1ca-b6ce-4785-80d7-95315d79e09c",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "Astam@123.in",
+        "status": "PENDING",
+        "invite_token": "299b56ce62f857c663574183d98d2afbca19d9206af5ab57f84ac318f2c657b0",
+        "token_expires_at": "2026-08-05T09:44:34.309Z",
+        "invited_at": "2026-08-03T09:44:34.310Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T09:44:34.310Z",
+        "updated_at": "2026-08-03T09:44:34.310Z"
+      },
+      {
+        "id": "f8f79d30-a812-4c86-84b2-8debf9e8df35",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "merchant_email": "sads@123.in",
+        "status": "PENDING",
+        "invite_token": "4e78c778b81d699b839443b0f6f8f42d0a25a3192fbfa2caaeefdda37a500ae2",
+        "token_expires_at": "2026-08-05T11:15:13.393Z",
+        "invited_at": "2026-08-03T11:15:13.397Z",
+        "confirmed_at": null,
+        "revoked_at": null,
+        "created_at": "2026-08-03T11:15:13.397Z",
+        "updated_at": "2026-08-03T11:15:13.397Z"
+      }
+    ],
+    "agency_store_log": [
+      {
+        "id": "6d098b5a-f8e5-42eb-b106-fd73dabe25b3",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "wovetow337@ayable.com",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "appel"
+        },
+        "ip_address": null,
+        "created_at": "2026-07-31T12:33:41.252Z"
+      },
+      {
+        "id": "a167b34a-9501-40a3-ab84-73753eceb3f9",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "wovetow337@ayable.com",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "appel"
+        },
+        "ip_address": null,
+        "created_at": "2026-07-31T12:36:21.675Z"
+      },
+      {
+        "id": "11bdfe63-4d28-4fbf-bc36-9ed3b5bfd847",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "sister95@ethereal.email",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "idealStudio"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T08:30:53.450Z"
+      },
+      {
+        "id": "93efb800-9769-46f4-9354-2732c873bd65",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "studio@123.com",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "StupidStudio"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T09:35:12.240Z"
+      },
+      {
+        "id": "fdd7c407-5901-401b-bc39-6b6e6544e809",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "StupidStudio@123.com",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "StupidStudio"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T09:37:41.396Z"
+      },
+      {
+        "id": "ffb094a1-b11d-48e4-b6c9-2d7ef5557193",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "StupidStudio@123.com",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "StupidStudio"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T09:39:13.496Z"
+      },
+      {
+        "id": "489e438d-6f03-43e0-99a7-a6c042ade97e",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "StudioMerchat@123.in",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "StudioMerchat"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T09:41:32.167Z"
+      },
+      {
+        "id": "e1f8b769-fd51-447c-a9a5-7084d383454e",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "Astam@123.in",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "Astam"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T09:44:34.321Z"
+      },
+      {
+        "id": "ee4361a4-a197-43c5-8095-f7906e2e63b8",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "tenant_id": "PENDING_CREATION",
+        "member_id": null,
+        "member_email": "sads@123.in",
+        "action": "INVITE_SENT",
+        "metadata": {
+          "merchantExists": false,
+          "storeDisplayName": "StuidoStupid"
+        },
+        "ip_address": null,
+        "created_at": "2026-08-03T11:15:13.410Z"
+      }
+    ],
+    "agency_team_member": [],
+    "tenant": [
+      {
+        "id": "8582b730-6afb-4662-94bf-7291ac71cb53",
+        "store_name": "Brand Alpha",
+        "subdomain": "alpha",
+        "custom_domain": null,
+        "created_at": "2026-07-30T15:40:28.258Z",
+        "updated_at": "2026-07-30T15:40:28.258Z",
+        "agency_id": null,
+        "ownership_status": "INDEPENDENT_MERCHANT",
+        "transfer_code_hash": null,
+        "transfer_expires_at": null,
+        "system_password_hash": null,
+        "plan": "free",
+        "can_go_live": false
+      },
+      {
+        "id": "5f10fdde-6dd6-4782-975a-259fe122a5bc",
+        "store_name": "Brand Beta",
+        "subdomain": "beta",
+        "custom_domain": null,
+        "created_at": "2026-07-30T15:40:28.275Z",
+        "updated_at": "2026-07-30T15:40:28.275Z",
+        "agency_id": null,
+        "ownership_status": "INDEPENDENT_MERCHANT",
+        "transfer_code_hash": null,
+        "transfer_expires_at": null,
+        "system_password_hash": null,
+        "plan": "free",
+        "can_go_live": false
+      },
+      {
+        "id": "71e3fd6d-28c5-4bed-abf1-3954146cd551",
+        "store_name": "Bentoco Default Store",
+        "subdomain": "admin",
+        "custom_domain": null,
+        "created_at": "2026-07-31T07:08:10.310Z",
+        "updated_at": "2026-07-31T07:08:10.310Z",
+        "agency_id": null,
+        "ownership_status": "INDEPENDENT_MERCHANT",
+        "transfer_code_hash": null,
+        "transfer_expires_at": null,
+        "system_password_hash": null,
+        "plan": "free",
+        "can_go_live": false
+      }
+    ],
+    "user": [
+      {
+        "id": "usr_agency_test_01",
+        "email": "agcy@bentoco.com",
+        "first_name": null,
+        "last_name": null,
+        "role": "AGENCY",
+        "created_at": "2026-08-03T18:19:26.559Z",
+        "updated_at": "2026-08-03T18:19:26.559Z",
+        "tenant_id": null
+      },
+      {
+        "id": "usr_admin_1785481690321",
+        "email": "admin@bentoco.com",
+        "first_name": "Bentoco",
+        "last_name": "Admin",
+        "role": "MERCHANT",
+        "created_at": "2026-07-31T07:08:10.327Z",
+        "updated_at": "2026-07-31T07:08:10.327Z",
+        "tenant_id": "71e3fd6d-28c5-4bed-abf1-3954146cd551"
+      }
+    ],
+    "store": [
+      {
+        "id": "store_live_01",
+        "name": "Urban Threads Apparel",
+        "default_currency_code": "usd",
+        "created_at": "2026-07-31T11:17:44.271Z",
+        "updated_at": "2026-07-31T11:17:44.271Z"
+      },
+      {
+        "id": "store_live_02",
+        "name": "Apex Tactical Gear",
+        "default_currency_code": "usd",
+        "created_at": "2026-07-31T11:17:44.279Z",
+        "updated_at": "2026-07-31T11:17:44.279Z"
+      },
+      {
+        "id": "store_live_03",
+        "name": "LuxeLiving Home & Decor",
+        "default_currency_code": "usd",
+        "created_at": "2026-07-31T11:17:44.353Z",
+        "updated_at": "2026-07-31T11:17:44.353Z"
+      },
+      {
+        "id": "store_live_04",
+        "name": "Aura Skincare & Cosmetics",
+        "default_currency_code": "usd",
+        "created_at": "2026-07-31T11:17:44.356Z",
+        "updated_at": "2026-07-31T11:17:44.356Z"
+      },
+      {
+        "id": "store_live_05",
+        "name": "Zenith Electronics & Tech",
+        "default_currency_code": "usd",
+        "created_at": "2026-07-31T11:17:44.359Z",
+        "updated_at": "2026-07-31T11:17:44.359Z"
+      }
+    ],
+    "ownership_status": [
+      {
+        "id": 1,
+        "store_id": "store_live_01",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "status": "AGENCY_MANAGED",
+        "updated_at": "2026-07-31T11:17:44.274Z"
+      },
+      {
+        "id": 2,
+        "store_id": "store_live_02",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "status": "AGENCY_MANAGED",
+        "updated_at": "2026-07-31T11:17:44.336Z"
+      },
+      {
+        "id": 3,
+        "store_id": "store_live_03",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "status": "AGENCY_MANAGED",
+        "updated_at": "2026-07-31T11:17:44.355Z"
+      },
+      {
+        "id": 4,
+        "store_id": "store_live_04",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "status": "AGENCY_MANAGED",
+        "updated_at": "2026-07-31T11:17:44.357Z"
+      },
+      {
+        "id": 5,
+        "store_id": "store_live_05",
+        "agency_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+        "status": "AGENCY_MANAGED",
+        "updated_at": "2026-07-31T11:17:44.359Z"
+      }
+    ]
+  },
+  "counts": {
+    "agency": 1,
+    "agency_store_access": 9,
+    "agency_store_log": 9,
+    "agency_team_member": 0,
+    "tenant": 3,
+    "user": 2,
+    "store": 5,
+    "ownership_status": 5
+  },
+  "schema": {
+    "agency": [
+      {
+        "column_name": "id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "subdomain",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "unique_uid",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "owner_email",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "master_uid",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "owner_id",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      }
+    ],
+    "agency_store_access": [
+      {
+        "column_name": "id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "agency_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "tenant_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "merchant_email",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "status",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": "'PENDING'::character varying"
+      },
+      {
+        "column_name": "invite_token",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "token_expires_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "invited_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "confirmed_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "revoked_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "agency_store_log": [
+      {
+        "column_name": "id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "agency_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "tenant_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "member_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "member_email",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "action",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "metadata",
+        "data_type": "jsonb",
+        "is_nullable": "YES",
+        "column_default": "'{}'::jsonb"
+      },
+      {
+        "column_name": "ip_address",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "agency_team_member": [
+      {
+        "column_name": "id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "agency_id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "user_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "email",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "role",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": "'AGENCY_MEMBER'::character varying"
+      },
+      {
+        "column_name": "assigned_tenant_ids",
+        "data_type": "jsonb",
+        "is_nullable": "YES",
+        "column_default": "'[]'::jsonb"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "rbac_role",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": "'FULL_ACCESS'::character varying"
+      }
+    ],
+    "tenant": [
+      {
+        "column_name": "id",
+        "data_type": "uuid",
+        "is_nullable": "NO",
+        "column_default": "gen_random_uuid()"
+      },
+      {
+        "column_name": "store_name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "subdomain",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "custom_domain",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "agency_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "ownership_status",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": "'INDEPENDENT_MERCHANT'::character varying"
+      },
+      {
+        "column_name": "transfer_code_hash",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "transfer_expires_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "system_password_hash",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "plan",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": "'free'::character varying"
+      },
+      {
+        "column_name": "can_go_live",
+        "data_type": "boolean",
+        "is_nullable": "NO",
+        "column_default": "false"
+      }
+    ],
+    "user": [
+      {
+        "column_name": "id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": "('usr_'::text || gen_random_uuid())"
+      },
+      {
+        "column_name": "email",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "first_name",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "last_name",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "role",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": "'member'::character varying"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "tenant_id",
+        "data_type": "uuid",
+        "is_nullable": "YES",
+        "column_default": null
+      }
+    ],
+    "store": [
+      {
+        "column_name": "id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "name",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "default_currency_code",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": "'usd'::character varying"
+      },
+      {
+        "column_name": "created_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ],
+    "ownership_status": [
+      {
+        "column_name": "id",
+        "data_type": "integer",
+        "is_nullable": "NO",
+        "column_default": "nextval('ownership_status_id_seq'::regclass)"
+      },
+      {
+        "column_name": "store_id",
+        "data_type": "character varying",
+        "is_nullable": "NO",
+        "column_default": null
+      },
+      {
+        "column_name": "agency_id",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": null
+      },
+      {
+        "column_name": "status",
+        "data_type": "character varying",
+        "is_nullable": "YES",
+        "column_default": "'AGENCY_MANAGED'::character varying"
+      },
+      {
+        "column_name": "updated_at",
+        "data_type": "timestamp with time zone",
+        "is_nullable": "YES",
+        "column_default": "now()"
+      }
+    ]
+  },
+  "all_public_tables": [
+    "agency",
+    "agency_store_access",
+    "agency_store_log",
+    "agency_team_member",
+    "cart",
+    "cart_payment_collection",
+    "cart_promotion",
+    "customer",
+    "customer_account_holder",
+    "invite_rbac_role",
+    "link_module_migrations",
+    "location_fulfillment_provider",
+    "location_fulfillment_set",
+    "mikro_orm_migrations",
+    "order",
+    "order_cart",
+    "order_fulfillment",
+    "order_payment_collection",
+    "order_promotion",
+    "order_state_history",
+    "ownership_status",
+    "product",
+    "product_sales_channel",
+    "product_shipping_profile",
+    "product_variant_inventory_item",
+    "product_variant_price_set",
+    "publishable_api_key_sales_channel",
+    "region_payment_provider",
+    "return_fulfillment",
+    "sales_channel_stock_location",
+    "script_migrations",
+    "shipping_option_price_set",
+    "store",
+    "tenant",
+    "tenant_otp_session",
+    "tenant_payment_config",
+    "tenant_wallet",
+    "tenant_wallet_ledger",
+    "user",
+    "user_rbac_role"
+  ]
+}

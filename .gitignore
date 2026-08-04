@@ -1,4 +1,9 @@
 .env
+
+# Local DB dumps from Stage 0+ migration (binary; keep on disk only)
+backups/*.dump
+backups/**/*.dump
+
 node_modules
 *yarn-error.log
 .pnp.*
