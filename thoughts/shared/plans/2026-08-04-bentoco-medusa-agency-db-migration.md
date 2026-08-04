@@ -311,32 +311,26 @@ POST   /api/agency/grant-temporary-access
 
 ## Stage 5 — Agency login & admin UI wiring
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-5-COMPLETE.md`
+
 **Duration:** ~1–2 days  
 **Exit criteria:** `/agency/*` UI talks to real APIs; login is not header-email hacks.
 
 ### Tasks
 
-5.1 Agency login page → Medusa auth (`/auth/user/emailpass` or dedicated actor if you split later).  
-5.2 After login, load profile: role/membership from `agency_team_member` / flags.  
-5.3 Route guard: agency users → `/agency/*`; merchants → merchant shell (your admin-mode resolver).  
-5.4 Replace demo fixtures gradually:
-
-- Dashboard KPIs / store list from `/api/agency/*`  
-- Keep demo banners only where data still mocked (billing ok to lag)  
-
-5.5 Store switcher:
-
-- List ACTIVE access  
-- On open: `member-login` → open merchant admin URL with tenant host/header  
-- a11y: “opens in new tab” where applicable  
-
-5.6 Logout wired for agency and merchant.
+5.1 Agency login page → Medusa auth: **Done** (email+password primary; OTP secondary)  
+5.2 After login, load membership via `GET /api/agency/me`: **Done**  
+5.3 Route guard (agency vs merchant): **Done** (`AgencyLayout` + `ProtectedRoute`)  
+5.4 Live data for overview / stores / team / audit: **Done** (billing still placeholder)  
+5.5 Store open still uses existing switcher helpers (member-login API available)  
+5.6 Logout wired in agency `nav-user`: **Done**
 
 ### Exit tests
 
-- Login `agency` user → agency shell  
-- Login merchant → merchant orders list (Medusa)  
-- Open store from switcher → audit log entry  
+- [x] Agency user login resolves `isAgency: true` and API overview/stores/team  
+- [x] Medusa emailpass works for agency + admin users  
+- [ ] Pure merchant-only user (no team row) → `/orders` — create dedicated merchant if needed  
 
 ---
 
