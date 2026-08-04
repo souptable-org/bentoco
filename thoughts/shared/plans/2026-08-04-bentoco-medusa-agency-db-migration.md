@@ -251,12 +251,16 @@ Medusa users: `admin@bentoco.com`, `agcy@bentoco.com`
 
 ## Stage 4 — Port agency HTTP off `app.ts` into Medusa
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-4-COMPLETE.md`  
+**Routes:** `packages/bentoco/src/api/api/agency/*/route.ts` (compiled to `dist/api/api/agency`)
+
 **Duration:** ~1–2 days  
 **Exit criteria:** Agency endpoints served by Medusa process; stub no longer required on 9000.
 
 ### Tasks
 
-4.1 Create Medusa API routes (project `src/api/` or package routes), e.g.:
+4.1 Create Medusa API routes: **Done** (package paths → `/api/agency/*`)
 
 ```text
 POST   /api/agency/invite-store
@@ -264,24 +268,22 @@ GET    /api/agency/confirm-access
 DELETE /api/agency/revoke-access
 POST   /api/agency/member-login
 GET    /api/agency/access-log
-GET    /api/agency/overview          (if still needed)
+GET    /api/agency/overview
 GET    /api/agency/stores
 GET    /api/agency/team
-GET    /api/agency/billing           (can stay mock initially)
+GET    /api/agency/billing
 POST   /api/agency/transfer-store
 POST   /api/agency/confirm-transfer
 POST   /api/agency/grant-temporary-access
 ```
 
-4.2 Reuse existing logic with thin adapters:
+4.2 Reuse existing logic with thin adapters: **Done**
 
-- Keep `inviteStore`, `confirmAccess`, `revokeAccess`, `agencyMemberLogin`, `getAccessLog`  
-- Replace ad-hoc `pg.Client` per request with:
+- Helpers: `agency-access.ts`, `agency-store-transfer.ts`  
+- Shared: `withPgClient` + `agency-handlers.ts`  
+- Fixed access-log join (`tenant.store_name`)
 
-  - shared `pg` pool, **or**  
-  - Medusa query/manager injection  
-
-4.3 Register CORS for admin origin (already in config).
+4.3 Register CORS for admin origin (already in config): **Yes**
 
 4.4 Register `tenantMiddleware` in Medusa middleware pipeline for routes that need isolation.
 
