@@ -160,49 +160,47 @@ Merchant admin can log in against **empty-but-valid** Medusa on DB `bentoco`. **
 
 ## Stage 2 — Multi-tenant schema on top of Medusa
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-2-COMPLETE.md`  
+**SQL:** `packages/bentoco/src/migration-scripts/stage-2-tenant-foundation.sql`  
+**Runner:** `scripts/run-stage-2-tenant-migration.js`
+
 **Duration:** ~0.5–1 day  
 **Exit criteria:** `tenant` (+ related) exist beside Medusa tables; `tenant_id` on chosen commerce entities; no broken Medusa boot.
 
 ### Tasks
 
-2.1 Add **tenant registry** migration (SQL or Medusa migration script):
+2.1 Add **tenant registry** migration: **Done**
 
-- `tenant` (`id`, `store_name`, `subdomain`, `custom_domain`, timestamps)  
-- Indexes on `subdomain`, `custom_domain`  
-- Agency-oriented columns as needed: `agency_id`, `ownership_status`, `plan`, `can_go_live`, transfer fields, etc. (from current prototype)
+- `tenant` + indexes + plan/ownership columns (agency-ready for Stage 3)
+- `tenant_store` bridge to Medusa `store`
 
-2.2 Add `tenant_id` (nullable first) to Medusa-managed tables that multi-tenant isolation requires, e.g.:
+2.2 Add nullable `tenant_id` on: **Done** — `product`, `order`, `customer`, `cart`, `user`  
+Also optional `user.role` for Bentoco flags.
 
-- Prefer linking via **Medusa `store` / sales channel** where possible  
-- Where product model requires it: `product`, `customer`, `order`, `cart`, `user` metadata or explicit columns  
+**Design choice locked:**
 
-**Important design choice (document in migration notes):**
+| Approach | Status |
+|----------|--------|
+| **A. `tenant` 1:1 `store` via `tenant_store`** | **Chosen** |
+| **B. row-level `tenant_id` only** | Also applied (nullable) for future RLS |
 
-| Approach | Pros | Cons |
-|----------|------|------|
-| **A. `tenant` 1:1 `store`** | Aligns with Medusa store concept | Mapping layer needed |
-| **B. `tenant_id` on all rows** | Matches current prototype/RLS docs | Must keep MikroORM models/migrations in sync |
+2.3 Wallet / payment / OTP / order state tables: **Done**
 
-Recommended for Bentoco product thesis: **tenant registry + map tenant → Medusa store_id**, then phase RLS; avoid fighting every Medusa column on day one if store mapping is enough for agency switcher.
+2.4 Do **not** drop Medusa columns: **Honored**
 
-2.3 Wallet / payment-per-tenant tables (if still required):
-
-- `tenant_payment_config`, `tenant_wallet`, `tenant_wallet_ledger`, `tenant_otp_session`
-
-2.4 Do **not** drop Medusa columns to match old Drizzle shapes.
-
-2.5 Verify Medusa still boots and admin list endpoints still work.
+2.5 Verify Medusa still boots: **Passed** (health, login, stores, products, orders)
 
 ### Exit tests
 
-- `SELECT * FROM tenant` works  
-- Medusa `user` / `store` tables still full-shaped  
-- No migration rewind needed  
+- [x] `SELECT * FROM tenant` works (seeded `admin` ↔ default store)  
+- [x] Medusa admin APIs still 200  
+- [x] No FORCE RLS on core tables  
 
-### Risks
+### Risks mitigated
 
-- Adding NOT NULL `tenant_id` before backfill breaks inserts from Medusa defaults.  
-- Changing MikroORM-owned tables without module model updates → runtime errors.
+- Did **not** run old `0000-tenant-multi-tenancy-rls.sql` as-is (it FORCE RLS + fake CREATE TABLE stubs).  
+- Stage 2 SQL is additive / IF NOT EXISTS only.
 
 ---
 
