@@ -206,12 +206,17 @@ Also optional `user.role` for Bentoco flags.
 
 ## Stage 3 — Agency schema + data restore
 
+**Status:** COMPLETED 2026-08-04  
+**Notes:** `backups/STAGE-3-COMPLETE.md`  
+**SQL:** `packages/bentoco/src/migration-scripts/stage-3-agency-schema.sql`  
+**Runner:** `scripts/run-stage-3-agency-migration.js`
+
 **Duration:** ~0.5 day  
 **Exit criteria:** All agency tables present; optional restored rows; FKs consistent with new Medusa IDs.
 
 ### Tasks
 
-3.1 Create agency tables (from prototype + Agency Access plan):
+3.1 Create agency tables: **Done**
 
 | Table | Purpose |
 |--------|---------|
@@ -219,27 +224,28 @@ Also optional `user.role` for Bentoco flags.
 | `agency_store_access` | Invite/consent lifecycle PENDING → ACTIVE → REVOKED |
 | `agency_store_log` | Audit: who entered which store when |
 | `agency_team_member` | Staff + `rbac_role` + assigned tenants/stores |
+| `ownership_status` | Store-level management flag |
 
-3.2 Align IDs with Medusa world:
+3.2 Align IDs with Medusa world: **Done**
 
-- Prefer `store_id` (Medusa store) **and/or** `tenant_id` in access rows — pick one primary key for “which merchant store” and document it  
-- Link agency owner to Medusa `user.id` + `auth_identity` (not only email string)
+- Primary merchant key: **`tenant_id`** (TEXT; allows `PENDING_CREATION`)  
+- Secondary: **`store_id`** (Medusa store, set when known)  
+- Agency owner/member: Medusa **`user.id`** on `agency.owner_id` / `agency_team_member.user_id`
 
-3.3 Restore data (if Option B):
+3.3 Restore data: **Clean re-seed** (Option B spirit)
 
-- Import dumped `agency*` / `tenant` rows  
-- Remap broken FKs to new Medusa user/store IDs  
-- Or re-seed: 1 agency, 1–2 tenants/stores, access rows  
+- Restored stable agency UUID / `AGENCY-849201` from Stage 0  
+- Did **not** bulk-import broken PENDING invite rows  
+- Seeded ACTIVE access on default tenant + one PENDING demo invite  
 
-3.4 Seed scripts (replace raw `scripts/seed-admin-user.js` partial inserts):
-
-- Use Medusa workflows/API or `medusa user` for identities  
-- Separate script for agency org + access fixtures  
+3.4 Seed scripts: **Done** — `run-stage-3-agency-migration.js`  
+Medusa users: `admin@bentoco.com`, `agcy@bentoco.com`
 
 ### Exit tests
 
-- Counts non-zero for agency seed  
-- No orphan `agency_store_access` rows  
+- [x] Counts non-zero for agency seed (1 agency, 2 members, 2 access, 1 audit)  
+- [x] ACTIVE access has real tenant_id + store_id  
+- [x] Medusa merchant + agency login still 200  
 
 ---
 
