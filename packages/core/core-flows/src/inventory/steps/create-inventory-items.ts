@@ -1,10 +1,10 @@
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 import type {
   IInventoryService,
   InventoryTypes,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 
 /**
  * The data to create the inventory items.

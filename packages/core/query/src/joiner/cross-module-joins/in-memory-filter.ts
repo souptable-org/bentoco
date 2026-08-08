@@ -1,4 +1,4 @@
-import { isObject, MedusaError } from "@medusajs/utils"
+import { isObject, MedusaError } from "@bentoco/utils"
 
 /**
  * In-memory evaluation of Medusa filter objects against loaded records —

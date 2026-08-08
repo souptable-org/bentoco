@@ -1,13 +1,13 @@
-import { IProductModuleService } from "@medusajs/framework/types"
+import { IProductModuleService } from "@bentoco/framework/types"
 import {
   Modules,
   ProductStatus,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { Product, ProductTag } from "@models"
 import {
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@bentoco/test-utils"
 
 jest.setTimeout(30000)
 

@@ -20,7 +20,7 @@ import {
   RetrievePaymentOutput,
   UpdatePaymentInput,
   UpdatePaymentOutput,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
   implements IPaymentProvider
@@ -69,8 +69,8 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * @typeParam TConfig - The type of the provider's options passed as a second parameter.
    *
    * @example
-   * import { AbstractPaymentProvider } from "@medusajs/framework/utils"
-   * import { Logger } from "@medusajs/framework/types"
+   * import { AbstractPaymentProvider } from "@bentoco/framework/utils"
+   * import { Logger } from "@bentoco/framework/types"
    *
    * type Options = {
    *   apiKey: string
@@ -182,7 +182,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   CapturePaymentInput,
    *   CapturePaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options
@@ -254,7 +254,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    *   AuthorizePaymentInput,
    *   AuthorizePaymentOutput,
    *   PaymentSessionStatus
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -303,7 +303,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   CancelPaymentInput,
    *   CancelPaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -358,7 +358,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   InitiatePaymentInput,
    *   InitiatePaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -417,7 +417,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   DeletePaymentInput,
    *   DeletePaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -454,7 +454,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    *   GetPaymentStatusInput,
    *   GetPaymentStatusOutput,
    *   PaymentSessionStatus
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -516,7 +516,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   RefundPaymentInput,
    *   RefundPaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -555,7 +555,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   RetrievePaymentInput,
    *   RetrievePaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -587,7 +587,7 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * import {
    *   UpdatePaymentInput,
    *   UpdatePaymentOutput,
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
@@ -640,11 +640,11 @@ export abstract class AbstractPaymentProvider<TConfig = Record<string, unknown>>
    * // other imports...
    * import {
    *   BigNumber
-   * } from "@medusajs/framework/utils"
+   * } from "@bentoco/framework/utils"
    * import {
    *   ProviderWebhookPayload,
    *   WebhookActionResult
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    *
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<

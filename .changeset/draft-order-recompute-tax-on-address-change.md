@@ -1,5 +1,5 @@
 ---
-"@medusajs/core-flows": patch
+"@bentoco/core-flows": patch
 ---
 
 fix(core-flows): recompute draft order tax lines on address change and conversion

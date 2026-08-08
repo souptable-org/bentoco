@@ -1,4 +1,4 @@
-import { asValue } from "@medusajs/deps/awilix"
+import { asValue } from "@bentoco/deps/awilix"
 import {
   ConfigModule,
   ExternalModuleDeclaration,
@@ -14,7 +14,7 @@ import {
   ModuleExports,
   ModuleServiceInitializeOptions,
   RemoteQueryFunction,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   createMedusaContainer,
@@ -34,7 +34,7 @@ import {
   registerFeatureFlag,
   withDbTroubleshootingLink,
   DBTroubleshootingSection,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { Link } from "./link"
 import {
   MedusaModule,

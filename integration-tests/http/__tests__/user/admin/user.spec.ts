@@ -1,12 +1,12 @@
-import { createUsersWorkflow } from "@medusajs/core-flows"
-import { IWorkflowEngineService } from "@medusajs/framework/types"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IAuthModuleService } from "@medusajs/types"
+import { createUsersWorkflow } from "@bentoco/core-flows"
+import { IWorkflowEngineService } from "@bentoco/framework/types"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IAuthModuleService } from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   generateJwtToken,
   Modules,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

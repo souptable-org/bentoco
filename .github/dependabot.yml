@@ -6,7 +6,7 @@
 # alert noise is handled by auto-triage rules + the triage script.
 version: 2
 updates:
-  # Root workspace lockfile — the tree behind all published @medusajs/* packages
+  # Root workspace lockfile — the tree behind all published @bentoco/* packages
   # (also contains integration-tests + build tooling; single shared yarn.lock).
   - package-ecosystem: "npm"
     directory: "/"

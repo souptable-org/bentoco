@@ -5,7 +5,7 @@ import {
   rectSortingStrategy,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable"
-import { Text, clx } from "@medusajs/ui"
+import { Text, clx } from "@bentoco/ui"
 import { ReactNode } from "react"
 import { useTranslation } from "react-i18next"
 import type { LayoutSection } from "./types"

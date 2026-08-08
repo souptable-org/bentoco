@@ -1,5 +1,5 @@
-import { Adjustments, AdjustmentsDone } from "@medusajs/icons"
-import { DropdownMenu, IconButton, Tooltip } from "@medusajs/ui"
+import { Adjustments, AdjustmentsDone } from "@bentoco/icons"
+import { DropdownMenu, IconButton, Tooltip } from "@bentoco/ui"
 import { useCallback, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { useLocation, useNavigate } from "react-router-dom"

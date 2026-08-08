@@ -1,4 +1,4 @@
-import { CustomerDTO } from "@medusajs/framework/types";
+import { CustomerDTO } from "@bentoco/framework/types";
 
 /**
  * Options for configuring the Loyalty plugin in medusa-config.

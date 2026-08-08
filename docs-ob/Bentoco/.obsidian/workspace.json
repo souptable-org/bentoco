@@ -1,0 +1,280 @@
+{
+  "main": {
+    "id": "1ee8d5f2eae93e93",
+    "type": "split",
+    "children": [
+      {
+        "id": "740c439115c6508b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21c2d5d0f7987726",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docs/Bentoco Feature Lists.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bentoco Feature Lists"
+            }
+          },
+          {
+            "id": "aaf5a81362b5795e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docs/P5 Admin Dashboard Dual-Mode & Agency RBAC/Roadmap.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Roadmap"
+            }
+          },
+          {
+            "id": "3919eaa2df4a25d5",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.4"
+            }
+          },
+          {
+            "id": "8caf9257891ff54d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docs/comparison.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "comparison"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "02db4ee020efac88",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e8392152cf4766e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ad372673fe85ec3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1640b9af242594fa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fbc8b19289b8d74e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1a5368438611849c",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a2024526f3af77c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63ee241839bfc68e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/HARDFORK.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for HARDFORK"
+            }
+          },
+          {
+            "id": "dc2b8bed1ed5c6e3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Notes/HARDFORK.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from HARDFORK"
+            }
+          },
+          {
+            "id": "db8dbbe632227b34",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "68f4205b205afa91",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "af81fd29547ec7c3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Chats/New Chat.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "02867aaaa0d9f8f5",
+            "type": "leaf",
+            "state": {
+              "type": "chat-view",
+              "state": {
+                "file": "Chats/New Chat.md"
+              },
+              "icon": "message-square",
+              "title": "New Chat"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "page-width-toggle:페이지 너비 전환": false,
+      "smart-second-brain:Open S2B Chat": false
+    }
+  },
+  "active": "02867aaaa0d9f8f5",
+  "lastOpenFiles": [
+    "Docs/comparison.md",
+    "Chats/New Chat.md",
+    "Chats",
+    "Docs/MVP-PLAN.md",
+    "Docs/MVO-DONE.md",
+    "Docs/MVO-COMPLETION-HANDOFF.md",
+    "Docs/razorpay-byok.md",
+    "unified_auth_plan.md",
+    "Notes/Agency Access System — Implementation Plan.md",
+    "Docs/P5 Admin Dashboard Dual-Mode & Agency RBAC/Agency Page Structure Map.md",
+    "Docs/P3 Indian Order State Machine & COD/Roadmap.md",
+    "Docs/Bentoco roadmap.md",
+    "Docs/P5 Admin Dashboard Dual-Mode & Agency RBAC/Roadmap.md",
+    "Docs/P5 Admin Dashboard Dual-Mode & Agency RBAC",
+    "Docs/P3 Indian Order State Machine & COD",
+    "Docs/Bentoco product spec.md",
+    "Docs/Bentoco Feature Lists.md",
+    "Docs/bentoco_roadmap.md",
+    "Docs/P1 Database Multi-Tenancy & RLS/Roadmap.md",
+    "Docs/P1 Database Multi-Tenancy & RLS",
+    "Docs/Compeition Matrix.md",
+    "Docs/about - Bentoco.md",
+    "Notes/HARDFORK.md",
+    "QUCTIONS AND ANSWER.md",
+    "Q&A/You know you keep saying enterprise and not solo operators there must be a good reason why that is cause if the solo operator market is bigger than the enterprise market in scale these would have really tried to acquire that market first dont you think.md",
+    "Docs/The Ideal GTM.md",
+    "Docs/pricing tiers and monetization strategy.md",
+    "Q&A/What is our Monetization model.md",
+    "Docs/PRODUCT THESIS - BHARAT COMMERCE.md",
+    "Notes/founder’s objection-handling cheat sheet..md",
+    "Docs",
+    "Notes",
+    "Q&A",
+    "Untitled.base"
+  ]
+}

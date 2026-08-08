@@ -3,13 +3,13 @@ import {
   IEventBusModuleService,
   MedusaContainer,
   Subscriber,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   isFileSkipped,
   kebabCase,
   Modules,
   registerDevServerResource,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { parse } from "path"
 import { configManager } from "../config"
 import { container } from "../container"

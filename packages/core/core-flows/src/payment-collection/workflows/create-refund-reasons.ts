@@ -1,5 +1,5 @@
-import { CreateRefundReasonDTO, RefundReasonDTO, } from "@medusajs/framework/types"
-import { createWorkflow, WorkflowData, WorkflowResponse, } from "@medusajs/framework/workflows-sdk"
+import { CreateRefundReasonDTO, RefundReasonDTO, } from "@bentoco/framework/types"
+import { createWorkflow, WorkflowData, WorkflowResponse, } from "@bentoco/framework/workflows-sdk"
 import { createRefundReasonStep } from "../steps/create-refund-reasons"
 
 /**

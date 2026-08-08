@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@bentoco/framework/types"
 import { EntityOverride } from "../utils/entity-overrides"
 
 export type InitializeModuleInjectableDependencies = {
@@ -13,7 +13,7 @@ export type InitializeModuleInjectableDependencies = {
  * module.exports = defineConfig({
  *   modules: [
  *     {
- *       resolve: "@medusajs/medusa/settings",
+ *       resolve: "@bentoco/medusa/settings",
  *       options: {
  *         entityOverrides: {
  *           Brand: {
@@ -42,9 +42,9 @@ export interface SettingsModuleOptions {
   entityOverrides?: Record<string, EntityOverride>
 }
 
-declare module "@medusajs/types" {
+declare module "@bentoco/types" {
   interface ModuleOptions {
-    "@medusajs/settings": SettingsModuleOptions
-    "@medusajs/medusa/settings": SettingsModuleOptions
+    "@bentoco/settings": SettingsModuleOptions
+    "@bentoco/medusa/settings": SettingsModuleOptions
   }
 }

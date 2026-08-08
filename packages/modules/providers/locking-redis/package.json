@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/locking-redis",
+  "name": "@bentoco/locking-redis",
   "version": "2.18.0",
   "description": "Redis Lock for Medusa",
   "main": "dist/index.js",
@@ -23,10 +23,10 @@
   "author": "Medusa",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.18.0"
+    "@bentoco/framework": "2.18.0"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.18.0"
+    "@bentoco/framework": "2.18.0"
   },
   "dependencies": {
     "ioredis": "^5.4.1"

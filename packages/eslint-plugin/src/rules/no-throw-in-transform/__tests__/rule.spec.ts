@@ -8,7 +8,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // No throw at all.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => data.input.foo)
           return value
@@ -18,7 +18,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // throw inside a createStep callback is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             if (!input) throw new Error("bad")
@@ -31,7 +31,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // throw in a top-level helper is fine.
     {
       code: `
-        import { transform } from "@medusajs/framework/workflows-sdk"
+        import { transform } from "@bentoco/framework/workflows-sdk"
         function helper() {
           throw new Error("nope")
         }
@@ -50,7 +50,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // (the immediately-enclosing function is the inner one, not the transform callback).
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             const inner = () => {
@@ -67,7 +67,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // Direct throw inside a transform arrow callback.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             if (!data.input.foo) {
@@ -83,7 +83,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // throw inside a transform function-expression callback.
     {
       code: `
-        import { transform } from "@medusajs/framework/workflows-sdk"
+        import { transform } from "@bentoco/framework/workflows-sdk"
         transform({}, function (data) {
           throw new Error("bad")
         })
@@ -93,7 +93,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // Aliased `transform` import binding is tracked.
     {
       code: `
-        import { transform as t } from "@medusajs/framework/workflows-sdk"
+        import { transform as t } from "@bentoco/framework/workflows-sdk"
         t({}, (data) => {
           throw new Error("bad")
         })
@@ -103,7 +103,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // Multiple throws — each flagged.
     {
       code: `
-        import { transform } from "@medusajs/framework/workflows-sdk"
+        import { transform } from "@bentoco/framework/workflows-sdk"
         transform({}, (data) => {
           if (data.a) throw new Error("a")
           if (data.b) throw new Error("b")
@@ -118,7 +118,7 @@ ruleTester.run("no-throw-in-transform", rule, {
     // throw in a later callback when transform is chained with multiple callbacks.
     {
       code: `
-        import { transform } from "@medusajs/framework/workflows-sdk"
+        import { transform } from "@bentoco/framework/workflows-sdk"
         transform(
           {},
           (data) => data,

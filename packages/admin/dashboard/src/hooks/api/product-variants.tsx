@@ -7,8 +7,8 @@ import {
 import { InfiniteData } from "@tanstack/query-core"
 import { sdk } from "../../lib/client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes } from "@medusajs/types"
+import { FetchError } from "@bentoco/js-sdk"
+import { HttpTypes } from "@bentoco/types"
 import { useInfiniteList } from "../use-infinite-list"
 
 const PRODUCT_VARIANT_QUERY_KEY = "product_variant" as const

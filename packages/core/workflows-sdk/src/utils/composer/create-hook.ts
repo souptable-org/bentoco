@@ -1,4 +1,4 @@
-import { OrchestrationUtils } from "@medusajs/utils"
+import { OrchestrationUtils } from "@bentoco/utils"
 import {
   CompensateFn,
   createStep,
@@ -54,7 +54,7 @@ export type Hook<Name extends string, Input, Output> = {
  *   createHook,
  *   createWorkflow,
  *   WorkflowResponse,
- * } from "@medusajs/framework/workflows-sdk"
+ * } from "@bentoco/framework/workflows-sdk"
  * import { createProductStep } from "./steps/create-product"
  *
  * export const myWorkflow = createWorkflow(

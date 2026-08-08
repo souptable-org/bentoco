@@ -1,9 +1,9 @@
-import type { ProductTypes } from "@medusajs/framework/types"
+import type { ProductTypes } from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { updateProductOptionValuesStep } from "../steps"
 
 /**

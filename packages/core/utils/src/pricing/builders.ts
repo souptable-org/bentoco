@@ -4,7 +4,7 @@ import {
   PriceRuleDTO,
   ProductVariantDTO,
   UpdatePriceListPriceDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 export function buildPriceListRules(
   priceListRules?: PriceListRuleDTO[]

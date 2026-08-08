@@ -17,7 +17,7 @@ export const rule = createRule<[], MessageIds>({
     },
     messages: {
       configNotDefineRouteConfig:
-        "UI route `config` export must be initialized via `defineRouteConfig(...)` from `@medusajs/admin-sdk`.",
+        "UI route `config` export must be initialized via `defineRouteConfig(...)` from `@bentoco/admin-sdk`.",
     },
     schema: [],
   },

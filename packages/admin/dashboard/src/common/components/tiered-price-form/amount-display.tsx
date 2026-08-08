@@ -1,5 +1,5 @@
 import { Control, useWatch } from "react-hook-form"
-import { Text } from "@medusajs/ui"
+import { Text } from "@bentoco/ui"
 import { CurrencyInfo } from "../../../lib/data/currencies"
 import { getLocaleAmount } from "../../../lib/money-amount-helpers"
 

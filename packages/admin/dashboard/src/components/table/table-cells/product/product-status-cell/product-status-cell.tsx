@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { DataTableStatusIndicator } from "../../../../data-table/components/data-table-status-cell/data-table-status-cell"
 import { PlaceholderCell } from "../../common/placeholder-cell"
 

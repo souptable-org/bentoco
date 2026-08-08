@@ -1,4 +1,4 @@
-import { DAL, FindConfigOrder } from "@medusajs/types"
+import { DAL, FindConfigOrder } from "@bentoco/types"
 import { isObject } from "../../../common"
 import { SoftDeletableFilterKey } from "../mikro-orm-soft-deletable-filter"
 import { buildExistsFilter, joinRequiresFilter } from "./filter-sql"

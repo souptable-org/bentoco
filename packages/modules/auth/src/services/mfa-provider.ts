@@ -5,7 +5,7 @@ import {
   IAuthMfaProvider,
   AuthMfaProvider,
   RecoveryCodeAuthMfaProvider,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import { AuthMfaProviderRegistrationPrefix } from "@types"
 
 type InjectedDependencies = {

@@ -1,4 +1,4 @@
-import { Constructor, IDmlEntity, ModuleExports } from "@medusajs/types"
+import { Constructor, IDmlEntity, ModuleExports } from "@bentoco/types"
 import { DmlEntity } from "../dml"
 import {
   buildIdPrefixToEntityNameFromDmlObjects,

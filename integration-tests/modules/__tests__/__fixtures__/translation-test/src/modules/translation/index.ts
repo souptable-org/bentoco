@@ -1,4 +1,4 @@
-import { Module } from "@medusajs/framework/utils";
+import { Module } from "@bentoco/framework/utils";
 import { TranslationModule } from "./service";
 
 export const TRANSLATION = "translation";

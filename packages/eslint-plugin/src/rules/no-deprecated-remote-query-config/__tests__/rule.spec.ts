@@ -8,7 +8,7 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Already using queryConfig.
     {
       code: `
-        import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { MedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
           const { fields } = req.queryConfig
         }
@@ -17,7 +17,7 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Unrelated property on a typed req.
     {
       code: `
-        import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { MedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
           const id = req.params.id
         }
@@ -49,7 +49,7 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Computed access.
     {
       code: `
-        import { MedusaRequest } from "@medusajs/framework/http"
+        import { MedusaRequest } from "@bentoco/framework/http"
         export const GET = async (req: MedusaRequest, res: unknown) => {
           return req["remoteQueryConfig"]
         }
@@ -69,14 +69,14 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Typed param via direct import.
     {
       code: `
-        import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { MedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
           const { fields } = req.remoteQueryConfig
         }
       `,
       errors: [{ messageId: "deprecatedRemoteQueryConfig" }],
       output: `
-        import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { MedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
           const { fields } = req.queryConfig
         }
@@ -85,14 +85,14 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // AuthenticatedMedusaRequest.
     {
       code: `
-        import { AuthenticatedMedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { AuthenticatedMedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const POST = async (req: AuthenticatedMedusaRequest, res: MedusaResponse) => {
           return req.remoteQueryConfig
         }
       `,
       errors: [{ messageId: "deprecatedRemoteQueryConfig" }],
       output: `
-        import { AuthenticatedMedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+        import { AuthenticatedMedusaRequest, MedusaResponse } from "@bentoco/framework/http"
         export const POST = async (req: AuthenticatedMedusaRequest, res: MedusaResponse) => {
           return req.queryConfig
         }
@@ -101,14 +101,14 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Aliased import.
     {
       code: `
-        import { MedusaRequest as MReq } from "@medusajs/framework/http"
+        import { MedusaRequest as MReq } from "@bentoco/framework/http"
         function handler(req: MReq) {
           return req.remoteQueryConfig
         }
       `,
       errors: [{ messageId: "deprecatedRemoteQueryConfig" }],
       output: `
-        import { MedusaRequest as MReq } from "@medusajs/framework/http"
+        import { MedusaRequest as MReq } from "@bentoco/framework/http"
         function handler(req: MReq) {
           return req.queryConfig
         }
@@ -145,7 +145,7 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Multiple accesses.
     {
       code: `
-        import { MedusaRequest } from "@medusajs/framework/http"
+        import { MedusaRequest } from "@bentoco/framework/http"
         export const PATCH = async (req: MedusaRequest, res) => {
           const a = req.remoteQueryConfig
           const b = req.remoteQueryConfig.fields
@@ -156,7 +156,7 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
         { messageId: "deprecatedRemoteQueryConfig" },
       ],
       output: `
-        import { MedusaRequest } from "@medusajs/framework/http"
+        import { MedusaRequest } from "@bentoco/framework/http"
         export const PATCH = async (req: MedusaRequest, res) => {
           const a = req.queryConfig
           const b = req.queryConfig.fields
@@ -166,14 +166,14 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // Renamed param with type annotation.
     {
       code: `
-        import { MedusaRequest } from "@medusajs/framework/http"
+        import { MedusaRequest } from "@bentoco/framework/http"
         function helper(request: MedusaRequest) {
           return request.remoteQueryConfig
         }
       `,
       errors: [{ messageId: "deprecatedRemoteQueryConfig" }],
       output: `
-        import { MedusaRequest } from "@medusajs/framework/http"
+        import { MedusaRequest } from "@bentoco/framework/http"
         function helper(request: MedusaRequest) {
           return request.queryConfig
         }
@@ -182,14 +182,14 @@ ruleTester.run("no-deprecated-remote-query-config", rule, {
     // HttpTypes-qualified annotation.
     {
       code: `
-        import { HttpTypes } from "@medusajs/framework/types"
+        import { HttpTypes } from "@bentoco/framework/types"
         export const GET = async (req: HttpTypes.MedusaRequest, res) => {
           return req.remoteQueryConfig
         }
       `,
       errors: [{ messageId: "deprecatedRemoteQueryConfig" }],
       output: `
-        import { HttpTypes } from "@medusajs/framework/types"
+        import { HttpTypes } from "@bentoco/framework/types"
         export const GET = async (req: HttpTypes.MedusaRequest, res) => {
           return req.queryConfig
         }

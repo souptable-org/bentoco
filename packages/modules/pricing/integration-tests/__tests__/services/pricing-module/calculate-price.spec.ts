@@ -3,13 +3,13 @@ import {
   CreatePriceSetDTO,
   IPricingModuleService,
   PricingTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   Modules,
   PriceListStatus,
   PriceListType,
-} from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { withOperator } from "../../../__fixtures__/price-rule"
 import { seedPriceData } from "../../../__fixtures__/seed-price-data"
 

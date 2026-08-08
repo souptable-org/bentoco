@@ -1,4 +1,4 @@
-import { Heading, Text } from "@medusajs/ui"
+import { Heading, Text } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { DataTableFilter } from "../../../../components/table/data-table/data-table-filter"
 import { useInventoryTableFilters } from "../../inventory-list/components/use-inventory-table-filters"

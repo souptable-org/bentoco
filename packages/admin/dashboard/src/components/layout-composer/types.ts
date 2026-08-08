@@ -3,7 +3,7 @@ import type {
   LayoutSection,
   Layouts,
   SectionNameFor,
-} from "@medusajs/admin-shared"
+} from "@bentoco/admin-shared"
 
 export type { LayoutSection, Layouts, SectionNameFor }
 

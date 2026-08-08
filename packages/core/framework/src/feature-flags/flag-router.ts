@@ -1,4 +1,4 @@
-import { isObject, isString } from "@medusajs/utils"
+import { isObject, isString } from "@bentoco/utils"
 import { FeatureFlagsResponse, IFlagRouter } from "./types"
 
 export class FlagRouter implements IFlagRouter {

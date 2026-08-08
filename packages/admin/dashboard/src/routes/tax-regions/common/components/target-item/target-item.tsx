@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons"
-import { IconButton, Text } from "@medusajs/ui"
+import { XMarkMini } from "@bentoco/icons"
+import { IconButton, Text } from "@bentoco/ui"
 import { useProduct } from "../../../../../hooks/api"
 
 type TargetItemProps = {

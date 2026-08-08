@@ -1,11 +1,11 @@
-import { isPresent, MedusaError, Modules } from "@medusajs/framework/utils";
+import { isPresent, MedusaError, Modules } from "@bentoco/framework/utils";
 import {
   deleteCartCreditLinesWorkflow,
   dismissLinksWorkflow,
   refreshCartItemsWorkflow,
   useQueryGraphStep,
-} from "@medusajs/medusa/core-flows";
-import { createStep, createWorkflow, transform } from "@medusajs/framework/workflows-sdk";
+} from "@bentoco/medusa/core-flows";
+import { createStep, createWorkflow, transform } from "@bentoco/framework/workflows-sdk";
 import { PluginModule } from "../../../types";
 import { PluginCartDTO } from "../../../types/cart";
 import { ModuleGiftCard } from "../../../types/loyalty";

@@ -1,7 +1,7 @@
-import { Link } from "@medusajs/framework/modules-sdk"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Link } from "@bentoco/framework/modules-sdk"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/framework/utils"
 
 /**
  * The data to detach stock locations from sales channels.

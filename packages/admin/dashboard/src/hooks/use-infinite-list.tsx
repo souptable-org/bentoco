@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { PaginatedResponse } from "@medusajs/types"
+import { FetchError } from "@bentoco/js-sdk"
+import { PaginatedResponse } from "@bentoco/types"
 import {
   QueryKey,
   UseInfiniteQueryOptions,

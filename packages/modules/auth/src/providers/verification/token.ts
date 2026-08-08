@@ -3,8 +3,8 @@ import {
   Context,
   IAuthVerificationProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { MedusaError } from "@bentoco/framework/utils"
 import { AuthVerification } from "@models"
 import { TokenVerificationProviderOptions } from "@types"
 import {

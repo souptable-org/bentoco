@@ -3,7 +3,7 @@ import {
   OrderDTO,
   OrderWorkflow,
   PaymentCollectionDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   deepFlatMap,
   MathBN,
@@ -12,7 +12,7 @@ import {
   OrderWorkflowEvents,
   PaymentCollectionStatus,
   ReservationItemWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createHook,
   createStep,
@@ -22,7 +22,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep, useQueryGraphStep } from "../../common"
 import { updatePaymentCollectionStep } from "../../payment-collection"
 import { cancelPaymentStep } from "../../payment/steps"

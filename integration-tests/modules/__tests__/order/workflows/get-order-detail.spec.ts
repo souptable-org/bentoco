@@ -1,6 +1,6 @@
-import { getOrderDetailWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { OrderDTO } from "@medusajs/types"
+import { getOrderDetailWorkflow } from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { OrderDTO } from "@bentoco/types"
 import { createOrderFixture, prepareDataFixtures } from "./__fixtures__"
 
 jest.setTimeout(50000)

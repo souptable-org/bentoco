@@ -1,5 +1,5 @@
-import { Container, Text } from "@medusajs/ui";
-import { CreditCard } from "@medusajs/icons";
+import { Container, Text } from "@bentoco/ui";
+import { CreditCard } from "@bentoco/icons";
 
 import { AdminStoreCreditAccount } from "../../../../../types";
 import DisplayId from "../../../../components/display-id";

@@ -1,5 +1,5 @@
-import { LoaderOptions } from "@medusajs/framework/types"
-import { asValue } from "@medusajs/framework/awilix"
+import { LoaderOptions } from "@bentoco/framework/types"
+import { asValue } from "@bentoco/framework/awilix"
 import Redis from "ioredis"
 import { RedisCacheModuleOptions } from "../types"
 

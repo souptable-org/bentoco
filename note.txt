@@ -1,0 +1,137 @@
+Technical audit: Agency dashboard
+
+Target: packages/admin/dashboard agency surface (/agency/* shell + overview)
+Mode: Operate (admin console)
+Note: No PRODUCT.md — proceeded from code only. Suggest /impeccable init later.
+
+───
+
+Audit Health Score
+
+┌───────┬──────────────────────────┬───────┬───────────────────────────────────────────────────────────────────┐
+│ #     │ Dimension                │ Score │ Key Finding                                                       │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ 1     │ Accessibility            │ 2     │ 32px icon buttons; global scrollbar hide; weak new-tab disclosure │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ 2     │ Performance              │ 3     │ Light UI; full TTF fonts; no major thrash                         │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ 3     │ Responsive Design        │ 2     │ Mobile header crowding; touch targets under 44px                  │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ 4     │ Theming                  │ 3     │ Solid Medusa↔shadcn bridge; some hard Tailwind status colors      │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ 5     │ Implementation Integrity │ 3     │ Demo honesty improved; shell coherent; residual template patterns │
+├───────┼──────────────────────────┼───────┼───────────────────────────────────────────────────────────────────┤
+│ Total │                          │ 13/20 │ Acceptable                                                        │
+└───────┴──────────────────────────┴───────┴───────────────────────────────────────────────────────────────────┘
+
+───
+
+Implementation Integrity Verdict
+
+Pass with caveats. The shell expresses an intentional system: Efferd-style inset main, Medusa token bridge, explicit demo fixtures, store open-in-new-tab. Detector only flags Inter/Roboto (overused-font) — false positive for this monorepo (Medusa admin platform fonts). Remaining integrity risk is operational: dead controls (e.g. Log out), demo data, and a11y gaps that block “production console” claims.
+
+───
+
+Executive Summary
+
+• Score: 13/20 (Acceptable)
+• Issues: 0 P0 · 4 P1 · 5 P2 · 2 P3
+• Top critical:
+  1. Touch targets size-8 (32px) on primary header controls
+  2. Global scrollbar suppression
+  3. New-tab merchant open under-disclosed for a11y
+  4. Mobile header density / overflow risk
+• Next steps: adapt (touch + responsive), a11y pass on open-store + scrollbars, polish theming tokens for status colors
+
+───
+
+Detailed Findings by Severity
+
+[P1] Icon controls below 44×44px touch target
+• Location: app-header.tsx (search size-8), theme-toggle.tsx (size-8), nav-user.tsx avatar size-8, stores table row menus h-8 w-8
+• Category: Accessibility / Responsive
+• Impact: Hard to tap on touch devices; fails WCAG 2.5.5 Target Size (enhanced) and common 44px guidance
+• WCAG: 2.5.5 (AAA) / best practice for mobile
+• Recommendation: Use min-h-11 min-w-11 hit areas (or size-icon with padding) while keeping visual 32px if needed
+• Suggested command: /impeccable adapt packages/admin/dashboard
+
+[P1] Scrollbars hidden globally
+• Location: index.css lines 89–100 (scrollbar-width: none, webkit hide on *)
+• Category: Accessibility
+• Impact: Scroll position harder to discover; some users rely on visible scrollbars; content length unclear
+• WCAG: Related to 2.4.1 / usability (not always a hard fail, high impact)
+• Recommendation: Scope hide to agency shell scroll containers only, or keep thin scrollbars; never app-wide *
+• Suggested command: /impeccable audit fix via polish/adapt — prefer /impeccable polish packages/admin/dashboard
+
+[P1] “Open” merchant admin: new tab without full a11y disclosure
+• Location: agency-dashboard-view.tsx StoreList Open button; agency-store-switcher.tsx; agency-store-url.ts
+• Category: Accessibility
+• Impact: Screen reader users may not know focus jumps to a new tab; unexpected context change
+• WCAG: 3.2.5 / G201 (opening new windows)
+• Recommendation: Visible “(new tab)” text or aria-label="Open Urban Threads merchant admin (opens in new tab)"
+• Suggested command: /impeccable clarify packages/admin/dashboard
+
+[P1] Header control cluster on small viewports
+• Location: app-header.tsx
+• Category: Responsive
+• Impact: Trigger + store switcher + search + theme + avatar compete; overflow/truncate; store switcher max-width may crush
+• Recommendation: Collapse theme under user menu on sm; keep one search; ensure switcher can shrink
+• Suggested command: /impeccable adapt packages/admin/dashboard
+
+[P2] Status badges use hard-coded Tailwind palette colors
+• Location: agency-dashboard-view.tsx statusBadgeClass (emerald-*, amber-*, rose-*)
+• Category: Theming
+• Impact: Bypasses Medusa tag tokens; may contrast poorly in some themes
+• Recommendation: Map to ui-tag-green/orange/red (or CSS vars from @bentoco/ui-preset)
+• Suggested command: /impeccable colorize packages/admin/dashboard or polish
+
+[P2] No prefers-reduced-motion policy
+• Location: Agency shell + sidebar transitions (duration-200 width/left)
+• Category: Accessibility
+• Impact: Motion-sensitive users get sidebar/panel animation without opt-out
+• Recommendation: @media (prefers-reduced-motion: reduce) { * { transition: none } } scoped to shell
+• Suggested command: /impeccable polish packages/admin/dashboard
+
+[P2] Log out control has no behavior
+• Location: nav-user.tsx Log out item
+• Category: Implementation Integrity
+• Impact: Dead control; looks broken
+• Recommendation: Wire logout or remove until auth is connected
+• Suggested command: /impeccable harden packages/admin/dashboard
+
+[P2] Card titles are not headings
+• Location: card.tsx CardTitle renders <div>; dashboard uses it under a single h1
+• Category: Accessibility
+• Impact: Weak document outline for “Client stores” section
+• Recommendation: Use h2/h3 for section titles (or CardTitle as="h2")
+• Suggested command: /impeccable polish packages/admin/dashboard
+
+[P2] Command palette trigger only shows ⌘K (not Ctrl)
+• Location: app-header.tsx title Search (⌘K)
+• Category: Responsive / a11y
+• Impact: Windows/Linux users get wrong accelerator hint
+• Recommendation: Detect platform or show “⌘K / Ctrl+K”
+• Suggested command: /impeccable clarify packages/admin/dashboard
+
+[P3] Detector: overused font (Inter / Roboto)
+• Location: index.css font-face
+• Category: Implementation Integrity
+• Impact: Cosmetic distinctiveness only
+• False positive for product: Medusa admin platform default — keep unless rebranding
+• Suggested command: skip / document only
+
+[P3] Full TTF font payloads
+• Location: index.css Inter + Roboto Mono .ttf
+• Category: Performance
+• Impact: Larger download than woff2
+• Recommendation: Prefer woff2 subsets when packaging allows
+• Suggested command: /impeccable optimize packages/admin/dashboard
+
+───
+
+Patterns & Systemic Issues
+
+1. 32px icon buttons as the default interactive chrome size → systemic touch-target problem
+2. Global CSS resets (hide all scrollbars) → high blast radius; agency-only intent should be scoped
+3. Status color via utility palette instead of design-system tags → theme drift risk
+4. Demo honesty is good — keep labeling fixtures until live data lands

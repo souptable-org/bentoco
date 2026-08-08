@@ -1,5 +1,5 @@
-import { MathBN, MedusaError } from "@medusajs/framework/utils";
-import { createStep } from "@medusajs/framework/workflows-sdk";
+import { MathBN, MedusaError } from "@bentoco/framework/utils";
+import { createStep } from "@bentoco/framework/workflows-sdk";
 import { ModuleAccountStats, ModuleGiftCard } from "../../../types";
 
 /**

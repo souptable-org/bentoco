@@ -1,12 +1,12 @@
-import { asFunction, asValue, Lifetime } from "@medusajs/framework/awilix"
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { asFunction, asValue, Lifetime } from "@bentoco/framework/awilix"
+import { moduleProviderLoader } from "@bentoco/framework/modules-sdk"
 import {
   CreatePaymentProviderDTO,
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { MedusaError } from "@bentoco/framework/utils"
 
 import { PaymentProviderService } from "@services"
 import * as providers from "../providers"

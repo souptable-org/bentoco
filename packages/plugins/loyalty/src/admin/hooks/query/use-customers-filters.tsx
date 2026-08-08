@@ -1,4 +1,4 @@
-import { createDataTableFilterHelper } from "@medusajs/ui";
+import { createDataTableFilterHelper } from "@bentoco/ui";
 import { useMemo } from "react";
 import { useCustomers } from "../api/customers";
 

@@ -1,9 +1,9 @@
 import type {
   FulfillmentTypes,
   IFulfillmentModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The shipping option types to create.

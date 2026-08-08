@@ -1,0 +1,9 @@
+{
+  "id": "page-width-toggle",
+  "name": "Page Width Toggle",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Toggle page width per note between default and wide with one click from the ribbon, command palette, right-click menu, or the note more-options menu.",
+  "author": "HEONO3H",
+  "isDesktopOnly": false
+}

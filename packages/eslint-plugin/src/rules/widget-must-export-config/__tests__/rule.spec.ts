@@ -9,7 +9,7 @@ ruleTester.run("widget-must-export-config", rule, {
   valid: [
     // Standard widget: default export + named config via defineWidgetConfig.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const MyWidget = () => null
 export const config = defineWidgetConfig({ zone: "product.details.before" })
 export default MyWidget`,
@@ -17,7 +17,7 @@ export default MyWidget`,
     },
     // Aliased defineWidgetConfig import.
     {
-      code: `import { defineWidgetConfig as dwc } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig as dwc } from "@bentoco/admin-sdk"
 const MyWidget = () => null
 export const config = dwc({ zone: "product.details.before" })
 export default MyWidget`,
@@ -31,7 +31,7 @@ export default () => null`,
     },
     // Renamed export `foo as config`.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const widgetConfig = defineWidgetConfig({ zone: "product.details.before" })
 export { widgetConfig as config }
 export default () => null`,
@@ -61,7 +61,7 @@ export default () => null`,
     },
     // `export const config = somethingElse(...)` — wrong function.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 function buildConfig() { return { zone: "product.details.before" } }
 export const config = buildConfig()
 export default () => null`,

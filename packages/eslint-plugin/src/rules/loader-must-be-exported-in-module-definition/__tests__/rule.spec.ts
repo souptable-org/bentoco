@@ -13,14 +13,14 @@ const makeModule = (files: FixtureFile[]) =>
   createFixtureWorkspace("src/modules/hello", files)
 
 const LOADER_CODE = `
-import { LoaderOptions } from "@medusajs/framework/types"
+import { LoaderOptions } from "@bentoco/framework/types"
 export default async function helloWorldLoader({ container }: LoaderOptions) {
   return
 }
 `
 
 const INDEX_REGISTERED = `
-import { Module } from "@medusajs/framework/utils"
+import { Module } from "@bentoco/framework/utils"
 import HelloService from "./service"
 import helloWorldLoader from "./loaders/hello-world"
 
@@ -31,7 +31,7 @@ export default Module("hello", {
 `
 
 const INDEX_REGISTERED_NAMED = `
-import { Module } from "@medusajs/framework/utils"
+import { Module } from "@bentoco/framework/utils"
 import HelloService from "./service"
 import { loader as helloWorldLoader } from "./loaders/hello-world"
 
@@ -42,7 +42,7 @@ export default Module("hello", {
 `
 
 const INDEX_NO_LOADERS = `
-import { Module } from "@medusajs/framework/utils"
+import { Module } from "@bentoco/framework/utils"
 import HelloService from "./service"
 
 export default Module("hello", {
@@ -51,7 +51,7 @@ export default Module("hello", {
 `
 
 const INDEX_IMPORTED_NOT_IN_ARRAY = `
-import { Module } from "@medusajs/framework/utils"
+import { Module } from "@bentoco/framework/utils"
 import HelloService from "./service"
 import helloWorldLoader from "./loaders/hello-world"
 
@@ -64,7 +64,7 @@ export default Module("hello", {
 `
 
 const INDEX_ALIASED_MODULE = `
-import { Module as M } from "@medusajs/framework/utils"
+import { Module as M } from "@bentoco/framework/utils"
 import HelloService from "./service"
 import helloWorldLoader from "./loaders/hello-world"
 
@@ -75,7 +75,7 @@ export default M("hello", {
 `
 
 const INDEX_ONLY_OTHER_LOADER = `
-import { Module } from "@medusajs/framework/utils"
+import { Module } from "@bentoco/framework/utils"
 import HelloService from "./service"
 import otherLoader from "./loaders/other"
 

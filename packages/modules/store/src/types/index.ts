@@ -2,7 +2,7 @@ import {
   IEventBusModuleService,
   Logger,
   StoreTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger

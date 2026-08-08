@@ -5,13 +5,13 @@ import {
   InternalModuleDeclaration,
   Logger,
   Message,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   AbstractEventBusModuleService,
   EventPriority,
   isPresent,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   BulkJobOptions,
   Queue,

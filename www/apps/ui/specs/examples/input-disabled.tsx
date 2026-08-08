@@ -1,4 +1,4 @@
-import { Input } from "@medusajs/ui"
+import { Input } from "@bentoco/ui"
 
 export default function InputDisabled() {
   return (

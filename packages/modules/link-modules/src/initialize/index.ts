@@ -1,4 +1,4 @@
-import { MedusaModule, MODULE_SCOPE } from "@medusajs/framework/modules-sdk"
+import { MedusaModule, MODULE_SCOPE } from "@bentoco/framework/modules-sdk"
 import {
   ExternalModuleDeclaration,
   ILinkModule,
@@ -8,7 +8,7 @@ import {
   ModuleJoinerConfig,
   ModuleServiceInitializeCustomDataLayerOptions,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   arrayDifference,
   composeLinkName,
@@ -19,7 +19,7 @@ import {
   promiseAll,
   simpleHash,
   toPascalCase,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import * as linkDefinitions from "../definitions"
 import { MigrationsExecutionPlanner } from "../migration"
 import { InitializeModuleInjectableDependencies } from "../types"

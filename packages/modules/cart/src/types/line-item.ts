@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@bentoco/framework/types"
 
 interface PartialUpsertLineItemDTO {
   subtitle?: string

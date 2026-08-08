@@ -1,4 +1,4 @@
-import { Badge } from "@medusajs/ui"
+import { Badge } from "@bentoco/ui"
 import { defineCellRenderer } from "../../../../../lib/table/cell-renderers"
 
 // "Global" vs "Product-specific" badge derived from is_exclusive.

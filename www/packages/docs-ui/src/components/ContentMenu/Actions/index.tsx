@@ -5,7 +5,7 @@ import React, { useMemo } from "react"
 import { useSiteConfig } from "@/providers/SiteConfig"
 import { useAiAssistant } from "@/providers/AiAssistant"
 import { usePathname } from "next/navigation"
-import { BroomSparkle, MarkdownSolid } from "@medusajs/icons"
+import { BroomSparkle, MarkdownSolid } from "@bentoco/icons"
 import { useChat } from "@kapaai/react-sdk"
 import { ContentMenuSection } from "../Section"
 

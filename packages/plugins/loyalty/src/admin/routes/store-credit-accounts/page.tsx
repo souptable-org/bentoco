@@ -1,6 +1,6 @@
-import { defineRouteConfig } from "@medusajs/admin-sdk"
-import { LayoutComposer } from "@medusajs/dashboard/components"
-import { Toaster } from "@medusajs/ui"
+import { defineRouteConfig } from "@bentoco/admin-sdk"
+import { LayoutComposer } from "@bentoco/dashboard/components"
+import { Toaster } from "@bentoco/ui"
 import StoreCreditIcon from "../../components/icons/store-credit-icon"
 import { StoreCreditAccountsTable } from "./components/store-credit-accounts-table/table"
 

@@ -1,4 +1,4 @@
-import { Drawer, clx } from "@medusajs/ui"
+import { Drawer, clx } from "@bentoco/ui"
 import {
   ComponentPropsWithoutRef,
   PropsWithChildren,

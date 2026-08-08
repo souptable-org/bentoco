@@ -3,7 +3,7 @@ import {
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { dismissRemoteLinkStep } from "../../common/steps/dismiss-remote-links"
 import { validateUserRolePermissionsStep } from "../steps/validate-user-role-permissions"
 

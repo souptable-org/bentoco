@@ -1,9 +1,9 @@
-import { Channels, PencilSquare } from "@medusajs/icons"
-import { Container, Heading, Text, Tooltip } from "@medusajs/ui"
+import { Channels, PencilSquare } from "@bentoco/icons"
+import { Container, Heading, Text, Tooltip } from "@bentoco/ui"
 import { Trans, useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useSalesChannels } from "../../../../../hooks/api/sales-channels"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 type ProductSalesChannelSectionProps = {
   product: HttpTypes.AdminProduct

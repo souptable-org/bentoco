@@ -1,6 +1,6 @@
 // Medusa-only ESLint config.
 //
-// Runs ONLY the `@medusajs/eslint-plugin` convention rules, using the exact
+// Runs ONLY the `@bentoco/eslint-plugin` convention rules, using the exact
 // scope and rules defined in the root `.eslintrc.js` — the root config stays the
 // single source of truth, and this config follows it automatically. The style /
 // prettier / @typescript-eslint overrides are filtered out so a run reports only
@@ -14,11 +14,11 @@ const root = require("./.eslintrc.js")
 // files still parse.
 const isRuleless = (o) => !o.rules || Object.keys(o.rules).length === 0
 
-// An override whose every rule is a Medusa rule (`@medusajs/*`).
+// An override whose every rule is a Medusa rule (`@bentoco/*`).
 const isMedusaOverride = (o) =>
   o.rules &&
   Object.keys(o.rules).length > 0 &&
-  Object.keys(o.rules).every((rule) => rule.startsWith("@medusajs/"))
+  Object.keys(o.rules).every((rule) => rule.startsWith("@bentoco/"))
 
 const overrides = (root.overrides || []).filter(
   (o) => isRuleless(o) || isMedusaOverride(o)

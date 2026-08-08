@@ -3,10 +3,10 @@ import {
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
-import type { InventoryTypes } from "@medusajs/framework/types"
-import { InventoryItemWorkflowEvents } from "@medusajs/framework/utils"
+import type { InventoryTypes } from "@bentoco/framework/types"
+import { InventoryItemWorkflowEvents } from "@bentoco/framework/utils"
 import { emitEventStep } from "../../common"
 import { updateInventoryItemsStep } from "../steps"
 

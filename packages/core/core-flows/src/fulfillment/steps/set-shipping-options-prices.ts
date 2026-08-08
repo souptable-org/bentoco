@@ -8,15 +8,15 @@ import {
   PriceDTO,
   PriceSetDTO,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   LINKS,
   Modules,
   isDefined,
   isString,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 interface PriceRegionId {
   region_id: string

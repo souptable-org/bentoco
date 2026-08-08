@@ -60,10 +60,10 @@ The rest of this guide always uses the \`src/modules/my-mfa\` directory as an ex
 </Note>`,
       `## 2. Create the MFA Module Provider Service
 
-Create the file \`src/modules/my-mfa/service.ts\` that holds the module provider's main service. It must implement the \`AuthMfaProvider\` interface imported from \`@medusajs/framework/types\`:
+Create the file \`src/modules/my-mfa/service.ts\` that holds the module provider's main service. It must implement the \`AuthMfaProvider\` interface imported from \`@bentoco/framework/types\`:
 
 \`\`\`ts title="src/modules/my-mfa/service.ts"
-import { AuthMfaProvider } from "@medusajs/framework/types"
+import { AuthMfaProvider } from "@bentoco/framework/types"
 
 type Options = {
   // define any options your provider needs here
@@ -82,7 +82,7 @@ export default MyAuthMfaProviderService
 Create the file \`src/modules/my-mfa/index.ts\` with the following content:
 
 \`\`\`ts title="src/modules/my-mfa/index.ts"
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@bentoco/framework/utils"
 import MyAuthMfaProviderService from "./service"
 
 export default ModuleProvider(Modules.AUTH, {
@@ -100,7 +100,7 @@ module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/auth",
+      resolve: "@bentoco/medusa/auth",
       dependencies: [Modules.CACHE, ContainerRegistrationKeys.LOGGER],
       options: {
         mfa: {
@@ -119,7 +119,7 @@ module.exports = defineConfig({
         },
         providers: [
           {
-            resolve: "@medusajs/medusa/auth-emailpass",
+            resolve: "@bentoco/medusa/auth-emailpass",
             id: "emailpass",
           },
         ],
@@ -197,10 +197,10 @@ The rest of this guide always uses the \`src/modules/my-recovery-code\` director
 </Note>`,
       `## 2. Create the Recovery Code MFA Module Provider Service
 
-Create the file \`src/modules/my-recovery-code/service.ts\` that holds the module provider's main service. It must implement the \`RecoveryCodeAuthMfaProvider\` interface imported from \`@medusajs/framework/types\`:
+Create the file \`src/modules/my-recovery-code/service.ts\` that holds the module provider's main service. It must implement the \`RecoveryCodeAuthMfaProvider\` interface imported from \`@bentoco/framework/types\`:
 
 \`\`\`ts title="src/modules/my-recovery-code/service.ts"
-import { RecoveryCodeAuthMfaProvider } from "@medusajs/framework/types"
+import { RecoveryCodeAuthMfaProvider } from "@bentoco/framework/types"
 
 type Options = {
   // define any options your provider needs here
@@ -219,7 +219,7 @@ export default MyRecoveryCodeProviderService
 Create the file \`src/modules/my-recovery-code/index.ts\` with the following content:
 
 \`\`\`ts title="src/modules/my-recovery-code/index.ts"
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@bentoco/framework/utils"
 import MyRecoveryCodeProviderService from "./service"
 
 export default ModuleProvider(Modules.AUTH, {
@@ -237,7 +237,7 @@ module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/auth",
+      resolve: "@bentoco/medusa/auth",
       dependencies: [Modules.CACHE, ContainerRegistrationKeys.LOGGER],
       options: {
         mfa: {
@@ -255,7 +255,7 @@ module.exports = defineConfig({
         },
         providers: [
           {
-            resolve: "@medusajs/medusa/auth-emailpass",
+            resolve: "@bentoco/medusa/auth-emailpass",
             id: "emailpass",
           },
         ],

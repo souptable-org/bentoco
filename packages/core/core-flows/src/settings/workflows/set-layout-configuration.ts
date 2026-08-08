@@ -1,13 +1,13 @@
 import {
   LayoutConfigurationData,
   LayoutConfigurationDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { setActiveLayoutScopeStep, setLayoutConfigurationStep } from "../steps"
 
 /**

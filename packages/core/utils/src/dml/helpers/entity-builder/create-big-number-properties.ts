@@ -1,4 +1,4 @@
-import { DMLSchema } from "@medusajs/types"
+import { DMLSchema } from "@bentoco/types"
 import { isBigNumber } from "../../../common/is-big-number"
 import { isDefined } from "../../../common/is-defined"
 import { trimZeros } from "../../../common/trim-zeros"

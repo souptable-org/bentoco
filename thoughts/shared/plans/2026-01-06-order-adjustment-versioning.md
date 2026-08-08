@@ -125,8 +125,8 @@ const _OrderShippingMethodAdjustment = model.define(
 
 #### Automated Verification:
 
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/order build`
-- [x] Unit tests pass: `yarn workspace @medusajs/order test`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/order build`
+- [x] Unit tests pass: `yarn workspace @bentoco/order test`
 
 #### Manual Verification:
 
@@ -189,16 +189,16 @@ Create a data migration script to backfill existing `order_shipping_method_adjus
 **Changes**: Create data migration script
 
 ````typescript
-import { MedusaContainer } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+import { MedusaContainer } from "@bentoco/framework/types"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
 
 /**
  * Data migration to backfill version field for existing order_shipping_method_adjustment records.
  * Sets adjustment versions based on the latest order_shipping version for their associated shipping method.
  */
 ```typescript
-import { MedusaContainer } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+import { MedusaContainer } from "@bentoco/framework/types"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
 
 export default async function backfillShippingAdjustmentVersions({
   container,
@@ -234,7 +234,7 @@ export default async function backfillShippingAdjustmentVersions({
 
 #### Automated Verification:
 
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/medusa build`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/medusa build`
 - [x] Data migration can be executed without errors
 
 #### Manual Verification:
@@ -272,7 +272,7 @@ import {
   InferEntityType,
   OrderChangeActionDTO,
   OrderDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 // Add new array declaration around line 36
 const lineItemAdjustmentsToCreate: CreateOrderLineItemAdjustmentDTO[] = []
@@ -342,8 +342,8 @@ Also update the destructuring where `applyChangesToOrder` is called to include `
 
 #### Automated Verification:
 
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/order build`
-- [x] Unit tests pass: `yarn workspace @medusajs/order test`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/order build`
+- [x] Unit tests pass: `yarn workspace @bentoco/order test`
 
 #### Manual Verification:
 
@@ -431,8 +431,8 @@ if (shippingMethodIds.length) {
 
 #### Automated Verification:
 
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/order build`
-- [x] Unit tests pass: `yarn workspace @medusajs/order test`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/order build`
+- [x] Unit tests pass: `yarn workspace @bentoco/order test`
 - [x] Integration tests pass: `yarn test:integration:modules -- --testPathPattern=order`
 
 #### Manual Verification:
@@ -505,7 +505,7 @@ export interface CreateOrderShippingMethodAdjustmentDTO {
 
 #### Automated Verification:
 
-- [ ] TypeScript compilation passes: `yarn workspace @medusajs/types build`
+- [ ] TypeScript compilation passes: `yarn workspace @bentoco/types build`
 - [ ] Dependent packages compile: `yarn build`
 
 #### Manual Verification:
@@ -638,7 +638,7 @@ export type ChangeActionType =
 **Changes**: Create handler mirroring `item-adjustments-replace.ts`
 
 ```typescript
-import { ChangeActionType, MedusaError } from "@medusajs/framework/utils"
+import { ChangeActionType, MedusaError } from "@bentoco/framework/utils"
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
 
@@ -715,14 +715,14 @@ import {
   OrderChangeDTO,
   OrderDTO,
   PromotionDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { ChangeActionType } from "@bentoco/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   getActionsToComputeFromPromotionsStep,
   prepareAdjustmentsFromPromotionActionsStep,
@@ -888,11 +888,11 @@ export const computeAdjustmentsForPreviewWorkflow = createWorkflow(
 
 #### Automated Verification:
 
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/utils build`
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/types build`
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/order build`
-- [x] TypeScript compilation passes: `yarn workspace @medusajs/core-flows build`
-- [x] Unit tests pass: `yarn workspace @medusajs/order test`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/utils build`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/types build`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/order build`
+- [x] TypeScript compilation passes: `yarn workspace @bentoco/core-flows build`
+- [x] Unit tests pass: `yarn workspace @bentoco/order test`
 - [x] Integration tests pass: `yarn test:integration:http -- --testPathPattern=order-edit`
 
 #### Manual Verification:

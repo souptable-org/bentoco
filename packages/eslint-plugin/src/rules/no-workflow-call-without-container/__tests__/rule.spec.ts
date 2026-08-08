@@ -18,7 +18,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Canonical use: invoke with container, chain .run.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         const myWorkflow = createWorkflow("my", () => new WorkflowResponse({}))
         async function handler(container: any) {
           await myWorkflow(container).run({ input: {} })
@@ -28,7 +28,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Invoking with container but not chaining .run — no longer flagged (container-only rule).
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         const myWorkflow = createWorkflow("my", () => new WorkflowResponse({}))
         async function handler(container: any) {
           const exec = myWorkflow(container)
@@ -38,7 +38,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // ReturnWorkflow-typed value invoked properly.
     {
       code: `
-        import type { ReturnWorkflow } from "@medusajs/framework/workflows-sdk"
+        import type { ReturnWorkflow } from "@bentoco/framework/workflows-sdk"
         declare const myWorkflow: ReturnWorkflow<any, any, []>
         async function handler(container: any) {
           await myWorkflow(container).run({ input: {} })
@@ -55,7 +55,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // The createWorkflow call itself is not a workflow invocation.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         const myWorkflow = createWorkflow("my", () => new WorkflowResponse({}))
       `,
     },
@@ -71,7 +71,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Workflow invoked with no container.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         const myWorkflow = createWorkflow("my", () => new WorkflowResponse({}))
         async function go() {
           await myWorkflow().run({ input: {} })
@@ -82,7 +82,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Calling .run directly on the workflow value bypasses container resolution.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         const helloWorldWorkflow = createWorkflow("hello", () => new WorkflowResponse({}))
         async function go() {
           await helloWorldWorkflow.run({ input: {} })
@@ -95,7 +95,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // ReturnWorkflow-typed: no container.
     {
       code: `
-        import type { ReturnWorkflow } from "@medusajs/framework/workflows-sdk"
+        import type { ReturnWorkflow } from "@bentoco/framework/workflows-sdk"
         declare const myWorkflow: ReturnWorkflow<any, any, []>
         async function go() {
           await myWorkflow().run({ input: {} })
@@ -106,7 +106,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // ReturnWorkflow-typed: .run accessed directly.
     {
       code: `
-        import type { ReturnWorkflow } from "@medusajs/framework/workflows-sdk"
+        import type { ReturnWorkflow } from "@bentoco/framework/workflows-sdk"
         declare const myWorkflow: ReturnWorkflow<any, any, []>
         async function go() {
           await myWorkflow.run({ input: {} })
@@ -117,7 +117,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Member-expression callee: namespace-style access, called with no container.
     {
       code: `
-        import type { ReturnWorkflow } from "@medusajs/framework/workflows-sdk"
+        import type { ReturnWorkflow } from "@bentoco/framework/workflows-sdk"
         declare const flows: { createCustomerWorkflow: ReturnWorkflow<any, any, []> }
         async function go() {
           await flows.createCustomerWorkflow().run({ input: {} })
@@ -133,7 +133,7 @@ ruleTester.run("no-workflow-call-without-container", rule, {
     // Member-expression .run on member-accessed workflow value.
     {
       code: `
-        import type { ReturnWorkflow } from "@medusajs/framework/workflows-sdk"
+        import type { ReturnWorkflow } from "@bentoco/framework/workflows-sdk"
         declare const flows: { createCustomerWorkflow: ReturnWorkflow<any, any, []> }
         async function go() {
           await flows.createCustomerWorkflow.run({ input: {} })

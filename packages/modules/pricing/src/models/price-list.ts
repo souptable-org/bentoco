@@ -2,7 +2,7 @@ import {
   model,
   PriceListStatus,
   PriceListType,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import Price from "./price"
 import PriceListRule from "./price-list-rule"
 

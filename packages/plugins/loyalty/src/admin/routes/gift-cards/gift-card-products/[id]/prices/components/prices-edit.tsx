@@ -1,9 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
-import { Button } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Button } from "@bentoco/ui"
 import { useMemo } from "react"
 import { useForm } from "react-hook-form"
-import * as zod from "@medusajs/framework/zod"
+import * as zod from "@bentoco/framework/zod"
 import { KeyboundForm } from "../../../../../../components/keybound-form"
 import {
   RouteFocusModal,

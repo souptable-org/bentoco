@@ -1,14 +1,14 @@
 import type {
   IInventoryService,
   InventoryTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   convertItemResponseToUpdateRequest,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@bentoco/framework/utils"
 
 /**
  * The data to update the inventory levels.

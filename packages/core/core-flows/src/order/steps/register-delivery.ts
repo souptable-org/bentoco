@@ -1,9 +1,9 @@
 import {
   IOrderModuleService,
   RegisterOrderDeliveryDTO,
-} from "@medusajs/framework/types"
-import { ModuleRegistrationName } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/types"
+import { ModuleRegistrationName } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 export const registerOrderDeliveryStepId = "register-order-delivery"
 /**

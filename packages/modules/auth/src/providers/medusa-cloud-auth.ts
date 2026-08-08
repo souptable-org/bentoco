@@ -3,11 +3,11 @@ import {
   AuthenticationResponse,
   AuthIdentityProviderService,
   Logger,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   AbstractAuthModuleProvider,
   MedusaError,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { MedusaCloudAuthProviderOptions } from "@types"
 import crypto from "crypto"
 import jwt, { type JwtHeader, type JwtPayload } from "jsonwebtoken"

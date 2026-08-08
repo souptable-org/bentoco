@@ -4,7 +4,7 @@ import {
   FindConfig,
   InferEntityType,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   createMedusaMikroOrmEventSubscriber,
   FreeTextSearchFilterKeyPrefix,
@@ -17,7 +17,7 @@ import {
   MedusaService,
   ModulesSdkUtils,
   registerInternalServiceEventSubscriber,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { EntityManager, EventType } from "@mikro-orm/core"
 import { ProductCategory } from "@models"
 import { ProductCategoryRepository } from "@repositories"

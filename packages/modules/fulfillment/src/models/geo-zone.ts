@@ -9,7 +9,7 @@ import {
   NullableModifier,
   PrimaryKeyModifier,
   TextProperty,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 import { ServiceZone } from "./service-zone"
 

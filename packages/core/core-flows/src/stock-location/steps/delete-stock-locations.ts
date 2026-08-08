@@ -1,6 +1,6 @@
-import { DeleteEntityInput } from "@medusajs/framework/modules-sdk"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { DeleteEntityInput } from "@bentoco/framework/modules-sdk"
+import { Modules } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The IDs of stock locations to delete.

@@ -3,11 +3,11 @@ import {
   OrderExchangeDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MedusaError,
   ReservationItemWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   WorkflowData,
   createStep,
@@ -15,7 +15,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../../common"
 import { deleteReservationsByLineItemsStep } from "../../../reservation/steps/delete-reservations-by-line-items"
 import { cancelOrderExchangeStep } from "../../steps"

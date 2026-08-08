@@ -3,7 +3,7 @@ import {
   EventMetadata,
   InterceptorSubscriber,
   InternalModuleDeclaration,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import { ulid } from "ulid"
 
 export abstract class AbstractEventBusModuleService

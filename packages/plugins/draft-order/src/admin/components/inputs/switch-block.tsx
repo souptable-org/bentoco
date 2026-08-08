@@ -1,4 +1,4 @@
-import { Switch } from "@medusajs/ui"
+import { Switch } from "@bentoco/ui"
 import type { Control, FieldValues, Path } from "react-hook-form"
 import { Form } from "../common/form"
 

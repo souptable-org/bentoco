@@ -8,7 +8,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // No try/catch in the constructor at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -17,7 +17,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch inside a nested createStep callback is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             try {
@@ -33,7 +33,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch inside a nested transform callback is fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             try {
@@ -49,7 +49,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch inside a createStep nested inside a when().then() callback is fine.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const step = createStep("s", () => {
@@ -80,7 +80,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch outside any workflow constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         function helper(x) {
           try {
             return x()
@@ -96,7 +96,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // Arrow constructor with direct try/catch.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           try {
             return doSomething(input)
@@ -110,7 +110,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // Function-expression constructor with direct try/catch.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           try {
             return input
@@ -124,7 +124,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // Aliased createWorkflow import binding.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           try {
             return input
@@ -138,7 +138,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch/finally is also flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           try {
             return input
@@ -154,7 +154,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // Multiple try statements — each flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           try { doA() } catch (e) {}
           try { doB() } catch (e) {}
@@ -168,7 +168,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // try/catch directly inside a when().then() callback is also flagged.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             try {
@@ -184,7 +184,7 @@ ruleTester.run("no-try-catch-in-workflow", rule, {
     // Aliased `when` import is tracked too.
     {
       code: `
-        import { createWorkflow, when as w } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when as w } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           w({ input }, (data) => data.input.foo).then(() => {
             try {

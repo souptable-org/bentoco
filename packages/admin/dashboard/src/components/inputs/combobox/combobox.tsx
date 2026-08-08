@@ -14,8 +14,8 @@ import {
   PlusMini,
   TrianglesMini,
   XMarkMini,
-} from "@medusajs/icons"
-import { Badge, clx, Text } from "@medusajs/ui"
+} from "@bentoco/icons"
+import { Badge, clx, Text } from "@bentoco/ui"
 import { matchSorter } from "match-sorter"
 import {
   ComponentPropsWithoutRef,

@@ -6,14 +6,14 @@ import {
   LoaderOptions,
   ModuleJoinerConfig,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   composeLinkName,
   composeTableName,
   simpleHash,
   toPascalCase,
-} from "@medusajs/framework/utils"
-import { asClass, asValue } from "@medusajs/framework/awilix"
+} from "@bentoco/framework/utils"
+import { asClass, asValue } from "@bentoco/framework/awilix"
 export function containerLoader(entity, joinerConfig: ModuleJoinerConfig) {
   return async (
     {

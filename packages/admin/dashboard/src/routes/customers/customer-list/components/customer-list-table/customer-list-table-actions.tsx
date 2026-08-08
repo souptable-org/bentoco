@@ -1,5 +1,5 @@
-import { PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { PencilSquare } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import { useTranslation } from "react-i18next"
 
 import {

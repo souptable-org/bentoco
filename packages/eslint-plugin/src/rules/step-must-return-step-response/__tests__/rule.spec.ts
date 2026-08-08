@@ -8,7 +8,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // No return at all.
     {
       code: `
-        import { createStep } from "@medusajs/framework/workflows-sdk"
+        import { createStep } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           const x = input
         })
@@ -17,7 +17,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Bare \`return;\` (no value) is fine.
     {
       code: `
-        import { createStep } from "@medusajs/framework/workflows-sdk"
+        import { createStep } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return
         })
@@ -26,7 +26,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // \`return undefined\` is fine.
     {
       code: `
-        import { createStep } from "@medusajs/framework/workflows-sdk"
+        import { createStep } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return undefined
         })
@@ -35,7 +35,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Returning a StepResponse is fine.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse({ ok: true })
         })
@@ -45,7 +45,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // bare return of a plain value is fine.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep(
           "s",
           (input) => new StepResponse({ ok: true }),
@@ -58,7 +58,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Aliased StepResponse import is tracked.
     {
       code: `
-        import { createStep, StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new SR({ ok: true })
         })
@@ -67,7 +67,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `StepResponse.skip()` is a valid step return.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return StepResponse.skip()
         })
@@ -76,7 +76,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `StepResponse.skip()` via an aliased import.
     {
       code: `
-        import { createStep, StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return SR.skip()
         })
@@ -85,7 +85,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `StepResponse.skip()` with a TS type assertion (`as any`) is still valid.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return StepResponse.skip() as any
         })
@@ -94,7 +94,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `StepResponse.permanentFailure()` is a valid step return.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return StepResponse.permanentFailure("failed")
         })
@@ -103,7 +103,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `StepResponse.permanentFailure()` via an aliased import.
     {
       code: `
-        import { createStep, StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return SR.permanentFailure("failed")
         })
@@ -112,7 +112,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // `new StepResponse(...)` with a TS type assertion is still valid.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse({ ok: true }) as any
         })
@@ -121,7 +121,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Return inside a nested function helper is irrelevant to this rule.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           function helper() {
             return { plain: "object" }
@@ -133,7 +133,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Returns in unrelated functions are not flagged.
     {
       code: `
-        import { createStep } from "@medusajs/framework/workflows-sdk"
+        import { createStep } from "@bentoco/framework/workflows-sdk"
         function helper() {
           return { plain: "object" }
         }
@@ -153,14 +153,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Returning a plain object — autofix wraps it.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return { ok: true }
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse({ ok: true })
         })
@@ -169,7 +169,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Returning an identifier — autofix wraps it.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           const value = input
           return value
@@ -177,7 +177,7 @@ ruleTester.run("step-must-return-step-response", rule, {
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           const value = input
           return new StepResponse(value)
@@ -187,14 +187,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Aliased StepResponse — autofix uses the alias.
     {
       code: `
-        import { createStep, StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return { ok: true }
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new SR({ ok: true })
         })
@@ -203,14 +203,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Function-expression callback.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", function (input) {
           return input
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", function (input) {
           return new StepResponse(input)
         })
@@ -219,14 +219,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Aliased createStep import.
     {
       code: `
-        import { createStep as cs, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep as cs, StepResponse } from "@bentoco/framework/workflows-sdk"
         cs("s", (input) => {
           return input
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep as cs, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep as cs, StepResponse } from "@bentoco/framework/workflows-sdk"
         cs("s", (input) => {
           return new StepResponse(input)
         })
@@ -235,7 +235,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Returning new <SomethingElse>(...) — not StepResponse.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         class Other {}
         createStep("s", (input) => {
           return new Other()
@@ -243,7 +243,7 @@ ruleTester.run("step-must-return-step-response", rule, {
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         class Other {}
         createStep("s", (input) => {
           return new StepResponse(new Other())
@@ -253,14 +253,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // A non-\`skip\` static call on StepResponse is not a valid return — wrapped.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return StepResponse.from(input)
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse(StepResponse.from(input))
         })
@@ -269,7 +269,7 @@ ruleTester.run("step-must-return-step-response", rule, {
     // Multiple returns — each is flagged and fixed.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           if (input) {
             return { early: true }
@@ -282,7 +282,7 @@ ruleTester.run("step-must-return-step-response", rule, {
         { messageId: "missingStepResponse" },
       ],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           if (input) {
             return new StepResponse({ early: true })
@@ -294,14 +294,14 @@ ruleTester.run("step-must-return-step-response", rule, {
     // StepResponse is not yet imported — autofix inserts it into the existing import.
     {
       code: `
-        import { createStep } from "@medusajs/framework/workflows-sdk"
+        import { createStep } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return input
         })
       `,
       errors: [{ messageId: "missingStepResponse" }],
       output: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse(input)
         })

@@ -1,6 +1,6 @@
-import { applyTranslations } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { ShippingOptionDTO } from "@medusajs/types"
+import { applyTranslations } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { ShippingOptionDTO } from "@bentoco/types"
 
 export const getTranslatedShippingOptionsStepId =
   "get-translated-shipping-options"

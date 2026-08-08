@@ -1,9 +1,9 @@
 import { z } from "zod"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
-import { Button, Heading, IconButton, Input, Label } from "@medusajs/ui"
+import { Button, Heading, IconButton, Input, Label } from "@bentoco/ui"
 
 import { CreateProductVariantSchema } from "./constants"
-import { XMarkMini } from "@medusajs/icons"
+import { XMarkMini } from "@bentoco/icons"
 import { useTranslation } from "react-i18next"
 
 import { useComboboxData } from "../../../../../hooks/use-combobox-data"

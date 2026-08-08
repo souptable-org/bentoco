@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-import { TriangleRightMini } from "@medusajs/icons";
-import { Text } from "@medusajs/ui";
+import { TriangleRightMini } from "@bentoco/icons";
+import { Text } from "@bentoco/ui";
 
 export interface SidebarLinkProps {
   to: string;

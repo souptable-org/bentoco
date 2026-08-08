@@ -16,7 +16,7 @@ vi.mock("react-i18next", () => ({
   }),
 }))
 
-vi.mock("@medusajs/icons", () => ({
+vi.mock("@bentoco/icons", () => ({
   TriangleDownMini: () => <svg data-testid="triangle-down-mini" />,
   XMarkMini: () => <svg data-testid="x-mark-mini" />,
 }))

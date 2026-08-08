@@ -1,5 +1,5 @@
-import { SidebarLeft, TriangleRightMini, XMark } from "@medusajs/icons"
-import { IconButton, clx } from "@medusajs/ui"
+import { SidebarLeft, TriangleRightMini, XMark } from "@bentoco/icons"
+import { IconButton, clx } from "@bentoco/ui"
 import { AnimatePresence } from "motion/react"
 import { Dialog as RadixDialog } from "radix-ui"
 import { PropsWithChildren, ReactNode, useEffect, useState } from "react"
@@ -27,7 +27,7 @@ import {
   CUSTOMIZE_IDS,
   LAYOUT_CONTROLS_LOCATION,
 } from "../../layout-composer/constants"
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 
 export const Shell = ({ children }: PropsWithChildren) => {
   const globalShortcuts = useGlobalShortcuts()

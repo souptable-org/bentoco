@@ -2,7 +2,7 @@ import {
   IAnalyticsProvider,
   ProviderIdentifyAnalyticsEventDTO,
   ProviderTrackAnalyticsEventDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 /**
  * ### constructor
@@ -15,8 +15,8 @@ import {
  * #### Example
  *
  * ```ts
- * import { Logger } from "@medusajs/framework/types"
- * import { AbstractAnalyticsProviderService } from "@medusajs/framework/utils"
+ * import { Logger } from "@bentoco/framework/types"
+ * import { AbstractAnalyticsProviderService } from "@bentoco/framework/utils"
  *
  * type InjectedDependencies = {
  *   logger: Logger

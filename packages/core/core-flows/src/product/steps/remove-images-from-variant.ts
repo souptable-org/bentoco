@@ -1,6 +1,6 @@
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { IProductModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { IProductModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 
 export const removeImagesFromVariantStepId = "remove-images-from-variant"
 

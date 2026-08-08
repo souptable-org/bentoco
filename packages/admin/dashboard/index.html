@@ -5,9 +5,107 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medusa Admin</title>
+    <!-- Bentoco type: Stack Sans Text (body/UI) + Headline + Permanent Marker -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Text:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      Apply theme before first paint to avoid a white flash (esp. dark mode).
+      Must stay inline and blocking — no async/defer.
+    -->
+    <script>
+      (function () {
+        try {
+          var key = "medusa_admin_theme"
+          var stored = localStorage.getItem(key)
+          var dark =
+            stored === "dark" ||
+            ((stored === "system" || !stored) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          var theme = dark ? "dark" : "light"
+          var root = document.documentElement
+          root.classList.remove("light", "dark")
+          root.classList.add(theme)
+          root.style.colorScheme = theme
+          root.dataset.theme = theme
+        } catch (e) {
+          document.documentElement.classList.add("dark")
+          document.documentElement.style.colorScheme = "dark"
+          document.documentElement.dataset.theme = "dark"
+        }
+      })()
+    </script>
+    <style>
+      /* Pre-CSS paint: match Medusa subtle surfaces so refresh is not pure white */
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background-color: #f4f4f5;
+        color: #18181b;
+      }
+      html.dark,
+      html.dark body {
+        background-color: #18181b;
+        color: #fafafa;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      #app-boot {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #f4f4f5;
+        color: #71717a;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-size: 0.875rem;
+      }
+      html.dark #app-boot {
+        background-color: #18181b;
+        color: #a1a1aa;
+      }
+      #app-boot[hidden] {
+        display: none !important;
+      }
+      #app-boot-spinner {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 9999px;
+        border: 2px solid currentColor;
+        border-top-color: transparent;
+        opacity: 0.55;
+        animation: app-boot-spin 0.7s linear infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #app-boot-spinner {
+          animation: none;
+          border-top-color: currentColor;
+          opacity: 0.35;
+        }
+      }
+      @keyframes app-boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="app-boot" role="status" aria-live="polite" aria-busy="true">
+        <div id="app-boot-spinner" aria-hidden="true"></div>
+        <span>Loading…</span>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

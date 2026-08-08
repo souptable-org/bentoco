@@ -1,5 +1,5 @@
-import { generatePostgresAlterColummnIfExistStatement } from "@medusajs/framework/utils"
-import { Migration } from "@medusajs/framework/mikro-orm/migrations"
+import { generatePostgresAlterColummnIfExistStatement } from "@bentoco/framework/utils"
+import { Migration } from "@bentoco/framework/mikro-orm/migrations"
 
 export class Migration20240225134525 extends Migration {
   async up(): Promise<void> {

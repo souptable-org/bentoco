@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading } from "@bentoco/ui"
 
 import { formatProvider } from "../../../../lib/format-provider"
 

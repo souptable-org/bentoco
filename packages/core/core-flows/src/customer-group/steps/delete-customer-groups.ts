@@ -1,6 +1,6 @@
-import type { ICustomerModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import type { ICustomerModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The IDs of the customer groups to delete.

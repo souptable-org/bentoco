@@ -3,7 +3,7 @@ import {
   FeatureFlag,
   isFileDisabled,
   parseCorsOrigins,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import cors, { CorsOptions } from "cors"
 import type {
   ErrorRequestHandler,
@@ -24,7 +24,7 @@ import type {
   RouteHandler,
 } from "./types"
 
-import { Logger, MedusaContainer } from "@medusajs/types"
+import { Logger, MedusaContainer } from "@bentoco/types"
 import { join } from "path"
 import { configManager } from "../config"
 import { MiddlewareFileLoader } from "./middleware-file-loader"

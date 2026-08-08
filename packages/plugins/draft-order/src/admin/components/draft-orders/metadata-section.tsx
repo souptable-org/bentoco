@@ -1,6 +1,6 @@
-import { ArrowUpRightOnBox } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Badge, Container, Heading, IconButton } from "@medusajs/ui"
+import { ArrowUpRightOnBox } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Badge, Container, Heading, IconButton } from "@bentoco/ui"
 import { Link } from "react-router-dom"
 
 interface MetadataSectionProps {

@@ -9,7 +9,7 @@ For example, create the file `src/jobs/hello-world.ts` with the following conten
 ```ts
 import {
   MedusaContainer
-} from "@medusajs/framework/types";
+} from "@bentoco/framework/types";
 
 export default async function myCustomJob(container: MedusaContainer) {
   const productService = container.resolve("product")

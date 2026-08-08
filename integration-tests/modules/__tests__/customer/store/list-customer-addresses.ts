@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ICustomerModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { ICustomerModuleService } from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 import {
   generatePublishableKey,
   generateStoreHeaders,

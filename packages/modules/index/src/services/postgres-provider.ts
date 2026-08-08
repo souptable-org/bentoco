@@ -6,7 +6,7 @@ import {
   QueryGraphFunction,
   RemoteQueryFunction,
   Subscriber,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MikroOrmBaseRepository as BaseRepository,
   CommonEvents,
@@ -19,12 +19,12 @@ import {
   Modules,
   toMikroORMEntity,
   unflattenObjectKeys,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   EntityManager,
   EntityRepository,
   SqlEntityManager,
-} from "@medusajs/framework/mikro-orm/postgresql"
+} from "@bentoco/framework/mikro-orm/postgresql"
 import { IndexData, IndexRelation } from "@models"
 import { createPartitions, QueryBuilder } from "../utils"
 import { flattenObjectKeys } from "../utils/flatten-object-keys"

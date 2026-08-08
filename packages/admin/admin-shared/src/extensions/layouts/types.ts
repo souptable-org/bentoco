@@ -14,9 +14,9 @@ export type LayoutSection = {
  * ## Augmenting from a plugin
  * ```ts
  * // my-plugin/index.d.ts
- * import "@medusajs/admin-shared"
+ * import "@bentoco/admin-shared"
  *
- * declare module "@medusajs/admin-shared" {
+ * declare module "@bentoco/admin-shared" {
  *   interface LayoutSectionRegistry {
  *     "my-plugin:three-column": "main" | "left" | "right"
  *     "my-plugin:hero": "hero" | "body"

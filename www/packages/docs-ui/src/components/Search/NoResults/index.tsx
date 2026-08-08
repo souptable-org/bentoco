@@ -1,4 +1,4 @@
-import { MagnifierAlert } from "@medusajs/icons"
+import { MagnifierAlert } from "@bentoco/icons"
 import clsx from "clsx"
 import React from "react"
 

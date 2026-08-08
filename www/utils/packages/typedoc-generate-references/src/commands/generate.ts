@@ -21,14 +21,14 @@ export default async function generate(
 
   try {
     if (references.includes("core-flows")) {
-      await import("@medusajs/core-flows")
+      await import("@bentoco/core-flows")
       // @ts-ignore - loyalty-plugin may not be built in CI
-      await import("@medusajs/loyalty-plugin/workflows")
+      await import("@bentoco/loyalty-plugin/workflows")
     }
   } catch (e) {
     console.warn(
       chalk.bgYellow("Warning: ") +
-        "Couldn't load @medusajs/core-flows or @medusajs/loyalty-plugin. Make sure to have them installed if you want to generate references for core flows or loyalty workflows."
+        "Couldn't load @bentoco/core-flows or @bentoco/loyalty-plugin. Make sure to have them installed if you want to generate references for core flows or loyalty workflows."
     )
   }
 

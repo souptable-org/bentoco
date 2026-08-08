@@ -1,13 +1,13 @@
 import {
   IPricingModuleService,
   PricingWorkflow,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MedusaError,
   Modules,
   arrayDifference,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The price preferences to update.

@@ -1,5 +1,5 @@
-import { RemoteJoinerQuery } from "@medusajs/types"
-import { deduplicate, isDefined } from "@medusajs/utils"
+import { RemoteJoinerQuery } from "@bentoco/types"
+import { deduplicate, isDefined } from "@bentoco/utils"
 import { GraphCatalog } from "./catalog"
 import {
   consumeResiduals,

@@ -18,7 +18,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Plain object — fine.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse({ ok: true })
         })
@@ -27,7 +27,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Array of primitives — fine.
     {
       code: `
-        import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
         createStep("s", (input) => {
           return new StepResponse([1, 2, 3])
         })
@@ -36,7 +36,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // WorkflowResponse with a plain object.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("w", () => {
           return new WorkflowResponse({ ok: true })
         })
@@ -45,7 +45,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // \`new Map\` outside of a response — fine.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const m = new Map()
         const size = m.size
         const r = new StepResponse({ size })
@@ -61,14 +61,14 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Buffer is intentionally not flagged.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse({ data: Buffer.from("hi") })
       `,
     },
     // Primitive return is fine.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse("hello")
       `,
     },
@@ -77,7 +77,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // \`new Map\` directly as a StepResponse argument.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse(new Map())
       `,
       errors: [
@@ -90,7 +90,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // \`new Set\` nested inside an object property literal.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse({ items: new Set([1, 2, 3]) })
       `,
       errors: [
@@ -103,7 +103,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // \`new WeakMap\` inside an array literal.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse([new WeakMap()])
       `,
       errors: [
@@ -116,7 +116,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // \`new WeakSet\` deeply nested in an object.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const r = new StepResponse({ a: { b: { c: new WeakSet() } } })
       `,
       errors: [
@@ -129,7 +129,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Aliased StepResponse import is still tracked.
     {
       code: `
-        import { StepResponse as SR } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse as SR } from "@bentoco/framework/workflows-sdk"
         const r = new SR({ items: new Map() })
       `,
       errors: [
@@ -142,7 +142,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // WorkflowResponse with a non-serializable value.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("w", () => {
           return new WorkflowResponse({ items: new Set<number>() })
         })
@@ -157,7 +157,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Type-aware: identifier whose type is `Map`.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const m = new Map<string, number>()
         const r = new StepResponse(m)
       `,
@@ -171,7 +171,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Type-aware: identifier whose type is an object with a Set property.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         const data: { items: Set<number> } = { items: new Set<number>() }
         const r = new StepResponse(data)
       `,
@@ -185,7 +185,7 @@ ruleTester.run("no-non-serializable-step-return", rule, {
     // Type-aware: function call whose return type is a Map.
     {
       code: `
-        import { StepResponse } from "@medusajs/framework/workflows-sdk"
+        import { StepResponse } from "@bentoco/framework/workflows-sdk"
         function build(): Map<string, number> { return new Map() }
         const r = new StepResponse(build())
       `,

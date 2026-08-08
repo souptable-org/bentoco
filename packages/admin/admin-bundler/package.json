@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/admin-bundler",
+  "name": "@bentoco/admin-bundler",
   "version": "2.18.0",
   "description": "Bundler for the Medusa admin dashboard.",
   "author": "Kasper Kristensen <kasper@medusajs.com>",
@@ -21,12 +21,12 @@
     "package.json"
   ],
   "devDependencies": {
-    "@medusajs/types": "2.18.0"
+    "@bentoco/types": "2.18.0"
   },
   "dependencies": {
-    "@medusajs/admin-shared": "2.18.0",
-    "@medusajs/admin-vite-plugin": "2.18.0",
-    "@medusajs/dashboard": "2.18.0",
+    "@bentoco/admin-shared": "2.18.0",
+    "@bentoco/admin-vite-plugin": "2.18.0",
+    "@bentoco/dashboard": "2.18.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "compression": "^1.8.0",

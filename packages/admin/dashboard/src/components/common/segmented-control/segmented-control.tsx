@@ -1,4 +1,4 @@
-import { Button, clx } from "@medusajs/ui"
+import { Button, clx } from "@bentoco/ui"
 import { ReactNode } from "react"
 
 export type SegmentedControlOption = {

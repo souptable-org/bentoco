@@ -34,8 +34,8 @@ import {
   UpdatePaymentInput,
   UpdatePaymentOutput,
   WebhookActionResult,
-} from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { ModulesSdkUtils } from "@bentoco/framework/utils"
 import { PaymentProvider } from "@models"
 
 type InjectedDependencies = {

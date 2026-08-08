@@ -1,6 +1,6 @@
-import { ChartPie, PencilSquare } from "@medusajs/icons"
-import { AdminCampaign } from "@medusajs/types"
-import { Container, Heading, Text } from "@medusajs/ui"
+import { ChartPie, PencilSquare } from "@bentoco/icons"
+import { AdminCampaign } from "@bentoco/types"
+import { Container, Heading, Text } from "@bentoco/ui"
 import { Trans, useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 

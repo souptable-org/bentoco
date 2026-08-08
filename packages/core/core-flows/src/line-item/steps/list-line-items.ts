@@ -3,9 +3,9 @@ import {
   FilterableLineItemProps,
   FindConfig,
   ICartModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to list line items.

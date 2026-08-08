@@ -1,0 +1,8 @@
+{
+  "name": "Aura Premium Ecommerce",
+  "description": "A premium frontend-only ecommerce experience tailored for the Indian market, featuring UPI, COD, Pincode availability, and a luxury design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

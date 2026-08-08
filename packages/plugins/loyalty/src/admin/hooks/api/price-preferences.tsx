@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk";
-import { HttpTypes } from "@medusajs/types";
+import { FetchError } from "@bentoco/js-sdk";
+import { HttpTypes } from "@bentoco/types";
 import { QueryKey, UseQueryOptions, useQuery } from "@tanstack/react-query";
 import { queryKeysFactory } from "../../lib/query-key";
 import { sdk } from "../../lib/sdk";

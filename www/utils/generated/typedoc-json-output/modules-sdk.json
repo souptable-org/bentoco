@@ -72,7 +72,7 @@
 									"qualifiedName": "ModuleDefinition"
 								},
 								"name": "ModuleDefinition",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -105,7 +105,7 @@
 						"qualifiedName": "ModuleDefinition"
 					},
 					"name": "ModuleDefinition",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			},
 			"defaultValue": "..."
@@ -230,7 +230,7 @@
 				"type": "reference",
 				"target": 47197,
 				"name": "DeleteEntityInput",
-				"package": "@medusajs/modules-sdk"
+				"package": "@bentoco/modules-sdk"
 			}
 		},
 		{
@@ -331,7 +331,7 @@
 																"qualifiedName": "ModuleJoinerConfig"
 															},
 															"name": "ModuleJoinerConfig",
-															"package": "@medusajs/types"
+															"package": "@bentoco/types"
 														}
 													},
 													{
@@ -354,7 +354,7 @@
 																"qualifiedName": "ModuleDefinition"
 															},
 															"name": "ModuleDefinition",
-															"package": "@medusajs/types"
+															"package": "@bentoco/types"
 														}
 													}
 												],
@@ -383,7 +383,7 @@
 								"type": "reference",
 								"target": 47202,
 								"name": "Link",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						}
 					]
@@ -455,7 +455,7 @@
 															"qualifiedName": "ModuleJoinerConfig"
 														},
 														"name": "ModuleJoinerConfig",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												},
 												{
@@ -478,7 +478,7 @@
 															"qualifiedName": "ModuleDefinition"
 														},
 														"name": "ModuleDefinition",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												}
 											],
@@ -598,7 +598,7 @@
 											"qualifiedName": "LoadedLinkModule"
 										},
 										"name": "LoadedLinkModule",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									}
 								]
 							}
@@ -665,7 +665,7 @@
 														"qualifiedName": "RemoteRelationship"
 													},
 													"name": "RemoteRelationship",
-													"package": "@medusajs/modules-sdk"
+													"package": "@bentoco/modules-sdk"
 												}
 											}
 										],
@@ -725,7 +725,7 @@
 													"qualifiedName": "LinkDefinition"
 												},
 												"name": "LinkDefinition",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -736,7 +736,7 @@
 														"qualifiedName": "LinkDefinition"
 													},
 													"name": "LinkDefinition",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -755,7 +755,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									"defaultValue": "{}"
 								}
@@ -827,7 +827,7 @@
 													"qualifiedName": "LinkDefinition"
 												},
 												"name": "LinkDefinition",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -838,7 +838,7 @@
 														"qualifiedName": "LinkDefinition"
 													},
 													"name": "LinkDefinition",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -857,7 +857,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									"defaultValue": "{}"
 								}
@@ -923,7 +923,7 @@
 										"type": "reference",
 										"target": 47197,
 										"name": "DeleteEntityInput",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									}
 								},
 								{
@@ -939,7 +939,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									"defaultValue": "{}"
 								}
@@ -970,7 +970,7 @@
 																"qualifiedName": "CascadeError"
 															},
 															"name": "CascadeError",
-															"package": "@medusajs/modules-sdk"
+															"package": "@bentoco/modules-sdk"
 														}
 													}
 												]
@@ -982,7 +982,7 @@
 													"qualifiedName": "RemovedIds"
 												},
 												"name": "RemovedIds",
-												"package": "@medusajs/modules-sdk"
+												"package": "@bentoco/modules-sdk"
 											}
 										]
 									}
@@ -1033,7 +1033,7 @@
 										"type": "reference",
 										"target": 47197,
 										"name": "DeleteEntityInput",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									}
 								},
 								{
@@ -1049,7 +1049,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									"defaultValue": "{}"
 								}
@@ -1080,7 +1080,7 @@
 																"qualifiedName": "CascadeError"
 															},
 															"name": "CascadeError",
-															"package": "@medusajs/modules-sdk"
+															"package": "@bentoco/modules-sdk"
 														}
 													}
 												]
@@ -1092,7 +1092,7 @@
 													"qualifiedName": "RemovedIds"
 												},
 												"name": "RemovedIds",
-												"package": "@medusajs/modules-sdk"
+												"package": "@bentoco/modules-sdk"
 											}
 										]
 									}
@@ -1149,7 +1149,7 @@
 													"qualifiedName": "LinkDefinition"
 												},
 												"name": "LinkDefinition",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -1160,7 +1160,7 @@
 														"qualifiedName": "LinkDefinition"
 													},
 													"name": "LinkDefinition",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -1237,7 +1237,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									"defaultValue": "{}"
 								}
@@ -1265,7 +1265,7 @@
 														"qualifiedName": "LinkDefinition"
 													},
 													"name": "LinkDefinition",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -1380,7 +1380,7 @@
 													"qualifiedName": "MedusaContainer"
 												},
 												"name": "MedusaContainer",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -1415,7 +1415,7 @@
 															"qualifiedName": "ModuleResolution"
 														},
 														"name": "ModuleResolution",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												],
 												"name": "Record",
@@ -1443,7 +1443,7 @@
 													"qualifiedName": "Logger"
 												},
 												"name": "Logger",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -1619,7 +1619,7 @@
 													"qualifiedName": "MedusaContainer"
 												},
 												"name": "MedusaContainer",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -1645,7 +1645,7 @@
 														"qualifiedName": "ModuleProvider"
 													},
 													"name": "ModuleProvider",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										},
@@ -1721,7 +1721,7 @@
 																			"qualifiedName": "MedusaContainer"
 																		},
 																		"name": "MedusaContainer",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	}
 																},
 																{
@@ -1840,7 +1840,7 @@
 									"qualifiedName": "MedusaContainer"
 								},
 								"name": "MedusaContainer",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -1856,7 +1856,7 @@
 									"qualifiedName": "ModuleProvider"
 								},
 								"name": "ModuleProvider",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -2092,7 +2092,7 @@
 																			"qualifiedName": "InternalModuleDeclaration"
 																		},
 																		"name": "InternalModuleDeclaration",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	},
 																	{
 																		"type": "reference",
@@ -2101,7 +2101,7 @@
 																			"qualifiedName": "ExternalModuleDeclaration"
 																		},
 																		"name": "ExternalModuleDeclaration",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	}
 																]
 															}
@@ -2135,7 +2135,7 @@
 													"qualifiedName": "ModuleExports"
 												},
 												"name": "ModuleExports",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -2161,7 +2161,7 @@
 													"qualifiedName": "ModuleDefinition"
 												},
 												"name": "ModuleDefinition",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -2228,7 +2228,7 @@
 									"qualifiedName": "ModuleResolution"
 								},
 								"name": "ModuleResolution",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "Record",
@@ -2280,7 +2280,7 @@
 									"qualifiedName": "ModuleDefinition"
 								},
 								"name": "ModuleDefinition",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -2303,7 +2303,7 @@
 											"qualifiedName": "InternalModuleDeclaration"
 										},
 										"name": "InternalModuleDeclaration",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Partial",
@@ -2325,7 +2325,7 @@
 									"qualifiedName": "ModuleExports"
 								},
 								"name": "ModuleExports",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -2359,7 +2359,7 @@
 									"qualifiedName": "ModuleResolution"
 								},
 								"name": "ModuleResolution",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "Record",
@@ -2754,7 +2754,7 @@
 									"qualifiedName": "ILinkMigrationsPlanner"
 								},
 								"name": "ILinkMigrationsPlanner",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -2847,7 +2847,7 @@
 															"qualifiedName": "InternalModuleDeclaration"
 														},
 														"name": "InternalModuleDeclaration",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													},
 													{
 														"type": "reference",
@@ -2856,7 +2856,7 @@
 															"qualifiedName": "ExternalModuleDeclaration"
 														},
 														"name": "ExternalModuleDeclaration",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												]
 											}
@@ -2926,7 +2926,7 @@
 												"qualifiedName": "ModuleServiceInitializeOptions"
 											},
 											"name": "ModuleServiceInitializeOptions",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									},
 									{
@@ -3087,7 +3087,7 @@
 												"type": "reference",
 												"target": 47366,
 												"name": "MedusaModuleConfig",
-												"package": "@medusajs/modules-sdk"
+												"package": "@bentoco/modules-sdk"
 											}
 										},
 										{
@@ -3111,7 +3111,7 @@
 													"qualifiedName": "MedusaContainer"
 												},
 												"name": "MedusaContainer",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -3134,7 +3134,7 @@
 												"type": "reference",
 												"target": 47370,
 												"name": "SharedResources",
-												"package": "@medusajs/modules-sdk"
+												"package": "@bentoco/modules-sdk"
 											}
 										},
 										{
@@ -3359,7 +3359,7 @@
 													"qualifiedName": "LoadedModule"
 												},
 												"name": "LoadedModule",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -3370,7 +3370,7 @@
 														"qualifiedName": "LoadedModule"
 													},
 													"name": "LoadedModule",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -3401,7 +3401,7 @@
 										"type": "reference",
 										"target": 47202,
 										"name": "Link",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									},
 									{
 										"type": "intrinsic",
@@ -3431,7 +3431,7 @@
 									"qualifiedName": "RemoteQueryFunction"
 								},
 								"name": "RemoteQueryFunction",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -3566,7 +3566,7 @@
 								"type": "reference",
 								"target": 47349,
 								"name": "RunMigrationFn",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -3587,7 +3587,7 @@
 								"type": "reference",
 								"target": 47355,
 								"name": "RevertMigrationFn",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -3608,7 +3608,7 @@
 								"type": "reference",
 								"target": 47359,
 								"name": "GenerateMigrations",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -3629,7 +3629,7 @@
 								"type": "reference",
 								"target": 47363,
 								"name": "GetLinkExecutionPlanner",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -3826,7 +3826,7 @@
 									"qualifiedName": "MedusaContainer"
 								},
 								"name": "MedusaContainer",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					],
@@ -3942,7 +3942,7 @@
 									"qualifiedName": "MedusaContainer"
 								},
 								"name": "MedusaContainer",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -3965,7 +3965,7 @@
 								"type": "reference",
 								"target": 47370,
 								"name": "SharedResources",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -3993,7 +3993,7 @@
 										"qualifiedName": "LoadedModule"
 									},
 									"name": "LoadedModule",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						},
@@ -4059,7 +4059,7 @@
 								"type": "reference",
 								"target": 47366,
 								"name": "MedusaModuleConfig",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						},
 						{
@@ -4085,7 +4085,7 @@
 										"type": "reference",
 										"target": 47445,
 										"name": "RegisterModuleJoinerConfig",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									},
 									{
 										"type": "array",
@@ -4093,7 +4093,7 @@
 											"type": "reference",
 											"target": 47445,
 											"name": "RegisterModuleJoinerConfig",
-											"package": "@medusajs/modules-sdk"
+											"package": "@bentoco/modules-sdk"
 										}
 									}
 								]
@@ -4349,7 +4349,7 @@
 								"type": "reference",
 								"target": 47397,
 								"name": "MedusaAppOptions",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							},
 							"defaultValue": "{}"
 						}
@@ -4365,7 +4365,7 @@
 								"type": "reference",
 								"target": 47375,
 								"name": "MedusaAppOutput",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						],
 						"name": "Promise",
@@ -4417,7 +4417,7 @@
 										"type": "reference",
 										"target": 47397,
 										"name": "MedusaAppOptions",
-										"package": "@medusajs/modules-sdk"
+										"package": "@bentoco/modules-sdk"
 									},
 									{
 										"type": "reflection",
@@ -4545,7 +4545,7 @@
 								"type": "reference",
 								"target": 47397,
 								"name": "MedusaAppOptions",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							},
 							"defaultValue": "{}"
 						}
@@ -4622,7 +4622,7 @@
 								"type": "reference",
 								"target": 47397,
 								"name": "MedusaAppOptions",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							},
 							"defaultValue": "{}"
 						}
@@ -4685,7 +4685,7 @@
 								"type": "reference",
 								"target": 47397,
 								"name": "MedusaAppOptions",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							},
 							"defaultValue": "{}"
 						}
@@ -4704,7 +4704,7 @@
 									"qualifiedName": "ILinkMigrationsPlanner"
 								},
 								"name": "ILinkMigrationsPlanner",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "Promise",
@@ -4797,7 +4797,7 @@
 									"qualifiedName": "MedusaContainer"
 								},
 								"name": "MedusaContainer",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -4859,7 +4859,7 @@
 									"qualifiedName": "ModuleExports"
 								},
 								"name": "ModuleExports",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -4992,7 +4992,7 @@
 									"qualifiedName": "ModuleBootstrapDeclaration"
 								},
 								"name": "ModuleBootstrapDeclaration",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5018,7 +5018,7 @@
 									"qualifiedName": "ModuleExports"
 								},
 								"name": "ModuleExports",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5044,7 +5044,7 @@
 									"qualifiedName": "MedusaContainer"
 								},
 								"name": "MedusaContainer",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5070,7 +5070,7 @@
 									"qualifiedName": "ModuleDefinition"
 								},
 								"name": "ModuleDefinition",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5296,7 +5296,7 @@
 									"qualifiedName": "LinkModuleDefinition"
 								},
 								"name": "LinkModuleDefinition",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5322,7 +5322,7 @@
 									"qualifiedName": "InternalModuleDeclaration"
 								},
 								"name": "InternalModuleDeclaration",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5348,7 +5348,7 @@
 									"qualifiedName": "ModuleExports"
 								},
 								"name": "ModuleExports",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5500,7 +5500,7 @@
 							"qualifiedName": "ModuleJoinerConfig"
 						},
 						"name": "ModuleJoinerConfig",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -5541,7 +5541,7 @@
 														"qualifiedName": "ModuleJoinerConfig"
 													},
 													"name": "ModuleJoinerConfig",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										}
@@ -5553,7 +5553,7 @@
 											"qualifiedName": "ModuleJoinerConfig"
 										},
 										"name": "ModuleJoinerConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							]
@@ -5587,7 +5587,7 @@
 						"qualifiedName": "MedusaModule"
 					},
 					"name": "MedusaModule",
-					"package": "@medusajs/modules-sdk",
+					"package": "@bentoco/modules-sdk",
 					"preferValues": true
 				}
 			},
@@ -5736,7 +5736,7 @@
 													"qualifiedName": "ModuleJoinerConfig"
 												},
 												"name": "ModuleJoinerConfig",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -5759,7 +5759,7 @@
 													"qualifiedName": "ModuleDefinition"
 												},
 												"name": "ModuleDefinition",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										}
 									],
@@ -5792,7 +5792,7 @@
 								"qualifiedName": "LinkDefinition"
 							},
 							"name": "LinkDefinition",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				}
@@ -5849,7 +5849,7 @@
 									"qualifiedName": "LinkingErrorMessageInput"
 								},
 								"name": "LinkingErrorMessageInput",
-								"package": "@medusajs/modules-sdk"
+								"package": "@bentoco/modules-sdk"
 							}
 						}
 					],
@@ -5968,7 +5968,7 @@
 												"qualifiedName": "ModuleJoinerConfig"
 											},
 											"name": "ModuleJoinerConfig",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -5985,7 +5985,7 @@
 											"qualifiedName": "IRemoteDataFetcher"
 										},
 										"name": "IRemoteDataFetcher",
-										"package": "@medusajs/query"
+										"package": "@bentoco/query"
 									}
 								},
 								{
@@ -6047,7 +6047,7 @@
 															"qualifiedName": "RelationMap"
 														},
 														"name": "RelationMap",
-														"package": "@medusajs/query"
+														"package": "@bentoco/query"
 													}
 												}
 											],
@@ -6075,7 +6075,7 @@
 								"type": "reference",
 								"target": 47182,
 								"name": "RemoteJoiner",
-								"package": "@medusajs/query"
+								"package": "@bentoco/query"
 							}
 						}
 					]
@@ -6121,7 +6121,7 @@
 											"qualifiedName": "RemoteJoinerQuery"
 										},
 										"name": "RemoteJoinerQuery",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -6139,7 +6139,7 @@
 											"qualifiedName": "RemoteJoinerOptions"
 										},
 										"name": "RemoteJoinerOptions",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -6289,7 +6289,7 @@
 							"qualifiedName": "MedusaContainer"
 						},
 						"name": "MedusaContainer",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -6669,7 +6669,7 @@
 																			"qualifiedName": "QueryContextType"
 																		},
 																		"name": "QueryContextType",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	}
 																},
 																{
@@ -7055,7 +7055,7 @@
 																			}
 																		],
 																		"name": "RemoteQueryFilters",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	}
 																},
 																{
@@ -7088,7 +7088,7 @@
 																			"qualifiedName": "QueryContextType"
 																		},
 																		"name": "QueryContextType",
-																		"package": "@medusajs/types"
+																		"package": "@bentoco/types"
 																	}
 																},
 																{
@@ -7333,7 +7333,7 @@
 															"qualifiedName": "RemoteJoinerQuery"
 														},
 														"name": "RemoteJoinerQuery",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													},
 													{
 														"type": "reference",
@@ -7348,7 +7348,7 @@
 															}
 														],
 														"name": "RemoteQueryObjectConfig",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													},
 													{
 														"type": "reference",
@@ -7363,7 +7363,7 @@
 															}
 														],
 														"name": "RemoteQueryObjectFromStringResult",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												]
 											}
@@ -7815,7 +7815,7 @@
 																													"qualifiedName": "QueryContextType"
 																												},
 																												"name": "QueryContextType",
-																												"package": "@medusajs/types"
+																												"package": "@bentoco/types"
 																											}
 																										},
 																										{
@@ -8201,7 +8201,7 @@
 																													}
 																												],
 																												"name": "RemoteQueryFilters",
-																												"package": "@medusajs/types"
+																												"package": "@bentoco/types"
 																											}
 																										},
 																										{
@@ -8234,7 +8234,7 @@
 																													"qualifiedName": "QueryContextType"
 																												},
 																												"name": "QueryContextType",
-																												"package": "@medusajs/types"
+																												"package": "@bentoco/types"
 																											}
 																										},
 																										{
@@ -8514,7 +8514,7 @@
 																									"qualifiedName": "RemoteJoinerQuery"
 																								},
 																								"name": "RemoteJoinerQuery",
-																								"package": "@medusajs/types"
+																								"package": "@bentoco/types"
 																							},
 																							{
 																								"type": "reference",
@@ -8529,7 +8529,7 @@
 																									}
 																								],
 																								"name": "RemoteQueryObjectConfig",
-																								"package": "@medusajs/types"
+																								"package": "@bentoco/types"
 																							},
 																							{
 																								"type": "reference",
@@ -8544,7 +8544,7 @@
 																									}
 																								],
 																								"name": "RemoteQueryObjectFromStringResult",
-																								"package": "@medusajs/types"
+																								"package": "@bentoco/types"
 																							}
 																						]
 																					}
@@ -8919,7 +8919,7 @@
 														"type": "reference",
 														"target": 47182,
 														"name": "RemoteJoiner",
-														"package": "@medusajs/query"
+														"package": "@bentoco/query"
 													}
 												},
 												{
@@ -8944,7 +8944,7 @@
 																"qualifiedName": "ModuleJoinerConfig"
 															},
 															"name": "ModuleJoinerConfig",
-															"package": "@medusajs/types"
+															"package": "@bentoco/types"
 														}
 													}
 												},
@@ -8968,7 +8968,7 @@
 															"qualifiedName": "IIndexService"
 														},
 														"name": "IIndexService",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												},
 												{
@@ -8991,7 +8991,7 @@
 															"qualifiedName": "MedusaContainer"
 														},
 														"name": "MedusaContainer",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												}
 											],
@@ -9021,7 +9021,7 @@
 								"type": "reference",
 								"target": 47461,
 								"name": "Query",
-								"package": "@medusajs/query"
+								"package": "@bentoco/query"
 							}
 						}
 					]
@@ -9070,7 +9070,7 @@
 													"qualifiedName": "RemoteJoinerQuery"
 												},
 												"name": "RemoteJoinerQuery",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "reflection",
@@ -9339,7 +9339,7 @@
 																	"qualifiedName": "QueryContextType"
 																},
 																"name": "QueryContextType",
-																"package": "@medusajs/types"
+																"package": "@bentoco/types"
 															}
 														},
 														{
@@ -9725,7 +9725,7 @@
 																	}
 																],
 																"name": "RemoteQueryFilters",
-																"package": "@medusajs/types"
+																"package": "@bentoco/types"
 															}
 														},
 														{
@@ -9758,7 +9758,7 @@
 																	"qualifiedName": "QueryContextType"
 																},
 																"name": "QueryContextType",
-																"package": "@medusajs/types"
+																"package": "@bentoco/types"
 															}
 														},
 														{
@@ -9875,7 +9875,7 @@
 													}
 												],
 												"name": "RemoteQueryObjectConfig",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "reference",
@@ -9890,7 +9890,7 @@
 													}
 												],
 												"name": "RemoteQueryObjectFromStringResult",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										]
 									}
@@ -9910,7 +9910,7 @@
 											"qualifiedName": "RemoteJoinerOptions"
 										},
 										"name": "RemoteJoinerOptions",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -10014,7 +10014,7 @@
 											"qualifiedName": "RemoteJoinerOptions"
 										},
 										"name": "RemoteJoinerOptions",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -10096,12 +10096,12 @@
 												"type": "reference",
 												"target": 47606,
 												"name": "TEntry",
-												"package": "@medusajs/query",
+												"package": "@bentoco/query",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RemoteQueryInput",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -10119,7 +10119,7 @@
 											"qualifiedName": "RemoteJoinerOptions"
 										},
 										"name": "RemoteJoinerOptions",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -10141,12 +10141,12 @@
 												"type": "reference",
 												"target": 47606,
 												"name": "TEntry",
-												"package": "@medusajs/query",
+												"package": "@bentoco/query",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "GraphResultSet",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -10218,12 +10218,12 @@
 														"type": "reference",
 														"target": 47611,
 														"name": "TEntry",
-														"package": "@medusajs/query",
+														"package": "@bentoco/query",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "RemoteQueryInput",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "reflection",
@@ -10260,12 +10260,12 @@
 																		"type": "reference",
 																		"target": 47611,
 																		"name": "TEntry",
-																		"package": "@medusajs/query",
+																		"package": "@bentoco/query",
 																		"refersToTypeParameter": true
 																	}
 																],
 																"name": "RemoteQueryFilters",
-																"package": "@medusajs/types"
+																"package": "@bentoco/types"
 															}
 														}
 													],
@@ -10304,7 +10304,7 @@
 											"qualifiedName": "RemoteJoinerOptions"
 										},
 										"name": "RemoteJoinerOptions",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -10326,12 +10326,12 @@
 												"type": "reference",
 												"target": 47611,
 												"name": "TEntry",
-												"package": "@medusajs/query",
+												"package": "@bentoco/query",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "GraphResultSet",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -10462,7 +10462,7 @@
 																		"qualifiedName": "ModuleJoinerConfig"
 																	},
 																	"name": "ModuleJoinerConfig",
-																	"package": "@medusajs/types"
+																	"package": "@bentoco/types"
 																}
 															},
 															{
@@ -10485,7 +10485,7 @@
 																		"qualifiedName": "ModuleDefinition"
 																	},
 																	"name": "ModuleDefinition",
-																	"package": "@medusajs/types"
+																	"package": "@bentoco/types"
 																}
 															}
 														],
@@ -10529,7 +10529,7 @@
 													"qualifiedName": "RelationMap"
 												},
 												"name": "RelationMap",
-												"package": "@medusajs/query"
+												"package": "@bentoco/query"
 											}
 										},
 										{
@@ -10552,7 +10552,7 @@
 													"qualifiedName": "IIndexService"
 												},
 												"name": "IIndexService",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										},
 										{
@@ -10575,7 +10575,7 @@
 													"qualifiedName": "MedusaContainer"
 												},
 												"name": "MedusaContainer",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										}
 									],
@@ -10615,7 +10615,7 @@
 									"qualifiedName": "RemoteQueryFunction"
 								},
 								"name": "RemoteQueryFunction",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "intrinsic",
@@ -10692,7 +10692,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/modules-sdk",
+	"packageName": "@bentoco/modules-sdk",
 	"symbolIdMap": {
 		"47176": {
 			"sourceFileName": "../../../../packages/core/modules-sdk/src/index.ts",

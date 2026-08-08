@@ -2,8 +2,8 @@ import {
   LoadedModule,
   MedusaContainer,
   RemoteQueryFunction,
-} from "@medusajs/types"
-import { extractRelationsFromGQL } from "@medusajs/utils"
+} from "@bentoco/types"
+import { extractRelationsFromGQL } from "@bentoco/utils"
 import { buildSchema } from "graphql"
 import { createQuery, RelationMap } from "../../src"
 import {

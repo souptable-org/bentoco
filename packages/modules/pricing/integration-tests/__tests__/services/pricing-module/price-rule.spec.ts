@@ -1,11 +1,11 @@
-import { IPricingModuleService } from "@medusajs/framework/types"
-import { SqlEntityManager } from "@medusajs/framework/mikro-orm/postgresql"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IPricingModuleService } from "@bentoco/framework/types"
+import { SqlEntityManager } from "@bentoco/framework/mikro-orm/postgresql"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { Price } from "../../../../src/models"
 import { createPrices } from "../../../__fixtures__/price"
 import { createPriceRules } from "../../../__fixtures__/price-rule"
 import { createPriceSets } from "../../../__fixtures__/price-set"
-import { Modules, toMikroORMEntity } from "@medusajs/framework/utils"
+import { Modules, toMikroORMEntity } from "@bentoco/framework/utils"
 
 jest.setTimeout(30000)
 

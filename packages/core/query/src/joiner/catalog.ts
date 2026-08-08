@@ -2,8 +2,8 @@ import {
   JoinerRelationship,
   JoinerServiceConfigAlias,
   ModuleJoinerConfig,
-} from "@medusajs/types"
-import { isDefined, isString } from "@medusajs/utils"
+} from "@bentoco/types"
+import { isDefined, isString } from "@bentoco/utils"
 import {
   ComputedJoinerRelationship,
   InternalJoinerServiceConfig,

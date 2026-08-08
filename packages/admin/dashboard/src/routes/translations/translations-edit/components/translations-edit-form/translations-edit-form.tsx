@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { AdminStoreLocale, HttpTypes } from "@medusajs/types"
-import { Button, Copy, Prompt, Select, toast, Text } from "@medusajs/ui"
+import { AdminStoreLocale, HttpTypes } from "@bentoco/types"
+import { Button, Copy, Prompt, Select, toast, Text } from "@bentoco/ui"
 import { ColumnDef } from "@tanstack/react-table"
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useForm } from "react-hook-form"

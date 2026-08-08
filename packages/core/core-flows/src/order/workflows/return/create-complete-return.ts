@@ -8,14 +8,14 @@ import {
   ReturnDTO,
   ShippingOptionDTO,
   WithCalculatedPrice,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MathBN,
   MedusaError,
   Modules,
   OrderWorkflowEvents,
   isDefined,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -24,7 +24,7 @@ import {
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { pricingContextResult } from "../../../cart/utils/schemas"
 import {
   createRemoteLinkStep,
@@ -330,8 +330,8 @@ export const createAndCompleteReturnOrderWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  *
  * ```ts
- * import { createAndCompleteReturnOrderWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createAndCompleteReturnOrderWorkflow } from "@bentoco/medusa/core-flows";
+ * import { StepResponse } from "@bentoco/workflows-sdk";
  *
  * createAndCompleteReturnOrderWorkflow.hooks.setPricingContext((
  *   { order, additional_data }, { container }

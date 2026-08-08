@@ -1,11 +1,11 @@
-import { CreateCartCreditLineDTO } from "@medusajs/framework/types";
-import { isDefined, MathBN, MedusaError } from "@medusajs/framework/utils";
+import { CreateCartCreditLineDTO } from "@bentoco/framework/types";
+import { isDefined, MathBN, MedusaError } from "@bentoco/framework/utils";
 import {
   createCartCreditLinesWorkflow,
   deleteCartCreditLinesWorkflow,
   refreshCartItemsWorkflow,
   useQueryGraphStep,
-} from "@medusajs/medusa/core-flows";
+} from "@bentoco/medusa/core-flows";
 import {
   createStep,
   createWorkflow,
@@ -13,7 +13,7 @@ import {
   StepResponse,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk";
+} from "@bentoco/framework/workflows-sdk";
 import { PluginCartDTO } from "../../../../src/types/cart";
 import { ModuleStoreCreditAccount } from "../../../types/store-credit";
 

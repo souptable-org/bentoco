@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, Heading, Text } from "@medusajs/ui"
+import { Button, Heading, Text } from "@bentoco/ui"
 import { useFieldArray, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"

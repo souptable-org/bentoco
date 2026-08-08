@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, StatusBadge, Text } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading, StatusBadge, Text } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"

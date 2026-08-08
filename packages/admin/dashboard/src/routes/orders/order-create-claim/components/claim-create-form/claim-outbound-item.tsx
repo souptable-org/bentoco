@@ -1,6 +1,6 @@
-import { XCircle } from "@medusajs/icons"
-import { AdminOrderLineItem, HttpTypes } from "@medusajs/types"
-import { Input, Text } from "@medusajs/ui"
+import { XCircle } from "@bentoco/icons"
+import { AdminOrderLineItem, HttpTypes } from "@bentoco/types"
+import { Input, Text } from "@bentoco/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 

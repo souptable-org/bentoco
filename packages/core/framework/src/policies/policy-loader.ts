@@ -1,4 +1,4 @@
-import { discoverPoliciesFromDir } from "@medusajs/utils"
+import { discoverPoliciesFromDir } from "@bentoco/utils"
 import { normalize } from "path"
 
 /**

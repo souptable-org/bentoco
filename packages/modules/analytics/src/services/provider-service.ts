@@ -1,10 +1,10 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { MedusaError } from "@bentoco/framework/utils"
 import {
   Constructor,
   IAnalyticsProvider,
   ProviderIdentifyAnalyticsEventDTO,
   ProviderTrackAnalyticsEventDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 export const AnalyticsProviderIdentifierRegistrationName =
   "analytics_providers_identifier"

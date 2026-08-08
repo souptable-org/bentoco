@@ -1,4 +1,4 @@
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { useLoaderData } from "react-router-dom"
 
 import { useStore } from "../../../hooks/api/store"
@@ -10,6 +10,7 @@ import { LayoutComposer, detailPageDefaultEntries } from "../../../components/la
 import { useFeatureFlag } from "../../../providers/feature-flag-provider"
 import { StoreCurrencySection } from "./components/store-currency-section"
 import { StoreLocaleSection } from "./components/store-locale-section"
+import { StoreRazorpaySection } from "./components/store-razorpay-section"
 
 export const StoreDetail = () => {
   const initialData = useLoaderData() as Awaited<ReturnType<typeof storeLoader>>
@@ -37,6 +38,9 @@ export const StoreDetail = () => {
           <>
             <LayoutComposer.Entry id="StoreGeneralSection">
               <StoreGeneralSection store={store} />
+            </LayoutComposer.Entry>
+            <LayoutComposer.Entry id="StoreRazorpaySection">
+              <StoreRazorpaySection />
             </LayoutComposer.Entry>
             <LayoutComposer.Entry id="StoreCurrencySection">
               <StoreCurrencySection store={store} />

@@ -42,7 +42,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Same-module sibling import (relative).
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import PromotionRule from "./promotion-rule"
         export default model.define("promotion_rule_value", {
           promotion_rule: model.belongsTo(() => PromotionRule, { mappedBy: "values" }),
@@ -52,7 +52,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Parent-directory relative import (still same module).
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Promotion from "../models/promotion"
         export default model.define("campaign", {
           promotions: model.hasMany(() => Promotion, {}),
@@ -62,7 +62,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Block body with single return + relative import.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Promotion from "./promotion"
         export default model.define("campaign", {
           promotions: model.hasMany(() => { return Promotion }, {}),
@@ -72,7 +72,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Aliased model import + relative.
     {
       code: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         import Item from "./item"
         export default m.define("order", {
           items: m.hasMany(() => Item, {}),
@@ -82,7 +82,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Generic type arg + relative.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Order from "./order"
         export default model.define("order_change", {
           order: model.belongsTo<() => typeof Order>(() => Order, {}),
@@ -93,7 +93,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       code: `
         import { model } from "some-other-lib"
-        import Other from "@medusajs/other/models/other"
+        import Other from "@bentoco/other/models/other"
         export default model.define("x", {
           other: model.belongsTo(() => Other, {}),
         })
@@ -102,7 +102,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Non-relationship method — ignored.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export default model.define("x", {
           name: model.text(),
         })
@@ -112,7 +112,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: "/repo/src/modules/company/models/company.ts",
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Office from "./office"
         export default model.define("company", {
           offices: model.hasMany(() => Office, {}),
@@ -123,7 +123,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: "C:\\repo\\src\\modules\\company\\models\\company.ts",
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Office from "./office"
         export default model.define("company", {
           offices: model.hasMany(() => Office, {}),
@@ -134,7 +134,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: "/repo/src/modules/company/models/nested/info.ts",
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Company from "../../company"
         export default model.define("info", {
           company: model.belongsTo(() => Company, {}),
@@ -144,7 +144,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Same-file declaration (not imported) — same module by definition.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const Sibling = model.define("sibling", {})
         const Parent = model.define("parent", {
           sibling: model.belongsTo(() => Sibling, {}),
@@ -156,7 +156,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: aliasInModule,
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import { Part } from "@models"
         export default model.define("widget", {
           parts: model.hasMany(() => Part, { mappedBy: "widget" }),
@@ -167,7 +167,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: aliasSubpathInModule,
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Part from "@models/part"
         export default model.define("widget", {
           parts: model.hasMany(() => Part, { mappedBy: "widget" }),
@@ -179,8 +179,8 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // belongsTo across modules.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
-        import Product from "@medusajs/medusa/product/models/product"
+        import { model } from "@bentoco/framework/utils"
+        import Product from "@bentoco/medusa/product/models/product"
         export default model.define("blog_post", {
           product: model.belongsTo(() => Product, {}),
         })
@@ -191,7 +191,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
           data: {
             method: "belongsTo",
             name: "Product",
-            source: "@medusajs/medusa/product/models/product",
+            source: "@bentoco/medusa/product/models/product",
           },
         },
       ],
@@ -199,8 +199,8 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // hasMany across modules.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
-        import { Customer } from "@medusajs/customer"
+        import { model } from "@bentoco/framework/utils"
+        import { Customer } from "@bentoco/customer"
         export default model.define("loyalty", {
           customers: model.hasMany(() => Customer, {}),
         })
@@ -210,7 +210,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // hasOne across modules.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Profile from "third-party-pkg/profile"
         export default model.define("user", {
           profile: model.hasOne(() => Profile, {}),
@@ -221,7 +221,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // manyToMany across modules.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Tag from "@scope/tags"
         export default model.define("post", {
           tags: model.manyToMany(() => Tag, {}),
@@ -232,8 +232,8 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Block body with single return targeting an external import.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
-        import Other from "@medusajs/other"
+        import { model } from "@bentoco/framework/utils"
+        import Other from "@bentoco/other"
         export default model.define("x", {
           other: model.belongsTo(() => { return Other }, {}),
         })
@@ -243,8 +243,8 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Aliased model import.
     {
       code: `
-        import { model as m } from "@medusajs/framework/utils"
-        import Foreign from "@medusajs/other/models/foreign"
+        import { model as m } from "@bentoco/framework/utils"
+        import Foreign from "@bentoco/other/models/foreign"
         export default m.define("x", {
           foreign: m.belongsTo(() => Foreign, {}),
         })
@@ -255,7 +255,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: "/repo/src/modules/company/models/country-company-info.ts",
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Post from "../../blog/models/post"
         export default model.define("country_company_info", {
           post: model.hasOne(() => Post, {}),
@@ -276,7 +276,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: "/repo/src/modules/company/models/nested/info.ts",
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Post from "../../../blog/models/post"
         export default model.define("info", {
           post: model.belongsTo(() => Post, {}),
@@ -296,7 +296,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Unresolvable identifier (no binding in scope) — can't verify same-module.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export default model.define("x", {
           mystery: model.belongsTo(() => Mystery, {}),
         })
@@ -308,8 +308,8 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Non-identifier return (member chain) — can't verify same-module.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
-        import Other from "@medusajs/other"
+        import { model } from "@bentoco/framework/utils"
+        import Other from "@bentoco/other"
         export default model.define("x", {
           ref: model.belongsTo(() => Other.foo, {}),
         })
@@ -322,7 +322,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     {
       filename: aliasOutsideModule,
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import { Post } from "@external"
         export default model.define("widget", {
           post: model.belongsTo(() => Post, {}),
@@ -342,9 +342,9 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
     // Multiple relationships, only one is cross-module.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         import Sibling from "./sibling"
-        import Foreign from "@medusajs/other/models/foreign"
+        import Foreign from "@bentoco/other/models/foreign"
         export default model.define("x", {
           sibling: model.belongsTo(() => Sibling, {}),
           foreign: model.belongsTo(() => Foreign, {}),
@@ -356,7 +356,7 @@ ruleTester.run("link-no-cross-module-relationship", rule, {
           data: {
             method: "belongsTo",
             name: "Foreign",
-            source: "@medusajs/other/models/foreign",
+            source: "@bentoco/other/models/foreign",
           },
         },
       ],

@@ -1,6 +1,6 @@
-import { SqlEntityManager } from "@medusajs/framework/mikro-orm/postgresql"
+import { SqlEntityManager } from "@bentoco/framework/mikro-orm/postgresql"
 import { PriceListRule } from "@models"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@bentoco/framework/utils"
 import { defaultPriceListRuleData } from "./data"
 
 export * from "./data"

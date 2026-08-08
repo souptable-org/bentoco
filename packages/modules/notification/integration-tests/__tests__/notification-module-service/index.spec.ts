@@ -1,7 +1,7 @@
 import {
   CreateNotificationDTO,
   INotificationModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   CommonEvents,
   composeMessage,
@@ -9,11 +9,11 @@ import {
   Modules,
   NotificationEvents,
   NotificationStatus,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@bentoco/test-utils"
 import { NotificationModuleService } from "@services"
 import { resolve } from "path"
 

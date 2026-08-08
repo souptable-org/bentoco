@@ -49,7 +49,7 @@ The Draft Order Plugin enables admin users to create and manage orders on behalf
 
 1. Install the Draft Order plugin
 ```
-yarn add @medusajs/draft-order
+yarn add @bentoco/draft-order
 ```
 2. Configure the plugin in your medusa-config.ts
 ```
@@ -59,7 +59,7 @@ module.exports = defineConfig({
   },
   plugins: [
     {
-      resolve: "@medusajs/draft-order",
+      resolve: "@bentoco/draft-order",
       options: {},
     },
   ],

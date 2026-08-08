@@ -144,13 +144,13 @@ const nextConfig = {
   },
   outputFileTracingExcludes: {
     "*": [
-      "node_modules/@medusajs/icons",
+      "node_modules/@bentoco/icons",
       "../**/.open-next/**",
       "../!(ui)/.next/**",
     ],
   },
   experimental: {
-    optimizePackageImports: ["@medusajs/icons", "@medusajs/ui"],
+    optimizePackageImports: ["@bentoco/icons", "@bentoco/ui"],
   },
   rewrites: async () => {
     return {

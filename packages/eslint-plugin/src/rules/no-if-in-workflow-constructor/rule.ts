@@ -17,7 +17,7 @@ export const rule = createRule<[], MessageIds>({
     },
     messages: {
       ifInWorkflowConstructor:
-        "Do not use `if` statements inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Use `when(...).then(...)` from `@medusajs/framework/workflows-sdk` to conditionally execute steps.",
+        "Do not use `if` statements inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Use `when(...).then(...)` from `@bentoco/framework/workflows-sdk` to conditionally execute steps.",
     },
     schema: [],
   },

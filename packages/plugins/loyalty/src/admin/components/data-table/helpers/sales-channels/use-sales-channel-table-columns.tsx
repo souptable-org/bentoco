@@ -1,7 +1,7 @@
-import { HttpTypes } from "@medusajs/types";
+import { HttpTypes } from "@bentoco/types";
 import { useMemo } from "react";
 
-import { createDataTableColumnHelper, Tooltip } from "@medusajs/ui";
+import { createDataTableColumnHelper, Tooltip } from "@bentoco/ui";
 import { DataTableStatusCell } from "../../components/data-table-status-cell/data-table-status-cell";
 import { useDataTableDateColumns } from "../general/use-data-table-date-columns";
 

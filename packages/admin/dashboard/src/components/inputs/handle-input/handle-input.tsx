@@ -1,4 +1,4 @@
-import { Input, Text } from "@medusajs/ui"
+import { Input, Text } from "@bentoco/ui"
 import { ComponentProps, ElementRef, forwardRef } from "react"
 
 export const HandleInput = forwardRef<

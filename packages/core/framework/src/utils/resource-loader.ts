@@ -1,10 +1,10 @@
-import { Logger, MedusaContainer } from "@medusajs/types"
+import { Logger, MedusaContainer } from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   dynamicImport,
   promiseAll,
   readDirRecursive,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { Dirent } from "fs"
 import { access } from "fs/promises"
 import { join, parse } from "path"

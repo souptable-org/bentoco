@@ -2,8 +2,8 @@ import {
   ContainerRegistrationKeys,
   MedusaError,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to validate inventory items for creation.

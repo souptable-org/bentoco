@@ -1,0 +1,10 @@
+{
+  "smart-second-brain:open-chat": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": " "
+    }
+  ]
+}

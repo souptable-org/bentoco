@@ -1,6 +1,6 @@
-import type { IAuthModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import type { IAuthModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * Input for the create password reset token step.

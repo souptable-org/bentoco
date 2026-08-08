@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { LayoutComposer } from "@medusajs/dashboard/components"
+import { LayoutComposer } from "@bentoco/dashboard/components"
 import { JsonViewSection } from "../../../components/json-view-section"
 import { useGiftCard } from "../../../hooks/api/gift-cards"
 import GiftCardBalanceSection from "./components/gift-card-balance-section"

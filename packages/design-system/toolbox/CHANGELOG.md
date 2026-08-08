@@ -1,4 +1,4 @@
-# @medusajs/toolbox
+# @bentoco/toolbox
 
 ## 2.18.0
 

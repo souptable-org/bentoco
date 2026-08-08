@@ -5,14 +5,14 @@ import {
   AuthIdentityProviderService,
   EmailPassAuthProviderOptions,
   Logger,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   AbstractAuthModuleProvider,
   isString,
   MedusaError,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import Scrypt from "scrypt-kdf"
-import { isPresent } from "@medusajs/utils"
+import { isPresent } from "@bentoco/utils"
 
 type InjectedDependencies = {
   logger: Logger

@@ -1,6 +1,6 @@
-import { ILockingModule } from "@medusajs/framework/types"
-import { Modules, promiseAll } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { ILockingModule } from "@bentoco/framework/types"
+import { Modules, promiseAll } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { setTimeout } from "node:timers/promises"
 
 jest.setTimeout(5000)

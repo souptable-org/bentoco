@@ -25,15 +25,15 @@ export const rule = createRule<[], MessageIds>({
     },
     messages: {
       logicalExpression:
-        "Do not use `{{operator}}` inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@medusajs/framework/workflows-sdk`.",
+        "Do not use `{{operator}}` inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@bentoco/framework/workflows-sdk`.",
       conditionalExpression:
-        "Do not use ternary expressions inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@medusajs/framework/workflows-sdk`.",
+        "Do not use ternary expressions inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@bentoco/framework/workflows-sdk`.",
       negation:
-        "Do not use the `!` operator inside a workflow constructor or a `when().then()` callback — it runs at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@medusajs/framework/workflows-sdk`.",
+        "Do not use the `!` operator inside a workflow constructor or a `when().then()` callback — it runs at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@bentoco/framework/workflows-sdk`.",
       equalityExpression:
-        "Do not use `{{operator}}` inside a workflow constructor or a `when().then()` callback — it runs at definition time, not execution time. Wrap value comparison in `transform(...)` from `@medusajs/framework/workflows-sdk`.",
+        "Do not use `{{operator}}` inside a workflow constructor or a `when().then()` callback — it runs at definition time, not execution time. Wrap value comparison in `transform(...)` from `@bentoco/framework/workflows-sdk`.",
       optionalChaining:
-        "Do not use optional chaining (`?.`) inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@medusajs/framework/workflows-sdk`.",
+        "Do not use optional chaining (`?.`) inside a workflow constructor or a `when().then()` callback — both run at definition time, not execution time. Wrap value manipulation in `transform(...)` from `@bentoco/framework/workflows-sdk`.",
     },
     schema: [],
   },

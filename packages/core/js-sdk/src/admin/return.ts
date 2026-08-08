@@ -1,4 +1,4 @@
-import { HttpTypes, SelectParams } from "@medusajs/types"
+import { HttpTypes, SelectParams } from "@bentoco/types"
 
 import { Client } from "../client.js"
 import { ClientHeaders } from "../types.js"

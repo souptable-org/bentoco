@@ -1,4 +1,4 @@
-import { AdminPromotion } from "@medusajs/types"
+import { AdminPromotion } from "@bentoco/types"
 import { TFunction } from "i18next"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

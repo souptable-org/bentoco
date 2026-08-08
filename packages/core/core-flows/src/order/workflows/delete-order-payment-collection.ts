@@ -1,14 +1,14 @@
-import type { PaymentCollectionDTO } from "@medusajs/framework/types"
+import type { PaymentCollectionDTO } from "@bentoco/framework/types"
 import {
   MedusaError,
   Modules,
   PaymentCollectionStatus,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { removeRemoteLinkStep, useQueryGraphStep } from "../../common"
 
 /**

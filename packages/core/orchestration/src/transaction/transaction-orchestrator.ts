@@ -18,7 +18,7 @@ import {
   TransactionStepStatus,
 } from "./types"
 
-import { Context } from "@medusajs/types"
+import { Context } from "@bentoco/types"
 import {
   isDefined,
   isErrorLike,
@@ -28,7 +28,7 @@ import {
   promiseAll,
   serializeError,
   TransactionStepState,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { EventEmitter } from "events"
 import {
   PermanentStepFailureError,

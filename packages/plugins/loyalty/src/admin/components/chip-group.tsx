@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons";
-import { Button, clx } from "@medusajs/ui";
+import { XMarkMini } from "@bentoco/icons";
+import { Button, clx } from "@bentoco/ui";
 import { Children, PropsWithChildren, createContext, useContext } from "react";
 
 type ChipGroupVariant = "base" | "component";

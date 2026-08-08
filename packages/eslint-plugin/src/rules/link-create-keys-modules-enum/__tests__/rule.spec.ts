@@ -8,7 +8,7 @@ ruleTester.run("link-create-keys-modules-enum", rule, {
     // Canonical: computed key using the Modules enum.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({
           [Modules.PRODUCT]: { product_id: "1" },
           [Modules.ORDER]: { order_id: "2" },
@@ -46,7 +46,7 @@ ruleTester.run("link-create-keys-modules-enum", rule, {
     // Array of objects, all enum-form.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create([
           { [Modules.PRODUCT]: { product_id: "1" }, blog: { post_id: "2" } },
         ])
@@ -63,77 +63,77 @@ ruleTester.run("link-create-keys-modules-enum", rule, {
           data: { key: "product", enumMember: "PRODUCT" },
         },
       ],
-      output: `import { Modules } from "@medusajs/framework/utils"
+      output: `import { Modules } from "@bentoco/framework/utils"
 await link.create({ [Modules.PRODUCT]: { product_id: "1" } })`,
     },
     // String-literal key.
     {
       code: `await link.create({ "product": { product_id: "1" } })`,
       errors: [{ messageId: "preferEnumKey" }],
-      output: `import { Modules } from "@medusajs/framework/utils"
+      output: `import { Modules } from "@bentoco/framework/utils"
 await link.create({ [Modules.PRODUCT]: { product_id: "1" } })`,
     },
     // Existing framework/utils import → append `Modules` to specifier list.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         await link.create({ product: { product_id: "1" } })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { defineLink, Modules } from "@medusajs/framework/utils"
+        import { defineLink, Modules } from "@bentoco/framework/utils"
         await link.create({ [Modules.PRODUCT]: { product_id: "1" } })
       `,
     },
     // Modules already imported → reuse local binding, no second import added.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({ product: { id: "1" } })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({ [Modules.PRODUCT]: { id: "1" } })
       `,
     },
     // Aliased Modules import.
     {
       code: `
-        import { Modules as M } from "@medusajs/framework/utils"
+        import { Modules as M } from "@bentoco/framework/utils"
         await link.create({ order: { id: "1" } })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules as M } from "@medusajs/framework/utils"
+        import { Modules as M } from "@bentoco/framework/utils"
         await link.create({ [M.ORDER]: { id: "1" } })
       `,
     },
     // link.dismiss with snake_case enum value.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.dismiss({ sales_channel: { id: "x" } })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.dismiss({ [Modules.SALES_CHANNEL]: { id: "x" } })
       `,
     },
     // Workflow step: createRemoteLinkStep.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
-        import { createRemoteLinkStep } from "@medusajs/medusa/core-flows"
+        import { Modules } from "@bentoco/framework/utils"
+        import { createRemoteLinkStep } from "@bentoco/medusa/core-flows"
         createRemoteLinkStep([
           { product: { product_id: "1" }, blog: { post_id: "2" } },
         ])
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
-        import { createRemoteLinkStep } from "@medusajs/medusa/core-flows"
+        import { Modules } from "@bentoco/framework/utils"
+        import { createRemoteLinkStep } from "@bentoco/medusa/core-flows"
         createRemoteLinkStep([
           { [Modules.PRODUCT]: { product_id: "1" }, blog: { post_id: "2" } },
         ])
@@ -142,33 +142,33 @@ await link.create({ [Modules.PRODUCT]: { product_id: "1" } })`,
     // Workflow step alias.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
-        import { dismissRemoteLinkStep as drls } from "@medusajs/medusa/core-flows"
+        import { Modules } from "@bentoco/framework/utils"
+        import { dismissRemoteLinkStep as drls } from "@bentoco/medusa/core-flows"
         drls({ order: { id: "1" } })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
-        import { dismissRemoteLinkStep as drls } from "@medusajs/medusa/core-flows"
+        import { Modules } from "@bentoco/framework/utils"
+        import { dismissRemoteLinkStep as drls } from "@bentoco/medusa/core-flows"
         drls({ [Modules.ORDER]: { id: "1" } })
       `,
     },
     // Shorthand property.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({ product })
       `,
       errors: [{ messageId: "preferEnumKey" }],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({ [Modules.PRODUCT]: product })
       `,
     },
     // Multiple violations in one call.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({
           product: { id: "1" },
           order: { id: "2" },
@@ -186,7 +186,7 @@ await link.create({ [Modules.PRODUCT]: { product_id: "1" } })`,
         },
       ],
       output: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         await link.create({
           [Modules.PRODUCT]: { id: "1" },
           [Modules.ORDER]: { id: "2" },

@@ -1,4 +1,4 @@
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@bentoco/js-sdk"
 import {
   QueryKey,
   useMutation,
@@ -8,7 +8,7 @@ import {
 } from "@tanstack/react-query"
 import { sdk } from "../../lib/client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { queryClient } from "../../lib/query-client.ts"
 
 const PRODUCT_OPTIONS_QUERY_KEY = "product_options" as const

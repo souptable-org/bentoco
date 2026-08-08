@@ -1,6 +1,6 @@
-import { Modules } from "@medusajs/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
-import { SettingsTypes } from "@medusajs/types"
+import { Modules } from "@bentoco/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
+import { SettingsTypes } from "@bentoco/types"
 
 jest.setTimeout(30000)
 

@@ -2,8 +2,8 @@ import {
   ModuleJoinerConfig,
   RemoteJoinerOptions,
   RemoteJoinerQuery,
-} from "@medusajs/types"
-import { MedusaError } from "@medusajs/utils"
+} from "@bentoco/types"
+import { MedusaError } from "@bentoco/utils"
 import { GraphCatalog } from "./catalog"
 import { compileQuery } from "./compile"
 import { executePlan } from "./execute"

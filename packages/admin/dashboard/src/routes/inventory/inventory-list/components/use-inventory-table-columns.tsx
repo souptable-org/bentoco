@@ -1,6 +1,6 @@
-import { AdminInventoryItem } from "@medusajs/types"
+import { AdminInventoryItem } from "@bentoco/types"
 
-import { Checkbox } from "@medusajs/ui"
+import { Checkbox } from "@bentoco/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

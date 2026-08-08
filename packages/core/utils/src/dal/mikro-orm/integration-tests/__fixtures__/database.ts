@@ -1,4 +1,4 @@
-import { MikroORM } from "@medusajs/deps/mikro-orm/core"
+import { MikroORM } from "@bentoco/deps/mikro-orm/core"
 
 const DB_HOST = process.env.DB_HOST ?? "localhost"
 const DB_USERNAME = process.env.DB_USERNAME ?? "postgres"

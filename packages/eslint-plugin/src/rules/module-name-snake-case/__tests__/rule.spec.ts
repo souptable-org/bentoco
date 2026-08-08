@@ -8,7 +8,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // snake_case name
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export default Module("brand", { service: Service })
       `,
@@ -16,7 +16,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // camelCase is allowed (alphanumeric + underscores only per docs)
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export default Module("productMedia", { service: Service })
       `,
@@ -24,7 +24,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Single underscore-separated identifier
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export default Module("my_event", { service: Service })
       `,
@@ -32,7 +32,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Digits allowed
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export default Module("module_v2", { service: Service })
       `,
@@ -40,7 +40,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Identifier referencing a const string — resolved and accepted when valid.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export const BRAND_MODULE = "brand"
         export default Module(BRAND_MODULE, { service: Service })
@@ -49,7 +49,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Identifier whose const init is non-literal — cannot resolve, skip.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         const NAME = getName()
         export default Module(NAME, {})
       `,
@@ -57,7 +57,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // \`let\` — not a stable constant; skip resolution.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         let NAME = "my-event"
         Module(NAME, {})
       `,
@@ -72,7 +72,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Aliased import — invalid name but unaliased identifier should not match.
     {
       code: `
-        import { Module as M } from "@medusajs/framework/utils"
+        import { Module as M } from "@bentoco/framework/utils"
         export default M("ok_name", {})
       `,
     },
@@ -81,7 +81,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Dash-separated (the failure mode the catalog points at).
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export default Module("my-event", { service: Service })
       `,
@@ -90,7 +90,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Spaces.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         export default Module("my event", {})
       `,
       errors: [{ messageId: "invalidModuleName" }],
@@ -98,7 +98,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Special characters.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         export default Module("my.event", {})
       `,
       errors: [{ messageId: "invalidModuleName" }],
@@ -106,7 +106,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Empty string.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         export default Module("", {})
       `,
       errors: [{ messageId: "invalidModuleName" }],
@@ -114,7 +114,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Aliased Module import binding.
     {
       code: `
-        import { Module as M } from "@medusajs/framework/utils"
+        import { Module as M } from "@bentoco/framework/utils"
         export default M("my-event", {})
       `,
       errors: [{ messageId: "invalidModuleName" }],
@@ -122,7 +122,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Identifier referencing a const string with an invalid value — flagged on the identifier.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         import Service from "./service"
         export const BRAND_MODULE = "my-event"
         export default Module(BRAND_MODULE, { service: Service })
@@ -132,7 +132,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Identifier whose const init is an invalid string (no export).
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         const NAME = "my.event"
         Module(NAME, {})
       `,
@@ -141,7 +141,7 @@ ruleTester.run("module-name-snake-case", rule, {
     // Multiple Module calls in one file — each flagged.
     {
       code: `
-        import { Module } from "@medusajs/framework/utils"
+        import { Module } from "@bentoco/framework/utils"
         Module("bad-one", {})
         Module("bad.two", {})
       `,

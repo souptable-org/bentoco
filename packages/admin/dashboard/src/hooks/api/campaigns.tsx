@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes, LinkMethodRequest } from "@medusajs/types"
+import { FetchError } from "@bentoco/js-sdk"
+import { HttpTypes, LinkMethodRequest } from "@bentoco/types"
 import {
   QueryKey,
   UseMutationOptions,

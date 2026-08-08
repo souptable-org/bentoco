@@ -1,11 +1,11 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import {
   DataTableColumnAlignment,
   DataTableColumnDef,
   DataTableCommand,
   DataTableEmptyStateProps,
   DataTableFilter,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { ReactNode } from "react"
 
 /**

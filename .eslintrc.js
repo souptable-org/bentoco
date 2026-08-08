@@ -1,5 +1,5 @@
 const path = require("path")
-const medusa = require("@medusajs/eslint-plugin")
+const medusa = require("@bentoco/eslint-plugin")
 
 // ---------------------------------------------------------------------------
 // Scope definitions
@@ -8,7 +8,7 @@ const medusa = require("@medusajs/eslint-plugin")
 // @typescript-eslint formatting rules) historically ran only on a curated set
 // of packages (the `.eslintignore` allowlist) plus root/integration-tests.
 //
-// We now also run `@medusajs/eslint-plugin` (Medusa convention rules) over all
+// We now also run `@bentoco/eslint-plugin` (Medusa convention rules) over all
 // of the framework's own packages. Those packages must get the Medusa rules
 // WITHOUT suddenly being subjected to the full style/prettier lint.
 //

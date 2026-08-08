@@ -1,5 +1,9 @@
 import plugin from "tailwindcss/plugin"
-import { FONT_FAMILY_MONO, FONT_FAMILY_SANS } from "./constants"
+import {
+  FONT_FAMILY_HEADLINE,
+  FONT_FAMILY_MONO,
+  FONT_FAMILY_SANS,
+} from "./constants"
 import { theme } from "./theme/extension/theme"
 import { colors } from "./theme/tokens/colors"
 import { components } from "./theme/tokens/components"
@@ -44,6 +48,8 @@ export default plugin(
         ...theme.extend,
         fontFamily: {
           sans: FONT_FAMILY_SANS,
+          headline: FONT_FAMILY_HEADLINE,
+          notes: ["Permanent Marker", "cursive"],
           mono: FONT_FAMILY_MONO,
         },
         transitionProperty: {

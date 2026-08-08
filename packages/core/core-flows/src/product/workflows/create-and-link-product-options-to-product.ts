@@ -1,12 +1,12 @@
-import type { ProductTypes } from "@medusajs/framework/types"
+import type { ProductTypes } from "@bentoco/framework/types"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { isString, ProductWorkflowEvents } from "@medusajs/framework/utils"
+} from "@bentoco/framework/workflows-sdk"
+import { isString, ProductWorkflowEvents } from "@bentoco/framework/utils"
 
 import { emitEventStep } from "../../common"
 import { createProductOptionsStep } from "../steps"

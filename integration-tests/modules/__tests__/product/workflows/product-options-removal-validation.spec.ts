@@ -1,7 +1,7 @@
-import { createAndLinkProductOptionsToProductWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IProductModuleService } from "@medusajs/types"
-import { MedusaError, Modules } from "@medusajs/utils"
+import { createAndLinkProductOptionsToProductWorkflow } from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IProductModuleService } from "@bentoco/types"
+import { MedusaError, Modules } from "@bentoco/utils"
 
 jest.setTimeout(50000)
 

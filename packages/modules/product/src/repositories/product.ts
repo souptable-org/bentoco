@@ -1,6 +1,6 @@
 import { Product, ProductOption } from "@models"
 
-import { Context, DAL, InferEntityType } from "@medusajs/framework/types"
+import { Context, DAL, InferEntityType } from "@bentoco/framework/types"
 import {
   arrayDifference,
   DALUtils,
@@ -8,11 +8,11 @@ import {
   isPresent,
   MedusaError,
   mergeMetadata,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   SqlEntityManager,
   wrap,
-} from "@medusajs/framework/mikro-orm/postgresql"
+} from "@bentoco/framework/mikro-orm/postgresql"
 import { resolveAllowedOptionValues } from "../utils/resolve-allowed-option-values"
 
 export class ProductRepository extends DALUtils.mikroOrmBaseRepositoryFactory(

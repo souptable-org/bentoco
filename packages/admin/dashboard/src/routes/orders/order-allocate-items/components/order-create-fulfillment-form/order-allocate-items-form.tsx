@@ -7,8 +7,8 @@ import {
   AdminOrder,
   AdminInventoryItem,
   AdminOrderLineItem,
-} from "@medusajs/types"
-import { Alert, Button, Heading, Input, Select, toast } from "@medusajs/ui"
+} from "@bentoco/types"
+import { Alert, Button, Heading, Input, Select, toast } from "@bentoco/ui"
 import { useForm, useWatch } from "react-hook-form"
 
 import { Form } from "../../../../../components/common/form"

@@ -2,8 +2,8 @@ import {
   authenticate,
   validateAndTransformBody,
   validateAndTransformQuery,
-} from "@medusajs/framework";
-import { MiddlewareRoute } from "@medusajs/medusa";
+} from "@bentoco/framework";
+import { MiddlewareRoute } from "@bentoco/medusa";
 import {
   listStoreCreditAccountsTransformQueryConfig,
   retrieveStoreCreditAccountTransformQueryConfig,

@@ -4,8 +4,8 @@ import type {
   AuthMfaRecoveryCodesResponse,
   AuthMfaSetupResponse,
   FetchError,
-} from "@medusajs/js-sdk"
-import type { AuthTypes } from "@medusajs/types"
+} from "@bentoco/js-sdk"
+import type { AuthTypes } from "@bentoco/types"
 import {
   QueryKey,
   UseMutationOptions,

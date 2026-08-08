@@ -8,7 +8,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Schema with no reserved properties.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           name: model.text(),
@@ -18,7 +18,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Empty schema.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {})
       `,
     },
@@ -34,14 +34,14 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Non-define method — not flagged.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const col = model.text()
       `,
     },
     // Non-object second argument — skipped.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const schema = { created_at: model.dateTime() }
         export const Brand = model.define("brand", schema)
       `,
@@ -49,7 +49,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Computed key matching reserved name — not flagged (out of scope).
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const K = "created_at"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
@@ -60,7 +60,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Property named "id" is NOT reserved — users must define it themselves.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -71,7 +71,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Single reserved property — autofix removes it.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           created_at: model.dateTime(),
@@ -81,7 +81,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "created_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -90,7 +90,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // updated_at — autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           updated_at: model.dateTime(),
@@ -100,7 +100,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "updated_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -109,7 +109,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // deleted_at — autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           deleted_at: model.dateTime(),
@@ -119,7 +119,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "deleted_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -130,7 +130,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // ESLint skips adjacent-range fixes.)
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           created_at: model.dateTime(),
@@ -145,14 +145,14 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
       ],
       output: [
         `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           updated_at: model.dateTime(),
         })
       `,
         `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -162,7 +162,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // String-literal key — flagged.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           "created_at": model.dateTime(),
@@ -172,7 +172,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "created_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -181,7 +181,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Aliased model import binding.
     {
       code: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         export const Brand = m.define("brand", {
           id: m.id().primaryKey(),
           created_at: m.dateTime(),
@@ -191,7 +191,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "created_at" } },
       ],
       output: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         export const Brand = m.define("brand", {
           id: m.id().primaryKey(),
         })
@@ -200,7 +200,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // No trailing comma on reserved property — comma after prev property is preserved.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
           created_at: model.dateTime()
@@ -210,7 +210,7 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
         { messageId: "reservedDefaultProperty", data: { name: "created_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {
           id: model.id().primaryKey(),
         })
@@ -219,14 +219,14 @@ ruleTester.run("no-reserved-default-properties-in-model", rule, {
     // Sole property — just remove it.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", { created_at: model.dateTime() })
       `,
       errors: [
         { messageId: "reservedDefaultProperty", data: { name: "created_at" } },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {})
       `,
     },

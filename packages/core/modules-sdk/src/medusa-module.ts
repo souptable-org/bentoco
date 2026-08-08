@@ -11,7 +11,7 @@ import {
   ModuleJoinerConfig,
   ModuleResolution,
   ModuleServiceInitializeOptions,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   createMedusaContainer,
@@ -19,8 +19,8 @@ import {
   promiseAll,
   simpleHash,
   stringifyCircular,
-} from "@medusajs/utils"
-import { asValue } from "@medusajs/deps/awilix"
+} from "@bentoco/utils"
+import { asValue } from "@bentoco/deps/awilix"
 import { EOL } from "os"
 import {
   moduleLoader,

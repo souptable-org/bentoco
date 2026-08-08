@@ -1,0 +1,5 @@
+=== Phase 3 Order State Machine Audit Log [2026-08-08T06:03:51.688Z] ===
+
+--- Starting Phase 3: Indian Order State Machine & OTP Audit ---
+Provisioned Test Tenant [state-store-1786169031807] ID: 9d131534-819d-4a04-8541-b9e03433c1f5
+Phase 3 Audit Error: column "total" of relation "order" does not exist

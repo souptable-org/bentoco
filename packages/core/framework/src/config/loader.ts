@@ -1,4 +1,4 @@
-import { ContainerRegistrationKeys, getConfigFile } from "@medusajs/utils"
+import { ContainerRegistrationKeys, getConfigFile } from "@bentoco/utils"
 import { container } from "../container"
 import { asFunction } from "../deps/awilix"
 import { logger as defaultLogger } from "../logger"

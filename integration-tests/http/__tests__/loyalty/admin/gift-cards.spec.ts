@@ -1,9 +1,9 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { createGiftCardsWorkflow } from "@medusajs/loyalty-plugin/workflows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { createGiftCardsWorkflow } from "@bentoco/loyalty-plugin/workflows"
 import {
   ILoyaltyModuleService,
   PluginModule,
-} from "@medusajs/loyalty-plugin/types"
+} from "@bentoco/loyalty-plugin/types"
 import {
   adminHeaders,
   createAdminUser,

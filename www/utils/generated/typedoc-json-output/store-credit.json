@@ -94,7 +94,7 @@
 										"type": "reference",
 										"target": 531,
 										"name": "FindConfigOrder",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -169,7 +169,7 @@
 										"type": "reference",
 										"target": 450,
 										"name": "Entity",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"qualifiedName": "FindConfig.Entity",
 										"refersToTypeParameter": true
 									}
@@ -345,7 +345,7 @@
 						"type": "reference",
 						"target": 531,
 						"name": "FindConfigOrder",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -554,19 +554,19 @@
 											"type": "reference",
 											"target": 384,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 384,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -610,19 +610,19 @@
 											"type": "reference",
 											"target": 384,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 384,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -713,7 +713,7 @@
 							"type": "reference",
 							"target": 453,
 							"name": "TReturnableLinkableKeys",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					}
@@ -948,7 +948,7 @@
 								"type": "reference",
 								"target": 620,
 								"name": "EventMetadata",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -976,7 +976,7 @@
 								"type": "reference",
 								"target": 614,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -1046,12 +1046,12 @@
 								"type": "reference",
 								"target": 566,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Event",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -1188,7 +1188,7 @@
 								"type": "reference",
 								"target": 583,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -1274,7 +1274,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -1782,7 +1782,7 @@
 								"type": "reference",
 								"target": 594,
 								"name": "JoinerServiceConfigAlias",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "array",
@@ -1790,7 +1790,7 @@
 									"type": "reference",
 									"target": 594,
 									"name": "JoinerServiceConfigAlias",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -1953,7 +1953,7 @@
 							"type": "reference",
 							"target": 599,
 							"name": "JoinerRelationship",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -2038,7 +2038,7 @@
 											"type": "reference",
 											"target": 599,
 											"name": "JoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -2401,7 +2401,7 @@
 								"type": "reference",
 								"target": 537,
 								"name": "JoinerServiceConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "union",
@@ -2521,7 +2521,7 @@
 											"type": "reference",
 											"target": 552,
 											"name": "ModuleJoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -2743,7 +2743,7 @@
 																	"type": "reference",
 																	"target": 552,
 																	"name": "ModuleJoinerRelationship",
-																	"package": "@medusajs/types"
+																	"package": "@bentoco/types"
 																},
 																{
 																	"type": "literal",
@@ -3049,7 +3049,7 @@
 														"type": "reference",
 														"target": 557,
 														"name": "LinkModulesExtraFields",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												}
 											],
@@ -3124,7 +3124,7 @@
 						"type": "reference",
 						"target": 599,
 						"name": "JoinerRelationship",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -3291,7 +3291,7 @@
 								"type": "reference",
 								"target": 490,
 								"name": "ModuleJoinerConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -3779,7 +3779,7 @@
 												"type": "reference",
 												"target": 563,
 												"name": "Message",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -3787,7 +3787,7 @@
 													"type": "reference",
 													"target": 563,
 													"name": "Message",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -3841,7 +3841,7 @@
 										"type": "reference",
 										"target": 567,
 										"name": "MessageAggregatorFormat",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -3862,7 +3862,7 @@
 											"type": "reference",
 											"target": 563,
 											"name": "Message",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -3960,12 +3960,12 @@
 														"type": "reference",
 														"target": 527,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "RawMessageFormat",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -3977,12 +3977,12 @@
 															"type": "reference",
 															"target": 527,
 															"name": "T",
-															"package": "@medusajs/types",
+															"package": "@bentoco/types",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "RawMessageFormat",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -4122,7 +4122,7 @@
 						"type": "reference",
 						"target": 421,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -4169,7 +4169,7 @@
 						"type": "reference",
 						"target": 421,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -4372,7 +4372,7 @@
 						"type": "reference",
 						"target": 516,
 						"name": "IMessageAggregator",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4631,7 +4631,7 @@
 						"type": "reference",
 						"target": 615,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4892,7 +4892,7 @@
 						"type": "reference",
 						"target": 584,
 						"name": "IBigNumber",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				]
 			}
@@ -5071,7 +5071,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5099,7 +5099,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5127,7 +5127,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5680,13 +5680,13 @@
 						"type": "reference",
 						"target": 592,
 						"name": "TransactionType.CREDIT",
-						"package": "@medusajs/loyalty-plugin"
+						"package": "@bentoco/loyalty-plugin"
 					},
 					{
 						"type": "reference",
 						"target": 593,
 						"name": "TransactionType.DEBIT",
-						"package": "@medusajs/loyalty-plugin"
+						"package": "@bentoco/loyalty-plugin"
 					}
 				]
 			}
@@ -5798,7 +5798,7 @@
 								"type": "reference",
 								"target": 536,
 								"name": "TransactionTypeValues",
-								"package": "@medusajs/loyalty-plugin"
+								"package": "@bentoco/loyalty-plugin"
 							}
 						},
 						{
@@ -5826,7 +5826,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -5854,7 +5854,7 @@
 								"type": "reference",
 								"target": 422,
 								"name": "ModuleStoreCreditAccount",
-								"package": "@medusajs/loyalty-plugin"
+								"package": "@bentoco/loyalty-plugin"
 							}
 						},
 						{
@@ -6144,7 +6144,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -6331,7 +6331,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -6593,7 +6593,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -6621,7 +6621,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -6649,7 +6649,7 @@
 								"type": "reference",
 								"target": 530,
 								"name": "BigNumberValue",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					],
@@ -6722,7 +6722,7 @@
 									"type": "reference",
 									"target": 295,
 									"name": "ModuleStoreCreditAccountFilters",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -6732,11 +6732,11 @@
 											"type": "reference",
 											"target": 295,
 											"name": "ModuleStoreCreditAccountFilters",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -6780,7 +6780,7 @@
 									"type": "reference",
 									"target": 295,
 									"name": "ModuleStoreCreditAccountFilters",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -6790,11 +6790,11 @@
 											"type": "reference",
 											"target": 295,
 											"name": "ModuleStoreCreditAccountFilters",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -7018,11 +7018,11 @@
 							"type": "reference",
 							"target": 295,
 							"name": "ModuleStoreCreditAccountFilters",
-							"package": "@medusajs/loyalty-plugin"
+							"package": "@bentoco/loyalty-plugin"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -7074,7 +7074,7 @@
 									"type": "reference",
 									"target": 303,
 									"name": "ModuleListAccountTransactions",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -7084,11 +7084,11 @@
 											"type": "reference",
 											"target": 303,
 											"name": "ModuleListAccountTransactions",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -7132,7 +7132,7 @@
 									"type": "reference",
 									"target": 303,
 									"name": "ModuleListAccountTransactions",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -7142,11 +7142,11 @@
 											"type": "reference",
 											"target": 303,
 											"name": "ModuleListAccountTransactions",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -7298,11 +7298,11 @@
 							"type": "reference",
 							"target": 303,
 							"name": "ModuleListAccountTransactions",
-							"package": "@medusajs/loyalty-plugin"
+							"package": "@bentoco/loyalty-plugin"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -7403,7 +7403,7 @@
 										"type": "reference",
 										"target": 399,
 										"name": "ModuleCreateStoreCreditAccount",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -7426,7 +7426,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7441,7 +7441,7 @@
 										"type": "reference",
 										"target": 422,
 										"name": "ModuleStoreCreditAccount",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -7511,7 +7511,7 @@
 											"type": "reference",
 											"target": 399,
 											"name": "ModuleCreateStoreCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -7535,7 +7535,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7552,7 +7552,7 @@
 											"type": "reference",
 											"target": 422,
 											"name": "ModuleStoreCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -7644,7 +7644,7 @@
 										"type": "reference",
 										"target": 434,
 										"name": "ModuleUpdateStoreCreditAccount",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -7667,7 +7667,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7682,7 +7682,7 @@
 										"type": "reference",
 										"target": 422,
 										"name": "ModuleStoreCreditAccount",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -7752,7 +7752,7 @@
 											"type": "reference",
 											"target": 434,
 											"name": "ModuleUpdateStoreCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -7776,7 +7776,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7793,7 +7793,7 @@
 											"type": "reference",
 											"target": 422,
 											"name": "ModuleStoreCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -7933,7 +7933,7 @@
 										"type": "reference",
 										"target": 295,
 										"name": "ModuleStoreCreditAccountFilters",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -7976,11 +7976,11 @@
 												"type": "reference",
 												"target": 422,
 												"name": "ModuleStoreCreditAccount",
-												"package": "@medusajs/loyalty-plugin"
+												"package": "@bentoco/loyalty-plugin"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -8003,7 +8003,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8020,7 +8020,7 @@
 											"type": "reference",
 											"target": 422,
 											"name": "ModuleStoreCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -8159,11 +8159,11 @@
 												"type": "reference",
 												"target": 422,
 												"name": "ModuleStoreCreditAccount",
-												"package": "@medusajs/loyalty-plugin"
+												"package": "@bentoco/loyalty-plugin"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -8186,7 +8186,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8201,7 +8201,7 @@
 										"type": "reference",
 										"target": 422,
 										"name": "ModuleStoreCreditAccount",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -8310,7 +8310,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8442,7 +8442,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8585,12 +8585,12 @@
 												"type": "reference",
 												"target": 344,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/loyalty-plugin",
+												"package": "@bentoco/loyalty-plugin",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -8613,7 +8613,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8642,7 +8642,7 @@
 														"type": "reference",
 														"target": 344,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/loyalty-plugin",
+														"package": "@bentoco/loyalty-plugin",
 														"refersToTypeParameter": true
 													},
 													{
@@ -8793,7 +8793,7 @@
 										"type": "reference",
 										"target": 303,
 										"name": "ModuleListAccountTransactions",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -8816,7 +8816,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8833,7 +8833,7 @@
 											"type": "reference",
 											"target": 454,
 											"name": "ModuleAccountTransaction",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -8919,7 +8919,7 @@
 										"type": "reference",
 										"target": 467,
 										"name": "ModuleRetrieveAccountStats",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -8942,7 +8942,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8957,7 +8957,7 @@
 										"type": "reference",
 										"target": 470,
 										"name": "ModuleAccountStats",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -9044,7 +9044,7 @@
 											"type": "reference",
 											"target": 476,
 											"name": "ModuleCreditAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -9068,7 +9068,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -9085,7 +9085,7 @@
 											"type": "reference",
 											"target": 454,
 											"name": "ModuleAccountTransaction",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -9173,7 +9173,7 @@
 											"type": "reference",
 											"target": 483,
 											"name": "ModuleDebitAccount",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -9197,7 +9197,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -9214,7 +9214,7 @@
 											"type": "reference",
 											"target": 454,
 											"name": "ModuleAccountTransaction",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -9324,7 +9324,7 @@
 										"type": "reference",
 										"target": 405,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -9379,7 +9379,7 @@
 					"type": "reference",
 					"target": 385,
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		}
@@ -9436,7 +9436,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/loyalty-plugin",
+	"packageName": "@bentoco/loyalty-plugin",
 	"symbolIdMap": {
 		"294": {
 			"sourceFileName": "../../../../packages/plugins/loyalty/src/types/store-credit/service.ts",

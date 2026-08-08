@@ -1,8 +1,8 @@
 import {
   convertItemResponseToUpdateRequest,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils";
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk";
+} from "@bentoco/framework/utils";
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk";
 import {
   ILoyaltyModuleService,
   ModuleUpdateGiftCard,

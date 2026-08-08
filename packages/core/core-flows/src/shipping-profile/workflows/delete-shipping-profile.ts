@@ -2,8 +2,8 @@ import {
   createStep,
   createWorkflow,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
-import { MedusaError, Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/workflows-sdk"
+import { MedusaError, Modules } from "@bentoco/framework/utils"
 
 import { deleteShippingProfilesStep } from "../steps"
 import { removeRemoteLinkStep, useQueryGraphStep } from "../../common"

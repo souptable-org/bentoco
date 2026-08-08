@@ -2,8 +2,8 @@ import {
   AuthLoginResponse,
   AuthRegisterResponse,
   FetchError,
-} from "@medusajs/js-sdk"
-import { HttpTypes } from "@medusajs/types"
+} from "@bentoco/js-sdk"
+import { HttpTypes } from "@bentoco/types"
 import { UseMutationOptions, useMutation } from "@tanstack/react-query"
 import { sdk } from "../../lib/client"
 

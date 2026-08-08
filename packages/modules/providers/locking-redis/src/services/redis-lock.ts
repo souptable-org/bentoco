@@ -1,5 +1,5 @@
-import { MedusaError, promiseAll } from "@medusajs/framework/utils"
-import { ILockingProvider } from "@medusajs/types"
+import { MedusaError, promiseAll } from "@bentoco/framework/utils"
+import { ILockingProvider } from "@bentoco/types"
 import { RedisCacheModuleOptions } from "@types"
 import { Redis } from "ioredis"
 import { setTimeout } from "node:timers/promises"

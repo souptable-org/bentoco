@@ -5,22 +5,22 @@ type MessageIds = "useFrameworkEntrypoint" | "noInternalImport"
 
 /**
  * Deprecated standalone packages whose contents moved into
- * `@medusajs/framework/*` subpaths. Importing them still works today but is
+ * `@bentoco/framework/*` subpaths. Importing them still works today but is
  * discouraged — the framework entry points are the supported surface.
  */
 const OLD_PACKAGE_REWRITES: Record<string, string> = {
-  "@medusajs/utils": "@medusajs/framework/utils",
-  "@medusajs/types": "@medusajs/framework/types",
-  "@medusajs/workflows-sdk": "@medusajs/framework/workflows-sdk",
-  "@medusajs/modules-sdk": "@medusajs/framework/modules-sdk",
-  "@medusajs/orchestration": "@medusajs/framework/orchestration",
+  "@bentoco/utils": "@bentoco/framework/utils",
+  "@bentoco/types": "@bentoco/framework/types",
+  "@bentoco/workflows-sdk": "@bentoco/framework/workflows-sdk",
+  "@bentoco/modules-sdk": "@bentoco/framework/modules-sdk",
+  "@bentoco/orchestration": "@bentoco/framework/orchestration",
 }
 
 /**
- * Deep import into a `@medusajs/*` package's compiled build output, e.g.
- * `@medusajs/medusa/dist/...` or `@medusajs/framework/dist/...`. Requires a
+ * Deep import into a `@bentoco/*` package's compiled build output, e.g.
+ * `@bentoco/medusa/dist/...` or `@bentoco/framework/dist/...`. Requires a
  * path segment that is exactly `dist` so package names like
- * `@medusajs/some-dist-thing` aren't matched.
+ * `@bentoco/some-dist-thing` aren't matched.
  */
 const MEDUSA_DIST_IMPORT = /^@medusajs\/[^/]+\/(?:[^/]+\/)*dist(?:\/|$)/
 
@@ -65,13 +65,13 @@ export const rule = createRule<[], MessageIds>({
     type: "suggestion",
     docs: {
       description:
-        "Use the public `@medusajs/framework/*` entry points; don't import from a package's internal `dist/` build output or from deprecated standalone packages.",
+        "Use the public `@bentoco/framework/*` entry points; don't import from a package's internal `dist/` build output or from deprecated standalone packages.",
     },
     messages: {
       useFrameworkEntrypoint:
         "Import from `{{ replacement }}` instead of the deprecated `{{ source }}` package.",
       noInternalImport:
-        "Don't import from internal build output `{{ source }}`. Use a public `@medusajs/framework/*` entry point instead.",
+        "Don't import from internal build output `{{ source }}`. Use a public `@bentoco/framework/*` entry point instead.",
     },
     fixable: "code",
     schema: [],

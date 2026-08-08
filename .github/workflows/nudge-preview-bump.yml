@@ -1,6 +1,6 @@
 name: Nudge Preview Bump
 
-# Nudges the medusajs/dtc-starter repo to bump its `@medusajs/*` dependencies to
+# Nudges the medusajs/dtc-starter repo to bump its `@bentoco/*` dependencies to
 # the latest `preview` version and verify the resulting Medusa Cloud deployment.
 # All of that logic lives in dtc-starter's own `bump-preview.yml` workflow, which
 # is triggered by pushing a `bump-preview-*` tag and deletes the tag when it

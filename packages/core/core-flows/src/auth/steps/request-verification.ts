@@ -1,6 +1,6 @@
-import type { AuthTypes, IAuthModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import type { AuthTypes, IAuthModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The ID of the request verification step.

@@ -1,1 +1,1 @@
-export { RemoteJoiner } from "@medusajs/query"
+export { RemoteJoiner } from "@bentoco/query"

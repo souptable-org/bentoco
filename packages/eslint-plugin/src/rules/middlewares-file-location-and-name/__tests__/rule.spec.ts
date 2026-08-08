@@ -8,7 +8,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Canonical location + default export of defineMiddlewares(...).
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "src/api/middlewares.ts",
@@ -16,7 +16,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Canonical location, .js variant.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "src/api/middlewares.js",
@@ -24,7 +24,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Nested api/ path without src/.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "api/middlewares.ts",
@@ -55,7 +55,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Singular `middleware.ts` under api/ that calls defineMiddlewares.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "src/api/middleware.ts",
@@ -64,7 +64,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Singular under nested api/ path.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "api/middleware.js",
@@ -73,7 +73,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Plural `middlewares.ts` in wrong directory (src/, not src/api/).
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "src/middlewares.ts",
@@ -82,7 +82,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Plural deep inside api/ but not at the canonical path.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({ routes: [] })
       `,
       filename: "src/api/admin/middlewares.ts",
@@ -91,7 +91,7 @@ ruleTester.run("middlewares-file-location-and-name", rule, {
     // Canonical location but no default export at all.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export const config = defineMiddlewares({ routes: [] })
       `,
       filename: "src/api/middlewares.ts",

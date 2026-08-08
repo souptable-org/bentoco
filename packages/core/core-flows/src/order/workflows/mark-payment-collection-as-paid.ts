@@ -1,12 +1,12 @@
-import type { PaymentCollectionDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import type { PaymentCollectionDTO } from "@bentoco/framework/types"
+import { MedusaError } from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import {
   authorizePaymentSessionStep,

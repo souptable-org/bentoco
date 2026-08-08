@@ -1,5 +1,5 @@
-import { AdminCampaign } from "@medusajs/types"
-import { Button, Container, Heading } from "@medusajs/ui"
+import { AdminCampaign } from "@bentoco/types"
+import { Button, Container, Heading } from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"

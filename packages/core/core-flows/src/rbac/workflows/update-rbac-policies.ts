@@ -2,8 +2,8 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
-import { UpdateRbacPolicyDTO } from "@medusajs/types"
+} from "@bentoco/framework/workflows-sdk"
+import { UpdateRbacPolicyDTO } from "@bentoco/types"
 import { updateRbacPoliciesStep } from "../steps/update-rbac-policies"
 
 /**

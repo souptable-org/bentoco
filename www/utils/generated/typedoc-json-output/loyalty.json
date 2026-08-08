@@ -94,7 +94,7 @@
 										"type": "reference",
 										"target": 199,
 										"name": "FindConfigOrder",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -169,7 +169,7 @@
 										"type": "reference",
 										"target": 135,
 										"name": "Entity",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"qualifiedName": "FindConfig.Entity",
 										"refersToTypeParameter": true
 									}
@@ -345,7 +345,7 @@
 						"type": "reference",
 						"target": 199,
 						"name": "FindConfigOrder",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -1354,7 +1354,7 @@
 							"type": "reference",
 							"target": 251,
 							"name": "CustomerAddressDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -1781,19 +1781,19 @@
 											"type": "reference",
 											"target": 57,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 57,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -1837,19 +1837,19 @@
 											"type": "reference",
 											"target": 57,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 57,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -2091,7 +2091,7 @@
 								"type": "reference",
 								"target": 291,
 								"name": "EventMetadata",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -2119,7 +2119,7 @@
 								"type": "reference",
 								"target": 290,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -2189,12 +2189,12 @@
 								"type": "reference",
 								"target": 233,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Event",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -2331,7 +2331,7 @@
 								"type": "reference",
 								"target": 250,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -2417,7 +2417,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -2925,7 +2925,7 @@
 								"type": "reference",
 								"target": 270,
 								"name": "JoinerServiceConfigAlias",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "array",
@@ -2933,7 +2933,7 @@
 									"type": "reference",
 									"target": 270,
 									"name": "JoinerServiceConfigAlias",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -3096,7 +3096,7 @@
 							"type": "reference",
 							"target": 275,
 							"name": "JoinerRelationship",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -3181,7 +3181,7 @@
 											"type": "reference",
 											"target": 275,
 											"name": "JoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -3544,7 +3544,7 @@
 								"type": "reference",
 								"target": 204,
 								"name": "JoinerServiceConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "union",
@@ -3664,7 +3664,7 @@
 											"type": "reference",
 											"target": 219,
 											"name": "ModuleJoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -3886,7 +3886,7 @@
 																	"type": "reference",
 																	"target": 219,
 																	"name": "ModuleJoinerRelationship",
-																	"package": "@medusajs/types"
+																	"package": "@bentoco/types"
 																},
 																{
 																	"type": "literal",
@@ -4192,7 +4192,7 @@
 														"type": "reference",
 														"target": 224,
 														"name": "LinkModulesExtraFields",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												}
 											],
@@ -4267,7 +4267,7 @@
 						"type": "reference",
 						"target": 275,
 						"name": "JoinerRelationship",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -4434,7 +4434,7 @@
 								"type": "reference",
 								"target": 136,
 								"name": "ModuleJoinerConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -4922,7 +4922,7 @@
 												"type": "reference",
 												"target": 230,
 												"name": "Message",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -4930,7 +4930,7 @@
 													"type": "reference",
 													"target": 230,
 													"name": "Message",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -4984,7 +4984,7 @@
 										"type": "reference",
 										"target": 234,
 										"name": "MessageAggregatorFormat",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -5005,7 +5005,7 @@
 											"type": "reference",
 											"target": 230,
 											"name": "Message",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -5103,12 +5103,12 @@
 														"type": "reference",
 														"target": 173,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "RawMessageFormat",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -5120,12 +5120,12 @@
 															"type": "reference",
 															"target": 173,
 															"name": "T",
-															"package": "@medusajs/types",
+															"package": "@bentoco/types",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "RawMessageFormat",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -5265,7 +5265,7 @@
 						"type": "reference",
 						"target": 99,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5312,7 +5312,7 @@
 						"type": "reference",
 						"target": 99,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5515,7 +5515,7 @@
 						"type": "reference",
 						"target": 162,
 						"name": "IMessageAggregator",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5906,7 +5906,7 @@
 								"type": "reference",
 								"target": 176,
 								"name": "GiftCardStatus",
-								"package": "@medusajs/loyalty-plugin"
+								"package": "@bentoco/loyalty-plugin"
 							}
 						},
 						{
@@ -6012,7 +6012,7 @@
 								"type": "reference",
 								"target": 179,
 								"name": "CustomerDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -6702,7 +6702,7 @@
 								"type": "reference",
 								"target": 176,
 								"name": "GiftCardStatus",
-								"package": "@medusajs/loyalty-plugin"
+								"package": "@bentoco/loyalty-plugin"
 							}
 						},
 						{
@@ -6963,7 +6963,7 @@
 									"type": "reference",
 									"target": 1,
 									"name": "ModuleGiftCardFilters",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -6973,11 +6973,11 @@
 											"type": "reference",
 											"target": 1,
 											"name": "ModuleGiftCardFilters",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -7021,7 +7021,7 @@
 									"type": "reference",
 									"target": 1,
 									"name": "ModuleGiftCardFilters",
-									"package": "@medusajs/loyalty-plugin"
+									"package": "@bentoco/loyalty-plugin"
 								},
 								{
 									"type": "reference",
@@ -7031,11 +7031,11 @@
 											"type": "reference",
 											"target": 1,
 											"name": "ModuleGiftCardFilters",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -7385,11 +7385,11 @@
 							"type": "reference",
 							"target": 1,
 							"name": "ModuleGiftCardFilters",
-							"package": "@medusajs/loyalty-plugin"
+							"package": "@bentoco/loyalty-plugin"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -7490,7 +7490,7 @@
 										"type": "reference",
 										"target": 72,
 										"name": "ModuleCreateGiftCard",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -7513,7 +7513,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7528,7 +7528,7 @@
 										"type": "reference",
 										"target": 100,
 										"name": "ModuleGiftCard",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -7598,7 +7598,7 @@
 											"type": "reference",
 											"target": 72,
 											"name": "ModuleCreateGiftCard",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -7622,7 +7622,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7639,7 +7639,7 @@
 											"type": "reference",
 											"target": 100,
 											"name": "ModuleGiftCard",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -7731,7 +7731,7 @@
 										"type": "reference",
 										"target": 115,
 										"name": "ModuleUpdateGiftCard",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -7754,7 +7754,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7769,7 +7769,7 @@
 										"type": "reference",
 										"target": 100,
 										"name": "ModuleGiftCard",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -7839,7 +7839,7 @@
 											"type": "reference",
 											"target": 115,
 											"name": "ModuleUpdateGiftCard",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								},
@@ -7863,7 +7863,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -7880,7 +7880,7 @@
 											"type": "reference",
 											"target": 100,
 											"name": "ModuleGiftCard",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -8012,7 +8012,7 @@
 										"type": "reference",
 										"target": 1,
 										"name": "ModuleGiftCardFilters",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								},
 								{
@@ -8055,11 +8055,11 @@
 												"type": "reference",
 												"target": 100,
 												"name": "ModuleGiftCard",
-												"package": "@medusajs/loyalty-plugin"
+												"package": "@bentoco/loyalty-plugin"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -8082,7 +8082,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8099,7 +8099,7 @@
 											"type": "reference",
 											"target": 100,
 											"name": "ModuleGiftCard",
-											"package": "@medusajs/loyalty-plugin"
+											"package": "@bentoco/loyalty-plugin"
 										}
 									}
 								],
@@ -8226,11 +8226,11 @@
 												"type": "reference",
 												"target": 100,
 												"name": "ModuleGiftCard",
-												"package": "@medusajs/loyalty-plugin"
+												"package": "@bentoco/loyalty-plugin"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -8253,7 +8253,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8268,7 +8268,7 @@
 										"type": "reference",
 										"target": 100,
 										"name": "ModuleGiftCard",
-										"package": "@medusajs/loyalty-plugin"
+										"package": "@bentoco/loyalty-plugin"
 									}
 								],
 								"name": "Promise",
@@ -8377,7 +8377,7 @@
 										"type": "reference",
 										"target": 83,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -8425,7 +8425,7 @@
 					"type": "reference",
 					"target": 58,
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		}
@@ -8472,7 +8472,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/loyalty-plugin",
+	"packageName": "@bentoco/loyalty-plugin",
 	"symbolIdMap": {
 		"0": {
 			"sourceFileName": "../../../../packages/plugins/loyalty/src/types/loyalty/service.ts",

@@ -2,15 +2,15 @@
 // `definePolicies()``). The Edit / Delete action menu is commented out
 // below — uncomment to re-enable when policy management is opened to admins.
 
-// import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+// import { PencilSquare, Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import {
   Container,
   Heading,
   // Hint,
   // toast,
   // usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 // import { useNavigate } from "react-router-dom"
 

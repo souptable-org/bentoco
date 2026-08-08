@@ -35,9 +35,9 @@
     "typedoc"
   ],
   "dependencies": {
-    "@medusajs/core-flows": "link:../../../../packages/core/core-flows",
-    "@medusajs/framework": "link:../../../../packages/core/framework",
-    "@medusajs/loyalty-plugin": "link:../../../../packages/plugins/loyalty",
+    "@bentoco/core-flows": "link:../../../../packages/core/core-flows",
+    "@bentoco/framework": "link:../../../../packages/core/framework",
+    "@bentoco/loyalty-plugin": "link:../../../../packages/plugins/loyalty",
     "eslint": "^8.53.0",
     "glob": "13.0.6",
     "utils": "*",

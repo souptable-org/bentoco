@@ -1,4 +1,4 @@
-import { InformationCircleSolid } from "@medusajs/icons"
+import { InformationCircleSolid } from "@bentoco/icons"
 import {
   Badge,
   CurrencyInput,
@@ -6,7 +6,7 @@ import {
   Label,
   Text,
   Tooltip,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { Fragment, ReactNode } from "react"
 import { Control, useWatch, useFormContext } from "react-hook-form"
 import { Trans, useTranslation } from "react-i18next"

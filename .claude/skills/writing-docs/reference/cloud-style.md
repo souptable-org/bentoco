@@ -95,7 +95,7 @@ Use to reference a specific UI icon inline:
 
 ```mdx
 import { InlineIcon } from "docs-ui"
-import { EllipsisHorizontal } from "@medusajs/icons"
+import { EllipsisHorizontal } from "@bentoco/icons"
 
 Click the <InlineIcon Icon={EllipsisHorizontal} alt="three dots" /> icon next to the environment.
 ```

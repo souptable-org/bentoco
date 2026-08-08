@@ -1,4 +1,4 @@
-import { Knex } from "@medusajs/deps/mikro-orm/postgresql"
+import { Knex } from "@bentoco/deps/mikro-orm/postgresql"
 import {
   augmentFindOptionsWithCrossModuleJoins,
   buildTargetFilterSql,

@@ -2,9 +2,9 @@ import {
   CommonEvents,
   composeMessage,
   Modules,
-} from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
-import { IEventBusModuleService } from "@medusajs/types"
+} from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
+import { IEventBusModuleService } from "@bentoco/types"
 
 moduleIntegrationTestRunner<IEventBusModuleService>({
   moduleName: Modules.EVENT_BUS,

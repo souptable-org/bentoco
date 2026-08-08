@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom"
-import { toast, usePrompt } from "@medusajs/ui"
+import { toast, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { useDeleteProductOption } from "../../../../hooks/api"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 export const useDeleteProductOptionAction = ({
   id,

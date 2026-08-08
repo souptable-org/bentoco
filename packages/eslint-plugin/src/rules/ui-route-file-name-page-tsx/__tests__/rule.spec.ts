@@ -10,7 +10,7 @@ ruleTester.run("ui-route-file-name-page-tsx", rule, {
   valid: [
     // Properly named page.tsx that uses defineRouteConfig.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => <div />
 export const config = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,
@@ -18,7 +18,7 @@ export default CustomPage`,
     },
     // File not under admin/routes — out of scope.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 export const config = defineRouteConfig({ label: "Custom" })
 export default () => <div />`,
       filename: "src/lib/helpers.tsx",
@@ -31,7 +31,7 @@ export default CustomPage`,
     },
     // Misnamed file that imports defineRouteConfig but never calls it.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 export default () => <div />`,
       filename: MISNAMED,
     },
@@ -46,7 +46,7 @@ export default () => <div />`,
   invalid: [
     // Misnamed file calls defineRouteConfig from admin-sdk.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => <div />
 export const config = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,
@@ -55,7 +55,7 @@ export default CustomPage`,
     },
     // Aliased import — still tracked.
     {
-      code: `import { defineRouteConfig as drc } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig as drc } from "@bentoco/admin-sdk"
 export const config = drc({ label: "Custom" })
 export default () => <div />`,
       filename: MISNAMED,
@@ -63,7 +63,7 @@ export default () => <div />`,
     },
     // Bare `admin/routes/...` path (no `src/`).
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 export const config = defineRouteConfig({ label: "Custom" })
 export default () => <div />`,
       filename: "admin/routes/custom/custom.tsx",
@@ -71,7 +71,7 @@ export default () => <div />`,
     },
     // Nested misnamed file.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 export const config = defineRouteConfig({ label: "Sub" })
 export default () => <span />`,
       filename: "src/admin/routes/custom/sub-page.tsx",

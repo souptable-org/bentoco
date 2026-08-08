@@ -2,7 +2,7 @@ import {
   EntityConstructor,
   PropertyMetadata,
   RelationshipMetadata,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import { Searchable } from "../../../dal"
 
 /**

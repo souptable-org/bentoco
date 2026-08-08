@@ -1,5 +1,5 @@
-import { ModuleResolution } from "@medusajs/types"
-import { createMedusaContainer } from "@medusajs/utils"
+import { ModuleResolution } from "@bentoco/types"
+import { createMedusaContainer } from "@bentoco/utils"
 import { MODULE_SCOPE } from "../../types"
 import { moduleLoader } from "../module-loader"
 
@@ -161,10 +161,10 @@ describe("modules loader", () => {
     expect.assertions(1)
     const moduleResolutions: Record<string, ModuleResolution> = {
       testService: {
-        resolutionPath: "@medusajs/testService",
+        resolutionPath: "@bentoco/testService",
         definition: {
           key: "testService",
-          defaultPackage: "@medusajs/testService",
+          defaultPackage: "@bentoco/testService",
           label: "TestService",
           isRequired: true,
           defaultModuleDeclaration: {
@@ -181,7 +181,7 @@ describe("modules loader", () => {
       await moduleLoader({ container, moduleResolutions, logger })
     } catch (err) {
       expect(err.message).toEqual(
-        `Make sure you have installed the default package: @medusajs/testService`
+        `Make sure you have installed the default package: @bentoco/testService`
       )
     }
   })

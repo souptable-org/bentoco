@@ -1,5 +1,5 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { AdminApiKeyResponse, HttpTypes } from "@medusajs/types"
+import { PencilSquare, Trash } from "@bentoco/icons"
+import { AdminApiKeyResponse, HttpTypes } from "@bentoco/types"
 import {
   Container,
   createDataTableColumnHelper,
@@ -7,7 +7,7 @@ import {
   DataTableRowSelectionState,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { RowSelectionState } from "@tanstack/react-table"
 import { useCallback, useMemo, useState } from "react"

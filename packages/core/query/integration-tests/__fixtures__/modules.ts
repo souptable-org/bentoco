@@ -1,4 +1,4 @@
-import { LoadedModule, ModuleJoinerConfig } from "@medusajs/types"
+import { LoadedModule, ModuleJoinerConfig } from "@bentoco/types"
 import { integrationData } from "./data"
 
 const productJoinerConfig: ModuleJoinerConfig = {

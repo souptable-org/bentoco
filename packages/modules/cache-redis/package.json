@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/cache-redis",
+  "name": "@bentoco/cache-redis",
   "version": "2.18.0",
   "description": "Redis Cache Module for Medusa",
   "main": "dist/index.js",
@@ -26,7 +26,7 @@
   "author": "Medusa",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.18.0"
+    "@bentoco/framework": "2.18.0"
   },
   "scripts": {
     "watch": "yarn run -T tsc --build --watch",
@@ -37,6 +37,6 @@
     "ioredis": "^5.4.1"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.18.0"
+    "@bentoco/framework": "2.18.0"
   }
 }

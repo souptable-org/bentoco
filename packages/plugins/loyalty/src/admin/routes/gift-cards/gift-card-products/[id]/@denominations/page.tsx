@@ -1,4 +1,4 @@
-import { Heading } from "@medusajs/ui";
+import { Heading } from "@bentoco/ui";
 import { useParams } from "react-router-dom";
 import { RouteDrawer } from "../../../../../components/modals";
 import { useProduct } from "../../../../../hooks/api/products";

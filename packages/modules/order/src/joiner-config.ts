@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@bentoco/framework/utils"
 import {
   Order,
   OrderAddress,

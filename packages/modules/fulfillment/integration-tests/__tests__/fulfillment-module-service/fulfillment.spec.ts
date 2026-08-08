@@ -1,12 +1,12 @@
 import {
   IFulfillmentModuleService,
   UpdateFulfillmentDTO,
-} from "@medusajs/framework/types"
-import { FulfillmentEvents, Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { FulfillmentEvents, Modules } from "@bentoco/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@bentoco/test-utils"
 import { resolve } from "path"
 import {
   buildExpectedEventMessageShape,

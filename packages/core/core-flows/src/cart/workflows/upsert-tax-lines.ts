@@ -3,7 +3,7 @@ import {
   CartShippingMethodDTO,
   ItemTaxLineDTO,
   ShippingTaxLineDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -11,7 +11,7 @@ import {
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { getItemTaxLinesStep } from "../../tax/steps/get-item-tax-lines"
 import { validateCartStep } from "../steps"

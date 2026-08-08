@@ -1,8 +1,8 @@
 import plugin from "../index"
 
-describe("@medusajs/eslint-plugin", () => {
+describe("@bentoco/eslint-plugin", () => {
   it("exposes a meta block with the plugin name", () => {
-    expect(plugin.meta).toEqual({ name: "@medusajs/eslint-plugin" })
+    expect(plugin.meta).toEqual({ name: "@bentoco/eslint-plugin" })
   })
 
   it("registers the no-async-workflow-constructor rule", () => {
@@ -37,10 +37,10 @@ describe("@medusajs/eslint-plugin", () => {
         .filter((block) => block.rules)
         .map((block) => block.rules as Record<string, unknown>)
     )
-    expect(allRules).toHaveProperty("@medusajs/service-methods-must-be-async")
-    expect(allRules).toHaveProperty("@medusajs/module-name-snake-case")
+    expect(allRules).toHaveProperty("@bentoco/service-methods-must-be-async")
+    expect(allRules).toHaveProperty("@bentoco/module-name-snake-case")
     expect(allRules).toHaveProperty(
-      "@medusajs/data-model-table-name-snake-case"
+      "@bentoco/data-model-table-name-snake-case"
     )
 
     // Module-definition rule is scoped to the entry file, not the broad block.
@@ -48,7 +48,7 @@ describe("@medusajs/eslint-plugin", () => {
       (block) =>
         block.rules &&
         (block.rules as Record<string, unknown>)[
-          "@medusajs/module-name-snake-case"
+          "@bentoco/module-name-snake-case"
         ]
     )
     expect(moduleDefBlock!.files).toContain("src/index.{ts,js}")
@@ -58,7 +58,7 @@ describe("@medusajs/eslint-plugin", () => {
       (block) =>
         block.rules &&
         (block.rules as Record<string, unknown>)[
-          "@medusajs/primary-key-required"
+          "@bentoco/primary-key-required"
         ]
     )
     expect(modelsBlock!.files).toContain("**/models/**/*.{ts,js}")
@@ -75,7 +75,7 @@ describe("@medusajs/eslint-plugin", () => {
 
     // The plugin is registered in a `files`-less global block so that EVERY
     // linted file (including `.js` files matched by rule blocks) can resolve
-    // `@medusajs/*` rule references — it is intentionally not scoped to TS.
+    // `@bentoco/*` rule references — it is intentionally not scoped to TS.
     const pluginBlock = recommended.find(
       (block) => block.plugins && !block.files
     )

@@ -17,7 +17,7 @@ The Product Module gives you access Products, Variants, Categories, and more thr
 1\. Run the following command in your project
 
 ```bash
-npm install @medusajs/product
+npm install @bentoco/product
 ```
 
 2\. Add Database URL to your environment variables
@@ -157,7 +157,7 @@ To do that, add the serverComponentsExternalPackages option in `next.config.js`:
 
 const nextConfig = {
   experimental: {
-    serverComponentsExternalPackages: ["@medusajs/product"],
+    serverComponentsExternalPackages: ["@bentoco/product"],
   },
 }
 
@@ -173,7 +173,7 @@ For example, create the file `app/api/products/route.ts` with the following cont
 ```ts
 import { NextResponse } from "next/server"
 
-import { initialize as initializeProductModule } from "@medusajs/product"
+import { initialize as initializeProductModule } from "@bentoco/product"
 
 export async function GET(request: Request) {
   const productService = await initializeProductModule()

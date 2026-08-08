@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { AdminCampaign } from "@medusajs/types"
-import { Button, DatePicker, toast } from "@medusajs/ui"
+import { AdminCampaign } from "@bentoco/types"
+import { Button, DatePicker, toast } from "@bentoco/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"

@@ -8,7 +8,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Context param decorated with @MedusaContext().
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(@MedusaContext() sharedContext: Context = {}) {}
         }
@@ -17,7 +17,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Decorator on a plain (no-default) Context param.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async retrieve(id: string, @MedusaContext() sharedContext: Context) {}
         }
@@ -26,7 +26,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Method without a Context parameter — not flagged.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(filters: object) {}
         }
@@ -43,7 +43,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Constructor with Context param is exempt.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(sharedContext: Context) {
             super(...arguments)
@@ -54,7 +54,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Aliased decorator import is honored.
     {
       code: `
-        import { MedusaService, MedusaContext as MC } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext as MC } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(@MC() sharedContext: Context = {}) {}
         }
@@ -63,7 +63,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Protected method with decorated Context param.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           protected async list_(@MedusaContext() sharedContext: Context = {}) {}
         }
@@ -73,7 +73,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // service class — its bare `Context` param is not flagged.
     {
       code: `
-        import { MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaContext } from "@bentoco/framework/utils"
         class OrderService {
           async list(sharedContext: Context = {}) {}
         }
@@ -83,7 +83,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // the decorator lives on the implementation, which carries it here.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           list(id: string, sharedContext?: Context): Promise<string>
           list(id: number, sharedContext?: Context): Promise<number>
@@ -96,13 +96,13 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Public method with bare Context param — autofix inserts decorator.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(@MedusaContext() sharedContext: Context = {}) {}
         }
@@ -112,13 +112,13 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Bare Context param with no default — autofix.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async retrieve(id: string, sharedContext: Context) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async retrieve(id: string, @MedusaContext() sharedContext: Context) {}
         }
@@ -128,7 +128,7 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // No import for MedusaContext — reported without autofix.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
@@ -139,13 +139,13 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Honors aliased decorator import in the autofix.
     {
       code: `
-        import { MedusaService, MedusaContext as MC } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext as MC } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext as MC } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext as MC } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(@MC() sharedContext: Context = {}) {}
         }
@@ -155,13 +155,13 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Protected method with bare Context param.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           protected async list_(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           protected async list_(@MedusaContext() sharedContext: Context = {}) {}
         }
@@ -171,14 +171,14 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Multiple methods on the same class, each reported.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
           protected async list_(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(@MedusaContext() sharedContext: Context = {}) {}
           protected async list_(@MedusaContext() sharedContext: Context = {}) {}
@@ -192,13 +192,13 @@ ruleTester.run("medusa-context-on-context-param", rule, {
     // Context param after non-Context params is correctly targeted.
     {
       code: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async retrieve(id: string, filters: object, sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, MedusaContext } from "@medusajs/framework/utils"
+        import { MedusaService, MedusaContext } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async retrieve(id: string, filters: object, @MedusaContext() sharedContext: Context = {}) {}
         }

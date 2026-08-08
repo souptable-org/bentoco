@@ -1,9 +1,9 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 import {
   CreateLineItemAdjustmentDTO,
   IOrderModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 export const createDraftOrderLineItemAdjustmentsStepId =
   "create-draft-order-line-item-adjustments"

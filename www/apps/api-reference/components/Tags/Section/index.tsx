@@ -34,7 +34,7 @@ import { getApiRefTagSlug } from "docs-utils"
 import { RoutesSummary } from "./RoutesSummary"
 import { Feedback } from "../../Feedback"
 import ViewAsMarkdown from "@/components/ViewAsMarkdown"
-import { ArrowLeft } from "@medusajs/icons"
+import { ArrowLeft } from "@bentoco/icons"
 import {
   isScrollSpyLocked,
   isScrollSpyNavigation,

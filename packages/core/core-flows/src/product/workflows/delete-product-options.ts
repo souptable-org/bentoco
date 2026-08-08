@@ -1,4 +1,4 @@
-import { Modules, ProductOptionWorkflowEvents } from "@medusajs/framework/utils"
+import { Modules, ProductOptionWorkflowEvents } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -6,7 +6,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 import { emitEventStep } from "../../common"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"

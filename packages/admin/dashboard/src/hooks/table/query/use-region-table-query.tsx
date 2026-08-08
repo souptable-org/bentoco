@@ -1,4 +1,4 @@
-import { FindParams, HttpTypes } from "@medusajs/types"
+import { FindParams, HttpTypes } from "@bentoco/types"
 import { useQueryParams } from "../../use-query-params"
 
 type UseRegionTableQueryProps = {

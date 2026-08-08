@@ -1,10 +1,10 @@
-import type { LinkWorkflowInput } from "@medusajs/framework/types"
+import type { LinkWorkflowInput } from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to manage the sales channels of a publishable API key.

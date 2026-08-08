@@ -1,10 +1,10 @@
-import type { WorkflowTypes } from "@medusajs/framework/types"
+import type { WorkflowTypes } from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { notifyOnFailureStep, sendNotificationsStep } from "../../notification"
 import {
   normalizeCsvToChunksStep,
@@ -46,14 +46,14 @@ export const importProductsAsChunksWorkflowId = "import-products-as-chunks"
  * import {
  *   AuthenticatedMedusaRequest,
  *   MedusaResponse,
- * } from "@medusajs/framework/http"
+ * } from "@bentoco/framework/http"
  * import {
  *   importProductsAsChunksWorkflowId,
  *   waitConfirmationProductImportStepId,
- * } from "@medusajs/core-flows"
- * import type { IWorkflowEngineService } from "@medusajs/framework/types"
- * import { Modules, TransactionHandlerType } from "@medusajs/framework/utils"
- * import { StepResponse } from "@medusajs/framework/workflows-sdk"
+ * } from "@bentoco/core-flows"
+ * import type { IWorkflowEngineService } from "@bentoco/framework/types"
+ * import { Modules, TransactionHandlerType } from "@bentoco/framework/utils"
+ * import { StepResponse } from "@bentoco/framework/workflows-sdk"
  *
  * export const POST = async (
  *   req: AuthenticatedMedusaRequest,

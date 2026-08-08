@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { HttpTypes } from "@medusajs/types"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { HttpTypes } from "@bentoco/types"
 import {
   ApiKeyType,
   ModuleRegistrationName,
@@ -8,7 +8,7 @@ import {
   ProductStatus,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

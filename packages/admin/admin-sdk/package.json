@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/admin-sdk",
+  "name": "@bentoco/admin-sdk",
   "description": "SDK for building extension for the Medusa admin dashboard.",
   "version": "2.18.0",
   "author": "Kasper Kristensen <kasper@medusajs.com>",
@@ -22,7 +22,7 @@
     "build": "yarn run -T tsup"
   },
   "dependencies": {
-    "@medusajs/admin-shared": "2.18.0",
+    "@bentoco/admin-shared": "2.18.0",
     "zod": "4.2.0"
   },
   "packageManager": "yarn@3.2.1"

@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IOrderModuleService, IPromotionModuleService } from "@medusajs/types"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IOrderModuleService, IPromotionModuleService } from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
@@ -8,7 +8,7 @@ import {
   PromotionStatus,
   PromotionType,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

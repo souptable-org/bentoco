@@ -6,7 +6,7 @@ import {
   ModuleJoinerConfig,
   RemoteJoinerOptions,
   RemoteJoinerQuery,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 // Sentinel path used as the root key in expand maps.
 export const BASE_PATH = "_root"

@@ -1,6 +1,6 @@
-import type { IOrderModuleService } from "@medusajs/framework/types"
-import { createStep } from "@medusajs/framework/workflows-sdk"
-import { Modules } from "@medusajs/framework/utils"
+import type { IOrderModuleService } from "@bentoco/framework/types"
+import { createStep } from "@bentoco/framework/workflows-sdk"
+import { Modules } from "@bentoco/framework/utils"
 
 /**
  * The details of canceling the orders.

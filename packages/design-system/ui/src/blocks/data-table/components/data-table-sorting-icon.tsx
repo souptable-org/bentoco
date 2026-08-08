@@ -2,7 +2,7 @@
 
 import { DataTableSortDirection } from "@/blocks/data-table/types"
 import { clx } from "@/utils/clx"
-import { ArrowDownMini, ArrowUpMini } from "@medusajs/icons"
+import { ArrowDownMini, ArrowUpMini } from "@bentoco/icons"
 import * as React from "react"
 
 interface SortingIconProps {

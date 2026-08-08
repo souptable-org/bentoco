@@ -1,10 +1,10 @@
-import { Constructor } from "@medusajs/types"
-import { MikroORM, Utils } from "@medusajs/deps/mikro-orm/core"
+import { Constructor } from "@bentoco/types"
+import { MikroORM, Utils } from "@bentoco/deps/mikro-orm/core"
 import {
   Migrator as BaseMigrator,
   Migration,
   UmzugMigration,
-} from "@medusajs/deps/mikro-orm/migrations"
+} from "@bentoco/deps/mikro-orm/migrations"
 import { isFileDisabled, isFileSkipped } from "../../common/define-file-config"
 import { dynamicImport } from "../../common/dynamic-import"
 

@@ -4,7 +4,7 @@ import {
   OrderStatus,
   OrderWorkflowEvents,
   ReservationItemWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
@@ -13,12 +13,12 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import type {
   ConfirmVariantInventoryWorkflowInputDTO,
   IOrderModuleService,
   OrderDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { updateOrderTaxLinesWorkflow } from "../../order"
 import { validateDraftOrderStep } from "../steps/validate-draft-order"

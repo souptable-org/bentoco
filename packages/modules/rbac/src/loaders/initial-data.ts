@@ -2,8 +2,8 @@ import {
   InferEntityType,
   LoaderOptions,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
-import { WILDCARD } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { WILDCARD } from "@bentoco/framework/utils"
 import { RbacPolicy, RbacRole, RbacRolePolicy } from "@models"
 
 export default async ({

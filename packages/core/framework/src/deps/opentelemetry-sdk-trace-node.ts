@@ -1,1 +1,1 @@
-export * from "@medusajs/deps/opentelemetry/sdk-trace-node"
+export * from "@bentoco/deps/opentelemetry/sdk-trace-node"

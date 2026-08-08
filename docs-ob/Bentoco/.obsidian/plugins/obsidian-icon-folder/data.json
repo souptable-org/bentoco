@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🛠",
+      "🎬",
+      "LiToolCase",
+      "🏪",
+      "💰"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Notes/founder’s objection-handling cheat sheet..md": "LiHammer",
+  "Docs/The Core Market Gap.md": "🥝",
+  "Docs/Bentoco Feature Lists.md": "🧰",
+  "Docs/PRODUCT THESIS - BHARAT COMMERCE.md": "🗃",
+  "Docs/Compeition Matrix.md": "📈",
+  "Docs/pricing tiers and monetization strategy.md": "💰",
+  "Docs/The Ideal GTM.md": "🏪",
+  "Notes/HARDFORK.md": "LiToolCase",
+  "Docs/Bentoco roadmap.md": "🎬",
+  "Docs/Bentoco product spec.md": "🛠"
+}

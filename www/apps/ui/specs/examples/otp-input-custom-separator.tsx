@@ -1,4 +1,4 @@
-import { OtpInput } from "@medusajs/ui"
+import { OtpInput } from "@bentoco/ui"
 import { useState } from "react"
 
 export default function OtpInputCustomSeparator() {

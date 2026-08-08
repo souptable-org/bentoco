@@ -12,12 +12,12 @@ import {
   IFulfillmentProvider,
   Logger,
   ValidateFulfillmentDataContext,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MedusaError,
   ModulesSdkUtils,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { FulfillmentProvider } from "@models"
 
 type InjectedDependencies = {

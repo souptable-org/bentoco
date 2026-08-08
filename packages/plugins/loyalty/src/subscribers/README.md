@@ -9,7 +9,7 @@ For example, create the file `src/subscribers/product-created.ts` with the follo
 ```ts
 import {
   type SubscriberConfig,
-} from "@medusajs/framework"
+} from "@bentoco/framework"
 
 // subscriber function
 export default async function productCreateHandler() {
@@ -38,7 +38,7 @@ A subscriber receives an object having the following properties:
 import type {
   SubscriberArgs,
   SubscriberConfig,
-} from "@medusajs/framework"
+} from "@bentoco/framework"
 
 export default async function productCreateHandler({
   event: { data },

@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   IInventoryServiceNext,
   IPricingModuleService,
@@ -7,14 +7,14 @@ import {
   ISalesChannelModuleService,
   IStockLocationServiceNext,
   ITaxModuleService,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   ProductStatus,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

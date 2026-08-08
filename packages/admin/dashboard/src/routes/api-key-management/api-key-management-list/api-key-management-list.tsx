@@ -1,4 +1,4 @@
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { useLocation } from "react-router-dom"
 import { getApiKeyTypeFromPathname } from "../common/utils"
 import { ApiKeyManagementListTable } from "./components/api-key-management-list-table"

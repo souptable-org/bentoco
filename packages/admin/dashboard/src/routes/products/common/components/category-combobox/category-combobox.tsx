@@ -4,9 +4,9 @@ import {
   TriangleRightMini,
   TrianglesMini,
   XMarkMini,
-} from "@medusajs/icons"
-import { AdminProductCategoryResponse } from "@medusajs/types"
-import { Divider, Text, clx } from "@medusajs/ui"
+} from "@bentoco/icons"
+import { AdminProductCategoryResponse } from "@bentoco/types"
+import { Divider, Text, clx } from "@bentoco/ui"
 import { Popover as RadixPopover } from "radix-ui"
 import {
   CSSProperties,

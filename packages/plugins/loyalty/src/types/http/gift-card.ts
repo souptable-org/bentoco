@@ -8,7 +8,7 @@ import {
   SelectParams,
   StoreCustomer,
   StoreOrderLineItem,
-} from "@medusajs/framework/types";
+} from "@bentoco/framework/types";
 import {
   GiftCardStatus,
   ModuleCreateGiftCard,

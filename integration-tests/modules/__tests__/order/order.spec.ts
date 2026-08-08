@@ -1,14 +1,14 @@
 import {
   createOrderChangeWorkflow,
   createOrderWorkflow,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   CreateOrderLineItemDTO,
   IOrderModuleService,
   OrderDTO,
-} from "@medusajs/types"
-import { Modules, ProductStatus } from "@medusajs/utils"
+} from "@bentoco/types"
+import { Modules, ProductStatus } from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

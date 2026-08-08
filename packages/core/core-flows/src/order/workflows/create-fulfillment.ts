@@ -10,7 +10,7 @@ import {
   ProductVariantDTO,
   ReservationItemDTO,
   ShippingProfileDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   InventoryLevelWorkflowEvents,
   MathBN,
@@ -18,7 +18,7 @@ import {
   Modules,
   OrderWorkflowEvents,
   ReservationItemWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createHook,
   createStep,
@@ -27,7 +27,7 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   emitEventStep,

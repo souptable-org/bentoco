@@ -3,8 +3,8 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { InventoryItemWorkflowEvents, Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/workflows-sdk"
+import { InventoryItemWorkflowEvents, Modules } from "@bentoco/framework/utils"
 
 import { deleteInventoryItemStep, validateInventoryDeleteStep } from "../steps"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"

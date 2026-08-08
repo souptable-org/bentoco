@@ -1,10 +1,10 @@
-import { JoinerRelationship, RemoteJoinerOptions } from "@medusajs/types"
+import { JoinerRelationship, RemoteJoinerOptions } from "@bentoco/types"
 import {
   FilterOperatorMap,
   isDefined,
   isObject,
   MedusaError,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { GraphCatalog } from "./catalog"
 import {
   applyResidualFilters,

@@ -1,5 +1,5 @@
-import { AdminTranslationEntityStatistics, HttpTypes } from "@medusajs/types"
-import { Container, Divider, Heading, Text, Tooltip } from "@medusajs/ui"
+import { AdminTranslationEntityStatistics, HttpTypes } from "@bentoco/types"
+import { Container, Divider, Heading, Text, Tooltip } from "@bentoco/ui"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 

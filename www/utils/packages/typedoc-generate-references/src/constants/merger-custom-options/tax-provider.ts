@@ -48,10 +48,10 @@ The rest of this guide always uses the \`src/modules/my-tax\` directory as an ex
 </Note>`,
       `## 2. Create the Tax Module Provider's Service
 
-Create the file \`src/modules/my-tax/service.ts\` that holds the module provider's main service. It must implement the \`ITaxProvider\` interface imported from \`@medusajs/framework/types\`:
+Create the file \`src/modules/my-tax/service.ts\` that holds the module provider's main service. It must implement the \`ITaxProvider\` interface imported from \`@bentoco/framework/types\`:
 
 \`\`\`ts title="src/modules/my-tax/service.ts"
-import { ITaxProvider } from "@medusajs/framework/types"
+import { ITaxProvider } from "@bentoco/framework/types"
 
 export default class MyTaxProvider implements ITaxProvider {
   // TODO implement methods
@@ -68,7 +68,7 @@ import MyTaxProvider from "./service"
 import { 
   ModuleProvider, 
   Modules
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 export default ModuleProvider(Modules.TAX, {
   services: [MyTaxProvider],
@@ -91,7 +91,7 @@ module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/tax",
+      resolve: "@bentoco/medusa/tax",
       options: {
         providers: [
           {

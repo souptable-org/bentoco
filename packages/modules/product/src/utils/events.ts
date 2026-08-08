@@ -3,7 +3,7 @@ import {
   moduleEventBuilderFactory,
   Modules,
   ProductEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 export const eventBuilders = {
   createdProductCategory: moduleEventBuilderFactory({

@@ -1,4 +1,4 @@
-import Medusa from "@medusajs/js-sdk";
+import Medusa from "@bentoco/js-sdk";
 
 const backendUrl = __BACKEND_URL__ ?? "/";
 const authType = __AUTH_TYPE__ ?? "session";

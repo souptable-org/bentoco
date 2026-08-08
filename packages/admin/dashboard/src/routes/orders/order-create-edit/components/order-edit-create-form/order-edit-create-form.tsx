@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { AdminOrder, AdminOrderPreview } from "@medusajs/types"
-import { Button, Heading, Input, Switch, toast, usePrompt } from "@medusajs/ui"
+import { AdminOrder, AdminOrderPreview } from "@bentoco/types"
+import { Button, Heading, Input, Switch, toast, usePrompt } from "@bentoco/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 

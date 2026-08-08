@@ -1,4 +1,4 @@
-import { InlineTip } from "@medusajs/ui"
+import { InlineTip } from "@bentoco/ui"
 
 export default function InlineTipSuccess() {
   return (

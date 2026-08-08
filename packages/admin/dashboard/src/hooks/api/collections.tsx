@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { FindParams, HttpTypes, PaginatedResponse } from "@medusajs/types"
+import { FetchError } from "@bentoco/js-sdk"
+import { FindParams, HttpTypes, PaginatedResponse } from "@bentoco/types"
 import {
   InfiniteData,
   QueryKey,

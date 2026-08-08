@@ -2,7 +2,7 @@ import {
   MedusaError,
   Modules,
   ShippingOptionTypeWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -10,8 +10,8 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
+import { createStep } from "@bentoco/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deleteShippingOptionTypesStep } from "../steps"

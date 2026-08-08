@@ -2,8 +2,8 @@ import {
   Adjustments,
   AdjustmentsDone,
   ExclamationCircle,
-} from "@medusajs/icons";
-import { Button, DropdownMenu, clx } from "@medusajs/ui";
+} from "@bentoco/icons";
+import { Button, DropdownMenu, clx } from "@bentoco/ui";
 import {
   Cell,
   CellContext,

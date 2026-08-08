@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -272,7 +272,7 @@ medusaIntegrationTestRunner({
         const {
           ContainerRegistrationKeys,
           Modules,
-        } = require("@medusajs/framework/utils")
+        } = require("@bentoco/framework/utils")
         const remoteLink = container.resolve(ContainerRegistrationKeys.LINK)
 
         const inviteLinkService = remoteLink.getLinkModule(
@@ -371,7 +371,7 @@ medusaIntegrationTestRunner({
         const {
           ContainerRegistrationKeys,
           Modules,
-        } = require("@medusajs/framework/utils")
+        } = require("@bentoco/framework/utils")
         const remoteLink = container.resolve(ContainerRegistrationKeys.LINK)
 
         const linkService = remoteLink.getLinkModule(
@@ -423,7 +423,7 @@ medusaIntegrationTestRunner({
         const {
           ContainerRegistrationKeys,
           Modules,
-        } = require("@medusajs/framework/utils")
+        } = require("@bentoco/framework/utils")
         const remoteLink = container.resolve(ContainerRegistrationKeys.LINK)
 
         const linkService = remoteLink.getLinkModule(

@@ -2,14 +2,14 @@ import type {
   CustomerDTO,
   ICustomerModuleService,
   MedusaContainer,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   isDefined,
   Modules,
   useCache,
   validateEmail,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of the customer to find or create.

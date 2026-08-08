@@ -1,4 +1,4 @@
-import { MedusaError, PaymentSessionStatus } from "@medusajs/framework/utils"
+import { MedusaError, PaymentSessionStatus } from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
@@ -7,7 +7,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { addOrderTransactionStep } from "../../order/steps/add-order-transaction"
 import { authorizePaymentSessionStep } from "../steps"

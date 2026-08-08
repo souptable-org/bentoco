@@ -3,15 +3,15 @@
 // actions are commented out below — uncomment to re-enable the full CRUD UI
 // once policy management is opened to admins.
 
-// import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+// import { PencilSquare, Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import {
   Container,
   createDataTableColumnHelper,
   createDataTableFilterHelper,
   // toast,
   // usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

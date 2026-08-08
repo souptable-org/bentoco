@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@bentoco/icons/dist/types"
 
 const HomepageArrowUpMini = (props: IconProps) => {
   return (

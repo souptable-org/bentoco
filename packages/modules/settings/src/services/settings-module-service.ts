@@ -6,7 +6,7 @@ import {
   InternalModuleDeclaration,
   ModulesSdkTypes,
   SettingsTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   EmitEvents,
   InjectManager,
@@ -14,8 +14,8 @@ import {
   MedusaContext,
   MedusaError,
   MedusaService,
-} from "@medusajs/framework/utils"
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+} from "@bentoco/framework/utils"
+import { MedusaModule } from "@bentoco/framework/modules-sdk"
 import {
   ViewConfiguration,
   UserPreference,

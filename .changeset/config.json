@@ -9,9 +9,9 @@
   "commit": false,
   "fixed": [
     [
-      "@medusajs/*",
+      "@bentoco/*",
       "create-medusa-app",
-      "!@medusajs/ui"
+      "!@bentoco/ui"
     ]
   ],
   "linked": [],

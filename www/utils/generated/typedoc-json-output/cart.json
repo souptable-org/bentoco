@@ -99,7 +99,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -155,7 +155,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -496,7 +496,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -565,7 +565,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -827,7 +827,7 @@
 						"type": "reference",
 						"target": 1995,
 						"name": "CartShippingMethodDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -889,7 +889,7 @@
 					"type": "reference",
 					"target": 2381,
 					"name": "AdjustmentLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -1002,7 +1002,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -1071,7 +1071,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -1336,7 +1336,7 @@
 						"type": "reference",
 						"target": 1807,
 						"name": "CartLineItemDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -1398,7 +1398,7 @@
 					"type": "reference",
 					"target": 2381,
 					"name": "AdjustmentLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -2252,7 +2252,7 @@
 						"type": "reference",
 						"target": 1995,
 						"name": "CartShippingMethodDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2306,7 +2306,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2334,7 +2334,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2362,7 +2362,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2390,7 +2390,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -2429,7 +2429,7 @@
 					"type": "reference",
 					"target": 2393,
 					"name": "TaxLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -2884,7 +2884,7 @@
 						"type": "reference",
 						"target": 1807,
 						"name": "CartLineItemDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2938,7 +2938,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2966,7 +2966,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -2994,7 +2994,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -3022,7 +3022,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -3061,7 +3061,7 @@
 					"type": "reference",
 					"target": 2393,
 					"name": "TaxLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -3723,7 +3723,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -3907,7 +3907,7 @@
 							"type": "reference",
 							"target": 2178,
 							"name": "ShippingMethodTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -3943,7 +3943,7 @@
 							"type": "reference",
 							"target": 2094,
 							"name": "ShippingMethodAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -4052,7 +4052,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4080,7 +4080,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4108,7 +4108,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4136,7 +4136,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4164,7 +4164,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4192,7 +4192,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4220,7 +4220,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4248,7 +4248,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4276,7 +4276,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4304,7 +4304,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4332,7 +4332,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4360,7 +4360,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4388,7 +4388,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4416,7 +4416,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4444,7 +4444,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4472,7 +4472,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -4560,7 +4560,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4588,7 +4588,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4616,7 +4616,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4644,7 +4644,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4672,7 +4672,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4700,7 +4700,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4728,7 +4728,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4756,7 +4756,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4784,7 +4784,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4812,7 +4812,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4840,7 +4840,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4868,7 +4868,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4896,7 +4896,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4924,7 +4924,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4952,7 +4952,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -4980,7 +4980,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5008,7 +5008,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5036,7 +5036,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5064,7 +5064,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5092,7 +5092,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5120,7 +5120,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -5148,7 +5148,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -5238,7 +5238,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5273,7 +5273,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5308,7 +5308,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5343,7 +5343,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5378,7 +5378,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5413,7 +5413,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5448,7 +5448,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5483,7 +5483,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5518,7 +5518,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5553,7 +5553,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5588,7 +5588,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5623,7 +5623,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5658,7 +5658,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5693,7 +5693,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5728,7 +5728,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5763,7 +5763,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5798,7 +5798,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5833,7 +5833,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5868,7 +5868,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5903,7 +5903,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5938,7 +5938,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -5973,7 +5973,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -6114,7 +6114,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -6653,7 +6653,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -6681,7 +6681,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -6716,7 +6716,7 @@
 							"type": "reference",
 							"target": 2132,
 							"name": "LineItemTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -6752,7 +6752,7 @@
 							"type": "reference",
 							"target": 2056,
 							"name": "LineItemAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -6784,7 +6784,7 @@
 						"type": "reference",
 						"target": 1630,
 						"name": "CartDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7039,7 +7039,7 @@
 					"type": "reference",
 					"target": 2324,
 					"name": "CartLineItemTotalsDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -7280,7 +7280,7 @@
 						"type": "reference",
 						"target": 1764,
 						"name": "CartAddressDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7313,7 +7313,7 @@
 						"type": "reference",
 						"target": 1764,
 						"name": "CartAddressDTO",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7348,7 +7348,7 @@
 							"type": "reference",
 							"target": 1807,
 							"name": "CartLineItemDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -7384,7 +7384,7 @@
 							"type": "reference",
 							"target": 2255,
 							"name": "CartCreditLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -7420,7 +7420,7 @@
 							"type": "reference",
 							"target": 1995,
 							"name": "CartShippingMethodDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -7627,7 +7627,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7655,7 +7655,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7683,7 +7683,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7711,7 +7711,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7739,7 +7739,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7767,7 +7767,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7795,7 +7795,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7823,7 +7823,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7851,7 +7851,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7879,7 +7879,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7907,7 +7907,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7935,7 +7935,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7963,7 +7963,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -7991,7 +7991,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8019,7 +8019,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8047,7 +8047,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8075,7 +8075,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8103,7 +8103,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8131,7 +8131,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8159,7 +8159,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8187,7 +8187,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8215,7 +8215,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8243,7 +8243,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8271,7 +8271,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8299,7 +8299,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8327,7 +8327,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8355,7 +8355,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8383,7 +8383,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8411,7 +8411,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8439,7 +8439,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8467,7 +8467,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8495,7 +8495,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8523,7 +8523,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8551,7 +8551,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8579,7 +8579,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8607,7 +8607,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8635,7 +8635,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8663,7 +8663,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8691,7 +8691,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8719,7 +8719,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8747,7 +8747,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8775,7 +8775,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8803,7 +8803,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8831,7 +8831,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8859,7 +8859,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -8887,7 +8887,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -9070,7 +9070,7 @@
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -9122,7 +9122,7 @@
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -9174,7 +9174,7 @@
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -9212,7 +9212,7 @@
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -9248,7 +9248,7 @@
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -9284,7 +9284,7 @@
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -9320,7 +9320,7 @@
 									"type": "reference",
 									"target": 1710,
 									"name": "FilterableCartProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9330,11 +9330,11 @@
 											"type": "reference",
 											"target": 1710,
 											"name": "FilterableCartProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -9378,7 +9378,7 @@
 									"type": "reference",
 									"target": 1710,
 									"name": "FilterableCartProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9388,11 +9388,11 @@
 											"type": "reference",
 											"target": 1710,
 											"name": "FilterableCartProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -9436,11 +9436,11 @@
 							"type": "reference",
 							"target": 1710,
 							"name": "FilterableCartProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -9532,7 +9532,7 @@
 									"type": "reference",
 									"target": 1760,
 									"name": "FilterableAddressProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9542,11 +9542,11 @@
 											"type": "reference",
 											"target": 1760,
 											"name": "FilterableAddressProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -9590,7 +9590,7 @@
 									"type": "reference",
 									"target": 1760,
 									"name": "FilterableAddressProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9600,11 +9600,11 @@
 											"type": "reference",
 											"target": 1760,
 											"name": "FilterableAddressProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -9642,11 +9642,11 @@
 							"type": "reference",
 							"target": 1760,
 							"name": "FilterableAddressProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -9886,7 +9886,7 @@
 									"type": "reference",
 									"target": 1863,
 									"name": "FilterableLineItemProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9896,11 +9896,11 @@
 											"type": "reference",
 											"target": 1863,
 											"name": "FilterableLineItemProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -9944,7 +9944,7 @@
 									"type": "reference",
 									"target": 1863,
 									"name": "FilterableLineItemProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -9954,11 +9954,11 @@
 											"type": "reference",
 											"target": 1863,
 											"name": "FilterableLineItemProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10000,11 +10000,11 @@
 							"type": "reference",
 							"target": 1863,
 							"name": "FilterableLineItemProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -10210,7 +10210,7 @@
 						"type": "reference",
 						"target": 1863,
 						"name": "FilterableLineItemProps",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -10246,7 +10246,7 @@
 									"type": "reference",
 									"target": 2048,
 									"name": "FilterableLineItemAdjustmentProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -10256,11 +10256,11 @@
 											"type": "reference",
 											"target": 2048,
 											"name": "FilterableLineItemAdjustmentProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10304,7 +10304,7 @@
 									"type": "reference",
 									"target": 2048,
 									"name": "FilterableLineItemAdjustmentProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -10314,11 +10314,11 @@
 											"type": "reference",
 											"target": 2048,
 											"name": "FilterableLineItemAdjustmentProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10360,11 +10360,11 @@
 							"type": "reference",
 							"target": 2048,
 							"name": "FilterableLineItemAdjustmentProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -10538,7 +10538,7 @@
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -10576,7 +10576,7 @@
 									"type": "reference",
 									"target": 1988,
 									"name": "FilterableShippingMethodProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -10586,11 +10586,11 @@
 											"type": "reference",
 											"target": 1988,
 											"name": "FilterableShippingMethodProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10634,7 +10634,7 @@
 									"type": "reference",
 									"target": 1988,
 									"name": "FilterableShippingMethodProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -10644,11 +10644,11 @@
 											"type": "reference",
 											"target": 1988,
 											"name": "FilterableShippingMethodProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10689,11 +10689,11 @@
 							"type": "reference",
 							"target": 1988,
 							"name": "FilterableShippingMethodProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -10899,7 +10899,7 @@
 						"type": "reference",
 						"target": 1988,
 						"name": "FilterableShippingMethodProps",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -10935,7 +10935,7 @@
 									"type": "reference",
 									"target": 2086,
 									"name": "FilterableShippingMethodAdjustmentProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -10945,11 +10945,11 @@
 											"type": "reference",
 											"target": 2086,
 											"name": "FilterableShippingMethodAdjustmentProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -10993,7 +10993,7 @@
 									"type": "reference",
 									"target": 2086,
 									"name": "FilterableShippingMethodAdjustmentProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -11003,11 +11003,11 @@
 											"type": "reference",
 											"target": 2086,
 											"name": "FilterableShippingMethodAdjustmentProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -11049,11 +11049,11 @@
 							"type": "reference",
 							"target": 2086,
 							"name": "FilterableShippingMethodAdjustmentProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -11327,7 +11327,7 @@
 						"type": "reference",
 						"target": 1863,
 						"name": "FilterableLineItemProps",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -11363,7 +11363,7 @@
 									"type": "reference",
 									"target": 2122,
 									"name": "FilterableLineItemTaxLineProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -11373,11 +11373,11 @@
 											"type": "reference",
 											"target": 2122,
 											"name": "FilterableLineItemTaxLineProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -11421,7 +11421,7 @@
 									"type": "reference",
 									"target": 2122,
 									"name": "FilterableLineItemTaxLineProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -11431,11 +11431,11 @@
 											"type": "reference",
 											"target": 2122,
 											"name": "FilterableLineItemTaxLineProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -11479,11 +11479,11 @@
 							"type": "reference",
 							"target": 2122,
 							"name": "FilterableLineItemTaxLineProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -11757,7 +11757,7 @@
 						"type": "reference",
 						"target": 1988,
 						"name": "FilterableShippingMethodProps",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -11793,7 +11793,7 @@
 									"type": "reference",
 									"target": 2168,
 									"name": "FilterableShippingMethodTaxLineProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -11803,11 +11803,11 @@
 											"type": "reference",
 											"target": 2168,
 											"name": "FilterableShippingMethodTaxLineProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -11851,7 +11851,7 @@
 									"type": "reference",
 									"target": 2168,
 									"name": "FilterableShippingMethodTaxLineProps",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
@@ -11861,11 +11861,11 @@
 											"type": "reference",
 											"target": 2168,
 											"name": "FilterableShippingMethodTaxLineProps",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							]
 						}
@@ -11909,11 +11909,11 @@
 							"type": "reference",
 							"target": 2168,
 							"name": "FilterableShippingMethodTaxLineProps",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -12009,7 +12009,7 @@
 						"type": "reference",
 						"target": 2265,
 						"name": "BigNumberValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -12037,7 +12037,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -13150,7 +13150,7 @@
 					"type": "reference",
 					"target": 2311,
 					"name": "UpsertAddressDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -13624,7 +13624,7 @@
 					"type": "reference",
 					"target": 2311,
 					"name": "UpsertAddressDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -13899,7 +13899,7 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -13938,7 +13938,7 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -14015,7 +14015,7 @@
 							"type": "reference",
 							"target": 1899,
 							"name": "CreateLineItemDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				}
@@ -14374,13 +14374,13 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "reference",
 								"target": 1793,
 								"name": "UpdateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -14419,13 +14419,13 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "reference",
 								"target": 1793,
 								"name": "UpdateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					}
@@ -14939,13 +14939,13 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "reference",
 								"target": 1793,
 								"name": "UpdateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					},
@@ -14990,13 +14990,13 @@
 								"type": "reference",
 								"target": 1780,
 								"name": "CreateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "reference",
 								"target": 1793,
 								"name": "UpdateAddressDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					},
@@ -15175,7 +15175,7 @@
 					"type": "reference",
 					"target": 1747,
 					"name": "UpdateCartDataDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -15245,7 +15245,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -15483,7 +15483,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -15667,7 +15667,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -15864,7 +15864,7 @@
 					"type": "reference",
 					"target": 2357,
 					"name": "CreateAdjustmentDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -15992,7 +15992,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -17121,7 +17121,7 @@
 							"type": "reference",
 							"target": 2348,
 							"name": "CreateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						},
 						{
 							"type": "literal",
@@ -17531,7 +17531,7 @@
 							"type": "reference",
 							"target": 2364,
 							"name": "UpdateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						},
 						{
 							"type": "literal",
@@ -17904,7 +17904,7 @@
 					"type": "reference",
 					"target": 2348,
 					"name": "CreateTaxLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -18305,7 +18305,7 @@
 					"type": "reference",
 					"target": 2364,
 					"name": "UpdateTaxLineDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -18459,7 +18459,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -18980,7 +18980,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -19008,7 +19008,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -19040,7 +19040,7 @@
 							"type": "reference",
 							"target": 2348,
 							"name": "CreateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -19073,7 +19073,7 @@
 							"type": "reference",
 							"target": 2357,
 							"name": "CreateAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -19322,7 +19322,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -19951,7 +19951,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -19986,7 +19986,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -20024,7 +20024,7 @@
 							"type": "reference",
 							"target": 2348,
 							"name": "CreateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					},
 					"inheritedFrom": {
@@ -20063,7 +20063,7 @@
 							"type": "reference",
 							"target": 2357,
 							"name": "CreateAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					},
 					"inheritedFrom": {
@@ -20208,7 +20208,7 @@
 					"type": "reference",
 					"target": 1899,
 					"name": "CreateLineItemDTO",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -20259,7 +20259,7 @@
 								"type": "reference",
 								"target": 1807,
 								"name": "CartLineItemDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "Partial",
@@ -20298,7 +20298,7 @@
 								"type": "reference",
 								"target": 1959,
 								"name": "UpdateLineItemDTO",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "Partial",
@@ -21053,7 +21053,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -21141,7 +21141,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -21177,7 +21177,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -21276,7 +21276,7 @@
 									"type": "reference",
 									"target": 2348,
 									"name": "CreateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -21285,7 +21285,7 @@
 									"type": "reference",
 									"target": 2364,
 									"name": "UpdateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -21329,7 +21329,7 @@
 									"type": "reference",
 									"target": 2357,
 									"name": "CreateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -21338,7 +21338,7 @@
 									"type": "reference",
 									"target": 2374,
 									"name": "UpdateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -21411,7 +21411,7 @@
 									"type": "reference",
 									"target": 1959,
 									"name": "UpdateLineItemDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							],
 							"name": "Partial",
@@ -22165,7 +22165,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"inheritedFrom": {
 						"type": "reference",
@@ -22254,7 +22254,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -22284,7 +22284,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -22376,7 +22376,7 @@
 									"type": "reference",
 									"target": 2348,
 									"name": "CreateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -22385,7 +22385,7 @@
 									"type": "reference",
 									"target": 2364,
 									"name": "UpdateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -22423,7 +22423,7 @@
 									"type": "reference",
 									"target": 2357,
 									"name": "CreateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -22432,7 +22432,7 @@
 									"type": "reference",
 									"target": 2374,
 									"name": "UpdateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -22493,7 +22493,7 @@
 							"type": "reference",
 							"target": 1899,
 							"name": "CreateLineItemDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						},
 						{
 							"type": "union",
@@ -22618,7 +22618,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -22721,7 +22721,7 @@
 							"type": "reference",
 							"target": 2348,
 							"name": "CreateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -22754,7 +22754,7 @@
 							"type": "reference",
 							"target": 2357,
 							"name": "CreateAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				}
@@ -22847,7 +22847,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -22950,7 +22950,7 @@
 							"type": "reference",
 							"target": 2348,
 							"name": "CreateTaxLineDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -22983,7 +22983,7 @@
 							"type": "reference",
 							"target": 2357,
 							"name": "CreateAdjustmentDTO",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				}
@@ -23105,7 +23105,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -23211,7 +23211,7 @@
 									"type": "reference",
 									"target": 2348,
 									"name": "CreateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -23220,7 +23220,7 @@
 									"type": "reference",
 									"target": 2364,
 									"name": "UpdateTaxLineDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -23258,7 +23258,7 @@
 									"type": "reference",
 									"target": 2357,
 									"name": "CreateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							},
 							{
@@ -23267,7 +23267,7 @@
 									"type": "reference",
 									"target": 2374,
 									"name": "UpdateAdjustmentDTO",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -23388,7 +23388,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -23593,7 +23593,7 @@
 						"type": "reference",
 						"target": 2347,
 						"name": "BigNumberInput",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -23846,11 +23846,11 @@
 												"type": "reference",
 												"target": 1630,
 												"name": "CartDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -23873,7 +23873,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -23888,7 +23888,7 @@
 										"type": "reference",
 										"target": 1630,
 										"name": "CartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -24027,7 +24027,7 @@
 										"type": "reference",
 										"target": 1710,
 										"name": "FilterableCartProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24070,11 +24070,11 @@
 												"type": "reference",
 												"target": 1630,
 												"name": "CartDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24097,7 +24097,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24114,7 +24114,7 @@
 											"type": "reference",
 											"target": 1630,
 											"name": "CartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -24254,7 +24254,7 @@
 										"type": "reference",
 										"target": 1710,
 										"name": "FilterableCartProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24297,11 +24297,11 @@
 												"type": "reference",
 												"target": 1630,
 												"name": "CartDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24324,7 +24324,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24344,7 +24344,7 @@
 													"type": "reference",
 													"target": 1630,
 													"name": "CartDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											},
 											{
@@ -24444,7 +24444,7 @@
 											"type": "reference",
 											"target": 1720,
 											"name": "CreateCartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -24468,7 +24468,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24485,7 +24485,7 @@
 											"type": "reference",
 											"target": 1630,
 											"name": "CartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -24554,7 +24554,7 @@
 										"type": "reference",
 										"target": 1720,
 										"name": "CreateCartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24577,7 +24577,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24592,7 +24592,7 @@
 										"type": "reference",
 										"target": 1630,
 										"name": "CartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -24691,7 +24691,7 @@
 											"type": "reference",
 											"target": 1733,
 											"name": "UpdateCartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -24709,7 +24709,7 @@
 											"type": "reference",
 											"target": 1630,
 											"name": "CartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -24797,7 +24797,7 @@
 										"type": "reference",
 										"target": 1747,
 										"name": "UpdateCartDataDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24820,7 +24820,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24835,7 +24835,7 @@
 										"type": "reference",
 										"target": 1630,
 										"name": "CartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -24910,7 +24910,7 @@
 												"type": "reference",
 												"target": 1630,
 												"name": "CartDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "Partial",
@@ -24935,7 +24935,7 @@
 										"type": "reference",
 										"target": 1747,
 										"name": "UpdateCartDataDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -24958,7 +24958,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -24975,7 +24975,7 @@
 											"type": "reference",
 											"target": 1630,
 											"name": "CartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -25091,7 +25091,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25193,7 +25193,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25337,7 +25337,7 @@
 										"type": "reference",
 										"target": 1760,
 										"name": "FilterableAddressProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -25380,11 +25380,11 @@
 												"type": "reference",
 												"target": 1764,
 												"name": "CartAddressDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -25407,7 +25407,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25424,7 +25424,7 @@
 											"type": "reference",
 											"target": 1764,
 											"name": "CartAddressDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -25518,7 +25518,7 @@
 											"type": "reference",
 											"target": 1780,
 											"name": "CreateAddressDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -25542,7 +25542,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25559,7 +25559,7 @@
 											"type": "reference",
 											"target": 1764,
 											"name": "CartAddressDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -25628,7 +25628,7 @@
 										"type": "reference",
 										"target": 1780,
 										"name": "CreateAddressDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -25651,7 +25651,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25666,7 +25666,7 @@
 										"type": "reference",
 										"target": 1764,
 										"name": "CartAddressDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -25759,7 +25759,7 @@
 											"type": "reference",
 											"target": 1793,
 											"name": "UpdateAddressDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -25783,7 +25783,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25800,7 +25800,7 @@
 											"type": "reference",
 											"target": 1764,
 											"name": "CartAddressDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -25869,7 +25869,7 @@
 										"type": "reference",
 										"target": 1793,
 										"name": "UpdateAddressDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -25892,7 +25892,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -25907,7 +25907,7 @@
 										"type": "reference",
 										"target": 1764,
 										"name": "CartAddressDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -26022,7 +26022,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26124,7 +26124,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26275,11 +26275,11 @@
 												"type": "reference",
 												"target": 1807,
 												"name": "CartLineItemDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -26302,7 +26302,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26317,7 +26317,7 @@
 										"type": "reference",
 										"target": 1807,
 										"name": "CartLineItemDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -26454,7 +26454,7 @@
 										"type": "reference",
 										"target": 1863,
 										"name": "FilterableLineItemProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -26497,11 +26497,11 @@
 												"type": "reference",
 												"target": 1807,
 												"name": "CartLineItemDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -26524,7 +26524,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26541,7 +26541,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -26647,7 +26647,7 @@
 										"type": "reference",
 										"target": 1871,
 										"name": "CreateLineItemForCartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26664,7 +26664,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -26743,7 +26743,7 @@
 											"type": "reference",
 											"target": 1871,
 											"name": "CreateLineItemForCartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -26761,7 +26761,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -26851,7 +26851,7 @@
 											"type": "reference",
 											"target": 1899,
 											"name": "CreateLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -26875,7 +26875,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -26892,7 +26892,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -26998,7 +26998,7 @@
 											"type": "reference",
 											"target": 1927,
 											"name": "UpdateLineItemWithSelectorDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -27016,7 +27016,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -27087,7 +27087,7 @@
 											"type": "reference",
 											"target": 1930,
 											"name": "UpdateLineItemWithoutSelectorDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -27105,7 +27105,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -27181,7 +27181,7 @@
 												"type": "reference",
 												"target": 1807,
 												"name": "CartLineItemDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "Partial",
@@ -27213,7 +27213,7 @@
 												"type": "reference",
 												"target": 1959,
 												"name": "UpdateLineItemDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "Partial",
@@ -27240,7 +27240,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -27257,7 +27257,7 @@
 											"type": "reference",
 											"target": 1807,
 											"name": "CartLineItemDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -27352,7 +27352,7 @@
 												"type": "reference",
 												"target": 1959,
 												"name": "UpdateLineItemDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "Partial",
@@ -27379,7 +27379,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -27394,7 +27394,7 @@
 										"type": "reference",
 										"target": 1807,
 										"name": "CartLineItemDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -27531,7 +27531,7 @@
 										"type": "reference",
 										"target": 1988,
 										"name": "FilterableShippingMethodProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -27574,11 +27574,11 @@
 												"type": "reference",
 												"target": 1995,
 												"name": "CartShippingMethodDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -27601,7 +27601,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -27618,7 +27618,7 @@
 											"type": "reference",
 											"target": 1995,
 											"name": "CartShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -27724,7 +27724,7 @@
 										"type": "reference",
 										"target": 2025,
 										"name": "CreateShippingMethodDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -27739,7 +27739,7 @@
 										"type": "reference",
 										"target": 1995,
 										"name": "CartShippingMethodDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -27817,7 +27817,7 @@
 											"type": "reference",
 											"target": 2025,
 											"name": "CreateShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -27835,7 +27835,7 @@
 											"type": "reference",
 											"target": 1995,
 											"name": "CartShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -27925,7 +27925,7 @@
 											"type": "reference",
 											"target": 2033,
 											"name": "CreateShippingMethodForSingleCartDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -27949,7 +27949,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -27966,7 +27966,7 @@
 											"type": "reference",
 											"target": 1995,
 											"name": "CartShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28060,7 +28060,7 @@
 											"type": "reference",
 											"target": 2040,
 											"name": "UpdateShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -28078,7 +28078,7 @@
 											"type": "reference",
 											"target": 1995,
 											"name": "CartShippingMethodDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28173,7 +28173,7 @@
 												"type": "reference",
 												"target": 2040,
 												"name": "UpdateShippingMethodDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "Partial",
@@ -28200,7 +28200,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -28215,7 +28215,7 @@
 										"type": "reference",
 										"target": 1995,
 										"name": "CartShippingMethodDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -28352,7 +28352,7 @@
 										"type": "reference",
 										"target": 2048,
 										"name": "FilterableLineItemAdjustmentProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -28395,11 +28395,11 @@
 												"type": "reference",
 												"target": 2056,
 												"name": "LineItemAdjustmentDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -28422,7 +28422,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -28439,7 +28439,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28547,7 +28547,7 @@
 											"type": "reference",
 											"target": 2070,
 											"name": "CreateLineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -28565,7 +28565,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28642,7 +28642,7 @@
 										"type": "reference",
 										"target": 2070,
 										"name": "CreateLineItemAdjustmentDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -28659,7 +28659,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28757,7 +28757,7 @@
 											"type": "reference",
 											"target": 2070,
 											"name": "CreateLineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -28775,7 +28775,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -28898,7 +28898,7 @@
 											"type": "reference",
 											"target": 2078,
 											"name": "UpsertLineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -28922,7 +28922,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -28939,7 +28939,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -29077,7 +29077,7 @@
 										"type": "reference",
 										"target": 2086,
 										"name": "FilterableShippingMethodAdjustmentProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -29120,11 +29120,11 @@
 												"type": "reference",
 												"target": 2094,
 												"name": "ShippingMethodAdjustmentDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -29147,7 +29147,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -29164,7 +29164,7 @@
 											"type": "reference",
 											"target": 2094,
 											"name": "ShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -29272,7 +29272,7 @@
 											"type": "reference",
 											"target": 2108,
 											"name": "CreateShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -29290,7 +29290,7 @@
 											"type": "reference",
 											"target": 2094,
 											"name": "ShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -29367,7 +29367,7 @@
 										"type": "reference",
 										"target": 2108,
 										"name": "CreateShippingMethodAdjustmentDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -29382,7 +29382,7 @@
 										"type": "reference",
 										"target": 2094,
 										"name": "ShippingMethodAdjustmentDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -29479,7 +29479,7 @@
 											"type": "reference",
 											"target": 2108,
 											"name": "CreateShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -29503,7 +29503,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -29520,7 +29520,7 @@
 											"type": "reference",
 											"target": 2094,
 											"name": "ShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -29638,13 +29638,13 @@
 													"type": "reference",
 													"target": 2108,
 													"name": "CreateShippingMethodAdjustmentDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2115,
 													"name": "UpdateShippingMethodAdjustmentDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -29670,7 +29670,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -29687,7 +29687,7 @@
 											"type": "reference",
 											"target": 2094,
 											"name": "ShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -29825,7 +29825,7 @@
 										"type": "reference",
 										"target": 2122,
 										"name": "FilterableLineItemTaxLineProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -29868,11 +29868,11 @@
 												"type": "reference",
 												"target": 2132,
 												"name": "LineItemTaxLineDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -29895,7 +29895,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -29912,7 +29912,7 @@
 											"type": "reference",
 											"target": 2132,
 											"name": "LineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30012,7 +30012,7 @@
 											"type": "reference",
 											"target": 2149,
 											"name": "CreateLineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -30030,7 +30030,7 @@
 											"type": "reference",
 											"target": 2132,
 											"name": "LineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30099,7 +30099,7 @@
 										"type": "reference",
 										"target": 2149,
 										"name": "CreateLineItemTaxLineDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30114,7 +30114,7 @@
 										"type": "reference",
 										"target": 2132,
 										"name": "LineItemTaxLineDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -30204,7 +30204,7 @@
 												"type": "reference",
 												"target": 2149,
 												"name": "CreateLineItemTaxLineDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -30212,7 +30212,7 @@
 													"type": "reference",
 													"target": 2149,
 													"name": "CreateLineItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -30238,7 +30238,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30255,7 +30255,7 @@
 											"type": "reference",
 											"target": 2132,
 											"name": "LineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30373,13 +30373,13 @@
 													"type": "reference",
 													"target": 2149,
 													"name": "CreateLineItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2158,
 													"name": "UpdateLineItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -30405,7 +30405,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30422,7 +30422,7 @@
 											"type": "reference",
 											"target": 2132,
 											"name": "LineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30560,7 +30560,7 @@
 										"type": "reference",
 										"target": 2168,
 										"name": "FilterableShippingMethodTaxLineProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -30603,11 +30603,11 @@
 												"type": "reference",
 												"target": 2178,
 												"name": "ShippingMethodTaxLineDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -30630,7 +30630,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30647,7 +30647,7 @@
 											"type": "reference",
 											"target": 2178,
 											"name": "ShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30747,7 +30747,7 @@
 											"type": "reference",
 											"target": 2195,
 											"name": "CreateShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								}
@@ -30765,7 +30765,7 @@
 											"type": "reference",
 											"target": 2178,
 											"name": "ShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -30834,7 +30834,7 @@
 										"type": "reference",
 										"target": 2195,
 										"name": "CreateShippingMethodTaxLineDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30849,7 +30849,7 @@
 										"type": "reference",
 										"target": 2178,
 										"name": "ShippingMethodTaxLineDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -30947,7 +30947,7 @@
 												"type": "reference",
 												"target": 2195,
 												"name": "CreateShippingMethodTaxLineDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -30955,7 +30955,7 @@
 													"type": "reference",
 													"target": 2195,
 													"name": "CreateShippingMethodTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -30981,7 +30981,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -30998,7 +30998,7 @@
 											"type": "reference",
 											"target": 2178,
 											"name": "ShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -31116,13 +31116,13 @@
 													"type": "reference",
 													"target": 2195,
 													"name": "CreateShippingMethodTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2204,
 													"name": "UpdateShippingMethodTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -31148,7 +31148,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31165,7 +31165,7 @@
 											"type": "reference",
 											"target": 2178,
 											"name": "ShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -31281,7 +31281,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31383,7 +31383,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31511,7 +31511,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31613,7 +31613,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31741,7 +31741,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31843,7 +31843,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -31971,7 +31971,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32073,7 +32073,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32201,7 +32201,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32303,7 +32303,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32431,7 +32431,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32533,7 +32533,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32692,12 +32692,12 @@
 												"type": "reference",
 												"target": 1481,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -32720,7 +32720,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32749,7 +32749,7 @@
 														"type": "reference",
 														"target": 1481,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -32925,12 +32925,12 @@
 												"type": "reference",
 												"target": 1487,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -32953,7 +32953,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -32982,7 +32982,7 @@
 														"type": "reference",
 														"target": 1487,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -33134,12 +33134,12 @@
 												"type": "reference",
 												"target": 1493,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -33162,7 +33162,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -33191,7 +33191,7 @@
 														"type": "reference",
 														"target": 1493,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -33351,12 +33351,12 @@
 												"type": "reference",
 												"target": 1499,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -33379,7 +33379,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -33408,7 +33408,7 @@
 														"type": "reference",
 														"target": 1499,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -33568,12 +33568,12 @@
 												"type": "reference",
 												"target": 1505,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -33596,7 +33596,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -33625,7 +33625,7 @@
 														"type": "reference",
 														"target": 1505,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -33801,12 +33801,12 @@
 												"type": "reference",
 												"target": 1511,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -33829,7 +33829,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -33858,7 +33858,7 @@
 														"type": "reference",
 														"target": 1511,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -34018,12 +34018,12 @@
 												"type": "reference",
 												"target": 1517,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -34046,7 +34046,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -34075,7 +34075,7 @@
 														"type": "reference",
 														"target": 1517,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -34251,12 +34251,12 @@
 												"type": "reference",
 												"target": 1523,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -34279,7 +34279,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -34308,7 +34308,7 @@
 														"type": "reference",
 														"target": 1523,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -34460,12 +34460,12 @@
 												"type": "reference",
 												"target": 1529,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -34488,7 +34488,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -34517,7 +34517,7 @@
 														"type": "reference",
 														"target": 1529,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -34677,12 +34677,12 @@
 												"type": "reference",
 												"target": 1535,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -34705,7 +34705,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -34734,7 +34734,7 @@
 														"type": "reference",
 														"target": 1535,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -34886,12 +34886,12 @@
 												"type": "reference",
 												"target": 1541,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -34914,7 +34914,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -34943,7 +34943,7 @@
 														"type": "reference",
 														"target": 1541,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -35103,12 +35103,12 @@
 												"type": "reference",
 												"target": 1547,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -35131,7 +35131,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -35160,7 +35160,7 @@
 														"type": "reference",
 														"target": 1547,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -35312,12 +35312,12 @@
 												"type": "reference",
 												"target": 1553,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -35340,7 +35340,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -35369,7 +35369,7 @@
 														"type": "reference",
 														"target": 1553,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -35529,12 +35529,12 @@
 												"type": "reference",
 												"target": 1559,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -35557,7 +35557,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -35586,7 +35586,7 @@
 														"type": "reference",
 														"target": 1559,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -35738,12 +35738,12 @@
 												"type": "reference",
 												"target": 1565,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "SoftDeleteReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -35766,7 +35766,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -35795,7 +35795,7 @@
 														"type": "reference",
 														"target": 1565,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -35955,12 +35955,12 @@
 												"type": "reference",
 												"target": 1571,
 												"name": "TReturnableLinkableKeys",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "RestoreReturn",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -35983,7 +35983,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -36012,7 +36012,7 @@
 														"type": "reference",
 														"target": 1571,
 														"name": "TReturnableLinkableKeys",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													},
 													{
@@ -36121,7 +36121,7 @@
 											"type": "reference",
 											"target": 2078,
 											"name": "UpsertLineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -36145,7 +36145,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -36162,7 +36162,7 @@
 											"type": "reference",
 											"target": 2056,
 											"name": "LineItemAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -36261,13 +36261,13 @@
 													"type": "reference",
 													"target": 2108,
 													"name": "CreateShippingMethodAdjustmentDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2115,
 													"name": "UpdateShippingMethodAdjustmentDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -36293,7 +36293,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -36310,7 +36310,7 @@
 											"type": "reference",
 											"target": 2094,
 											"name": "ShippingMethodAdjustmentDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -36409,13 +36409,13 @@
 													"type": "reference",
 													"target": 2149,
 													"name": "CreateLineItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2158,
 													"name": "UpdateLineItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -36441,7 +36441,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -36458,7 +36458,7 @@
 											"type": "reference",
 											"target": 2132,
 											"name": "LineItemTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -36557,13 +36557,13 @@
 													"type": "reference",
 													"target": 2195,
 													"name": "CreateShippingMethodTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												},
 												{
 													"type": "reference",
 													"target": 2204,
 													"name": "UpdateShippingMethodTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											]
 										}
@@ -36589,7 +36589,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -36606,7 +36606,7 @@
 											"type": "reference",
 											"target": 2178,
 											"name": "ShippingMethodTaxLineDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -36692,7 +36692,7 @@
 					"type": "reference",
 					"target": 1604,
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -36785,7 +36785,7 @@
 										"type": "reference",
 										"target": 2247,
 										"name": "FindConfigOrder",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -36860,7 +36860,7 @@
 										"type": "reference",
 										"target": 1629,
 										"name": "Entity",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"qualifiedName": "FindConfig.Entity",
 										"refersToTypeParameter": true
 									}
@@ -37036,7 +37036,7 @@
 						"type": "reference",
 						"target": 2247,
 						"name": "FindConfigOrder",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -37186,7 +37186,7 @@
 						"type": "reference",
 						"target": 2252,
 						"name": "InternalQueryOptions",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			],
@@ -37564,7 +37564,7 @@
 									}
 								],
 								"name": "FilterQuery",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					],
@@ -37766,7 +37766,7 @@
 								"type": "reference",
 								"target": 2494,
 								"name": "CrossModuleJoinLink",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -37786,7 +37786,7 @@
 								"type": "reference",
 								"target": 2500,
 								"name": "CrossModuleJoinTarget",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					],
@@ -37872,7 +37872,7 @@
 									"type": "reference",
 									"target": 2430,
 									"name": "CrossModuleJoinSpec",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						}
@@ -37946,19 +37946,19 @@
 											"type": "reference",
 											"target": 2288,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 2288,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -38002,19 +38002,19 @@
 											"type": "reference",
 											"target": 2288,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								{
 									"type": "reference",
 									"target": 2288,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -38135,7 +38135,7 @@
 							"type": "reference",
 							"target": 2216,
 							"name": "TReturnableLinkableKeys",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					}
@@ -38214,7 +38214,7 @@
 							"type": "reference",
 							"target": 2219,
 							"name": "TReturnableLinkableKeys",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					}
@@ -38277,7 +38277,7 @@
 					"type": "reference",
 					"target": 2465,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@bentoco/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -38290,14 +38290,14 @@
 						"type": "reference",
 						"target": 2465,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
 						"type": "reference",
 						"target": 2512,
 						"name": "Scalar",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"trueType": {
 						"type": "intrinsic",
@@ -38311,12 +38311,12 @@
 								"type": "reference",
 								"target": 2465,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQuery",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				"falseType": {
@@ -38327,12 +38327,12 @@
 							"type": "reference",
 							"target": 2465,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					],
 					"name": "FilterValue",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			}
 		},
@@ -38371,7 +38371,7 @@
 							"type": "reference",
 							"target": 2467,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						},
 						"extendsType": {
@@ -38402,7 +38402,7 @@
 								"type": "reference",
 								"target": 2467,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -38436,7 +38436,7 @@
 								"type": "reference",
 								"target": 2467,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -38600,7 +38600,7 @@
 					"type": "reference",
 					"target": 2553,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@bentoco/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -38621,7 +38621,7 @@
 							"type": "reference",
 							"target": 2553,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					],
@@ -38632,7 +38632,7 @@
 					"type": "reference",
 					"target": 2553,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@bentoco/types",
 					"refersToTypeParameter": true
 				}
 			}
@@ -38665,7 +38665,7 @@
 					"type": "reference",
 					"target": 2551,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@bentoco/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -38726,12 +38726,12 @@
 								"qualifiedName": "PK"
 							},
 							"name": "PK",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					],
 					"name": "ReadonlyPrimary",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				},
 				"falseType": {
 					"type": "conditional",
@@ -38739,7 +38739,7 @@
 						"type": "reference",
 						"target": 2551,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
@@ -38803,12 +38803,12 @@
 											"qualifiedName": "PK"
 										},
 										"name": "PK",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ReadonlyPrimary",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "intrinsic",
@@ -38822,7 +38822,7 @@
 							"type": "reference",
 							"target": 2551,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						},
 						"extendsType": {
@@ -38883,12 +38883,12 @@
 										"qualifiedName": "PK"
 									},
 									"name": "PK",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"refersToTypeParameter": true
 								}
 							],
 							"name": "ReadonlyPrimary",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						},
 						"falseType": {
 							"type": "conditional",
@@ -38896,7 +38896,7 @@
 								"type": "reference",
 								"target": 2551,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -38957,12 +38957,12 @@
 											"qualifiedName": "PK"
 										},
 										"name": "PK",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ReadonlyPrimary",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							"falseType": {
 								"type": "intrinsic",
@@ -39029,12 +39029,12 @@
 											"type": "reference",
 											"target": 2310,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "Query",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						},
@@ -39063,12 +39063,12 @@
 											"type": "reference",
 											"target": 2310,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "Query",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						},
@@ -39098,12 +39098,12 @@
 												"type": "reference",
 												"target": 2310,
 												"name": "T",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "ExpandScalar",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "array",
@@ -39115,12 +39115,12 @@
 													"type": "reference",
 													"target": 2310,
 													"name": "T",
-													"package": "@medusajs/types",
+													"package": "@bentoco/types",
 													"refersToTypeParameter": true
 												}
 											],
 											"name": "ExpandScalar",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								]
@@ -39149,12 +39149,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39182,12 +39182,12 @@
 											"type": "reference",
 											"target": 2310,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "ExpandScalar",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						},
@@ -39216,12 +39216,12 @@
 											"type": "reference",
 											"target": 2310,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "ExpandScalar",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						},
@@ -39248,12 +39248,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "Query",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39279,12 +39279,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39310,12 +39310,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39341,12 +39341,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39372,12 +39372,12 @@
 										"type": "reference",
 										"target": 2310,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -39615,7 +39615,7 @@
 						"type": "reference",
 						"target": 2540,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					},
 					{
@@ -39626,12 +39626,12 @@
 								"type": "reference",
 								"target": 2540,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "ExpandScalar",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reference",
@@ -39641,12 +39641,12 @@
 								"type": "reference",
 								"target": 2540,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Primary",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				]
 			}
@@ -39688,16 +39688,16 @@
 										"type": "reference",
 										"target": 2520,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "FilterValue2",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reference",
@@ -39707,12 +39707,12 @@
 								"type": "reference",
 								"target": 2520,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterValue2",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "array",
@@ -39724,12 +39724,12 @@
 									"type": "reference",
 									"target": 2520,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"refersToTypeParameter": true
 								}
 							],
 							"name": "FilterValue2",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					},
 					{
@@ -39821,7 +39821,7 @@
 						"type": "reference",
 						"target": 2537,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -39836,14 +39836,14 @@
 								"qualifiedName": "Key"
 							},
 							"name": "Key",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						},
 						"objectType": {
 							"type": "reference",
 							"target": 2537,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@bentoco/types",
 							"refersToTypeParameter": true
 						}
 					},
@@ -39893,14 +39893,14 @@
 										"qualifiedName": "Key"
 									},
 									"name": "Key",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"refersToTypeParameter": true
 								},
 								"objectType": {
 									"type": "reference",
 									"target": 2537,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"refersToTypeParameter": true
 								}
 							},
@@ -39917,20 +39917,20 @@
 												"qualifiedName": "Key"
 											},
 											"name": "Key",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										},
 										"objectType": {
 											"type": "reference",
 											"target": 2537,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@bentoco/types",
 											"refersToTypeParameter": true
 										}
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						]
 					},
@@ -39945,14 +39945,14 @@
 									"qualifiedName": "Key"
 								},
 								"name": "Key",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							"objectType": {
 								"type": "reference",
 								"target": 2537,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -39969,7 +39969,7 @@
 									"qualifiedName": "U"
 								},
 								"name": "U",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -40021,7 +40021,7 @@
 													"qualifiedName": "V"
 												},
 												"name": "V",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										}
@@ -40037,7 +40037,7 @@
 										"qualifiedName": "V"
 									},
 									"name": "V",
-									"package": "@medusajs/types",
+									"package": "@bentoco/types",
 									"refersToTypeParameter": true
 								},
 								"extendsType": {
@@ -40062,7 +40062,7 @@
 														"qualifiedName": "V"
 													},
 													"name": "V",
-													"package": "@medusajs/types",
+													"package": "@bentoco/types",
 													"refersToTypeParameter": true
 												}
 											],
@@ -40075,19 +40075,19 @@
 												"type": "reference",
 												"target": 2538,
 												"name": "Prev",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											},
 											"objectType": {
 												"type": "reference",
 												"target": 2541,
 												"name": "PrevLimit",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										}
 									],
 									"name": "FilterQuery",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								},
 								"falseType": {
 									"type": "intrinsic",
@@ -40155,7 +40155,7 @@
 					"type": "reference",
 					"target": 2518,
 					"name": "Prev",
-					"package": "@medusajs/types",
+					"package": "@bentoco/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -40172,7 +40172,7 @@
 						"type": "reference",
 						"target": 2517,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
@@ -40185,7 +40185,7 @@
 							}
 						],
 						"name": "Constructor",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"trueType": {
 						"type": "reference",
@@ -40198,19 +40198,19 @@
 									"qualifiedName": "Prototype"
 								},
 								"name": "Prototype",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 2518,
 								"name": "Prev",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQueryProperties",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"falseType": {
 						"type": "reference",
@@ -40220,19 +40220,19 @@
 								"type": "reference",
 								"target": 2517,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 2518,
 								"name": "Prev",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQueryProperties",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				}
 			}
@@ -40505,7 +40505,7 @@
 								"type": "reference",
 								"target": 2521,
 								"name": "EventMetadata",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						},
 						{
@@ -40533,7 +40533,7 @@
 								"type": "reference",
 								"target": 2511,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -40603,12 +40603,12 @@
 								"type": "reference",
 								"target": 2446,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Event",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -40745,7 +40745,7 @@
 								"type": "reference",
 								"target": 2463,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@bentoco/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -40831,7 +40831,7 @@
 										"type": "reference",
 										"target": 1693,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									},
 									{
 										"type": "literal",
@@ -41772,7 +41772,7 @@
 								"type": "reference",
 								"target": 2468,
 								"name": "JoinerServiceConfigAlias",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "array",
@@ -41780,7 +41780,7 @@
 									"type": "reference",
 									"target": 2468,
 									"name": "JoinerServiceConfigAlias",
-									"package": "@medusajs/types"
+									"package": "@bentoco/types"
 								}
 							}
 						]
@@ -41959,7 +41959,7 @@
 							"type": "reference",
 							"target": 2484,
 							"name": "JoinerRelationship",
-							"package": "@medusajs/types"
+							"package": "@bentoco/types"
 						}
 					}
 				},
@@ -42052,7 +42052,7 @@
 											"type": "reference",
 											"target": 2484,
 											"name": "JoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -42212,7 +42212,7 @@
 										"type": "reference",
 										"target": 2532,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@bentoco/types",
 										"refersToTypeParameter": true
 									},
 									{
@@ -42241,7 +42241,7 @@
 														"type": "reference",
 														"target": 2532,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													}
 												}
@@ -42527,7 +42527,7 @@
 								"type": "reference",
 								"target": 2404,
 								"name": "JoinerServiceConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							},
 							{
 								"type": "union",
@@ -42647,7 +42647,7 @@
 											"type": "reference",
 											"target": 2419,
 											"name": "ModuleJoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -42869,7 +42869,7 @@
 																	"type": "reference",
 																	"target": 2419,
 																	"name": "ModuleJoinerRelationship",
-																	"package": "@medusajs/types"
+																	"package": "@bentoco/types"
 																},
 																{
 																	"type": "literal",
@@ -43206,7 +43206,7 @@
 														"type": "reference",
 														"target": 2424,
 														"name": "LinkModulesExtraFields",
-														"package": "@medusajs/types"
+														"package": "@bentoco/types"
 													}
 												}
 											],
@@ -43282,7 +43282,7 @@
 						"type": "reference",
 						"target": 2484,
 						"name": "JoinerRelationship",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "reflection",
@@ -43449,7 +43449,7 @@
 								"type": "reference",
 								"target": 2220,
 								"name": "ModuleJoinerConfig",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -43937,7 +43937,7 @@
 												"type": "reference",
 												"target": 2443,
 												"name": "Message",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -43945,7 +43945,7 @@
 													"type": "reference",
 													"target": 2443,
 													"name": "Message",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -43999,7 +43999,7 @@
 										"type": "reference",
 										"target": 2447,
 										"name": "MessageAggregatorFormat",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -44020,7 +44020,7 @@
 											"type": "reference",
 											"target": 2443,
 											"name": "Message",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -44118,12 +44118,12 @@
 														"type": "reference",
 														"target": 2282,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@bentoco/types",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "RawMessageFormat",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											},
 											{
 												"type": "array",
@@ -44135,12 +44135,12 @@
 															"type": "reference",
 															"target": 2282,
 															"name": "T",
-															"package": "@medusajs/types",
+															"package": "@bentoco/types",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "RawMessageFormat",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											}
 										]
@@ -44280,7 +44280,7 @@
 						"type": "reference",
 						"target": 1709,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -44327,7 +44327,7 @@
 						"type": "reference",
 						"target": 1709,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@bentoco/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -44530,7 +44530,7 @@
 						"type": "reference",
 						"target": 2271,
 						"name": "IMessageAggregator",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -44789,7 +44789,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				},
 				{
@@ -45032,7 +45032,7 @@
 						"type": "reference",
 						"target": 2266,
 						"name": "BigNumberRawValue",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					{
 						"type": "intrinsic",
@@ -45056,7 +45056,7 @@
 						"type": "reference",
 						"target": 2435,
 						"name": "IBigNumber",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				]
 			}
@@ -45099,7 +45099,7 @@
 						"type": "reference",
 						"target": 2435,
 						"name": "IBigNumber",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					}
 				]
 			}
@@ -45203,7 +45203,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@bentoco/types",
 	"symbolIdMap": {
 		"1241": {
 			"sourceFileName": "../../../../packages/core/types/src/cart/service.ts",

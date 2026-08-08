@@ -5,13 +5,13 @@ import {
   InferEntityType,
   OrderTypes,
   RepositoryService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   InjectManager,
   MedusaContext,
   MedusaError,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { Order } from "@models"
 
 type InjectedDependencies = {

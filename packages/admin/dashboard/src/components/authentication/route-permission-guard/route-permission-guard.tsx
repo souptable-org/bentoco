@@ -1,5 +1,5 @@
-import { ExclamationCircle } from "@medusajs/icons"
-import { Container, Heading, Text } from "@medusajs/ui"
+import { ExclamationCircle } from "@bentoco/icons"
+import { Container, Heading, Text } from "@bentoco/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { Navigate, Outlet, useMatches } from "react-router-dom"

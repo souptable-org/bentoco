@@ -1,6 +1,6 @@
-import type { ICartModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import type { ICartModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of the shipping method adjustments to remove.

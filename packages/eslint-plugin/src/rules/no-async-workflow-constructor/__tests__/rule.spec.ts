@@ -7,7 +7,7 @@ ruleTester.run("no-async-workflow-constructor", rule, {
   valid: [
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -15,7 +15,7 @@ ruleTester.run("no-async-workflow-constructor", rule, {
     },
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           return input
         })
@@ -33,7 +33,7 @@ ruleTester.run("no-async-workflow-constructor", rule, {
     // Async function not passed to createWorkflow is not flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         const doSomething = async () => 1
         createWorkflow("my-workflow", (input) => input)
       `,
@@ -41,7 +41,7 @@ ruleTester.run("no-async-workflow-constructor", rule, {
     // Honors aliased import binding for valid cases too.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => input)
       `,
     },
@@ -49,13 +49,13 @@ ruleTester.run("no-async-workflow-constructor", rule, {
   invalid: [
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", async (input) => {
           return input
         })
       `,
       output: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -64,13 +64,13 @@ ruleTester.run("no-async-workflow-constructor", rule, {
     },
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", async function (input) {
           return input
         })
       `,
       output: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           return input
         })
@@ -80,11 +80,11 @@ ruleTester.run("no-async-workflow-constructor", rule, {
     // Aliased import binding.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", async (input) => input)
       `,
       output: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => input)
       `,
       errors: [{ messageId: "asyncWorkflowConstructor" }],

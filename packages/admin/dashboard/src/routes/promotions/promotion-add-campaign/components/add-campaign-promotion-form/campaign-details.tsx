@@ -1,5 +1,5 @@
-import { AdminCampaign } from "@medusajs/types"
-import { Heading, Text } from "@medusajs/ui"
+import { AdminCampaign } from "@bentoco/types"
+import { Heading, Text } from "@bentoco/ui"
 import { Fragment } from "react"
 import { useTranslation } from "react-i18next"
 

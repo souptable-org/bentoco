@@ -47,7 +47,7 @@ yarn install
 # Build all packages
 yarn build
 # Build specific package
-yarn workspace @medusajs/medusa build
+yarn workspace @bentoco/medusa build
 # Watch mode (in package directory)
 yarn watch
 ```
@@ -171,16 +171,16 @@ export class OrderModuleService
 - Type request: `AuthenticatedMedusaRequest<T>` or `MedusaRequest<T>`
 - Type response: `MedusaResponse<T>`
 - Access dependencies from `req.scope`
-- Use workflows from `@medusajs/core-flows`
+- Use workflows from `@bentoco/core-flows`
 
 **Example:**
 ```typescript
-import { deleteOrderWorkflow } from "@medusajs/core-flows"
-import { HttpTypes } from "@medusajs/framework/types"
+import { deleteOrderWorkflow } from "@bentoco/core-flows"
+import { HttpTypes } from "@bentoco/framework/types"
 import {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 
 export const DELETE = async (
   req: AuthenticatedMedusaRequest,
@@ -281,7 +281,7 @@ export const deletePromotionsWorkflow = createWorkflow(
 
 **Example:**
 ```typescript
-import { MedusaError, validateEmail } from "@medusajs/framework/utils"
+import { MedusaError, validateEmail } from "@bentoco/framework/utils"
 
 // In service
 if (!entity) {
@@ -328,14 +328,14 @@ import {
   MedusaService,
   EmitEvents,
   Modules,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 // Types
 import type {
   Context,
   DAL,
   IOrderModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 // Workflows
 import {
@@ -344,14 +344,14 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 // Core flows
-import { deleteOrderWorkflow } from "@medusajs/core-flows"
+import { deleteOrderWorkflow } from "@bentoco/core-flows"
 
 // HTTP
 import {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 ```

@@ -1,6 +1,6 @@
-import { ITranslationModuleService } from "@medusajs/framework/types"
-import { DmlEntity, Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { ITranslationModuleService } from "@bentoco/framework/types"
+import { DmlEntity, Module, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import TranslationModuleService from "@services/translation-module"
 import { createLocaleFixture, createTranslationFixture } from "../__fixtures__"
 

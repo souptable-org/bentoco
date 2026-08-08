@@ -27,7 +27,7 @@ For integration guides, add the service type as a tag string (e.g., `analytics`,
 ## Required Imports and Metadata
 
 ```mdx
-import { Github, PlaySolid } from "@medusajs/icons"
+import { Github, PlaySolid } from "@bentoco/icons"
 import { Prerequisites, WorkflowDiagram, CardList } from "docs-ui"
 
 export const metadata = {

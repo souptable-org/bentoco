@@ -1,6 +1,6 @@
-import { Checkbox, Text, clx } from "@medusajs/ui"
+import { Checkbox, Text, clx } from "@bentoco/ui"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 type LocationItemProps = {
   selected: boolean

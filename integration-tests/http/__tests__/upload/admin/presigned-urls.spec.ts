@@ -1,11 +1,11 @@
 import { join } from "path"
 import { readFile } from "fs/promises"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
-import { AdminUploadPreSignedUrlRequest } from "@medusajs/types"
+import { AdminUploadPreSignedUrlRequest } from "@bentoco/types"
 
 jest.setTimeout(30000)
 

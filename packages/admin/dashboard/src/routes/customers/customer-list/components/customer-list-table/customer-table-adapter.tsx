@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { useMemo } from "react"
 import { useCustomers } from "../../../../../hooks/api/customers"
 import {

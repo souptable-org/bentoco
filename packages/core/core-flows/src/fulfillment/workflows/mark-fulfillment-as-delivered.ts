@@ -1,5 +1,5 @@
-import type { FulfillmentDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import type { FulfillmentDTO } from "@bentoco/framework/types"
+import { MedusaError } from "@bentoco/framework/utils"
 import {
   StepResponse,
   WorkflowData,
@@ -7,7 +7,7 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { updateFulfillmentWorkflow } from "./update-fulfillment"
 import { acquireLockStep, releaseLockStep } from "../../locking"

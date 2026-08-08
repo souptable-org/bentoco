@@ -3,8 +3,8 @@ import {
   PencilSquare,
   Trash,
   TriangleRightMini,
-} from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+} from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import {
   Badge,
   Divider,
@@ -12,12 +12,12 @@ import {
   StatusBadge,
   Text,
   Tooltip,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { Collapsible as RadixCollapsible } from "radix-ui"
 import { ComponentPropsWithoutRef } from "react"
 import { useTranslation } from "react-i18next"
 
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@bentoco/js-sdk"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useProductTypes } from "../../../../../hooks/api/product-types"
 import { useProducts } from "../../../../../hooks/api/products"

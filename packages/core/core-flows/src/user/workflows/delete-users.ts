@@ -1,11 +1,11 @@
-import type { UserWorkflow } from "@medusajs/framework/types"
-import { Modules, UserWorkflowEvents } from "@medusajs/framework/utils"
+import type { UserWorkflow } from "@bentoco/framework/types"
+import { Modules, UserWorkflowEvents } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep, removeRemoteLinkStep } from "../../common"
 import { deleteUsersStep } from "../steps"
 

@@ -10,7 +10,7 @@ import { SidebarItem } from "@/components/Sidebar/Item"
 import { SidebarItemTitle } from "@/components/Sidebar/Item/Title"
 import { useSidebar } from "@/providers/Sidebar"
 import clsx from "clsx"
-import { TriangleDownMini, TriangleUpMini } from "@medusajs/icons"
+import { TriangleDownMini, TriangleUpMini } from "@bentoco/icons"
 import Link from "next/link"
 
 export type SidebarItemCategoryProps = {

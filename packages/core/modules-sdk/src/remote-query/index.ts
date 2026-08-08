@@ -1,1 +1,1 @@
-export { createQuery, Query } from "@medusajs/query"
+export { createQuery, Query } from "@bentoco/query"

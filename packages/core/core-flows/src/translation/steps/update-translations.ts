@@ -3,13 +3,13 @@ import {
   ITranslationModuleService,
   UpdateTranslationDataDTO,
   UpdateTranslationDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   MedusaError,
   MedusaErrorTypes,
   Modules,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to update translations.

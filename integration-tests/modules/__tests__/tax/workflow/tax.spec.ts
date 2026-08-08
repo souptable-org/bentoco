@@ -1,11 +1,11 @@
-import { ITaxModuleService } from "@medusajs/types"
+import { ITaxModuleService } from "@bentoco/types"
 
 import {
   createTaxRateRulesStepId,
   updateTaxRatesWorkflow,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/utils"
+} from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { Modules } from "@bentoco/utils"
 import { createAdminUser } from "../../../../helpers/create-admin-user"
 
 jest.setTimeout(50000)

@@ -3,7 +3,7 @@ import {
   BigNumberInput,
   InferEntityType,
   PromotionTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ApplicationMethodAllocation,
   ApplicationMethodTargetType,
@@ -12,7 +12,7 @@ import {
   MathBN,
   MedusaError,
   ApplicationMethodTargetType as TargetType,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { Promotion } from "@models"
 import { areRulesValidForContext } from "../validations"
 import { sortLineItemByPriceAscending } from "./sort-by-price"

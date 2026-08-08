@@ -1,10 +1,10 @@
-import { deleteProductOptionsWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { deleteProductOptionsWorkflow } from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   IFulfillmentModuleService,
   IProductModuleService,
-} from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+} from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 
 jest.setTimeout(50000)
 

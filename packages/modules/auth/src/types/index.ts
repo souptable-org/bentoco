@@ -2,7 +2,7 @@ import {
   Logger,
   ModuleProviderExports,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
@@ -140,9 +140,9 @@ export interface MedusaCloudAuthProviderOptions {
   disabled: boolean
 }
 
-declare module "@medusajs/types" {
+declare module "@bentoco/types" {
   interface ModuleOptions {
-    "@medusajs/auth": AuthModuleOptions
-    "@medusajs/medusa/auth": AuthModuleOptions
+    "@bentoco/auth": AuthModuleOptions
+    "@bentoco/medusa/auth": AuthModuleOptions
   }
 }

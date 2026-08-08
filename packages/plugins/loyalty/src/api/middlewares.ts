@@ -1,4 +1,4 @@
-import { defineMiddlewares } from "@medusajs/framework";
+import { defineMiddlewares } from "@bentoco/framework";
 import { adminGiftCardMiddlewares } from "./admin/gift-cards/middlewares";
 import { adminStoreCreditAccountMiddlewares } from "./admin/store-credit-accounts/middlewares";
 import { storeCartMiddlewares } from "./store/carts/middlewares";

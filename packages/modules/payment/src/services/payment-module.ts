@@ -39,7 +39,7 @@ import {
   UpdatePaymentSessionDTO,
   UpsertPaymentCollectionDTO,
   WebhookActionResult,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   BigNumber,
   defaultCurrencies,
@@ -57,8 +57,8 @@ import {
   PaymentCollectionStatus,
   PaymentSessionStatus,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { SqlEntityManager } from "@medusajs/framework/mikro-orm/postgresql"
+} from "@bentoco/framework/utils"
+import { SqlEntityManager } from "@bentoco/framework/mikro-orm/postgresql"
 import {
   AccountHolder,
   Capture,

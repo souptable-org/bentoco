@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@bentoco/ui"
 import QRCode from "qrcode"
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"

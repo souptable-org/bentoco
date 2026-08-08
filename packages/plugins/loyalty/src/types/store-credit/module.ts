@@ -1,4 +1,4 @@
-import { BigNumberValue } from "@medusajs/framework/types";
+import { BigNumberValue } from "@bentoco/framework/types";
 
 /* Entity: StoreCreditAccount */
 

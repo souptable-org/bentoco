@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/framework/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { Modules } from "@bentoco/framework/utils"
 import {
   adminHeaders,
   createAdminUser,

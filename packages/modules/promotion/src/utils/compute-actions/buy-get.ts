@@ -3,7 +3,7 @@ import {
   ComputeActionItemLine,
   InferEntityType,
   PromotionTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ApplicationMethodTargetType,
   ApplicationMethodType,
@@ -11,7 +11,7 @@ import {
   MathBN,
   MedusaError,
   PromotionType,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { areRulesValidForContext } from "../validations"
 import { computeActionForBudgetExceeded } from "./usage"
 import { Promotion } from "@models"

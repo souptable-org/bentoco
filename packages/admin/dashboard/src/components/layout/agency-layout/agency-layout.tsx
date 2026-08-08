@@ -5,9 +5,11 @@ import { AppShell } from "@/components/app-shell"
 import { useMe } from "../../../hooks/api/users"
 import { Spinner } from "@bentoco/icons"
 import {
+  ensureModeFromHost,
   fetchAgencyMe,
   isAgencyMode,
   persistAgencySession,
+  resolveModeFromHost,
 } from "@/lib/agency-session"
 
 export const AgencyLayout: React.FC = () => {
@@ -20,6 +22,8 @@ export const AgencyLayout: React.FC = () => {
     let cancelled = false
 
     async function resolveAccess() {
+      ensureModeFromHost()
+
       if (isLoading) {
         return
       }
@@ -28,10 +32,27 @@ export const AgencyLayout: React.FC = () => {
         return
       }
 
-      // Fast path: session already marked agency after login
-      if (isAgencyMode()) {
-        setAgencyCheck("allowed")
-        return
+      // Fast path: agency host or session already marked agency
+      if (isAgencyMode() || resolveModeFromHost() === "agency") {
+        // Still refresh membership when possible
+        try {
+          const me = await fetchAgencyMe(user.email)
+          if (!cancelled && me.isAgency) {
+            persistAgencySession(me)
+            setAgencyCheck("allowed")
+            return
+          }
+          if (!cancelled && resolveModeFromHost() === "agency" && me.isAgency) {
+            setAgencyCheck("allowed")
+            return
+          }
+        } catch {
+          // On agency host with prior session, allow shell; API pages show errors
+          if (!cancelled && isAgencyMode()) {
+            setAgencyCheck("allowed")
+            return
+          }
+        }
       }
 
       try {

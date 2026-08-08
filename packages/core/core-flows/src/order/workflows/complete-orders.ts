@@ -1,12 +1,12 @@
-import type { AdditionalData } from "@medusajs/framework/types"
-import { OrderWorkflowEvents } from "@medusajs/framework/utils"
+import type { AdditionalData } from "@bentoco/framework/types"
+import { OrderWorkflowEvents } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { completeOrdersStep } from "../steps"
 

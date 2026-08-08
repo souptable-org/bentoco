@@ -4,13 +4,13 @@ import {
   AdminOrder,
   AdminOrderPreview,
   AdminReturn,
-} from "@medusajs/types"
-import { Alert, Button, Heading, Text, toast } from "@medusajs/ui"
+} from "@bentoco/types"
+import { Alert, Button, Heading, Text, toast } from "@bentoco/ui"
 import { useEffect, useMemo, useState } from "react"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { Form } from "../../../../../components/common/form"
 import { Combobox } from "../../../../../components/inputs/combobox"
 import {

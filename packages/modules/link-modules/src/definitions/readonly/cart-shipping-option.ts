@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 
 export const CartShippingOption: ModuleJoinerConfig = {
   isLink: true,

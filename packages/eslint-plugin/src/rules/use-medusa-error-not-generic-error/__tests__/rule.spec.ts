@@ -7,7 +7,7 @@ ruleTester.run("use-medusa-error-not-generic-error", rule, {
   valid: [
     // Already throwing MedusaError.
     {
-      code: `import { MedusaError } from "@medusajs/framework/utils"
+      code: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.NOT_FOUND, "nope")`,
     },
     // Custom (non-built-in) error classes are out of scope.
@@ -35,7 +35,7 @@ throw new MedusaError(MedusaError.Types.NOT_FOUND, "nope")`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "Something went wrong")`,
             },
           ],
@@ -53,7 +53,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "Something went wrong"
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE)`,
             },
           ],
@@ -71,7 +71,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE)`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "bad type")`,
             },
           ],
@@ -88,7 +88,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "bad type")`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "out of range")`,
             },
           ],
@@ -98,7 +98,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "out of range")`,
     // MedusaError already imported via named specifier → no duplicate import,
     // appended to the existing specifier list is unnecessary (already present).
     {
-      code: `import { MedusaError } from "@medusajs/framework/utils"
+      code: `import { MedusaError } from "@bentoco/framework/utils"
 throw new Error("boom")`,
       output: null,
       errors: [
@@ -108,7 +108,7 @@ throw new Error("boom")`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "boom")`,
             },
           ],
@@ -117,7 +117,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "boom")`,
     },
     // Existing utils import without MedusaError → append to specifier list.
     {
-      code: `import { Modules } from "@medusajs/framework/utils"
+      code: `import { Modules } from "@bentoco/framework/utils"
 throw new Error("boom")`,
       output: null,
       errors: [
@@ -127,7 +127,7 @@ throw new Error("boom")`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { Modules, MedusaError } from "@medusajs/framework/utils"
+              output: `import { Modules, MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "boom")`,
             },
           ],
@@ -145,7 +145,7 @@ throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "boom")`,
           suggestions: [
             {
               messageId: "replaceWithMedusaError",
-              output: `import { MedusaError } from "@medusajs/framework/utils"
+              output: `import { MedusaError } from "@bentoco/framework/utils"
 throw new MedusaError(MedusaError.Types.UNEXPECTED_STATE, "msg", { cause: err })`,
             },
           ],

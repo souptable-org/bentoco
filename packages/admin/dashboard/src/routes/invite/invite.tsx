@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Alert, Button, Heading, Hint, Input, Text, toast } from "@medusajs/ui"
+import { Alert, Button, Heading, Hint, Input, Text, toast } from "@bentoco/ui"
 import i18n from "i18next"
 import { AnimatePresence, motion } from "motion/react"
 import { useState } from "react"
@@ -16,7 +16,7 @@ import {
 } from "../../hooks/api/auth"
 import { useAcceptInvite } from "../../hooks/api/invites"
 import { isFetchError } from "../../lib/is-fetch-error"
-import { AuthLoginResponse } from "@medusajs/js-sdk"
+import { AuthLoginResponse } from "@bentoco/js-sdk"
 
 const CreateAccountSchema = z
   .object({

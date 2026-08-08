@@ -1,4 +1,4 @@
-import { Select } from "@medusajs/ui"
+import { Select } from "@bentoco/ui"
 
 export default function SelectSmall() {
   return (

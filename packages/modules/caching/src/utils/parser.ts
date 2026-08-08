@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { isObject } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@bentoco/framework/types"
+import { isObject } from "@bentoco/framework/utils"
 import {
   GraphQLObjectType,
   GraphQLSchema,

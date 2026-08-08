@@ -62,7 +62,7 @@ jobs:
           version: 10.11.1
 
       - name: Install Medusa cli
-        run: npm i -g @medusajs/cli@preview
+        run: npm i -g @bentoco/cli@preview
 
       - name: Create Medusa project
         working-directory: ..

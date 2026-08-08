@@ -1,4 +1,4 @@
-import { Tooltip, clx } from "@medusajs/ui"
+import { Tooltip, clx } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { TruncatedText } from "../truncated-text"
 

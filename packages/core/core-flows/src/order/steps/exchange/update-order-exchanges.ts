@@ -1,12 +1,12 @@
 import {
   IOrderModuleService,
   UpdateOrderExchangeDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   Modules,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 export const updateOrderExchangesStepId = "update-order-exchange"
 /**

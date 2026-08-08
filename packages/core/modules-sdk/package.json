@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/modules-sdk",
+  "name": "@bentoco/modules-sdk",
   "version": "2.18.0",
   "description": "SDK for medusa modules",
   "main": "dist/index.js",
@@ -34,11 +34,11 @@
     "watch": "yarn run -T tsc --build --watch"
   },
   "devDependencies": {
-    "@medusajs/types": "2.18.0"
+    "@bentoco/types": "2.18.0"
   },
   "dependencies": {
-    "@medusajs/deps": "2.18.0",
-    "@medusajs/query": "2.18.0",
-    "@medusajs/utils": "2.18.0"
+    "@bentoco/deps": "2.18.0",
+    "@bentoco/query": "2.18.0",
+    "@bentoco/utils": "2.18.0"
   }
 }

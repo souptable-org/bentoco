@@ -1,4 +1,4 @@
-import { Button, Drawer, Text } from "@medusajs/ui"
+import { Button, Drawer, Text } from "@bentoco/ui"
 
 export default function DrawerDemo() {
   return (

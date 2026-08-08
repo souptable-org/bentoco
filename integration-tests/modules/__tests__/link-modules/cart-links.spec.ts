@@ -1,12 +1,12 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   ICartModuleService,
   ICustomerModuleService,
   IPaymentModuleService,
   IRegionModuleService,
   ISalesChannelModuleService,
-} from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+} from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 
 jest.setTimeout(50000)
 

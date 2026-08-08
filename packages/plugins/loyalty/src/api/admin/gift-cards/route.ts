@@ -1,8 +1,8 @@
 import {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework";
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils";
+} from "@bentoco/framework";
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils";
 import { createGiftCardsWorkflow } from "../../../workflows/gift-cards/workflows/create-gift-cards";
 import { AdminCreateGiftCardParams, AdminGetGiftCardsParams, AdminGiftCardResponse, AdminGiftCardsResponse } from "../../../types";
 

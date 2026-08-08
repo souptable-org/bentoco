@@ -1,4 +1,4 @@
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/utils"
 import { NextFunction } from "express"
 import { authenticate, AuthType } from "../authenticate-middleware"
 import { MedusaRequest, MedusaResponse } from "../../types"

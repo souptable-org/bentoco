@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@bentoco/icons/dist/types"
 import clsx from "clsx"
 import React from "react"
 

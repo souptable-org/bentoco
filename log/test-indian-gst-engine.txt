@@ -1,0 +1,82 @@
+=== Indian GST Engine Audit Log [2026-07-30T17:11:04.863Z] ===
+
+--- Starting Indian GST Engine Audit ---
+Intra-state (MH -> MH) Invoice Summary: {
+  "subtotalPaisa": 249700,
+  "totalCgstPaisa": 16479,
+  "totalSgstPaisa": 16479,
+  "totalIgstPaisa": 0,
+  "totalTaxPaisa": 32958,
+  "grandTotalPaisa": 282658,
+  "isInterstate": false,
+  "lineItems": [
+    {
+      "itemId": "item_1",
+      "title": "Oversized Graphic Tee",
+      "hsnCode": "6109",
+      "quantity": 2,
+      "unitPaisa": 99900,
+      "totalPaisa": 199800,
+      "gstRatePercent": 12,
+      "cgstPaisa": 11988,
+      "sgstPaisa": 11988,
+      "igstPaisa": 0,
+      "totalTaxPaisa": 23976,
+      "grossPaisa": 223776
+    },
+    {
+      "itemId": "item_2",
+      "title": "Matte Clay Hair Wax",
+      "hsnCode": "3305",
+      "quantity": 1,
+      "unitPaisa": 49900,
+      "totalPaisa": 49900,
+      "gstRatePercent": 18,
+      "cgstPaisa": 4491,
+      "sgstPaisa": 4491,
+      "igstPaisa": 0,
+      "totalTaxPaisa": 8982,
+      "grossPaisa": 58882
+    }
+  ]
+}
+Inter-state (MH -> KA) Invoice Summary: {
+  "subtotalPaisa": 249700,
+  "totalCgstPaisa": 0,
+  "totalSgstPaisa": 0,
+  "totalIgstPaisa": 32958,
+  "totalTaxPaisa": 32958,
+  "grandTotalPaisa": 282658,
+  "isInterstate": true,
+  "lineItems": [
+    {
+      "itemId": "item_1",
+      "title": "Oversized Graphic Tee",
+      "hsnCode": "6109",
+      "quantity": 2,
+      "unitPaisa": 99900,
+      "totalPaisa": 199800,
+      "gstRatePercent": 12,
+      "cgstPaisa": 0,
+      "sgstPaisa": 0,
+      "igstPaisa": 23976,
+      "totalTaxPaisa": 23976,
+      "grossPaisa": 223776
+    },
+    {
+      "itemId": "item_2",
+      "title": "Matte Clay Hair Wax",
+      "hsnCode": "3305",
+      "quantity": 1,
+      "unitPaisa": 49900,
+      "totalPaisa": 49900,
+      "gstRatePercent": 18,
+      "cgstPaisa": 0,
+      "sgstPaisa": 0,
+      "igstPaisa": 8982,
+      "totalTaxPaisa": 8982,
+      "grossPaisa": 58882
+    }
+  ]
+}
+✅ INDIAN GST ENGINE AUDIT PASSED: HSN code tax splits & IGST/CGST/SGST calculations verified!

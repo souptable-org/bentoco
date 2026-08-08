@@ -1,6 +1,6 @@
-import { StepResponse } from "@medusajs/framework/workflows-sdk";
+import { StepResponse } from "@bentoco/framework/workflows-sdk";
 
-import { createStep } from "@medusajs/framework/workflows-sdk";
+import { createStep } from "@bentoco/framework/workflows-sdk";
 import { PluginModule } from "../../../types";
 import { ModuleGiftCard } from "../../../types/loyalty";
 import {

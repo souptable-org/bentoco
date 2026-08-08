@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import i18next from "i18next"
 import { describe, expect, it } from "vitest"
 

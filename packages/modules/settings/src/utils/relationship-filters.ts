@@ -3,7 +3,7 @@
  * Configures dropdown filters for relationship fields.
  */
 
-import { GraphQLObjectType, isScalarType } from "@medusajs/framework/utils"
+import { GraphQLObjectType, isScalarType } from "@bentoco/framework/utils"
 import {
   SchemaTypeMap,
   getUnderlyingType,

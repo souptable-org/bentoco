@@ -1,5 +1,5 @@
-import { AdminPromotion } from "@medusajs/types"
-import { Button, Container, Heading } from "@medusajs/ui"
+import { AdminPromotion } from "@bentoco/types"
+import { Button, Container, Heading } from "@bentoco/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

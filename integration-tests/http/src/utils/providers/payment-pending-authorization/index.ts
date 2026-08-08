@@ -1,4 +1,4 @@
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@bentoco/framework/utils"
 import { PendingAuthorizationPaymentProvider } from "./provider"
 
 const services = [PendingAuthorizationPaymentProvider]

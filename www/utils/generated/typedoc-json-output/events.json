@@ -7184,7 +7184,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/utils",
+	"packageName": "@bentoco/utils",
 	"symbolIdMap": {
 		"63963": {
 			"sourceFileName": "../../../../packages/core/utils/src/core-flows/events.ts",

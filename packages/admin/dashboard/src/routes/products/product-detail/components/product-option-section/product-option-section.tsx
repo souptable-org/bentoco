@@ -1,9 +1,9 @@
-import { ArrowRight, PencilSquare } from "@medusajs/icons"
-import { Badge, Container, Heading } from "@medusajs/ui"
+import { ArrowRight, PencilSquare } from "@bentoco/icons"
+import { Badge, Container, Heading } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { SectionRow } from "../../../../../components/common/section"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 const OptionActions = ({
   option,

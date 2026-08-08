@@ -1,6 +1,6 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { UpdateTranslationSettingsDTO } from "@medusajs/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { UpdateTranslationSettingsDTO } from "@bentoco/types"
 
 export const updateTranslationSettingsStepId = "update-translation-settings"
 

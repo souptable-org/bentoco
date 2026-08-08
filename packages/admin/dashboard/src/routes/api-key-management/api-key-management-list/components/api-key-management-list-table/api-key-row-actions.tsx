@@ -1,6 +1,6 @@
-import { PencilSquare, SquareTwoStack, Trash, XCircle } from "@medusajs/icons"
-import { AdminApiKeyResponse } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { PencilSquare, SquareTwoStack, Trash, XCircle } from "@bentoco/icons"
+import { AdminApiKeyResponse } from "@bentoco/types"
+import { toast, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import {

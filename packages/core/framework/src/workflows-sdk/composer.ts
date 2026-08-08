@@ -1,1 +1,1 @@
-export * from "@medusajs/workflows-sdk/composer"
+export * from "@bentoco/workflows-sdk/composer"

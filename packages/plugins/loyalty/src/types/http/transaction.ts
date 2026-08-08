@@ -3,7 +3,7 @@ import {
   FindParams,
   OperatorMap,
   PaginatedResponse,
-} from "@medusajs/framework/types";
+} from "@bentoco/framework/types";
 import {
   ModuleAccountTransaction,
   ModuleCreateAccountTransaction,

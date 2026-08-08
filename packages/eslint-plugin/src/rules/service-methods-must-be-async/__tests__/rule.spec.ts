@@ -8,7 +8,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // All methods async.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async create() {}
           async update() {}
@@ -18,7 +18,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Method with Promise return type annotation but no async (e.g. delegates to another async fn).
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           fetch(): Promise<void> {
             return Promise.resolve()
@@ -29,7 +29,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Constructor is not flagged.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
             super(...arguments)
@@ -41,7 +41,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Private/protected methods are not flagged.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           private helper() {}
           protected internal() {}
@@ -52,7 +52,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Static method that's already async is fine.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           static async helper() {}
           async run() {}
@@ -63,7 +63,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // properties, not invoked like service methods.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           get name() { return "foo" }
           set name(v: string) {}
@@ -122,7 +122,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Class extends something other than MedusaService, and isn't named *Service.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class Foo extends SomethingElse {
           create() {}
         }
@@ -131,7 +131,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Honors aliased MedusaService import.
     {
       code: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           async create() {}
         }
@@ -141,13 +141,13 @@ ruleTester.run("service-methods-must-be-async", rule, {
   invalid: [
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           create() {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async create() {}
         }
@@ -157,7 +157,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Multiple non-async methods.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           create() {}
           update() {}
@@ -165,7 +165,7 @@ ruleTester.run("service-methods-must-be-async", rule, {
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async create() {}
           async update() {}
@@ -180,13 +180,13 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Non-Promise return type annotation.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           fetch(): void {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async fetch(): void {}
         }
@@ -196,13 +196,13 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Aliased MedusaService import.
     {
       code: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           create() {}
         }
       `,
       output: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           async create() {}
         }
@@ -212,13 +212,13 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Class expression.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         const FooService = class extends MedusaService({}) {
           create() {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         const FooService = class extends MedusaService({}) {
           async create() {}
         }
@@ -228,13 +228,13 @@ ruleTester.run("service-methods-must-be-async", rule, {
     // Static methods are invocable from outside the service, so they must be async too.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           static helper() {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           static async helper() {}
         }

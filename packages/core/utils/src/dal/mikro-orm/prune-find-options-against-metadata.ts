@@ -1,4 +1,4 @@
-import type { EntityMetadata } from "@medusajs/deps/mikro-orm/core"
+import type { EntityMetadata } from "@bentoco/deps/mikro-orm/core"
 
 export interface PruneFindOptionsResult {
   droppedFields: string[]

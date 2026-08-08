@@ -19,7 +19,7 @@ vi.mock("fs/promises", () => ({
 }))
 
 const validLayoutFile = `
-    import { defineLayoutConfig } from "@medusajs/admin-sdk"
+    import { defineLayoutConfig } from "@bentoco/admin-sdk"
 
     const Layout = () => {
         return <div>Layout 1</div>
@@ -37,7 +37,7 @@ const validLayoutFile = `
 `
 
 const layoutFileWithoutDefaultExport = `
-    import { defineLayoutConfig } from "@medusajs/admin-sdk"
+    import { defineLayoutConfig } from "@bentoco/admin-sdk"
 
     export const config = defineLayoutConfig({
         id: "no-default-export",

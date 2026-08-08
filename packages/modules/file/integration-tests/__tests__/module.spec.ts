@@ -1,6 +1,6 @@
-import { IFileModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IFileModuleService } from "@bentoco/framework/types"
+import { Module, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { FileModuleService } from "@services"
 import { resolve } from "path"
 

@@ -1,17 +1,17 @@
-import { CreateCartCreditLineDTO } from "@medusajs/framework/types";
-import { MathBN, Modules } from "@medusajs/framework/utils";
+import { CreateCartCreditLineDTO } from "@bentoco/framework/types";
+import { MathBN, Modules } from "@bentoco/framework/utils";
 import {
   createCartCreditLinesWorkflow,
   createLinksWorkflow,
   deleteCartCreditLinesWorkflow,
   dismissLinksWorkflow,
   useQueryGraphStep,
-} from "@medusajs/medusa/core-flows";
+} from "@bentoco/medusa/core-flows";
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk";
+} from "@bentoco/framework/workflows-sdk";
 import { PluginModule } from "../../../types";
 import { retrieveGiftCardsBalanceStep } from "../../gift-cards/steps/retrieve-gift-card-balance";
 import { validateGiftCardBalancesStep } from "../steps/validate-gift-card-balances";

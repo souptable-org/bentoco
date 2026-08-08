@@ -1,8 +1,8 @@
-import { AdminReservationResponse } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { AdminReservationResponse } from "@bentoco/types"
+import { Container, Heading } from "@bentoco/ui"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
-import { PencilSquare } from "@medusajs/icons"
+import { PencilSquare } from "@bentoco/icons"
 import { SectionRow } from "../../../../../components/common/section"
 import { useInventoryItem } from "../../../../../hooks/api/inventory"
 import { useStockLocation } from "../../../../../hooks/api/stock-locations"

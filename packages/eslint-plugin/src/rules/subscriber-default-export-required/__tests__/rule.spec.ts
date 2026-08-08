@@ -9,7 +9,7 @@ ruleTester.run("subscriber-default-export-required", rule, {
   valid: [
     // Default export of the subscriber function.
     {
-      code: `import type { SubscriberConfig } from "@medusajs/framework"
+      code: `import type { SubscriberConfig } from "@bentoco/framework"
 export default async function orderPlacedHandler() {}
 export const config: SubscriberConfig = { event: "order.placed" }`,
       filename: SUBSCRIBER,

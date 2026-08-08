@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/loyalty-plugin",
+  "name": "@bentoco/loyalty-plugin",
   "version": "2.18.0",
   "description": "Medusa Plugin: Loyalty - Gift Cards",
   "author": "Medusa (https://medusajs.com)",
@@ -54,16 +54,16 @@
     "watch": "medusa plugin:develop"
   },
   "devDependencies": {
-    "@medusajs/admin-sdk": "2.18.0",
-    "@medusajs/cli": "2.18.0",
-    "@medusajs/dashboard": "2.18.0",
-    "@medusajs/framework": "2.18.0",
-    "@medusajs/icons": "2.18.0",
-    "@medusajs/medusa": "2.18.0",
-    "@medusajs/test-utils": "2.18.0",
-    "@medusajs/types": "2.18.0",
-    "@medusajs/ui": "4.2.0",
-    "@medusajs/ui-preset": "2.18.0",
+    "@bentoco/admin-sdk": "2.18.0",
+    "@bentoco/cli": "2.18.0",
+    "@bentoco/dashboard": "2.18.0",
+    "@bentoco/framework": "2.18.0",
+    "@bentoco/icons": "2.18.0",
+    "@bentoco/medusa": "2.18.0",
+    "@bentoco/test-utils": "2.18.0",
+    "@bentoco/types": "2.18.0",
+    "@bentoco/ui": "4.2.0",
+    "@bentoco/ui-preset": "2.18.0",
     "@swc/core": "1.5.7",
     "@types/node": "^20.0.0",
     "cross-env": "^7.0.3",
@@ -71,35 +71,35 @@
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "@medusajs/admin-sdk": "2.18.0",
-    "@medusajs/cli": "2.18.0",
-    "@medusajs/dashboard": "2.18.0",
-    "@medusajs/framework": "2.18.0",
-    "@medusajs/icons": "2.18.0",
-    "@medusajs/medusa": "2.18.0",
-    "@medusajs/test-utils": "2.18.0",
-    "@medusajs/ui": "4.2.0",
+    "@bentoco/admin-sdk": "2.18.0",
+    "@bentoco/cli": "2.18.0",
+    "@bentoco/dashboard": "2.18.0",
+    "@bentoco/framework": "2.18.0",
+    "@bentoco/icons": "2.18.0",
+    "@bentoco/medusa": "2.18.0",
+    "@bentoco/test-utils": "2.18.0",
+    "@bentoco/ui": "4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "6.30.4"
   },
   "peerDependenciesMeta": {
-    "@medusajs/admin-sdk": {
+    "@bentoco/admin-sdk": {
       "optional": true
     },
-    "@medusajs/cli": {
+    "@bentoco/cli": {
       "optional": true
     },
-    "@medusajs/dashboard": {
+    "@bentoco/dashboard": {
       "optional": true
     },
-    "@medusajs/icons": {
+    "@bentoco/icons": {
       "optional": true
     },
-    "@medusajs/test-utils": {
+    "@bentoco/test-utils": {
       "optional": true
     },
-    "@medusajs/ui": {
+    "@bentoco/ui": {
       "optional": true
     },
     "react": {

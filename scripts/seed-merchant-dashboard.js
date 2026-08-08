@@ -96,6 +96,34 @@ async function main() {
     log("Region exists", `${region.name} / ${region.currency_code}`)
   }
 
+  // 3b) India tax region — default GST 18% (Medusa system tax provider)
+  const taxRegions = (
+    await request("GET", "/admin/tax-regions?limit=50", { token })
+  ).tax_regions
+  const indiaTax = taxRegions?.find((t) => t.country_code === "in" && !t.province_code)
+  if (!indiaTax) {
+    try {
+      const created = await request("POST", "/admin/tax-regions", {
+        token,
+        body: {
+          country_code: "in",
+          provider_id: "tp_system",
+          default_tax_rate: {
+            code: "GST",
+            name: "GST 18%",
+            rate: 18,
+          },
+        },
+      })
+      log("Tax region India", `GST 18% (${created.tax_region?.id})`)
+    } catch (e) {
+      // merchant vs agency auth may fail; log and continue
+      console.warn("! Tax region seed skipped:", e.message)
+    }
+  } else {
+    log("Tax region exists", indiaTax.id)
+  }
+
   // Also ensure a USD region for multi-currency demos if missing
   regions = (await request("GET", "/admin/regions?limit=50", { token })).regions
   let usdRegion = regions.find((r) => r.currency_code === "usd")
@@ -286,8 +314,9 @@ async function main() {
           sku: "KURTA-M-IND",
           options: { Size: "M", Color: "Indigo" },
           prices: [
-            { currency_code: "inr", amount: 149900 }, // ₹1,499.00
-            { currency_code: "usd", amount: 1800 },
+            // Medusa v2 amounts are major currency units (rupees), not paisa
+            { currency_code: "inr", amount: 1499 },
+            { currency_code: "usd", amount: 18 },
           ],
           manage_inventory: false,
         },
@@ -296,8 +325,8 @@ async function main() {
           sku: "KURTA-L-IVY",
           options: { Size: "L", Color: "Ivory" },
           prices: [
-            { currency_code: "inr", amount: 149900 },
-            { currency_code: "usd", amount: 1800 },
+            { currency_code: "inr", amount: 1499 },
+            { currency_code: "usd", amount: 18 },
           ],
           manage_inventory: false,
         },
@@ -319,8 +348,8 @@ async function main() {
           sku: "STOLE-RUBY",
           options: { Color: "Ruby" },
           prices: [
-            { currency_code: "inr", amount: 249900 },
-            { currency_code: "usd", amount: 2999 },
+            { currency_code: "inr", amount: 2499 },
+            { currency_code: "usd", amount: 30 },
           ],
           manage_inventory: false,
         },
@@ -329,8 +358,8 @@ async function main() {
           sku: "STOLE-EMR",
           options: { Color: "Emerald" },
           prices: [
-            { currency_code: "inr", amount: 249900 },
-            { currency_code: "usd", amount: 2999 },
+            { currency_code: "inr", amount: 2499 },
+            { currency_code: "usd", amount: 30 },
           ],
           manage_inventory: false,
         },
@@ -352,8 +381,8 @@ async function main() {
           sku: "DIYA-4PK",
           options: { Pack: "4-pack" },
           prices: [
-            { currency_code: "inr", amount: 89900 },
-            { currency_code: "usd", amount: 1099 },
+            { currency_code: "inr", amount: 899 },
+            { currency_code: "usd", amount: 11 },
           ],
           manage_inventory: false,
         },
@@ -375,8 +404,8 @@ async function main() {
           sku: "PLANTER-M",
           options: { Size: "Medium" },
           prices: [
-            { currency_code: "inr", amount: 59900 },
-            { currency_code: "usd", amount: 799 },
+            { currency_code: "inr", amount: 599 },
+            { currency_code: "usd", amount: 8 },
           ],
           manage_inventory: false,
         },
@@ -398,8 +427,8 @@ async function main() {
           sku: "CNOIL-500",
           options: { Volume: "500ml" },
           prices: [
-            { currency_code: "inr", amount: 44900 },
-            { currency_code: "usd", amount: 549 },
+            { currency_code: "inr", amount: 449 },
+            { currency_code: "usd", amount: 5.49 },
           ],
           manage_inventory: false,
         },

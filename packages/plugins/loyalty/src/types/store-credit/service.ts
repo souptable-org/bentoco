@@ -1,10 +1,10 @@
-import { RestoreReturn } from "@medusajs/framework/types";
+import { RestoreReturn } from "@bentoco/framework/types";
 import {
   BaseFilterable,
   Context,
   FindConfig,
   IModuleService,
-} from "@medusajs/types";
+} from "@bentoco/types";
 import {
   ModuleAccountStats,
   ModuleAccountTransaction,

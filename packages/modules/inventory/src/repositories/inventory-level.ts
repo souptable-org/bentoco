@@ -1,10 +1,10 @@
-import { Context } from "@medusajs/framework/types"
+import { Context } from "@bentoco/framework/types"
 import {
   BigNumber,
   MathBN,
   mikroOrmBaseRepositoryFactory,
-} from "@medusajs/framework/utils"
-import { SqlEntityManager } from "@medusajs/framework/mikro-orm/postgresql"
+} from "@bentoco/framework/utils"
+import { SqlEntityManager } from "@bentoco/framework/mikro-orm/postgresql"
 import { InventoryLevel } from "@models"
 
 export class InventoryLevelRepository extends mikroOrmBaseRepositoryFactory(

@@ -28,7 +28,7 @@ vi.mock("react-i18next", () => ({
   }),
 }))
 
-vi.mock("@medusajs/icons", () => ({
+vi.mock("@bentoco/icons", () => ({
   CheckMini: () => <div data-testid="check-mini" />,
   EllipseMiniSolid: () => <div data-testid="ellipse-mini-solid" />,
   PlusMini: () => <div data-testid="plus-mini" />,

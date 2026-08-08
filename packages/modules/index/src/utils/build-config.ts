@@ -1,17 +1,17 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+import { MedusaModule } from "@bentoco/framework/modules-sdk"
 import {
   IndexTypes,
   JoinerServiceConfigAlias,
   ModuleJoinerConfig,
   ModuleJoinerRelationship,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   buildModuleResourceEventName,
   CommonEvents,
   GraphQLUtils,
   kebabCase,
   lowerCaseFirst,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { schemaObjectRepresentationPropertiesToOmit } from "@types"
 import { baseGraphqlSchema } from "./base-graphql-schema"
 

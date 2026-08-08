@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import {
   Button,
   createDataTableColumnHelper,
@@ -11,7 +11,7 @@ import {
   Text,
   Textarea,
   toast,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { useForm } from "react-hook-form"

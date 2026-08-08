@@ -1,4 +1,4 @@
-# @medusajs/ui
+# @bentoco/ui
 
 ## 4.2.0
 
@@ -11,7 +11,7 @@
 - [#14661](https://github.com/medusajs/medusa/pull/14661) [`8f97e3f3710a2bae662415dac7098e1c6e60c3c9`](https://github.com/medusajs/medusa/commit/8f97e3f3710a2bae662415dac7098e1c6e60c3c9) Thanks [@NicolasGorga](https://github.com/NicolasGorga)! - feat(dashboard,admin-vite-plugin,admin-shared,ui,settings,js-sdk,types): view configuration UI enhancements — dynamic filter/sort resolution, custom cell renderer registration, property labels management UI
 
 - Updated dependencies []:
-  - @medusajs/icons@2.18.0
+  - @bentoco/icons@2.18.0
 
 ## 4.1.19
 
@@ -20,42 +20,42 @@
 - [#15683](https://github.com/medusajs/medusa/pull/15683) [`de58ec503bcd82aae3fe576f9a404c36e2525f4c`](https://github.com/medusajs/medusa/commit/de58ec503bcd82aae3fe576f9a404c36e2525f4c) Thanks [@Floofy6](https://github.com/Floofy6)! - chore: add package bugs metadata
 
 - Updated dependencies [[`de58ec503bcd82aae3fe576f9a404c36e2525f4c`](https://github.com/medusajs/medusa/commit/de58ec503bcd82aae3fe576f9a404c36e2525f4c)]:
-  - @medusajs/icons@2.17.2
+  - @bentoco/icons@2.17.2
 
 ## 4.1.18
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.17.1
+  - @bentoco/icons@2.17.1
 
 ## 4.1.17
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.17.0
+  - @bentoco/icons@2.17.0
 
 ## 4.1.16
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.16.0
+  - @bentoco/icons@2.16.0
 
 ## 4.1.15
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.15.5
+  - @bentoco/icons@2.15.5
 
 ## 4.1.14
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.15.4
+  - @bentoco/icons@2.15.4
 
 ## 4.1.13
 
@@ -64,63 +64,63 @@
 - [#15424](https://github.com/medusajs/medusa/pull/15424) [`18a410c48d9d928de6e63d9577782480c3308e6b`](https://github.com/medusajs/medusa/commit/18a410c48d9d928de6e63d9577782480c3308e6b) Thanks [@christiananese](https://github.com/christiananese)! - Added an OtpInput component for segmented numeric verification codes.
 
 - Updated dependencies [[`ac0a8b63d16518eae7c5370171b76bdf2d8dc2c5`](https://github.com/medusajs/medusa/commit/ac0a8b63d16518eae7c5370171b76bdf2d8dc2c5)]:
-  - @medusajs/icons@2.15.3
+  - @bentoco/icons@2.15.3
 
 ## 4.1.12
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.15.2
+  - @bentoco/icons@2.15.2
 
 ## 4.1.11
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.15.1
+  - @bentoco/icons@2.15.1
 
 ## 4.1.10
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.15.0
+  - @bentoco/icons@2.15.0
 
 ## 4.1.9
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.14.2
+  - @bentoco/icons@2.14.2
 
 ## 4.1.8
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.14.1
+  - @bentoco/icons@2.14.1
 
 ## 4.1.7
 
 ### Patch Changes
 
 - Updated dependencies [[`9757a6a8d19b3e819c43ae5a29f35c65fdce9c34`](https://github.com/medusajs/medusa/commit/9757a6a8d19b3e819c43ae5a29f35c65fdce9c34)]:
-  - @medusajs/icons@2.14.0
+  - @bentoco/icons@2.14.0
 
 ## 4.1.6
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.13.6
+  - @bentoco/icons@2.13.6
 
 ## 4.1.5
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.13.5
+  - @bentoco/icons@2.13.5
 
 ## 4.1.4
 
@@ -129,14 +129,14 @@
 - [#14849](https://github.com/medusajs/medusa/pull/14849) [`4efa4a6d8f10d1864156b575c7d867048deb6e93`](https://github.com/medusajs/medusa/commit/4efa4a6d8f10d1864156b575c7d867048deb6e93) Thanks [@fPolic](https://github.com/fPolic)! - fix(ui): propagate data table scroll
 
 - Updated dependencies []:
-  - @medusajs/icons@2.13.4
+  - @bentoco/icons@2.13.4
 
 ## 4.1.3
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.13.3
+  - @bentoco/icons@2.13.3
 
 ## 4.1.2
 
@@ -145,14 +145,14 @@
 - [#14160](https://github.com/medusajs/medusa/pull/14160) [`63e50fd6a4430dbb7737d1223818f8d27bb3d53b`](https://github.com/medusajs/medusa/commit/63e50fd6a4430dbb7737d1223818f8d27bb3d53b) Thanks [@adevinwild](https://github.com/adevinwild)! - fix(ui): stale filters when selecting a view (VIEW_CONFIUGRATIONS_FF)
 
 - Updated dependencies [[`873571a7c9471a28732ac7fad70ff66c28571a0e`](https://github.com/medusajs/medusa/commit/873571a7c9471a28732ac7fad70ff66c28571a0e)]:
-  - @medusajs/icons@2.13.2
+  - @bentoco/icons@2.13.2
 
 ## 4.1.1
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.13.1
+  - @bentoco/icons@2.13.1
 
 ## 4.1.0
 
@@ -163,21 +163,21 @@
 ### Patch Changes
 
 - Updated dependencies [[`a31e72c31c5235240cead2d04e39e5927688eec7`](https://github.com/medusajs/medusa/commit/a31e72c31c5235240cead2d04e39e5927688eec7)]:
-  - @medusajs/icons@2.13.0
+  - @bentoco/icons@2.13.0
 
 ## 4.0.34
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.6
+  - @bentoco/icons@2.12.6
 
 ## 4.0.33
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.5
+  - @bentoco/icons@2.12.5
 
 ## 4.0.32
 
@@ -186,35 +186,35 @@
 - [#14464](https://github.com/medusajs/medusa/pull/14464) [`d54589751c7f929c173c500344ce5689b8a5dc15`](https://github.com/medusajs/medusa/commit/d54589751c7f929c173c500344ce5689b8a5dc15) Thanks [@adrien2p](https://github.com/adrien2p)! - feat(translation): Improve translation alert in empty languages state
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.4
+  - @bentoco/icons@2.12.4
 
 ## 4.0.31
 
 ### Patch Changes
 
 - Updated dependencies [[`a43eb11d6565d19e82cf2b06e262ab509214b3d4`](https://github.com/medusajs/medusa/commit/a43eb11d6565d19e82cf2b06e262ab509214b3d4)]:
-  - @medusajs/icons@2.12.3
+  - @bentoco/icons@2.12.3
 
 ## 4.0.30
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.2
+  - @bentoco/icons@2.12.2
 
 ## 4.0.29
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.1
+  - @bentoco/icons@2.12.1
 
 ## 4.0.28
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.12.0
+  - @bentoco/icons@2.12.0
 
 ## 4.0.27
 
@@ -227,49 +227,49 @@
 - [#13932](https://github.com/medusajs/medusa/pull/13932) [`37563987b8fe75c9acfe62957a33e8398977647a`](https://github.com/medusajs/medusa/commit/37563987b8fe75c9acfe62957a33e8398977647a) Thanks [@adrien2p](https://github.com/adrien2p)! - chore(): Fix dependencies vulnerabilities
 
 - Updated dependencies [[`224ab39a81e8d3cf3d6fa3ff5eee82541f64728d`](https://github.com/medusajs/medusa/commit/224ab39a81e8d3cf3d6fa3ff5eee82541f64728d), [`afb40d437b3cc4ceb015df70985b2f005f40eaff`](https://github.com/medusajs/medusa/commit/afb40d437b3cc4ceb015df70985b2f005f40eaff), [`37563987b8fe75c9acfe62957a33e8398977647a`](https://github.com/medusajs/medusa/commit/37563987b8fe75c9acfe62957a33e8398977647a)]:
-  - @medusajs/icons@2.11.3
+  - @bentoco/icons@2.11.3
 
 ## 4.0.26
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.11.2
+  - @bentoco/icons@2.11.2
 
 ## 4.0.25
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.11.1
+  - @bentoco/icons@2.11.1
 
 ## 4.0.24
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.11.0
+  - @bentoco/icons@2.11.0
 
 ## 4.0.23
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.10.3
+  - @bentoco/icons@2.10.3
 
 ## 4.0.22
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.10.2
+  - @bentoco/icons@2.10.2
 
 ## 4.0.21
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.10.1
+  - @bentoco/icons@2.10.1
 
 ## 4.0.20
 
@@ -278,28 +278,28 @@
 - [#13092](https://github.com/medusajs/medusa/pull/13092) [`5b7a0412463ebab1dbc86c29024c1fd326ac47fc`](https://github.com/medusajs/medusa/commit/5b7a0412463ebab1dbc86c29024c1fd326ac47fc) Thanks [@fPolic](https://github.com/fPolic)! - chore(ui): display toast in top right corner
 
 - Updated dependencies []:
-  - @medusajs/icons@2.10.0
+  - @bentoco/icons@2.10.0
 
 ## 4.0.19
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.9.0
+  - @bentoco/icons@2.9.0
 
 ## 4.0.18
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.8
+  - @bentoco/icons@2.8.8
 
 ## 4.0.17
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.7
+  - @bentoco/icons@2.8.7
 
 ## 4.0.16
 
@@ -308,42 +308,42 @@
 - [#12855](https://github.com/medusajs/medusa/pull/12855) [`4b224d5effda952d7d87b96dd30407178edf4115`](https://github.com/medusajs/medusa/commit/4b224d5effda952d7d87b96dd30407178edf4115) Thanks [@peterlgh7](https://github.com/peterlgh7)! - fix: fix onScroll in Select.Content
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.6
+  - @bentoco/icons@2.8.6
 
 ## 4.0.15
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.5
+  - @bentoco/icons@2.8.5
 
 ## 4.0.14
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.4
+  - @bentoco/icons@2.8.4
 
 ## 4.0.13
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.3
+  - @bentoco/icons@2.8.3
 
 ## 4.0.12
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.2
+  - @bentoco/icons@2.8.2
 
 ## 4.0.11
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.1
+  - @bentoco/icons@2.8.1
 
 ## 4.0.10
 
@@ -352,14 +352,14 @@
 - [#12309](https://github.com/medusajs/medusa/pull/12309) [`4f6362b1cb1b84f01cc4cd277981aae7ae5797c9`](https://github.com/medusajs/medusa/commit/4f6362b1cb1b84f01cc4cd277981aae7ae5797c9) Thanks [@fPolic](https://github.com/fPolic)! - fix(design-system): filter/sorting menu tooltip error
 
 - Updated dependencies []:
-  - @medusajs/icons@2.8.0
+  - @bentoco/icons@2.8.0
 
 ## 4.0.9
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @medusajs/icons@2.7.1
+  - @bentoco/icons@2.7.1
 
 ## 4.0.8
 
@@ -368,7 +368,7 @@
 - [#11442](https://github.com/medusajs/medusa/pull/11442) [`c40fb01d9200283c5d69f3295e65fccc56a9a76f`](https://github.com/medusajs/medusa/commit/c40fb01d9200283c5d69f3295e65fccc56a9a76f) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(ui): Disable select cells if the row cannot be selected
 
 - Updated dependencies [[`cc4c5c86e227a6693d53ea6b5b9e62d0a7c57fa2`](https://github.com/medusajs/medusa/commit/cc4c5c86e227a6693d53ea6b5b9e62d0a7c57fa2)]:
-  - @medusajs/icons@2.7.0
+  - @bentoco/icons@2.7.0
 
 ## 4.0.7
 
@@ -377,7 +377,7 @@
 - [#11738](https://github.com/medusajs/medusa/pull/11738) [`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/medusajs/medusa/commit/3b470f41427e487c68f89b8ee8155de716ffe861) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Remove ranges on Medusa packages
 
 - Updated dependencies [[`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/medusajs/medusa/commit/3b470f41427e487c68f89b8ee8155de716ffe861)]:
-  - @medusajs/icons@2.6.1
+  - @bentoco/icons@2.6.1
 
 ## 4.0.6
 
@@ -390,7 +390,7 @@
 - [#11414](https://github.com/medusajs/medusa/pull/11414) [`47edd01deec79b394552cea349f1e41b7b88723b`](https://github.com/medusajs/medusa/commit/47edd01deec79b394552cea349f1e41b7b88723b) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(admin-vite-plugin,admin-bundler,ui,icons,dashboard,framework,types): Update Vite dependencies
 
 - Updated dependencies [[`47edd01deec79b394552cea349f1e41b7b88723b`](https://github.com/medusajs/medusa/commit/47edd01deec79b394552cea349f1e41b7b88723b)]:
-  - @medusajs/icons@2.5.1
+  - @bentoco/icons@2.5.1
 
 ## 4.0.5
 
@@ -409,7 +409,7 @@
 - [#11195](https://github.com/medusajs/medusa/pull/11195) [`9822bd930b55f1dfe9429cc3dfc1c2d0d4edc754`](https://github.com/medusajs/medusa/commit/9822bd930b55f1dfe9429cc3dfc1c2d0d4edc754) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - chore(ui,dashboard): Use radix-ui package
 
 - Updated dependencies [[`3dbef519d95cf694d06843cb694c0d2abdac2146`](https://github.com/medusajs/medusa/commit/3dbef519d95cf694d06843cb694c0d2abdac2146)]:
-  - @medusajs/icons@2.5.0
+  - @bentoco/icons@2.5.0
 
 ## 4.0.4
 
@@ -420,7 +420,7 @@
 - [#10024](https://github.com/medusajs/medusa/pull/10024) [`147c0e5a353b57d3a17db3b572334db58c830b3c`](https://github.com/medusajs/medusa/commit/147c0e5a353b57d3a17db3b572334db58c830b3c) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - feat(ui,dashboard): Add new DataTable block
 
 - Updated dependencies []:
-  - @medusajs/icons@2.4.0
+  - @bentoco/icons@2.4.0
 
 ## 4.0.3
 
@@ -431,7 +431,7 @@
 - [#10753](https://github.com/medusajs/medusa/pull/10753) [`3253e19b3603adacd913b8cbb3e88c9beb0c931a`](https://github.com/medusajs/medusa/commit/3253e19b3603adacd913b8cbb3e88c9beb0c931a) Thanks [@shahednasser](https://github.com/shahednasser)! - chore(ui): general updates and fixes to TSDocs and types
 
 - Updated dependencies [[`f7aaf2c8bb243c8478a943285628ba8eb331feb6`](https://github.com/medusajs/medusa/commit/f7aaf2c8bb243c8478a943285628ba8eb331feb6)]:
-  - @medusajs/icons@2.2.0
+  - @bentoco/icons@2.2.0
 
 ## 4.0.2
 
@@ -440,7 +440,7 @@
 - [#10481](https://github.com/medusajs/medusa/pull/10481) [`c9a66b19afcfcc626f9e2e4531771dc36f66a65e`](https://github.com/medusajs/medusa/commit/c9a66b19afcfcc626f9e2e4531771dc36f66a65e) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(dashboard,ui): Bring ConditionBlock in line with design
 
 - Updated dependencies []:
-  - @medusajs/icons@2.1.1
+  - @bentoco/icons@2.1.1
 
 ## 4.0.1
 
@@ -449,7 +449,7 @@
 - [#9775](https://github.com/medusajs/medusa/pull/9775) [`59e6747800133e091d20c2c167f600981abc5c0d`](https://github.com/medusajs/medusa/commit/59e6747800133e091d20c2c167f600981abc5c0d) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(dashboard,ui): DateFilter should remain open
 
 - Updated dependencies []:
-  - @medusajs/icons@2.0.1
+  - @bentoco/icons@2.0.1
 
 ## 4.0.0
 
@@ -460,7 +460,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/medusajs/medusa/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e)]:
-  - @medusajs/icons@2.0.0
+  - @bentoco/icons@2.0.0
 
 ## 3.0.0
 
@@ -468,11 +468,11 @@
 
 - [#7076](https://github.com/medusajs/medusa/pull/7076) [`c3260a2c5a`](https://github.com/medusajs/medusa/commit/c3260a2c5add86ada641db91e834d9f9de62ed14) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - feat(ui): Re-work `<Toaster />` and `<Toast />` based on `sonner`.
 
-  This update contains breaking changes to how toasts work in `@medusajs/ui`. This update has been made to provide a better user experience and to make it easier to use toasts in your Medusa application.
+  This update contains breaking changes to how toasts work in `@bentoco/ui`. This update has been made to provide a better user experience and to make it easier to use toasts in your Medusa application.
 
   ### BREAKING CHANGES
 
-  The `useToast` hook has been removed. Users should instead use the `toast` function that is exported from the `@medusajs/ui` package. This function can be used to show toasts in your application. For more information on how to use the `toast` function, please refer to the documentation.
+  The `useToast` hook has been removed. Users should instead use the `toast` function that is exported from the `@bentoco/ui` package. This function can be used to show toasts in your application. For more information on how to use the `toast` function, please refer to the documentation.
 
   The `Toaster` component is still available but the options for the component have changed. The default position has been changed to `bottom-right`. For more information on the `Toaster` component, please refer to the documentation.
 
@@ -500,7 +500,7 @@
 - [#6534](https://github.com/medusajs/medusa/pull/6534) [`44a5567d0d`](https://github.com/medusajs/medusa/commit/44a5567d0df71fb85a566e29748a6c8e21272163) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(ui): Left aligns text in RadioGroup.Choicebox component.
 
 - Updated dependencies [[`44d43e8155`](https://github.com/medusajs/medusa/commit/44d43e8155d1b1ca0af5e900787411c7d0b027c0)]:
-  - @medusajs/icons@1.2.1
+  - @bentoco/icons@1.2.1
 
 ## 2.4.1
 
@@ -533,7 +533,7 @@
 - [#6120](https://github.com/medusajs/medusa/pull/6120) [`e49b6944e3`](https://github.com/medusajs/medusa/commit/e49b6944e3380a4ee0de086e173901d643ec800c) Thanks [@kasperkristensen](https://github.com/kasperkristensen)! - fix(ui): Fix broken responsive style of Drawer between `sm` and `md`.
 
 - Updated dependencies [[`a2c149e7e5`](https://github.com/medusajs/medusa/commit/a2c149e7e588a9ebf080b4b43472bdb5126ed981)]:
-  - @medusajs/icons@1.2.0
+  - @bentoco/icons@1.2.0
 
 ## 2.2.4
 
@@ -567,7 +567,7 @@
 
   # Changelog
 
-  ## `@medusajs/ui`
+  ## `@bentoco/ui`
 
   This minor release contains a few bug fixes and improvements, as well as a new primitive component.
 
@@ -586,7 +586,7 @@
 
 - 035fa72: feat(ui,ui-preset): Release 2.1.0
 
-  ## `@medusajs/ui`
+  ## `@bentoco/ui`
 
   - The styling of buttons, inputs, and the CommandBar has been adjusted to have a more consistent look and feel.
   - Fixed an issue that caused DropdownMenu.Content to overflow the viewport.
@@ -594,11 +594,11 @@
   - The Text component now accepts a `leading` prop to adjust the line height. It can be set to `normal` (default) or `compact`. This change in the API is fully backwards compatible.
   - Adds a new subcomponent to RadioGroup called RadioGroup.ChoiceBox. This component wraps the RadioGroup.Item component with a mandatory label and description.
 
-  ## `@medusajs/ui-preset`
+  ## `@bentoco/ui-preset`
 
   - Updated several colors, shadows, and gradient effects.
 
-  ## `@medusajs/icons`
+  ## `@bentoco/icons`
 
   - Introduces 6 new icons: QuestionMark, SparklesMiniSolid, SparklesMini, ThumbDown, ThumbUp, and UserCircleMini.
   - There have been slight adjustments made to ArrowPathMini, EllipseBlueSolid, EllipseGreenSolid, EllipseGreySolid, EllipseOrangeSolid, EllipsePurpleSolid, and EllipseRedSolid.
@@ -606,7 +606,7 @@
 ### Patch Changes
 
 - Updated dependencies [035fa72]
-  - @medusajs/icons@1.1.0
+  - @bentoco/icons@1.1.0
 
 ## 2.0.0
 
@@ -614,7 +614,7 @@
 
 - ef98084: feat(ui,icons,ui-preset): Update to Medusa UI, including new components, icons, and preset styles.
 
-  # Changes in `@medusajs/ui`
+  # Changes in `@bentoco/ui`
 
   ## New components
 
@@ -642,7 +642,7 @@
   - `Table.Pagination` has been tweaked to ensure that it displays the correct number of pages when there is no data.
   - `Calendar` has been tweaked to prevent clicking a date from submitting any forms that precede it in the DOM.
 
-  # Changes in `@medusajs/icons`
+  # Changes in `@bentoco/icons`
 
   ## New icons
 
@@ -653,22 +653,22 @@
   - `PuzzleSolid`
   - `Text`
 
-  # Changes in `@medusajs/ui-preset`
+  # Changes in `@bentoco/ui-preset`
 
   Minor tweaks to colors, typography, and animations.
 
 ### Patch Changes
 
 - Updated dependencies [ef98084]
-  - @medusajs/icons@1.0.1
+  - @bentoco/icons@1.0.1
 
 ## 1.0.0
 
 ### Major Changes
 
-- 8d31ce6: Release of the Medusa UI design system, includes three new packages: `@medusajs/ui` a set of React components, hooks, and utils; `@medusajs/icons` a set of React icons; `@medusajs/ui-preset` a Tailwind CSS preset containing Medusa UI design tokens.
+- 8d31ce6: Release of the Medusa UI design system, includes three new packages: `@bentoco/ui` a set of React components, hooks, and utils; `@bentoco/icons` a set of React icons; `@bentoco/ui-preset` a Tailwind CSS preset containing Medusa UI design tokens.
 
 ### Patch Changes
 
 - Updated dependencies [8d31ce6]
-  - @medusajs/icons@1.0.0
+  - @bentoco/icons@1.0.0

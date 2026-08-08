@@ -2,7 +2,7 @@
  * Render mode mapping utilities for column generation.
  * Maps field names and GraphQL types to appropriate render modes.
  */
-import { GraphQLNamedType, isEnumType } from "@medusajs/framework/utils"
+import { GraphQLNamedType, isEnumType } from "@bentoco/framework/utils"
 
 /**
  * Common render mode type that can be extended by plugins.

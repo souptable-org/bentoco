@@ -1,5 +1,5 @@
-import { ArrowsPointingOut, CircleSliders } from "@medusajs/icons"
-import { clx } from "@medusajs/ui"
+import { ArrowsPointingOut, CircleSliders } from "@bentoco/icons"
+import { clx } from "@bentoco/ui"
 import { useEffect, useRef } from "react"
 
 export interface TieredPriceControlsProps {

@@ -1,9 +1,9 @@
-import { Modules, promiseAll } from "@medusajs/framework/utils"
+import { Modules, promiseAll } from "@bentoco/framework/utils"
 import {
   IFulfillmentModuleService,
   ValidateFulfillmentDataContext,
-} from "@medusajs/framework/types"
-import { createStep, StepResponse } from "@medusajs/workflows-sdk"
+} from "@bentoco/framework/types"
+import { createStep, StepResponse } from "@bentoco/workflows-sdk"
 
 /**
  * The details of the shipping methods to validate.

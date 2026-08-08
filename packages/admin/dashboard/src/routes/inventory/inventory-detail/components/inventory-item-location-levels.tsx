@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button, Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Button, Container, Heading } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 import { ItemLocationListTable } from "./location-levels-table/location-list-table"

@@ -1,4 +1,4 @@
-import { Calendar } from "@medusajs/ui"
+import { Calendar } from "@bentoco/ui"
 import * as React from "react"
 
 export default function CalendarDemo() {

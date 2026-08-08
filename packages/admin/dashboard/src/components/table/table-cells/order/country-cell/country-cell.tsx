@@ -1,7 +1,7 @@
-import { Tooltip } from "@medusajs/ui"
+import { Tooltip } from "@bentoco/ui"
 import ReactCountryFlag from "react-country-flag"
 import { PlaceholderCell } from "../../common/placeholder-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 type Country = Omit<HttpTypes.AdminRegionCountry, "id"> & {
   id?: string

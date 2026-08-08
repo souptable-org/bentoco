@@ -1,5 +1,5 @@
-import { raw } from "@medusajs/deps/mikro-orm/core"
-import { FindConfigOrder } from "@medusajs/types"
+import { raw } from "@bentoco/deps/mikro-orm/core"
+import { FindConfigOrder } from "@bentoco/types"
 import { isObject } from "../../../common"
 import {
   buildLinkCorrelationSql,

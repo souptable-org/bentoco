@@ -2,13 +2,13 @@ import {
   CreatePricesDTO,
   UpdatePricesDTO,
   CreatePriceSetDTO,
-} from "@medusajs/framework/types"
-import { Modules, arrayDifference } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules, arrayDifference } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { removeRemoteLinkStep, useRemoteQueryStep } from "../../common"
 import { createPriceSetsStep, updatePriceSetsStep } from "../../pricing"
 import { createVariantPricingLinkStep } from "../steps"

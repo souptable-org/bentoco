@@ -1,8 +1,8 @@
-import { ShoppingBag, TruckFast } from "@medusajs/icons"
-import { Container, Heading } from "@medusajs/ui"
+import { ShoppingBag, TruckFast } from "@bentoco/icons"
+import { Container, Heading } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { SidebarLink } from "../../../components/common/sidebar-link/sidebar-link"
 import { LayoutComposer } from "../../../components/layout-composer"
 import { useFeatureFlag } from "../../../providers/feature-flag-provider"

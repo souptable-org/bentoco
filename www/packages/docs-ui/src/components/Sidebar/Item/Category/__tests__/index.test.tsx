@@ -60,7 +60,7 @@ vi.mock("@/components/Sidebar/Item", () => ({
   ),
 }))
 
-vi.mock("@medusajs/icons", () => ({
+vi.mock("@bentoco/icons", () => ({
   TriangleDownMini: () => <svg data-testid="triangle-down-icon" />,
   TriangleUpMini: () => <svg data-testid="triangle-up-icon" />,
 }))

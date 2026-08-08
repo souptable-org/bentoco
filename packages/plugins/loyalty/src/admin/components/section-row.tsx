@@ -1,4 +1,4 @@
-import { Text, clx } from "@medusajs/ui";
+import { Text, clx } from "@bentoco/ui";
 
 export type SectionRowProps = {
   title: string;

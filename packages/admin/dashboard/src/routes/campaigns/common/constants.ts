@@ -1,4 +1,4 @@
-import { CampaignBudgetTypeValues } from "@medusajs/types"
+import { CampaignBudgetTypeValues } from "@bentoco/types"
 
 export const DEFAULT_CAMPAIGN_VALUES = {
   name: "",

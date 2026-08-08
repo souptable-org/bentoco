@@ -28,7 +28,7 @@ export const rule = createRule<[], MessageIds>({
       remoteLinkRegistrationKey:
         "`ContainerRegistrationKeys.REMOTE_LINK` is deprecated. Use `ContainerRegistrationKeys.LINK` instead.",
       remoteLinkTypeImport:
-        "`{{name}}` is deprecated. Import `{{replacement}}` from `@medusajs/framework/types` instead.",
+        "`{{name}}` is deprecated. Import `{{replacement}}` from `@bentoco/framework/types` instead.",
     },
     schema: [],
   },

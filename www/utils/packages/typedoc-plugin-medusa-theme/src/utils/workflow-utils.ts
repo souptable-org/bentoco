@@ -27,9 +27,9 @@ export function getPackageNameForWorkflowReflection(
 ): string {
   if (workflowReflection.sources?.length) {
     if (workflowReflection.sources[0].fileName.startsWith("plugins/loyalty")) {
-      return "@medusajs/loyalty-plugin/workflows"
+      return "@bentoco/loyalty-plugin/workflows"
     }
   }
 
-  return "@medusajs/medusa/core-flows"
+  return "@bentoco/medusa/core-flows"
 }

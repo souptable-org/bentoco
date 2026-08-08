@@ -1,5 +1,5 @@
 ---
-"@medusajs/dashboard": patch
+"@bentoco/dashboard": patch
 ---
 
 fix(dashboard): fix active sidebar link detection

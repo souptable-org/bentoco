@@ -3,15 +3,15 @@ import {
   SchedulerOptions,
   WorkflowManager,
   WorkflowScheduler,
-} from "@medusajs/orchestration"
-import { IEventBusModuleService } from "@medusajs/types"
+} from "@bentoco/orchestration"
+import { IEventBusModuleService } from "@bentoco/types"
 import {
   composeMessage,
   createMedusaContainer,
   Modules,
   promiseAll,
-} from "@medusajs/utils"
-import { asValue } from "@medusajs/deps/awilix"
+} from "@bentoco/utils"
+import { asValue } from "@bentoco/deps/awilix"
 import { setTimeout } from "timers/promises"
 import {
   createStep,

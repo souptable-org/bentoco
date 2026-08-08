@@ -1,13 +1,13 @@
 import { CsvError, parse, Parser } from "csv-parse"
-import type { HttpTypes, IFileModuleService } from "@medusajs/framework/types"
+import type { HttpTypes, IFileModuleService } from "@bentoco/framework/types"
 import {
   CSVNormalizer,
   MedusaError,
   Modules,
   productValidators,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { MedusaErrorTypes } from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { MedusaErrorTypes } from "@bentoco/framework/utils"
 
 /**
  * The CSV file content to parse.
@@ -197,7 +197,7 @@ async function createChunks(
 export const normalizeCsvToChunksStep = createStep(
   normalizeCsvToChunksStepId,
   async (fileKey: NormalizeProductCsvV1StepInput, { container }) => {
-    // eslint-disable-next-line @medusajs/step-must-return-step-response
+    // eslint-disable-next-line @bentoco/step-must-return-step-response
     return new Promise<
       StepResponse<{
         chunks: Chunk[]

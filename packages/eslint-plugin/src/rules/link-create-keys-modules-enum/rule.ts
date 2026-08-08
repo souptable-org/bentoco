@@ -175,7 +175,7 @@ export const rule = createRule<[], MessageIds>({
             }
           }
         }
-        if (node.source.value === "@medusajs/medusa/core-flows") {
+        if (node.source.value === "@bentoco/medusa/core-flows") {
           for (const specifier of node.specifiers) {
             if (
               specifier.type === AST_NODE_TYPES.ImportSpecifier &&

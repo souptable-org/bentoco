@@ -24,7 +24,7 @@ vi.mock("@/hooks/use-select", () => ({
 }))
 
 // mock components
-vi.mock("@medusajs/icons", () => ({
+vi.mock("@bentoco/icons", () => ({
   TriangleDownMini: () => <svg data-testid="triangle-down-icon" />,
 }))
 

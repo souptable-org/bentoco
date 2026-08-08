@@ -1,4 +1,4 @@
-import { Minus } from "@medusajs/icons"
+import { Minus } from "@bentoco/icons"
 import * as React from "react"
 
 import { Button } from "@/components/button"

@@ -822,7 +822,7 @@ export interface IInventoryService extends IModuleService {
    * @example
    * import {
    *   initialize as initializeInventoryModule,
-   * } from "@medusajs/inventory"
+   * } from "@bentoco/inventory"
    *
    * async function restoreReservationItemsByLineItem (
    *   lineItemIds: string[]

@@ -1,5 +1,5 @@
-import { Knex } from "@medusajs/deps/mikro-orm/knex"
-import { CrossModuleJoinSpec } from "@medusajs/types"
+import { Knex } from "@bentoco/deps/mikro-orm/knex"
+import { CrossModuleJoinSpec } from "@bentoco/types"
 import { MedusaError } from "../../../common"
 
 export type SqlFragment = {

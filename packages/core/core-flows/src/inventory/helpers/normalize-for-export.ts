@@ -2,8 +2,8 @@ import {
   BigNumberInput,
   HttpTypes,
   StockLocationTypes,
-} from "@medusajs/framework/types"
-import { BigNumber, upperCaseFirst } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { BigNumber, upperCaseFirst } from "@bentoco/framework/utils"
 
 type ExportableInventoryItem = HttpTypes.AdminInventoryItem & {
   /**

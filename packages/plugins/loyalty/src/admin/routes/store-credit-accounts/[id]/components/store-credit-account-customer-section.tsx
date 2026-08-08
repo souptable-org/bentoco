@@ -1,5 +1,5 @@
-import { Container } from "@medusajs/ui";
-import { User } from "@medusajs/icons";
+import { Container } from "@bentoco/ui";
+import { User } from "@bentoco/icons";
 
 import { SidebarLink } from "../../../../components/sidebar-link";
 import { useCustomer } from "../../../../hooks/api/customers";

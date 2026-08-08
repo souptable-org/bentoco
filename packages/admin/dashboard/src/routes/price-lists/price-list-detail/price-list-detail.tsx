@@ -1,4 +1,4 @@
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { useParams } from "react-router-dom"
 
 import { usePriceList } from "../../../hooks/api/price-lists"

@@ -1,4 +1,4 @@
-const { defineConfig, Modules } = require("@medusajs/utils")
+const { defineConfig, Modules } = require("@bentoco/utils")
 const os = require("os")
 const path = require("path")
 
@@ -11,7 +11,7 @@ process.env.DATABASE_URL = DB_URL
 process.env.LOG_LEVEL = "error"
 
 const customFulfillmentProvider = {
-  resolve: "@medusajs/fulfillment-manual",
+  resolve: "@bentoco/fulfillment-manual",
   id: "test-provider",
 }
 
@@ -37,7 +37,7 @@ const customTaxDataProvider = {
 // is honored. The always-present `pp_system_default` is unaffected.
 const customPaymentProvider = {
   resolve: {
-    services: [require("@medusajs/payment/dist/providers/system").default],
+    services: [require("@bentoco/payment/dist/providers/system").default],
   },
   id: "default_2",
 }
@@ -49,14 +49,14 @@ const customPaymentProviderAccountHolder = {
 
 const modules = {
   [Modules.TAX]: {
-    resolve: "@medusajs/tax",
+    resolve: "@bentoco/tax",
     options: {
       providers: [customTaxDataProvider],
     },
   },
   [Modules.PAYMENT]: {
-    resolve: "@medusajs/payment",
-    /** @type {import('@medusajs/payment').PaymentModuleOptions} */
+    resolve: "@bentoco/payment",
+    /** @type {import('@bentoco/payment').PaymentModuleOptions} */
     options: {
       providers: [customPaymentProvider, customPaymentProviderAccountHolder, customPendingAuthPaymentProvider],
       webhook_delay: 0,
@@ -64,7 +64,7 @@ const modules = {
     },
   },
   [Modules.FULFILLMENT]: {
-    /** @type {import('@medusajs/fulfillment').FulfillmentModuleOptions} */
+    /** @type {import('@bentoco/fulfillment').FulfillmentModuleOptions} */
     options: {
       providers: [
         customFulfillmentProvider,
@@ -73,11 +73,11 @@ const modules = {
     },
   },
   [Modules.NOTIFICATION]: {
-    resolve: "@medusajs/notification",
+    resolve: "@bentoco/notification",
     options: {
       providers: [
         {
-          resolve: "@medusajs/notification-local",
+          resolve: "@bentoco/notification-local",
           id: "local",
           options: {
             name: "Local Notification Provider",
@@ -88,11 +88,11 @@ const modules = {
     },
   },
   [Modules.FILE]: {
-    resolve: "@medusajs/file",
+    resolve: "@bentoco/file",
     options: {
       providers: [
         {
-          resolve: "@medusajs/file-local",
+          resolve: "@bentoco/file-local",
           id: "local",
           options: {
             // This is the directory where we can reliably write in CI environments
@@ -104,11 +104,11 @@ const modules = {
     },
   },
   [Modules.INDEX]: {
-    resolve: "@medusajs/index",
+    resolve: "@bentoco/index",
     disable: process.env.ENABLE_INDEX_MODULE !== "true",
   },
   [Modules.RBAC]: {
-    resolve: "@medusajs/rbac",
+    resolve: "@bentoco/rbac",
     disable: process.env.MEDUSA_FF_RBAC !== "true",
   },
   [Modules.AUTH]: {
@@ -118,7 +118,7 @@ const modules = {
       },
       providers: [
         {
-          resolve: "@medusajs/medusa/auth-emailpass",
+          resolve: "@bentoco/medusa/auth-emailpass",
           id: "emailpass",
         },
       ],
@@ -128,7 +128,7 @@ const modules = {
 
 if (process.env.MEDUSA_FF_TRANSLATION === "true") {
   modules[Modules.TRANSLATION] = {
-    resolve: "@medusajs/translation",
+    resolve: "@bentoco/translation",
   }
 }
 
@@ -149,7 +149,7 @@ module.exports = defineConfig({
   modules,
   plugins: [
     {
-      resolve: "@medusajs/loyalty-plugin",
+      resolve: "@bentoco/loyalty-plugin",
       options: {},
     },
   ],

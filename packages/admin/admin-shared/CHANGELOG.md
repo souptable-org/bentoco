@@ -1,4 +1,4 @@
-# @medusajs/admin-shared
+# @bentoco/admin-shared
 
 ## 2.18.0
 

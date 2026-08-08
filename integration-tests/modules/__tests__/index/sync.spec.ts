@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IndexTypes } from "@medusajs/types"
-import { defaultCurrencies, Modules } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IndexTypes } from "@bentoco/types"
+import { defaultCurrencies, Modules } from "@bentoco/utils"
 import { setTimeout } from "timers/promises"
 import {
   adminHeaders,

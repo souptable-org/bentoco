@@ -1,12 +1,12 @@
 import type {
   FulfillmentTypes,
   IFulfillmentModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   getSelectsAndRelationsFromObjectArray,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to identify and update the shipping option types.

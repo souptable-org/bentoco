@@ -10,12 +10,12 @@ import {
   Select,
   Text,
   toast,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { useFieldArray, useForm, useWatch } from "react-hook-form"
 import { z } from "zod"
 
-import { MagnifyingGlass } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { MagnifyingGlass } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import { useTranslation } from "react-i18next"
 import { Form } from "../../../../../components/common/form"
 import { SwitchBox } from "../../../../../components/common/switch-box"

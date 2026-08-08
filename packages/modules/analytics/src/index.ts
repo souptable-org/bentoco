@@ -1,5 +1,5 @@
 import "./types"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { Module, Modules } from "@bentoco/framework/utils"
 import AnalyticsService from "./services/analytics-service"
 import loadProviders from "./loaders/providers"
 

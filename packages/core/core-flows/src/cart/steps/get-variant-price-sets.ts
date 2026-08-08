@@ -1,14 +1,14 @@
-import { MedusaContainer, Query } from "@medusajs/framework"
+import { MedusaContainer, Query } from "@bentoco/framework"
 import {
   CalculatedPriceSet,
   IPricingModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   MedusaError,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of the variants to get price sets for.

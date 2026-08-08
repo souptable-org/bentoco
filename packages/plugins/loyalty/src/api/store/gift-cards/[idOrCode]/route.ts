@@ -1,11 +1,11 @@
 import type {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework";
+} from "@bentoco/framework";
 import {
   ContainerRegistrationKeys,
   MedusaError,
-} from "@medusajs/framework/utils";
+} from "@bentoco/framework/utils";
 import { StoreGetGiftCardParams } from "../../../../types";
 
 export const GET = async (

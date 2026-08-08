@@ -1,17 +1,17 @@
 import {
   InferEntityType,
   IProductModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   CommonEvents,
   composeMessage,
   Modules,
   ProductEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@bentoco/test-utils"
 import { ProductOption } from "../../../src/models"
 import { buildProductAndRelationsData } from "../../__fixtures__/product"
 

@@ -1,10 +1,10 @@
-import { createStep, StepResponse, WorkflowData } from "@medusajs/framework/workflows-sdk";
+import { createStep, StepResponse, WorkflowData } from "@bentoco/framework/workflows-sdk";
 import {
   IStoreCreditModuleService,
   ModuleCreateStoreCreditAccount,
   PluginModule,
 } from "../../../types";
-import { isPresent } from "@medusajs/framework/utils";
+import { isPresent } from "@bentoco/framework/utils";
 
 import { generateCode } from "../../../utils/code-generator";
 

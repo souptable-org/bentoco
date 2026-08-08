@@ -1,4 +1,4 @@
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { useLoaderData, useParams } from "react-router-dom"
 
 import { TwoColumnPageSkeleton } from "../../../components/common/skeleton"
@@ -8,8 +8,8 @@ import { CampaignSection } from "./components/campaign-section"
 import { PromotionConditionsSection } from "./components/promotion-conditions-section"
 import { PromotionGeneralSection } from "./components/promotion-general-section"
 import { promotionLoader } from "./loader"
-import { AdminPromotionRule } from "@medusajs/types"
-import { BasePromotionRuleValue } from "@medusajs/types/dist/http/promotion/common"
+import { AdminPromotionRule } from "@bentoco/types"
+import { BasePromotionRuleValue } from "@bentoco/types/dist/http/promotion/common"
 
 export type ExtendedPromotionRule = Omit<AdminPromotionRule, "values"> & {
   attribute_label?: string

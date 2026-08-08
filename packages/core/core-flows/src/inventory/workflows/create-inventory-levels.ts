@@ -1,14 +1,14 @@
 import type {
   InventoryLevelDTO,
   InventoryTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
-import { InventoryLevelWorkflowEvents } from "@medusajs/framework/utils"
+} from "@bentoco/framework/workflows-sdk"
+import { InventoryLevelWorkflowEvents } from "@bentoco/framework/utils"
 import { emitEventStep } from "../../common"
 import {
   createInventoryLevelsStep,

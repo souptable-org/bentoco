@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { Text } from "@medusajs/ui"
+import { Text } from "@bentoco/ui"
 import { SortableList } from "../../../../../components/common/sortable-list"
 import { CreateProductOptionSchema } from "./schema"
 

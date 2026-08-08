@@ -1,12 +1,12 @@
-import type { FulfillmentWorkflow } from "@medusajs/framework/types"
+import type { FulfillmentWorkflow } from "@bentoco/framework/types"
 import {
   createWorkflow,
   parallelize,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { deleteShippingOptionsStep } from "../steps"
 import { emitEventStep, removeRemoteLinkStep } from "../../common"
-import { ShippingOptionWorkflowEvents } from "@medusajs/framework/utils"
+import { ShippingOptionWorkflowEvents } from "@bentoco/framework/utils"
 
 export const deleteShippingOptionsWorkflowId =
   "delete-shipping-options-workflow"

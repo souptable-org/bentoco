@@ -1,6 +1,6 @@
-import { HandTruck, PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HandTruck, PencilSquare } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading } from "@bentoco/ui"
 import { Fragment } from "react"
 import { useTranslation } from "react-i18next"
 

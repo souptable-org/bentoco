@@ -3,7 +3,7 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ChangeActionType,
   deduplicate,
@@ -11,14 +11,14 @@ import {
   OrderChangeStatus,
   OrderEditWorkflowEvents,
   ReservationItemWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
   transform,
   WorkflowResponse,
   parallelize,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { reserveInventoryStep } from "../../../cart/steps/reserve-inventory"
 import {
   prepareConfirmInventoryInput,

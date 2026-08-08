@@ -1,5 +1,5 @@
-import { RemoteLink } from "@medusajs/modules-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { RemoteLink } from "@bentoco/modules-sdk"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   IApiKeyModuleService,
   ICartModuleService,
@@ -13,7 +13,7 @@ import {
   ISalesChannelModuleService,
   IStoreModuleService,
   ITaxModuleService,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   MedusaError,
@@ -21,7 +21,7 @@ import {
   ProductStatus,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   createAdminUser,
   generatePublishableKey,

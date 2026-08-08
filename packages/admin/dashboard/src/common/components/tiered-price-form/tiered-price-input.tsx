@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react"
-import { IconButton } from "@medusajs/ui"
-import { Plus, XMark } from "@medusajs/icons"
+import { IconButton } from "@bentoco/ui"
+import { Plus, XMark } from "@bentoco/icons"
 import { useCombinedRefs } from "../../../hooks/use-combined-refs"
 import { Form } from "../../../components/common/form"
 import { TieredPriceInputProps } from "./types"

@@ -4,7 +4,7 @@ import { createRule } from "../../create-rule"
 type MessageIds = "zodImportSource"
 
 const BARE_ZOD = "zod"
-const MEDUSA_ZOD = "@medusajs/framework/zod"
+const MEDUSA_ZOD = "@bentoco/framework/zod"
 
 function check(
   context: Parameters<Parameters<typeof createRule>[0]["create"]>[0],
@@ -32,11 +32,11 @@ export const rule = createRule<[], MessageIds>({
     type: "suggestion",
     docs: {
       description:
-        "Zod should be imported from `@medusajs/framework/zod` (Medusa v2.13+), not the bare `zod` package.",
+        "Zod should be imported from `@bentoco/framework/zod` (Medusa v2.13+), not the bare `zod` package.",
     },
     messages: {
       zodImportSource:
-        "Import Zod from `@medusajs/framework/zod` instead of `zod`.",
+        "Import Zod from `@bentoco/framework/zod` instead of `zod`.",
     },
     fixable: "code",
     schema: [],

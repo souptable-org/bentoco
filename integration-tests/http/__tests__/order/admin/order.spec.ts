@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { AdminShippingOption } from "@medusajs/types"
-import { ModuleRegistrationName, Modules, ProductStatus } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { AdminShippingOption } from "@bentoco/types"
+import { ModuleRegistrationName, Modules, ProductStatus } from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -14,11 +14,11 @@ import {
   updateOrderChangeActionsWorkflow,
   updateOrderChangesWorkflow,
   updateOrderShippingMethodsStep,
-} from "@medusajs/core-flows"
+} from "@bentoco/core-flows"
 import {
   createWorkflow,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 jest.setTimeout(300000)
 

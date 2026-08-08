@@ -1,4 +1,4 @@
-import { model } from "@medusajs/utils"
+import { model } from "@bentoco/utils"
 
 export const Brand = model.define("brand", {
   id: model.id({ prefix: "brand" }).primaryKey(),

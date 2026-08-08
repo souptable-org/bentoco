@@ -1,1 +1,1 @@
-# @medusajs/admin-shared
+# @bentoco/admin-shared

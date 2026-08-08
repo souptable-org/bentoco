@@ -25,7 +25,7 @@ export interface InjectionZoneRegistry
  * ```
  * @example
  * my-plugin/index.d.ts
- * declare module "@medusajs/admin-shared" {
+ * declare module "@bentoco/admin-shared" {
  *   interface InjectionZoneRegistry {
  *     "my-plugin.product-page": true
  *     "my-plugin.product-page.side": true

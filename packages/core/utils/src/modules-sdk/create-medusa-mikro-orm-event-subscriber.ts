@@ -1,4 +1,4 @@
-import { Context } from "@medusajs/types"
+import { Context } from "@bentoco/types"
 import { EventArgs, EventSubscriber } from "@mikro-orm/core"
 type Service = {
   interceptEntityMutationEvents: (

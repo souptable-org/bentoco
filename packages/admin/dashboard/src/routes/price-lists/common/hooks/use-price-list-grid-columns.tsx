@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Tooltip } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Tooltip } from "@bentoco/ui"
 import { ColumnDef } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

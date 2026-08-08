@@ -1,4 +1,4 @@
-import { defineLink } from "@medusajs/framework/utils";
+import { defineLink } from "@bentoco/framework/utils";
 import LoyaltyModule from "../modules/loyalty";
 
 defineLink(

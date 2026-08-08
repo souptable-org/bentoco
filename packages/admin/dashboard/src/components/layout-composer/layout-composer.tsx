@@ -1,5 +1,5 @@
 import { DndContext, DragOverlay } from "@dnd-kit/core"
-import { Badge, Button, usePrompt } from "@medusajs/ui"
+import { Badge, Button, usePrompt } from "@bentoco/ui"
 import {
   ComponentType,
   Fragment,

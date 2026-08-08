@@ -1,6 +1,6 @@
-import { IStoreModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IStoreModuleService } from "@bentoco/framework/types"
+import { Module, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { StoreModuleService } from "@services"
 import { createStoreFixture } from "../__fixtures__"
 

@@ -7,9 +7,9 @@ import {
   LineItemTaxLineDTO,
   ShippingMethodTaxLineDTO,
   ShippingTaxLineDTO,
-} from "@medusajs/framework/types"
-import { Modules, promiseAll } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/types"
+import { Modules, promiseAll } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of the tax lines to set in a cart.

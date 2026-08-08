@@ -1,9 +1,9 @@
-import type { PaymentCollectionDTO } from "@medusajs/framework/types"
+import type { PaymentCollectionDTO } from "@bentoco/framework/types"
 import {
   MathBN,
   MedusaError,
   PaymentCollectionStatus,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
@@ -12,7 +12,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { updatePaymentCollectionStep } from "../../payment-collection"
 import { cancelPaymentCollectionWorkflow } from "../../payment-collection/workflows/cancel-payment-collection"

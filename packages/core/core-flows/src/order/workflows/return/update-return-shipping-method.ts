@@ -5,8 +5,8 @@ import {
   OrderPreviewDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -16,7 +16,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   updateOrderChangeActionsStep,
@@ -146,8 +146,8 @@ export const updateReturnShippingMethodWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { updateReturnShippingMethodWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { updateReturnShippingMethodWorkflow } from "@bentoco/medusa/core-flows";
+ * import { StepResponse } from "@bentoco/workflows-sdk";
  * 
  * updateReturnShippingMethodWorkflow.hooks.setPricingContext((
  *   { order_return, order_change, additional_data }, { container }

@@ -7,7 +7,7 @@ afterEach(() => {
   cleanup()
 })
 
-vi.mock("@medusajs/icons", () => ({
+vi.mock("@bentoco/icons", () => ({
   ArrowsPointingOut: () => <svg data-testid="arrows-pointing-out" />,
   CircleSliders: () => <svg data-testid="circle-sliders" />,
 }))

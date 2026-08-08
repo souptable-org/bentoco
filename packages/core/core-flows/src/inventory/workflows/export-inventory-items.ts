@@ -1,9 +1,9 @@
-import type { WorkflowTypes } from "@medusajs/framework/types"
+import type { WorkflowTypes } from "@bentoco/framework/types"
 import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { notifyOnFailureStep, sendNotificationsStep } from "../../notification"
 import { exportInventoryItemsStep } from "../steps/export-inventory-items"

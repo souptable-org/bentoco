@@ -1,5 +1,5 @@
-import type { LinkWorkflowInput } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+import type { LinkWorkflowInput } from "@bentoco/framework/types"
+import { WorkflowData, createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
 import {
   linkSalesChannelsToApiKeyStep,
   validateSalesChannelsExistStep,

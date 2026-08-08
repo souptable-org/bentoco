@@ -1,10 +1,10 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
+import { ModuleJoinerConfig } from "@bentoco/framework/types"
 import {
   defineFileConfig,
   FeatureFlag,
   LINKS,
   Modules,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 export const UserRbacRole: ModuleJoinerConfig = {
   serviceName: LINKS.UserRbacRole,

@@ -8,7 +8,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // No conditional operators at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -17,7 +17,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Conditional operators inside a createStep callback are fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             const a = input.foo || "default"
@@ -36,7 +36,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Conditional operators inside a transform callback are fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             return data.input?.foo || "default"
@@ -49,7 +49,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // fine — the predicate runs at execution time against resolved input.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => !!data.input?.foo || false).then(() => {
             return input
@@ -60,7 +60,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Conditional operators inside a transform nested in a when().then() callback are fine.
     {
       code: `
-        import { createWorkflow, transform, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => true).then(() => {
             const value = transform({ input }, (data) => {
@@ -74,7 +74,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Conditional operators inside a createStep nested in a when().then() callback are fine.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => true).then(() => {
             const step = createStep("s", () => {
@@ -99,7 +99,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Outside any workflow constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         function helper(x) {
           return x || "default"
         }
@@ -111,7 +111,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // `||` in workflow constructor body.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input || "default"
           return v
@@ -122,7 +122,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // `&&` in workflow constructor body.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input && input.foo
           return v
@@ -133,7 +133,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // `??` in workflow constructor body.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input ?? "default"
           return v
@@ -144,7 +144,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Ternary expression.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input ? 1 : 2
           return v
@@ -155,7 +155,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Single `!` (negation).
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = !input
           return v
@@ -166,7 +166,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // `!!` (double negation) — only the outermost `!` is reported.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = !!input
           return v
@@ -177,7 +177,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Strict equality `===`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input === "foo"
           return v
@@ -188,7 +188,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Loose equality `==`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input == "foo"
           return v
@@ -199,7 +199,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Strict inequality `!==`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input !== "foo"
           return v
@@ -210,7 +210,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Loose inequality `!=`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input != null
           return v
@@ -221,7 +221,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Equality directly inside a when().then() callback is flagged.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => true).then(() => {
             const v = input === "foo"
@@ -234,7 +234,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Optional chaining `?.`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const v = input?.foo
           return v
@@ -245,7 +245,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Aliased createWorkflow import.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           const v = input || "default"
           return v
@@ -256,7 +256,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Function-expression constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           const v = input ?? "default"
           return v
@@ -267,7 +267,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Conditional operators directly inside a when().then() callback are flagged.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => true).then(() => {
             const v = input || "default"
@@ -280,7 +280,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Aliased `when` import is still tracked.
     {
       code: `
-        import { createWorkflow, when as w } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when as w } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           w({ input }, (data) => true).then(() => {
             const v = input?.foo
@@ -293,7 +293,7 @@ ruleTester.run("no-conditional-expressions-in-workflow", rule, {
     // Multiple violations of different kinds — each flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const a = input || "default"
           const b = input ? 1 : 2

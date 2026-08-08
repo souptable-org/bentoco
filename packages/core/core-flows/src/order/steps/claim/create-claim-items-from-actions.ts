@@ -1,9 +1,9 @@
 import {
   IOrderModuleService,
   OrderChangeActionDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/types"
+import { ChangeActionType, Modules } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of creating the claim items from a change action.

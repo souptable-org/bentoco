@@ -4,14 +4,14 @@ import {
   createReturnShippingMethodWorkflow,
   requestItemReturnWorkflow,
   updateRequestItemReturnWorkflow,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IFulfillmentModuleService, OrderDTO, ReturnDTO } from "@medusajs/types"
+} from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IFulfillmentModuleService, OrderDTO, ReturnDTO } from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { createOrderFixture, prepareDataFixtures } from "../__fixtures__"
 jest.setTimeout(50000)
 

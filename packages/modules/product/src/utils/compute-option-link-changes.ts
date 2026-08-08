@@ -1,4 +1,4 @@
-import { ProductTypes } from "@medusajs/framework/types"
+import { ProductTypes } from "@bentoco/framework/types"
 
 export interface OptionLinkChanges {
   linkPairs: ProductTypes.ProductOptionProductPair[]

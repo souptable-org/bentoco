@@ -1,4 +1,4 @@
-import { Badge, Tooltip } from "@medusajs/ui";
+import { Badge, Tooltip } from "@bentoco/ui";
 import { DataGridRowError } from "../types";
 
 type DataGridRowErrorIndicatorProps = {

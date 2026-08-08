@@ -1,7 +1,7 @@
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
-import { Link, Query } from "@medusajs/framework/modules-sdk"
-import { LinkDefinition } from "@medusajs/types"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/framework/utils"
+import { Link, Query } from "@bentoco/framework/modules-sdk"
+import { LinkDefinition } from "@bentoco/types"
 
 export const dismissProductVariantsInventoryStepId =
   "dismiss-product-variants-inventory"

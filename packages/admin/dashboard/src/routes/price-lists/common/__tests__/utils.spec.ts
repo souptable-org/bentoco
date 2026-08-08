@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import {
   initRecord,
   convertToPriceArray,

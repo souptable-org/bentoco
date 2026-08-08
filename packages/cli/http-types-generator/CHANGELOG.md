@@ -1,4 +1,4 @@
-# @medusajs/http-types-generator
+# @bentoco/http-types-generator
 
 ## 2.18.0
 

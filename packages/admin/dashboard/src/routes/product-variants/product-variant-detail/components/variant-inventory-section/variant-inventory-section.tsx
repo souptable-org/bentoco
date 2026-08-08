@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
 
-import { Buildings, Component } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { Buildings, Component } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading } from "@bentoco/ui"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { _DataTable } from "../../../../../components/table/data-table"

@@ -8,7 +8,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Public method with @InjectManager() decorator.
     {
       code: `
-        import { MedusaService, InjectManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectManager()
           async list(sharedContext: Context = {}) {}
@@ -18,7 +18,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Protected method with @InjectTransactionManager() decorator.
     {
       code: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectTransactionManager()
           protected async list_(sharedContext: Context = {}) {}
@@ -28,7 +28,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Method without a Context parameter is not flagged.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(filters: object) {}
         }
@@ -37,7 +37,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Private method with @InjectTransactionManager() decorator.
     {
       code: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectTransactionManager()
           private async helper(sharedContext: Context = {}) {}
@@ -56,7 +56,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // service class — its undecorated Context method is not flagged.
     {
       code: `
-        import { InjectManager } from "@medusajs/framework/utils"
+        import { InjectManager } from "@bentoco/framework/utils"
         class OrderService {
           async list(sharedContext: Context = {}) {}
         }
@@ -65,7 +65,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Constructor is exempt.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(sharedContext: Context) {
             super(...arguments)
@@ -76,7 +76,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Aliased decorator import is honored.
     {
       code: `
-        import { MedusaService, InjectManager as IM } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager as IM } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @IM()
           async list(sharedContext: Context = {}) {}
@@ -86,7 +86,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Getter / setter / static methods aren't covered by this rule (no Context params anyway).
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           get name() { return "foo" }
           static helper() {}
@@ -97,7 +97,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // implementation, which carries it here.
     {
       code: `
-        import { MedusaService, InjectManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           list(id: string, sharedContext?: Context): Promise<string>
           list(id: number, sharedContext?: Context): Promise<number>
@@ -111,13 +111,13 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Public method with Context param missing @InjectManager() — autofix inserts decorator.
     {
       code: `
-        import { MedusaService, InjectManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectManager()
           async list(sharedContext: Context = {}) {}
@@ -128,13 +128,13 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Protected method with Context param missing @InjectTransactionManager() — autofix.
     {
       code: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           protected async list_(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectTransactionManager()
           protected async list_(sharedContext: Context = {}) {}
@@ -145,7 +145,7 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // No import for the decorator — reported without autofix.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
@@ -156,13 +156,13 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Honors aliased decorator import in the autofix.
     {
       code: `
-        import { MedusaService, InjectManager as IM } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager as IM } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectManager as IM } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager as IM } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @IM()
           async list(sharedContext: Context = {}) {}
@@ -173,14 +173,14 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Decorator inserted before existing unrelated decorator.
     {
       code: `
-        import { MedusaService, InjectManager, EmitEvents } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager, EmitEvents } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @EmitEvents()
           async list(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectManager, EmitEvents } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager, EmitEvents } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectManager()
           @EmitEvents()
@@ -192,14 +192,14 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Multiple methods on the same class are each reported.
     {
       code: `
-        import { MedusaService, InjectManager, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async list(sharedContext: Context = {}) {}
           protected async list_(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectManager, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectManager, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectManager()
           async list(sharedContext: Context = {}) {}
@@ -215,13 +215,13 @@ ruleTester.run("use-inject-manager-on-public-methods", rule, {
     // Private method missing @InjectTransactionManager() is flagged like protected.
     {
       code: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           private async helper(sharedContext: Context = {}) {}
         }
       `,
       output: `
-        import { MedusaService, InjectTransactionManager } from "@medusajs/framework/utils"
+        import { MedusaService, InjectTransactionManager } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           @InjectTransactionManager()
           private async helper(sharedContext: Context = {}) {}

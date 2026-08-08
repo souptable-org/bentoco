@@ -1,5 +1,5 @@
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
-import { completeCartWorkflow } from "@medusajs/medusa/core-flows"
+import { StepResponse } from "@bentoco/framework/workflows-sdk"
+import { completeCartWorkflow } from "@bentoco/medusa/core-flows"
 import { confirmCartCreditLinesWorkflow } from "../carts/workflows/confirm-cart-credit-lines"
 
 ;(completeCartWorkflow.hooks as any).beforePaymentAuthorization(

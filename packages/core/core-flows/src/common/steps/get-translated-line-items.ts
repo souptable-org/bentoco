@@ -1,10 +1,10 @@
-import { ProductVariantDTO } from "@medusajs/framework/types"
-import { applyTranslations, FeatureFlag } from "@medusajs/framework/utils"
+import { ProductVariantDTO } from "@bentoco/framework/types"
+import { applyTranslations, FeatureFlag } from "@bentoco/framework/utils"
 import {
   createStep,
   StepFunction,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { applyTranslationsToItems } from "../utils/apply-translations-to-items"
 
 export interface GetTranslatedLineItemsStepInput<T> {

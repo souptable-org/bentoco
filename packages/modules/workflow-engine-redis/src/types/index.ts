@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@bentoco/framework/types"
 import { QueueOptions, WorkerOptions } from "bullmq"
 import { RedisOptions } from "ioredis"
 
@@ -178,9 +178,9 @@ export type RedisWorkflowsOptions = {
   }
 }
 
-declare module "@medusajs/types" {
+declare module "@bentoco/types" {
   interface ModuleOptions {
-    "@medusajs/workflow-engine-redis": RedisWorkflowsOptions
-    "@medusajs/medusa/workflow-engine-redis": RedisWorkflowsOptions
+    "@bentoco/workflow-engine-redis": RedisWorkflowsOptions
+    "@bentoco/medusa/workflow-engine-redis": RedisWorkflowsOptions
   }
 }

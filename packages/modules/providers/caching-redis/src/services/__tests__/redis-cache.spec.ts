@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@bentoco/framework/types"
 import { RedisCachingProvider } from "../redis-cache"
 
 type RedisHashValue = string | Buffer

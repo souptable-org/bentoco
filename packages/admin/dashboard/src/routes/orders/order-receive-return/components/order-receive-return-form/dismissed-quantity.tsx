@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react"
-import { HeartBroken } from "@medusajs/icons"
+import { HeartBroken } from "@bentoco/icons"
 import type { FieldValues, Control } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { AdminOrderLinePreview } from "@medusajs/types"
-import { Button, Input, Popover, toast } from "@medusajs/ui"
+import { AdminOrderLinePreview } from "@bentoco/types"
+import { Button, Input, Popover, toast } from "@bentoco/ui"
 
 import { Form } from "../../../../../components/common/form"
 import {

@@ -1,6 +1,6 @@
-import { updateRegionsWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { MedusaContainer, RegionDTO } from "@medusajs/types"
+import { updateRegionsWorkflow } from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { MedusaContainer, RegionDTO } from "@bentoco/types"
 import { createAdminUser } from "../../../../helpers/create-admin-user"
 
 jest.setTimeout(200000)

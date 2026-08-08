@@ -1,3 +1,3 @@
 /**
- * Public hook exports for `@medusajs/dashboard/hooks`.
+ * Public hook exports for `@bentoco/dashboard/hooks`.
  */

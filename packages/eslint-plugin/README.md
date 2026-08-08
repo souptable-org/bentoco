@@ -1,4 +1,4 @@
-# @medusajs/eslint-plugin
+# @bentoco/eslint-plugin
 
 Official ESLint plugin for Medusa projects. Codifies Medusa's framework conventions into automatically-enforced static checks across API routes, modules, workflows, subscribers, scheduled jobs, admin extensions, and module links.
 
@@ -7,7 +7,7 @@ Official ESLint plugin for Medusa projects. Codifies Medusa's framework conventi
 ## Installation
 
 ```bash
-npm install -D @medusajs/eslint-plugin eslint
+npm install -D @bentoco/eslint-plugin eslint
 ```
 
 `eslint` is a peer dependency — install it in the consuming project.
@@ -16,7 +16,7 @@ npm install -D @medusajs/eslint-plugin eslint
 
 ```js
 // eslint.config.js
-import medusa from "@medusajs/eslint-plugin"
+import medusa from "@bentoco/eslint-plugin"
 
 export default [...medusa.configs.recommended]
 ```
@@ -29,6 +29,6 @@ export default [...medusa.configs.recommended]
 ## Development
 
 ```bash
-yarn workspace @medusajs/eslint-plugin build
-yarn workspace @medusajs/eslint-plugin test
+yarn workspace @bentoco/eslint-plugin build
+yarn workspace @bentoco/eslint-plugin test
 ```

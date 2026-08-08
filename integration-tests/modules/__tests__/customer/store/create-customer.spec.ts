@@ -1,7 +1,7 @@
-import { IAuthModuleService } from "@medusajs/types"
+import { IAuthModuleService } from "@bentoco/types"
 
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/utils"
 import jwt from "jsonwebtoken"
 import {
   adminHeaders,

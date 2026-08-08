@@ -90,9 +90,9 @@ import {
   WorkflowResponse,
   createStep,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { Modules } from "@medusajs/framework/utils"
-import type { MedusaContainer } from "@medusajs/framework/types"
+} from "@bentoco/framework/workflows-sdk"
+import { Modules } from "@bentoco/framework/utils"
+import type { MedusaContainer } from "@bentoco/framework/types"
 ```
 
 Use highlights to call attention to key lines in the code (see `mdx-patterns.md`).

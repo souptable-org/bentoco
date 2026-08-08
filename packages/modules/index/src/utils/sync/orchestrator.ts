@@ -1,4 +1,4 @@
-import { ILockingModule, Logger } from "@medusajs/types"
+import { ILockingModule, Logger } from "@bentoco/types"
 
 export class Orchestrator {
   /**

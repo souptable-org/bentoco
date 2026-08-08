@@ -9,7 +9,7 @@ ruleTester.run("widget-must-have-default-export", rule, {
   valid: [
     // Default export of an arrow function component.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const MyWidget = () => null
 export const config = defineWidgetConfig({ zone: "product.details.before" })
 export default MyWidget`,
@@ -41,7 +41,7 @@ export { MyWidget as default }`,
     },
     // Only a named export, no default.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const MyWidget = () => null
 export const config = defineWidgetConfig({ zone: "product.details.before" })
 export { MyWidget }`,

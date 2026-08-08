@@ -1,9 +1,9 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
-import { LoaderOptions, ModulesSdkTypes } from "@medusajs/framework/types"
+import { moduleProviderLoader } from "@bentoco/framework/modules-sdk"
+import { LoaderOptions, ModulesSdkTypes } from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   getProviderRegistrationKey,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { CachingProviderService } from "@services"
 import {
   CachingDefaultProvider,

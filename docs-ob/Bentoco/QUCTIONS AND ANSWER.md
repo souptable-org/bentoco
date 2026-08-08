@@ -1,0 +1,3 @@
+Q1 : [[but why do you think we will not face the same CAC vs. Churn problem.]]
+Q2 : [[You know you keep saying enterprise and not solo operators there must be a good reason why that is cause if the solo operator market is bigger than the enterprise market in scale these would have really tried to acquire that market first dont you think]]
+Q3 : [[You know you keep saying enterprise and not solo operators there must be a good reason why that is cause if the solo operator market is bigger than the enterprise market in scale these would have really tried to acquire that market first dont you think]]

@@ -1,11 +1,11 @@
-import { TransactionState } from "@medusajs/utils"
+import { TransactionState } from "@bentoco/utils"
 import { DistributedTransactionType } from "./distributed-transaction"
 import { TransactionStep } from "./transaction-step"
 export {
   TransactionHandlerType,
   TransactionState,
   TransactionStepStatus,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 
 /**
  * Defines the structure and behavior of a single step within a transaction workflow.

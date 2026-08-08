@@ -1,7 +1,7 @@
 import {
   ModuleProviderExports,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 export const LockingDefaultProvider = "default_provider"
 export const LockingIdentifiersRegistrationName = "locking_providers_identifier"
@@ -32,9 +32,9 @@ export type LockingModuleOptions = Partial<ModuleServiceInitializeOptions> & {
   }[]
 }
 
-declare module "@medusajs/types" {
+declare module "@bentoco/types" {
   interface ModuleOptions {
-    "@medusajs/locking": LockingModuleOptions
-    "@medusajs/medusa/locking": LockingModuleOptions
+    "@bentoco/locking": LockingModuleOptions
+    "@bentoco/medusa/locking": LockingModuleOptions
   }
 }

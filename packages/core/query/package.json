@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/query",
+  "name": "@bentoco/query",
   "version": "2.18.0",
   "description": "Medusa remote query and joiner",
   "main": "dist/index.js",
@@ -34,10 +34,10 @@
     "watch": "yarn run -T tsc --build --watch"
   },
   "devDependencies": {
-    "@medusajs/types": "2.18.0"
+    "@bentoco/types": "2.18.0"
   },
   "dependencies": {
-    "@medusajs/deps": "2.18.0",
-    "@medusajs/utils": "2.18.0"
+    "@bentoco/deps": "2.18.0",
+    "@bentoco/utils": "2.18.0"
   }
 }

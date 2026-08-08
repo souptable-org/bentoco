@@ -47,13 +47,13 @@ export function AgencyLoginView() {
         }
         await signIn({ email, password })
         const me = await fetchAgencyMe(email)
-        if (!me.isAgency) {
-          throw new Error(
-            'This account is not an agency member. Use the merchant login instead.'
-          )
-        }
+        // Same rule as main /login: membership decides destination
         persistAgencySession(me)
-        navigate('/agency/dashboard', { replace: true })
+        if (me.isAgency) {
+          navigate('/agency/dashboard', { replace: true })
+        } else {
+          navigate('/', { replace: true })
+        }
         return
       }
 
@@ -62,32 +62,19 @@ export function AgencyLoginView() {
         throw new Error('Please enter all 6 digits of your authorization code.')
       }
 
-      const res = await fetch(
-        'http://localhost:9000/api/auth/verify-temporary-access',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, accessCode: otpValue }),
-        }
+      // Temp code path: limited store access (publisher + expiry enforced server-side)
+      const { redeemTempCodeAndOpen } = await import(
+        '@/lib/agency-store-session'
       )
-
-      const data = await res.json()
-      if (!res.ok) {
-        throw new Error(data.error || 'Invalid or expired OTP access code.')
+      const redeemed = await redeemTempCodeAndOpen({
+        email,
+        accessCode: otpValue,
+      })
+      if (!redeemed.ok) {
+        throw new Error(redeemed.error || 'Invalid or expired access code.')
       }
-
-      // OTP proves membership but full admin APIs need Medusa session —
-      // prefer password path; for OTP-only, still mark agency mode and route in.
-      const me = await fetchAgencyMe(email).catch(() => null)
-      if (me?.isAgency) {
-        persistAgencySession(me)
-      } else {
-        localStorage.setItem('bentoco_admin_mode', 'agency')
-        if (data.user?.agencyUid) {
-          localStorage.setItem('bentoco_agency_uid', data.user.agencyUid)
-        }
-      }
-      navigate('/agency/dashboard', { replace: true })
+      // redeemTempCodeAndOpen navigates to merchant store with session
+      return
     } catch (err: any) {
       setErrorMsg(err.message || 'Verification failed.')
     } finally {

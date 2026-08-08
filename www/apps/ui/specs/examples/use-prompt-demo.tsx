@@ -1,4 +1,4 @@
-import { Button, usePrompt } from "@medusajs/ui"
+import { Button, usePrompt } from "@bentoco/ui"
 
 export default function usePromptDemo() {
   const dialog = usePrompt()

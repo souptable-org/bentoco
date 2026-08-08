@@ -1,12 +1,17 @@
-import { PropsWithChildren, useEffect, useState } from "react"
+import { PropsWithChildren, useCallback, useEffect, useState } from "react"
 import { ThemeContext, ThemeOption, ThemeValue } from "./theme-context"
 
+/** Same storage key as Medusa admin so theme is shared across agency + store admin. */
 const THEME_KEY = "medusa_admin_theme"
 
 function getDefaultValue(): ThemeOption {
-  const persisted = localStorage?.getItem(THEME_KEY) as ThemeOption
+  if (typeof window === "undefined") {
+    return "system"
+  }
 
-  if (persisted) {
+  const persisted = localStorage.getItem(THEME_KEY) as ThemeOption | null
+
+  if (persisted === "light" || persisted === "dark" || persisted === "system") {
     return persisted
   }
 
@@ -15,69 +20,97 @@ function getDefaultValue(): ThemeOption {
 
 function getThemeValue(selected: ThemeOption): ThemeValue {
   if (selected === "system") {
-    if (window !== undefined) {
+    if (typeof window !== "undefined") {
       return window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"
     }
 
-    // Default to light theme if we can't detect the system preference
     return "light"
   }
 
   return selected
 }
 
+function applyThemeClass(value: ThemeValue) {
+  const root = document.documentElement
+
+  /**
+   * Temporarily disable transitions to prevent
+   * the theme change from flashing.
+   */
+  const css = document.createElement("style")
+  css.appendChild(
+    document.createTextNode(
+      `* {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+      }`
+    )
+  )
+  document.head.appendChild(css)
+
+  // Always clear both, then set the active mode (Medusa uses .dark on <html>)
+  root.classList.remove("light", "dark")
+  root.classList.add(value)
+  root.style.colorScheme = value
+
+  /**
+   * Re-enable transitions after the theme has been set,
+   * and force the browser to repaint.
+   */
+  window.getComputedStyle(css).opacity
+  document.head.removeChild(css)
+}
+
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
-  const [state, setState] = useState<ThemeOption>(getDefaultValue())
-  const [value, setValue] = useState<ThemeValue>(getThemeValue(state))
+  const [theme, setThemeState] = useState<ThemeOption>(getDefaultValue)
+  const [resolvedTheme, setResolvedTheme] = useState<ThemeValue>(() =>
+    getThemeValue(getDefaultValue())
+  )
 
-  const setTheme = (theme: ThemeOption) => {
-    localStorage.setItem(THEME_KEY, theme)
-
-    const themeValue = getThemeValue(theme)
-
-    setState(theme)
-    setValue(themeValue)
-  }
-
-  useEffect(() => {
-    const html = document.querySelector("html")
-    if (html) {
-      /**
-       * Temporarily disable transitions to prevent
-       * the theme change from flashing.
-       */
-      const css = document.createElement("style")
-      css.appendChild(
-        document.createTextNode(
-          `* {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -o-transition: none !important;
-            -ms-transition: none !important;
-            transition: none !important;
-          }`
-        )
-      )
-      document.head.appendChild(css)
-
-      html.classList.remove(value === "light" ? "dark" : "light")
-      html.classList.add(value)
-      // Ensures that native elements respect the theme, e.g. the scrollbar.
-      html.style.colorScheme = value
-
-      /**
-       * Re-enable transitions after the theme has been set,
-       * and force the browser to repaint.
-       */
-      window.getComputedStyle(css).opacity
-      document.head.removeChild(css)
+  const setTheme = useCallback((next: ThemeOption) => {
+    try {
+      localStorage.setItem(THEME_KEY, next)
+    } catch {
+      // ignore storage errors (private mode, etc.)
     }
-  }, [value])
+    const resolved = getThemeValue(next)
+    setThemeState(next)
+    setResolvedTheme(resolved)
+    // Apply immediately so UI updates without waiting for effect flush
+    applyThemeClass(resolved)
+  }, [])
+
+  // Apply class on mount / when resolved theme changes from system listener
+  useEffect(() => {
+    applyThemeClass(resolvedTheme)
+  }, [resolvedTheme])
+
+  // Follow OS preference when preference is "system" (Medusa behavior)
+  useEffect(() => {
+    if (theme !== "system") {
+      return
+    }
+
+    const media = window.matchMedia("(prefers-color-scheme: dark)")
+
+    const onChange = () => {
+      const next = media.matches ? "dark" : "light"
+      setResolvedTheme(next)
+      applyThemeClass(next)
+    }
+
+    onChange()
+    media.addEventListener("change", onChange)
+    return () => media.removeEventListener("change", onChange)
+  }, [theme])
 
   return (
-    <ThemeContext.Provider value={{ theme: state, setTheme }}>
+    <ThemeContext.Provider value={{ theme, resolvedTheme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   )

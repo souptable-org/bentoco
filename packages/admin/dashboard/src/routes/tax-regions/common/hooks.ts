@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { toast, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 import { useDeleteTaxRate } from "../../../hooks/api/tax-rates"

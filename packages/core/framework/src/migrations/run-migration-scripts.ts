@@ -1,5 +1,5 @@
-import { MedusaContainer } from "@medusajs/types"
-import { dynamicImport, isFileSkipped, Modules } from "@medusajs/utils"
+import { MedusaContainer } from "@bentoco/types"
+import { dynamicImport, isFileSkipped, Modules } from "@bentoco/utils"
 import { basename } from "path"
 import { logger } from "../logger"
 import { Migrator } from "./migrator"

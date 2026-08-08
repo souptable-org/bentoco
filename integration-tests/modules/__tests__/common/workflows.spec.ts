@@ -5,9 +5,9 @@ import {
   dismissLinksWorkflowId,
   updateLinksWorkflow,
   updateLinksWorkflowId,
-} from "@medusajs/core-flows"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { Modules } from "@bentoco/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   adminHeaders,
   createAdminUser,

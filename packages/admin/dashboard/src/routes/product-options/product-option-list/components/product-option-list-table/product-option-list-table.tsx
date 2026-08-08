@@ -1,8 +1,8 @@
-import { Container, createDataTableColumnHelper } from "@medusajs/ui"
+import { Container, createDataTableColumnHelper } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useCallback, useEffect, useMemo, useState } from "react"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { useNavigate, useSearchParams } from "react-router-dom"
 
 import { useProductOptions } from "../../../../../hooks/api/product-options"

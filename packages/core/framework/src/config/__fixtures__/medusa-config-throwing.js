@@ -1,4 +1,4 @@
-import { defineConfig } from "@medusajs/utils"
+import { defineConfig } from "@bentoco/utils"
 
 throw new Error("Uncaught error in medusa-config-throwing.js")
 

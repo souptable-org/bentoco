@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 import { AuthMfaFactor } from "./auth-mfa-factor"
 import { AuthMfaRecoveryCode } from "./auth-mfa-recovery-code"
 import { AuthPasswordResetToken } from "./auth-password-reset-token"

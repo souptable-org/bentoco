@@ -9,7 +9,7 @@ ruleTester.run("ui-route-must-have-default-export", rule, {
   valid: [
     // Default export of an arrow function component.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,
@@ -41,7 +41,7 @@ export { CustomPage as default }`,
     },
     // Only a named export, no default.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config = defineRouteConfig({ label: "Custom" })
 export { CustomPage }`,

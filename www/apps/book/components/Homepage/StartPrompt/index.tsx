@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckMini, SquareTwoStack } from "@medusajs/icons"
+import { CheckMini, SquareTwoStack } from "@bentoco/icons"
 import clsx from "clsx"
 import { CopyButton, HeadlineTags } from "docs-ui"
 import HomepageEdges from "../Edges"

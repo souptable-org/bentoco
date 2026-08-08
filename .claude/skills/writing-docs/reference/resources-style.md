@@ -69,8 +69,8 @@ import {
   WorkflowResponse,
   createStep,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/workflows-sdk"
+import { Modules } from "@bentoco/framework/utils"
 
 const myStep = createStep(
   "my-step",
@@ -155,7 +155,7 @@ Check what references exist by looking at the `www/apps/resources/references/` d
 Use the JS SDK pattern for API call examples, not raw fetch:
 
 ```ts
-import Medusa from "@medusajs/js-sdk"
+import Medusa from "@bentoco/js-sdk"
 
 const sdk = new Medusa({ baseUrl: "http://localhost:9000" })
 

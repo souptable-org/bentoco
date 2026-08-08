@@ -1,6 +1,6 @@
-import { z } from "@medusajs/deps/zod"
-import { BaseEntity, QueryConfig, RequestQueryFields } from "@medusajs/types"
-import { MedusaError, removeUndefinedProperties } from "@medusajs/utils"
+import { z } from "@bentoco/deps/zod"
+import { BaseEntity, QueryConfig, RequestQueryFields } from "@bentoco/types"
+import { MedusaError, removeUndefinedProperties } from "@bentoco/utils"
 import { NextFunction } from "express"
 
 import { zodValidator } from "../../zod/zod-helpers"

@@ -28,7 +28,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build HTTP types generator
-        run: yarn workspace @medusajs/http-types-generator build
+        run: yarn workspace @bentoco/http-types-generator build
 
       - name: Get changed validator files
         id: changed

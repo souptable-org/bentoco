@@ -2,11 +2,11 @@ import {
   createWorkflow,
   parallelize,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   UpdateTranslationSettingsDTO,
   CreateTranslationSettingsDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   createTranslationSettingsStep,
   deleteTranslationSettingsStep,

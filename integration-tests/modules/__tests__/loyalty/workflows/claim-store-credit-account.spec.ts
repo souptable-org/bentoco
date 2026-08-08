@@ -1,9 +1,9 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { createCustomersWorkflow } from "@medusajs/medusa/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { createCustomersWorkflow } from "@bentoco/medusa/core-flows"
 import {
   claimStoreCreditAccountWorkflow,
   createStoreCreditAccountsWorkflow,
-} from "@medusajs/loyalty-plugin/workflows"
+} from "@bentoco/loyalty-plugin/workflows"
 import {
   adminHeaders,
   createAdminUser,

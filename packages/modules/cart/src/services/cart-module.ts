@@ -8,7 +8,7 @@ import {
   InferEntityType,
   InternalModuleDeclaration,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   createRawPropertiesFromBigNumber,
   decorateCartTotals,
@@ -24,7 +24,7 @@ import {
   ModulesSdkUtils,
   promiseAll,
   normalizeCurrencyCode,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   Address,
   Cart,

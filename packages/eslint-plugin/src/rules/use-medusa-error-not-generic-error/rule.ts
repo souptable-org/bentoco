@@ -52,7 +52,7 @@ export const rule = createRule<[], MessageIds>({
   create(context) {
     const sourceCode = context.sourceCode ?? context.getSourceCode()
 
-    // Track the `@medusajs/framework/utils` import so the suggestion can add
+    // Track the `@bentoco/framework/utils` import so the suggestion can add
     // `MedusaError` to it (or insert a new import) when it isn't already
     // imported. Imports sit above throw statements in source order, so this is
     // fully resolved by the time any `ThrowStatement` is visited.

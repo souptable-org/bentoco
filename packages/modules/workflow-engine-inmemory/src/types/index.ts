@@ -1,6 +1,6 @@
-import { ContainerLike } from "@medusajs/framework"
-import { Logger } from "@medusajs/framework/types"
-import { FlowCancelOptions } from "@medusajs/framework/workflows-sdk"
+import { ContainerLike } from "@bentoco/framework"
+import { Logger } from "@bentoco/framework/types"
+import { FlowCancelOptions } from "@bentoco/framework/workflows-sdk"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger

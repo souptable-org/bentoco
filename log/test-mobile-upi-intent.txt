@@ -1,0 +1,9 @@
+=== Mobile UPI Intent Audit Log [2026-07-30T17:43:41.116Z] ===
+
+--- Starting Mobile UPI Intent Adapter Audit ---
+Generated Generic UPI Intent URL: upi://pay?pa=urbanthreads%40razorpay&pn=Urban%20Threads%20D2C&tr=ord_987654321&am=1499.00&cu=INR&tn=Prepaid%20Flip%20Order%20%23ord_987654321
+GPay Deep-Link: tez://pay?pa=urbanthreads%40razorpay&pn=Urban%20Threads%20D2C&tr=ord_987654321&am=1499.00&cu=INR&tn=Prepaid%20Flip%20Order%20%23ord_987654321
+PhonePe Deep-Link: phonepe://pay?pa=urbanthreads%40razorpay&pn=Urban%20Threads%20D2C&tr=ord_987654321&am=1499.00&cu=INR&tn=Prepaid%20Flip%20Order%20%23ord_987654321
+Paytm Deep-Link: paytmmp://pay?pa=urbanthreads%40razorpay&pn=Urban%20Threads%20D2C&tr=ord_987654321&am=1499.00&cu=INR&tn=Prepaid%20Flip%20Order%20%23ord_987654321
+Webhook Signature Validated: true
+✅ MOBILE UPI INTENT AUDIT PASSED: Slide-up drawer URLs & gateway webhook signatures verified!

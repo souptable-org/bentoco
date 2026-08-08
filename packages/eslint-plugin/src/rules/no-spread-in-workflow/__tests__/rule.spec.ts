@@ -8,7 +8,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // No spread at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -17,7 +17,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread inside a createStep callback is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", (data) => {
             const merged = { ...data, extra: 1 }
@@ -30,7 +30,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread inside a transform callback is fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             return { ...data.input, extra: 1 }
@@ -42,7 +42,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Rest destructuring inside a transform callback is fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             const { foo, ...rest } = data.input
@@ -55,7 +55,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread inside a createStep nested inside a when().then() callback is fine.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const step = createStep("s", (data) => {
@@ -79,7 +79,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread outside any workflow constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         function helper(x) {
           return { ...x, extra: 1 }
         }
@@ -91,7 +91,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Object spread in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const merged = { ...input, extra: 1 }
           return merged
@@ -102,7 +102,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Array spread in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const merged = [...input.items, 1]
           return merged
@@ -113,7 +113,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread as a call argument in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           doSomething(...input.args)
         })
@@ -123,7 +123,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Rest destructuring in a const declaration in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const { foo, ...rest } = input
           return rest
@@ -134,7 +134,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Function-expression constructor with spread.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           return { ...input }
         })
@@ -144,7 +144,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Aliased createWorkflow import binding.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           return { ...input }
         })
@@ -154,7 +154,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Multiple spreads — each flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const a = { ...input }
           const b = [...input.items]
@@ -168,7 +168,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Spread directly inside a when().then() callback.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const merged = { ...input }
@@ -181,7 +181,7 @@ ruleTester.run("no-spread-in-workflow", rule, {
     // Aliased `when` import is tracked too.
     {
       code: `
-        import { createWorkflow, when as w } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when as w } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           w({ input }, (data) => data.input.foo).then(() => {
             return [...input.items]

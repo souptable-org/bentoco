@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
 import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
 import { LayoutComposer, detailPageDefaultEntries } from "../../../components/layout-composer"
 import { useWorkflowExecution } from "../../../hooks/api/workflow-executions"

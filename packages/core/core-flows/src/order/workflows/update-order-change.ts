@@ -1,11 +1,11 @@
-import { OrderChangeDTO, UpdateOrderChangeDTO } from "@medusajs/framework/types"
+import { OrderChangeDTO, UpdateOrderChangeDTO } from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { updateOrderChangesStep } from "../steps/update-order-changes"
 import { onCarryPromotionsFlagSet } from "./on-carry-promotions-flag-set"
 

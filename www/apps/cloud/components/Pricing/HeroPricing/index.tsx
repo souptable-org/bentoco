@@ -1,5 +1,5 @@
 import React from "react"
-import { CheckCircleSolid } from "@medusajs/icons"
+import { CheckCircleSolid } from "@bentoco/icons"
 import { HeroPricingFields } from "../../../utils/types"
 import { H3, Button } from "docs-ui"
 import clsx from "clsx"

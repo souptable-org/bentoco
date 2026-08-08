@@ -12,7 +12,7 @@ import {
   Logger,
   ModuleJoinerConfig,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import crypto from "node:crypto"
 import {
   InjectTransactionManager,
@@ -21,7 +21,7 @@ import {
   MedusaError,
   MedusaService,
   generateEntityId,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   AuthVerification,
   AuthIdentity,

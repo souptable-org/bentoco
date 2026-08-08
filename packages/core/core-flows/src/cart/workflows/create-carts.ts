@@ -4,12 +4,12 @@ import {
   CreateCartDTO,
   CreateCartWorkflowInputDTO,
   CreateLineItemDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   CartWorkflowEvents,
   deduplicate,
   MedusaError,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createHook,
   createStep,
@@ -19,7 +19,7 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { getTranslatedLineItemsStep } from "../../common"
 import { emitEventStep } from "../../common/steps/emit-event"
 import {
@@ -157,8 +157,8 @@ export const createCartWorkflowId = "create-cart"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  *
  * ```ts
- * import { createCartWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createCartWorkflow } from "@bentoco/medusa/core-flows";
+ * import { StepResponse } from "@bentoco/workflows-sdk";
  *
  * createCartWorkflow.hooks.setPricingContext((
  *   { region, variantIds, salesChannel, customerData, additional_data }, { container }

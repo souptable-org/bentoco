@@ -1,6 +1,6 @@
-import { XMark } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Badge, IconButton, Skeleton, Text } from "@medusajs/ui"
+import { XMark } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Badge, IconButton, Skeleton, Text } from "@bentoco/ui"
 import { useCustomerAddress } from "../../hooks/api/customers"
 import { getFormattedAddress } from "../../lib/utils/address-utils"
 

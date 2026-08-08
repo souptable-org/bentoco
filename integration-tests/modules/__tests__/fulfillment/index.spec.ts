@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IFulfillmentModuleService, StockLocationDTO } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IFulfillmentModuleService, StockLocationDTO } from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 import { createAdminUser } from "../../../helpers/create-admin-user"
 import {
   generateCreateFulfillmentData,

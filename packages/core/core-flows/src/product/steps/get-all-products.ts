@@ -1,6 +1,6 @@
-import { FilterableProductProps } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { FilterableProductProps } from "@bentoco/framework/types"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The configuration to retrieve the products.

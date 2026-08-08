@@ -8,28 +8,28 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // snake_case name
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", { id: model.id().primaryKey() })
       `,
     },
     // Multi-word snake_case.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("product_media", { id: model.id().primaryKey() })
       `,
     },
     // Digits allowed (not at start).
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const M = model.define("brand_v2", { id: model.id().primaryKey() })
       `,
     },
     // Identifier referencing a const snake_case string — resolved and accepted.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const NAME = "brand"
         export const Brand = model.define(NAME, { id: model.id().primaryKey() })
       `,
@@ -37,7 +37,7 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // Identifier whose init is non-literal — cannot resolve, skip.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const NAME = getName()
         export const Brand = model.define(NAME, {})
       `,
@@ -52,14 +52,14 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // Aliased import — unaliased identifier should not match.
     {
       code: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         export const Brand = m.define("brand", {})
       `,
     },
     // Method call on `model` for something other than `define` should not flag.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const col = model.text()
       `,
     },
@@ -68,72 +68,72 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // Dash-separated — autofix to snake_case.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("my-brand", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("my_brand", {})
       `,
     },
     // camelCase — autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const ProductMedia = model.define("productMedia", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const ProductMedia = model.define("product_media", {})
       `,
     },
     // PascalCase — autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("BrandModel", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand_model", {})
       `,
     },
     // Consecutive uppercase — handles XML-style.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const X = model.define("myXMLParser", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const X = model.define("my_xml_parser", {})
       `,
     },
     // Uppercase — autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("BRAND", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         export const Brand = model.define("brand", {})
       `,
     },
     // Aliased model import binding.
     {
       code: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         export const Brand = m.define("my-brand", {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model as m } from "@medusajs/framework/utils"
+        import { model as m } from "@bentoco/framework/utils"
         export const Brand = m.define("my_brand", {})
       `,
     },
@@ -141,7 +141,7 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // the identifier (no autofix; only literals are rewritten).
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         const NAME = "my-brand"
         export const Brand = model.define(NAME, {})
       `,
@@ -150,7 +150,7 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // Multiple model.define calls — each flagged.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         model.define("bad-one", {})
         model.define("bad.two", {})
       `,
@@ -159,7 +159,7 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
         { messageId: "invalidTableName" },
       ],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         model.define("bad_one", {})
         model.define("bad_two", {})
       `,
@@ -167,12 +167,12 @@ ruleTester.run("data-model-table-name-snake-case", rule, {
     // Single quotes preserved by autofix.
     {
       code: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         model.define('my-brand', {})
       `,
       errors: [{ messageId: "invalidTableName" }],
       output: `
-        import { model } from "@medusajs/framework/utils"
+        import { model } from "@bentoco/framework/utils"
         model.define('my_brand', {})
       `,
     },

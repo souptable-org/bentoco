@@ -1,7 +1,7 @@
 import {
   CreatePromotionDTO,
   IPromotionModuleService,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ApplicationMethodType,
   CampaignBudgetType,
@@ -9,8 +9,8 @@ import {
   Modules,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner, SuiteOptions } from "@medusajs/test-utils"
+} from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner, SuiteOptions } from "@bentoco/test-utils"
 import { createCampaigns } from "../../../__fixtures__/campaigns"
 import { createDefaultPromotion } from "../../../__fixtures__/promotion"
 

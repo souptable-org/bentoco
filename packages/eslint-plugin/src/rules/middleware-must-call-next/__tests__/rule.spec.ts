@@ -8,7 +8,7 @@ ruleTester.run("middleware-must-call-next", rule, {
     // Canonical: calls next().
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({
           routes: [
             {

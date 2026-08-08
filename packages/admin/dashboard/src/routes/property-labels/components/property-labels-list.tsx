@@ -1,4 +1,4 @@
-import { Container, Heading, Text } from "@medusajs/ui"
+import { Container, Heading, Text } from "@bentoco/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 

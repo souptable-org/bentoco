@@ -2,12 +2,12 @@ import {
   AdditionalData,
   CartDTO,
   UpdateCartWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   CartWorkflowEvents,
   isDefined,
   MedusaError,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createHook,
   createStep,
@@ -18,7 +18,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep, useQueryGraphStep } from "../../common"
 import { deleteLineItemsStep } from "../../line-item"
 import { acquireLockStep, releaseLockStep } from "../../locking"

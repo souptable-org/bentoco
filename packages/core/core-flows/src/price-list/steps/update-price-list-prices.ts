@@ -5,12 +5,12 @@ import {
   UpdatePriceListPricesDTO,
   UpdatePriceListPriceWorkflowDTO,
   UpdatePriceListPriceWorkflowStepDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   buildPriceSetPricesForModule,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 export const updatePriceListPricesStepId = "update-price-list-prices"
 /**

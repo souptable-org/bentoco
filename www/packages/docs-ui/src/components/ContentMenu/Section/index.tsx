@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react"
 import { Button } from "../../Button"
-import { TriangleDownMini } from "@medusajs/icons"
+import { TriangleDownMini } from "@bentoco/icons"
 import clsx from "clsx"
 import { ContentMenuSectionDivider } from "../Divider"
 import { useIsBrowser } from "../../.."

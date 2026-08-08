@@ -1,5 +1,5 @@
-import "@medusajs/types"
-import "@medusajs/utils"
+import "@bentoco/types"
+import "@bentoco/utils"
 import "../types/container"
 
-export * from "@medusajs/utils"
+export * from "@bentoco/utils"

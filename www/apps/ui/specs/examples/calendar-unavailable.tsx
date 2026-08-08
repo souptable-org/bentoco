@@ -1,4 +1,4 @@
-import { Calendar } from "@medusajs/ui"
+import { Calendar } from "@bentoco/ui"
 
 function isUnavailable(date: Date) {
   // Disable all Sundays

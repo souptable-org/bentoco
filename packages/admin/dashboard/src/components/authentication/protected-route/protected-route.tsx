@@ -9,6 +9,11 @@ import {
   isAgencyMode,
   persistAgencySession,
 } from "../../../lib/agency-session"
+import {
+  hasValidStoreSession,
+  hydrateStoreSessionFromUrl,
+  isStoreOperatorMode,
+} from "../../../lib/agency-store-session"
 import { useFeatureFlag } from "../../../providers/feature-flag-provider"
 import { PermissionsProvider } from "../../../providers/permissions-provider"
 import { SearchProvider } from "../../../providers/search-provider"
@@ -33,6 +38,9 @@ export const ProtectedRoute = () => {
     let cancelled = false
 
     async function resolveMode() {
+      // Hydrate store_session from Open store URL before deciding gate
+      hydrateStoreSessionFromUrl()
+
       if (isLoadingUser) {
         return
       }
@@ -40,6 +48,13 @@ export const ProtectedRoute = () => {
         setAgencyGate("merchant")
         return
       }
+
+      // Agency staff who opened a store (airlock) operate merchant admin
+      if (isStoreOperatorMode() || hasValidStoreSession()) {
+        setAgencyGate("merchant")
+        return
+      }
+
       if (isAgencyMode()) {
         setAgencyGate("agency")
         return
@@ -48,10 +63,15 @@ export const ProtectedRoute = () => {
         const me = await fetchAgencyMe(user.email)
         if (cancelled) return
         persistAgencySession(me)
+        // Re-check store session after hydrate (Open store tab)
+        if (hasValidStoreSession()) {
+          setAgencyGate("merchant")
+          return
+        }
         setAgencyGate(me.isAgency ? "agency" : "merchant")
       } catch {
         if (!cancelled) {
-          setAgencyGate("merchant")
+          setAgencyGate(hasValidStoreSession() ? "merchant" : "merchant")
         }
       }
     }
@@ -60,7 +80,7 @@ export const ProtectedRoute = () => {
     return () => {
       cancelled = true
     }
-  }, [user?.email, isLoadingUser])
+  }, [user?.email, isLoadingUser, location.search, location.pathname])
 
   const policy: UserPolicy | null = useMemo(() => {
     if (!permissionsResponse) {
@@ -83,7 +103,8 @@ export const ProtectedRoute = () => {
     return <Navigate to="/login" state={{ from: location }} replace />
   }
 
-  // Agency members use the agency shell, not merchant MainLayout
+  // Agency members without assume-store stay in agency shell.
+  // With a valid store session they use merchant MainLayout (Open store path).
   if (agencyGate === "agency") {
     return <Navigate to="/agency/dashboard" replace />
   }

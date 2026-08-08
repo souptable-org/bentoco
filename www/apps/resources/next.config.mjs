@@ -281,7 +281,7 @@ const nextConfig = {
   outputFileTracingRoot: new URL("../../", import.meta.url).pathname,
   outputFileTracingExcludes: {
     "*": [
-      "node_modules/@medusajs/icons",
+      "node_modules/@bentoco/icons",
       "../**/.open-next/**",
       "../!(resources)/.next/**",
     ],
@@ -291,7 +291,7 @@ const nextConfig = {
     "/md\\-content/references/**": ["./references/**/*.mdx"],
   },
   experimental: {
-    optimizePackageImports: ["@medusajs/icons", "@medusajs/ui", "elkjs"],
+    optimizePackageImports: ["@bentoco/icons", "@bentoco/ui", "elkjs"],
   },
   rewrites: async () => {
     return {

@@ -1,4 +1,4 @@
-import { ModuleExports } from "@medusajs/framework/types"
+import { ModuleExports } from "@bentoco/framework/types"
 import Loader from "./loaders"
 import { RedisCacheService } from "./services"
 

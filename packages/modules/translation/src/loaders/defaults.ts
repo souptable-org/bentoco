@@ -2,11 +2,11 @@ import {
   LoaderOptions,
   Logger,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   normalizeLocale,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import Locale from "@models/locale"
 
 /**

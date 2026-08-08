@@ -4,8 +4,8 @@ import {
   GlobeEurope,
   PencilSquare,
   Trash,
-} from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+} from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import {
   Badge,
   clx,
@@ -16,7 +16,7 @@ import {
   DataTableAction,
   Tooltip,
   usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"

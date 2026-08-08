@@ -1,12 +1,12 @@
-import { PromotionActions } from "@medusajs/framework/utils"
+import { PromotionActions } from "@bentoco/framework/utils"
 import {
   createHook,
   createWorkflow,
   parallelize,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import type { OrderDTO } from "@medusajs/framework/types"
+} from "@bentoco/framework/workflows-sdk"
+import type { OrderDTO } from "@bentoco/framework/types"
 import {
   getActionsToComputeFromPromotionsStep,
   getPromotionCodesToApply,
@@ -73,7 +73,7 @@ export interface RefreshDraftOrderAdjustmentsWorkflowInput {
  *   input: {
  *     order: order,
  *     promo_codes: ["PROMO_CODE_1", "PROMO_CODE_2"],
- *     // imported from "@medusajs/framework/utils"
+ *     // imported from "@bentoco/framework/utils"
  *     action: PromotionActions.ADD,
  *   }
  * })

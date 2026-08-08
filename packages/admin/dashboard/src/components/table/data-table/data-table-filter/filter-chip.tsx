@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons"
-import { Text, clx } from "@medusajs/ui"
+import { XMarkMini } from "@bentoco/icons"
+import { Text, clx } from "@bentoco/ui"
 import { Popover as RadixPopover } from "radix-ui"
 import { MouseEvent } from "react"
 import { useTranslation } from "react-i18next"

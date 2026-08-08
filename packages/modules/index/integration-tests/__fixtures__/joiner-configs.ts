@@ -1,4 +1,4 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
+import { ModuleJoinerConfig } from "@bentoco/framework/types"
 
 /**
  * Joiner configs describing the fake "remote" modules the index module

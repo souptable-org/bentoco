@@ -1,14 +1,14 @@
-import CustomerModule from "@medusajs/customer"
-import ProductModule from "@medusajs/product"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { RemoteQueryFunction } from "@medusajs/types"
+import CustomerModule from "@bentoco/customer"
+import ProductModule from "@bentoco/product"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { RemoteQueryFunction } from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   defaultCurrencies,
   defineLink,
   Modules,
   promiseAll,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

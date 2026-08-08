@@ -1,11 +1,11 @@
-import type { FulfillmentWorkflow } from "@medusajs/framework/types"
+import type { FulfillmentWorkflow } from "@bentoco/framework/types"
 import {
   createWorkflow,
   parallelize,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   createShippingOptionsPriceSetsStep,
   upsertShippingOptionsStep,
@@ -14,7 +14,7 @@ import { setShippingOptionsPriceSetsStep } from "../steps/set-shipping-options-p
 import { validateFulfillmentProvidersStep } from "../steps/validate-fulfillment-providers"
 import { validateShippingOptionPricesStep } from "../steps/validate-shipping-option-prices"
 import { emitEventStep } from "../../common"
-import { ShippingOptionWorkflowEvents } from "@medusajs/framework/utils"
+import { ShippingOptionWorkflowEvents } from "@bentoco/framework/utils"
 
 /**
  * The data to create the shipping options.

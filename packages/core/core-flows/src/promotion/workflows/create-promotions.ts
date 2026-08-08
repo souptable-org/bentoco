@@ -1,13 +1,13 @@
 import type {
   AdditionalData,
   CreatePromotionDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { createPromotionsStep } from "../steps"
 
 /**

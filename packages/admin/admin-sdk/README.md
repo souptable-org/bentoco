@@ -1,1 +1,1 @@
-# @medusajs/admin-sdk
+# @bentoco/admin-sdk

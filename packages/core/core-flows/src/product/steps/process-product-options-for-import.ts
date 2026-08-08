@@ -2,10 +2,10 @@ import type {
   IProductModuleService,
   ProductTypes,
   UpdateProductWorkflowInputDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { deepCopy } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import { deepCopy } from "@bentoco/framework/utils"
 
 export const processProductOptionsForImportStepId =
   "process-product-options-for-import"

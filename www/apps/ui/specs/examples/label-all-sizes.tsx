@@ -1,4 +1,4 @@
-import { Label } from "@medusajs/ui"
+import { Label } from "@bentoco/ui"
 
 export default function LabelAllSizes() {
   return (

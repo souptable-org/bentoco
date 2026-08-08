@@ -48,7 +48,7 @@ export const metadata = {
 
 ~~~mdx
 ```ts title="src/workflows/my-workflow.ts"
-import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { createWorkflow } from "@bentoco/framework/workflows-sdk"
 // ...
 ```
 ~~~
@@ -65,7 +65,7 @@ export const highlights = [
 ]
 
 ​```ts title="src/jobs/hello-world.ts" highlights={highlights}
-import { MedusaContainer } from "@medusajs/framework/types"
+import { MedusaContainer } from "@bentoco/framework/types"
 
 export default async function greetingJob(container: MedusaContainer) {
   const logger = container.resolve("logger")

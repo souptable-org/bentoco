@@ -11,13 +11,13 @@ import {
   listShippingOptionsForCartWorkflow,
   orderEditAddNewItemWorkflow,
   processPaymentWorkflow,
-} from "@medusajs/core-flows"
+} from "@bentoco/core-flows"
 import {
   createStep,
   createWorkflow,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/framework/workflows-sdk"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   ICartModuleService,
   ICustomerModuleService,
@@ -31,14 +31,14 @@ import {
   ISalesChannelModuleService,
   IStockLocationService,
   Message,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   PaymentCollectionStatus,
   ProductStatus,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

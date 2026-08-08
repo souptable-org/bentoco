@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/draft-order",
+  "name": "@bentoco/draft-order",
   "version": "2.18.0",
   "description": "A draft order plugin for Medusa.",
   "author": "Medusa (https://medusajs.com)",
@@ -45,8 +45,8 @@
   "dependencies": {
     "@ariakit/react": "^0.4.15",
     "@babel/runtime": "^7.26.10",
+    "@bentoco/js-sdk": "2.18.0",
     "@hookform/resolvers": "3.4.2",
-    "@medusajs/js-sdk": "2.18.0",
     "@tanstack/react-query": "5.64.2",
     "@uiw/react-json-view": "^2.0.0-alpha.17",
     "date-fns": "^3.6.0",
@@ -57,45 +57,45 @@
     "react-hook-form": "7.49.1"
   },
   "devDependencies": {
-    "@medusajs/admin-sdk": "2.18.0",
-    "@medusajs/cli": "2.18.0",
-    "@medusajs/dashboard": "2.18.0",
-    "@medusajs/framework": "2.18.0",
-    "@medusajs/icons": "2.18.0",
-    "@medusajs/test-utils": "2.18.0",
-    "@medusajs/types": "2.18.0",
-    "@medusajs/ui": "4.2.0",
-    "@medusajs/ui-preset": "2.18.0"
+    "@bentoco/admin-sdk": "2.18.0",
+    "@bentoco/cli": "2.18.0",
+    "@bentoco/dashboard": "2.18.0",
+    "@bentoco/framework": "2.18.0",
+    "@bentoco/icons": "2.18.0",
+    "@bentoco/test-utils": "2.18.0",
+    "@bentoco/types": "2.18.0",
+    "@bentoco/ui": "4.2.0",
+    "@bentoco/ui-preset": "2.18.0"
   },
   "peerDependencies": {
-    "@medusajs/admin-sdk": "2.18.0",
-    "@medusajs/cli": "2.18.0",
-    "@medusajs/dashboard": "2.18.0",
-    "@medusajs/framework": "2.18.0",
-    "@medusajs/icons": "2.18.0",
-    "@medusajs/test-utils": "2.18.0",
-    "@medusajs/ui": "4.2.0",
+    "@bentoco/admin-sdk": "2.18.0",
+    "@bentoco/cli": "2.18.0",
+    "@bentoco/dashboard": "2.18.0",
+    "@bentoco/framework": "2.18.0",
+    "@bentoco/icons": "2.18.0",
+    "@bentoco/test-utils": "2.18.0",
+    "@bentoco/ui": "4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "6.30.4"
   },
   "peerDependenciesMeta": {
-    "@medusajs/admin-sdk": {
+    "@bentoco/admin-sdk": {
       "optional": true
     },
-    "@medusajs/cli": {
+    "@bentoco/cli": {
       "optional": true
     },
-    "@medusajs/dashboard": {
+    "@bentoco/dashboard": {
       "optional": true
     },
-    "@medusajs/icons": {
+    "@bentoco/icons": {
       "optional": true
     },
-    "@medusajs/test-utils": {
+    "@bentoco/test-utils": {
       "optional": true
     },
-    "@medusajs/ui": {
+    "@bentoco/ui": {
       "optional": true
     },
     "react": {

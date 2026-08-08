@@ -1,4 +1,4 @@
-import { QueryContext } from "@medusajs/utils"
+import { QueryContext } from "@bentoco/utils"
 import { parseFiltersJoinerConfigs } from "../__fixtures__/parse-filters"
 import { parseAndAssignFilters, toRemoteQuery } from "../to-remote-query"
 

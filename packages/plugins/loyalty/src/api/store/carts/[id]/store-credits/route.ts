@@ -1,9 +1,9 @@
 import type {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework";
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils";
-import { HttpTypes } from "@medusajs/framework/types";
+} from "@bentoco/framework";
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils";
+import { HttpTypes } from "@bentoco/framework/types";
 import { addStoreCreditsToCartWorkflow } from "../../../../../workflows/carts/workflows/add-store-credits-to-cart";
 import { StoreAddStoreCreditsToCart } from "../../../../../types";
 

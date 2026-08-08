@@ -12,7 +12,7 @@ ruleTester.run("prefer-link-over-remote-link", rule, {
     // Canonical: ContainerRegistrationKeys.LINK.
     {
       code: `
-        import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+        import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
         const link = container.resolve(ContainerRegistrationKeys.LINK)
       `,
     },
@@ -30,7 +30,7 @@ ruleTester.run("prefer-link-over-remote-link", rule, {
     },
     // Unrelated type import.
     {
-      code: `import type { Link } from "@medusajs/framework/types"`,
+      code: `import type { Link } from "@bentoco/framework/types"`,
     },
     // RemoteLink-like name from non-framework source — should not trigger.
     {
@@ -65,12 +65,12 @@ ruleTester.run("prefer-link-over-remote-link", rule, {
     // ContainerRegistrationKeys.REMOTE_LINK.
     {
       code: `
-        import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+        import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
         const link = container.resolve(ContainerRegistrationKeys.REMOTE_LINK)
       `,
       errors: [{ messageId: "remoteLinkRegistrationKey" }],
       output: `
-        import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+        import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
         const link = container.resolve(ContainerRegistrationKeys.LINK)
       `,
     },
@@ -80,34 +80,34 @@ ruleTester.run("prefer-link-over-remote-link", rule, {
       errors: [{ messageId: "remoteLinkRegistrationKey" }],
       output: `const link = container.resolve(Keys.LINK)`,
     },
-    // Type import: RemoteLink from @medusajs/framework/types.
+    // Type import: RemoteLink from @bentoco/framework/types.
     {
-      code: `import type { RemoteLink } from "@medusajs/framework/types"`,
+      code: `import type { RemoteLink } from "@bentoco/framework/types"`,
       errors: [{ messageId: "remoteLinkTypeImport" }],
-      output: `import type { Link } from "@medusajs/framework/types"`,
+      output: `import type { Link } from "@bentoco/framework/types"`,
     },
-    // Type import: IRemoteLink from @medusajs/types.
+    // Type import: IRemoteLink from @bentoco/types.
     {
-      code: `import { IRemoteLink } from "@medusajs/types"`,
+      code: `import { IRemoteLink } from "@bentoco/types"`,
       errors: [{ messageId: "remoteLinkTypeImport" }],
-      output: `import { ILink } from "@medusajs/types"`,
+      output: `import { ILink } from "@bentoco/types"`,
     },
     // Mixed: rename only the deprecated specifier.
     {
-      code: `import type { Link, RemoteLink } from "@medusajs/framework/types"`,
+      code: `import type { Link, RemoteLink } from "@bentoco/framework/types"`,
       errors: [{ messageId: "remoteLinkTypeImport" }],
-      output: `import type { Link, Link } from "@medusajs/framework/types"`,
+      output: `import type { Link, Link } from "@bentoco/framework/types"`,
     },
     // Aliased import — rename only the `imported` part, keep alias.
     {
-      code: `import type { RemoteLink as MyLink } from "@medusajs/framework/types"`,
+      code: `import type { RemoteLink as MyLink } from "@bentoco/framework/types"`,
       errors: [{ messageId: "remoteLinkTypeImport" }],
-      output: `import type { Link as MyLink } from "@medusajs/framework/types"`,
+      output: `import type { Link as MyLink } from "@bentoco/framework/types"`,
     },
     // Multiple violations in one file.
     {
       code: `
-        import { RemoteLink } from "@medusajs/framework/types"
+        import { RemoteLink } from "@bentoco/framework/types"
         const a = req.scope.resolve("remoteLink")
         const b = container.resolve(ContainerRegistrationKeys.REMOTE_LINK)
       `,
@@ -117,7 +117,7 @@ ruleTester.run("prefer-link-over-remote-link", rule, {
         { messageId: "remoteLinkRegistrationKey" },
       ],
       output: `
-        import { Link } from "@medusajs/framework/types"
+        import { Link } from "@bentoco/framework/types"
         const a = req.scope.resolve("link")
         const b = container.resolve(ContainerRegistrationKeys.LINK)
       `,

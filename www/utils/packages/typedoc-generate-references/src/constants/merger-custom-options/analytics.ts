@@ -36,11 +36,11 @@ module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/analytics",
+      resolve: "@bentoco/medusa/analytics",
       options: {
         providers: [
           {
-            resolve: "@medusajs/medusa/analytics-local",
+            resolve: "@bentoco/medusa/analytics-local",
             id: "local",
           },
         ],
@@ -57,8 +57,8 @@ Refer to the documentation of each provider for specific configuration options.
 In your workflow's step, you can resolve the Analytics Module's service from the Medusa container:
 
 \`\`\`ts
-import { Modules } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@bentoco/framework/utils"
+import { createStep } from "@bentoco/framework/workflows-sdk"
 
 const step1 = createStep(
   "step-1",

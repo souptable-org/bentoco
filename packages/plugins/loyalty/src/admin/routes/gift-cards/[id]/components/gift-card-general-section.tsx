@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Calendar } from "@medusajs/icons";
+import { Calendar } from "@bentoco/icons";
 import {
   Badge,
   Container,
@@ -7,7 +7,7 @@ import {
   Heading,
   StatusBadge,
   Text,
-} from "@medusajs/ui";
+} from "@bentoco/ui";
 import { Link } from "react-router-dom";
 import { AdminGiftCard } from "../../../../../types";
 import { ActionMenu } from "../../../../components/action-menu";

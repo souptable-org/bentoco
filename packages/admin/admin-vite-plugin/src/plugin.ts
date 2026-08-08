@@ -127,7 +127,7 @@ export const medusaVitePlugin: MedusaVitePlugin = (options) => {
   )
 
   return {
-    name: "@medusajs/admin-vite-plugin",
+    name: "@bentoco/admin-vite-plugin",
     enforce: "pre",
     async buildStart() {
       switch (mode) {

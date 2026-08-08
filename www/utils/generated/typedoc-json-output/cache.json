@@ -117,7 +117,7 @@
 												"type": "reference",
 												"target": 63716,
 												"name": "T",
-												"package": "@medusajs/types",
+												"package": "@bentoco/types",
 												"refersToTypeParameter": true
 											}
 										]
@@ -372,7 +372,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@bentoco/types",
 	"symbolIdMap": {
 		"63712": {
 			"sourceFileName": "../../../../packages/core/types/src/cache/service.ts",

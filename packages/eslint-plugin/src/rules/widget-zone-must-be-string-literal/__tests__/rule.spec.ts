@@ -9,19 +9,19 @@ ruleTester.run("widget-zone-must-be-string-literal", rule, {
   valid: [
     // Plain string literal zone.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: "product.details.before" })`,
       filename: WIDGET,
     },
     // Array of string literals.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: ["product.details.before", "product.details.after"] })`,
       filename: WIDGET,
     },
     // Aliased import.
     {
-      code: `import { defineWidgetConfig as dwc } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig as dwc } from "@bentoco/admin-sdk"
 export const config = dwc({ zone: "order.details.before" })`,
       filename: WIDGET,
     },
@@ -33,13 +33,13 @@ export const config = defineWidgetConfig({ zone: ZONE })`,
     },
     // No zone property at all — nothing to check.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({})`,
       filename: WIDGET,
     },
     // First argument is not an object literal — bail.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const opts = { zone: zoneVar }
 export const config = defineWidgetConfig(opts)`,
       filename: WIDGET,
@@ -48,7 +48,7 @@ export const config = defineWidgetConfig(opts)`,
   invalid: [
     // Identifier as zone.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const ZONE = "product.details.before"
 export const config = defineWidgetConfig({ zone: ZONE })`,
       filename: WIDGET,
@@ -56,23 +56,23 @@ export const config = defineWidgetConfig({ zone: ZONE })`,
     },
     // Member expression as zone.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: zones.product })`,
       filename: WIDGET,
       errors: [{ messageId: "mustBeStringLiteral" }],
     },
     // Template literal without expressions — autofix to plain string.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: \`product.details.before\` })`,
-      output: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      output: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: "product.details.before" })`,
       filename: WIDGET,
       errors: [{ messageId: "templateLiteralMustBeString" }],
     },
     // Template literal with expression — no autofix.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 const x = "before"
 export const config = defineWidgetConfig({ zone: \`product.details.\${x}\` })`,
       filename: WIDGET,
@@ -80,14 +80,14 @@ export const config = defineWidgetConfig({ zone: \`product.details.\${x}\` })`,
     },
     // Array with one identifier element.
     {
-      code: `import { defineWidgetConfig } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig } from "@bentoco/admin-sdk"
 export const config = defineWidgetConfig({ zone: ["product.details.before", ZONE] })`,
       filename: WIDGET,
       errors: [{ messageId: "mustBeStringLiteral" }],
     },
     // Aliased import with non-literal zone.
     {
-      code: `import { defineWidgetConfig as dwc } from "@medusajs/admin-sdk"
+      code: `import { defineWidgetConfig as dwc } from "@bentoco/admin-sdk"
 export const config = dwc({ zone: getZone() })`,
       filename: WIDGET,
       errors: [{ messageId: "mustBeStringLiteral" }],

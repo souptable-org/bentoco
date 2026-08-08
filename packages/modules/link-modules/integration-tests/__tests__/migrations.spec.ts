@@ -1,7 +1,7 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
-import { ILinkModule, ModuleJoinerConfig } from "@medusajs/framework/types"
-import { defineLink, isObject, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { MedusaModule } from "@bentoco/framework/modules-sdk"
+import { ILinkModule, ModuleJoinerConfig } from "@bentoco/framework/types"
+import { defineLink, isObject, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { MigrationsExecutionPlanner } from "../../src"
 import {
   Car,

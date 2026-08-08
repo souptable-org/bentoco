@@ -9,14 +9,14 @@ import {
   RegionDTO,
   UpdateLineItemDTO,
   UpdateLineItemWithSelectorDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   filterObjectByKeys,
   isDefined,
   MedusaError,
   ProductStatus,
   simpleHash,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
@@ -24,7 +24,7 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { getVariantPriceSetsStep } from "../steps"
 import {

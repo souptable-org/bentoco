@@ -1,4 +1,4 @@
-import { CurrencyInput } from "@medusajs/ui"
+import { CurrencyInput } from "@bentoco/ui"
 
 export default function CurrencyInputDisabled() {
   return (

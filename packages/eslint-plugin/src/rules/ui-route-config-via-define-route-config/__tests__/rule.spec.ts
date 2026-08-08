@@ -10,7 +10,7 @@ ruleTester.run("ui-route-config-via-define-route-config", rule, {
   valid: [
     // config initialized via defineRouteConfig.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,
@@ -18,7 +18,7 @@ export default CustomPage`,
     },
     // Aliased defineRouteConfig import.
     {
-      code: `import { defineRouteConfig as drc } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig as drc } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config = drc({ label: "Custom" })
 export default CustomPage`,
@@ -39,8 +39,8 @@ export default CustomPage`,
     },
     // config typed but still initialized via defineRouteConfig.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
-import type { RouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
+import type { RouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config: RouteConfig = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,

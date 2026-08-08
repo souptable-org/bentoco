@@ -84,7 +84,7 @@
 									"qualifiedName": "IFileProvider"
 								},
 								"name": "IFileProvider",
-								"package": "@medusajs/types"
+								"package": "@bentoco/types"
 							}
 						}
 					]
@@ -176,7 +176,7 @@
 												"qualifiedName": "CreateFileDTO"
 											},
 											"name": "CreateFileDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -203,7 +203,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -223,7 +223,7 @@
 												"qualifiedName": "FileDTO"
 											},
 											"name": "FileDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -295,7 +295,7 @@
 											"qualifiedName": "CreateFileDTO"
 										},
 										"name": "CreateFileDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -321,7 +321,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -339,7 +339,7 @@
 											"qualifiedName": "FileDTO"
 										},
 										"name": "FileDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -433,7 +433,7 @@
 											"qualifiedName": "GetUploadFileUrlDTO"
 										},
 										"name": "GetUploadFileUrlDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -459,7 +459,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -477,7 +477,7 @@
 											"qualifiedName": "UploadFileUrlDTO"
 										},
 										"name": "UploadFileUrlDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -550,7 +550,7 @@
 												"qualifiedName": "GetUploadFileUrlDTO"
 											},
 											"name": "GetUploadFileUrlDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								},
@@ -577,7 +577,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -597,7 +597,7 @@
 												"qualifiedName": "UploadFileUrlDTO"
 											},
 											"name": "UploadFileUrlDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -716,7 +716,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -821,7 +821,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -966,11 +966,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -996,7 +996,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1014,7 +1014,7 @@
 											"qualifiedName": "FileDTO"
 										},
 										"name": "FileDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -1104,7 +1104,7 @@
 											"qualifiedName": "FilterableFileProps"
 										},
 										"name": "FilterableFileProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -1153,11 +1153,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -1183,7 +1183,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1203,7 +1203,7 @@
 												"qualifiedName": "FileDTO"
 											},
 											"name": "FileDTO",
-											"package": "@medusajs/types"
+											"package": "@bentoco/types"
 										}
 									}
 								],
@@ -1294,7 +1294,7 @@
 											"qualifiedName": "FilterableFileProps"
 										},
 										"name": "FilterableFileProps",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -1343,11 +1343,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@bentoco/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -1373,7 +1373,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1396,7 +1396,7 @@
 														"qualifiedName": "FileDTO"
 													},
 													"name": "FileDTO",
-													"package": "@medusajs/types"
+													"package": "@bentoco/types"
 												}
 											},
 											{
@@ -1521,7 +1521,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1658,7 +1658,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1748,7 +1748,7 @@
 											"qualifiedName": "ProviderUploadStreamDTO"
 										},
 										"name": "ProviderUploadStreamDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1821,7 +1821,7 @@
 																	"qualifiedName": "ProviderFileResultDTO"
 																},
 																"name": "ProviderFileResultDTO",
-																"package": "@medusajs/types"
+																"package": "@bentoco/types"
 															}
 														],
 														"name": "Promise",
@@ -1929,7 +1929,7 @@
 						"qualifiedName": "IModuleService"
 					},
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		}
@@ -1942,7 +1942,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@bentoco/types",
 	"symbolIdMap": {
 		"63856": {
 			"sourceFileName": "../../../../packages/core/types/src/file/service.ts",

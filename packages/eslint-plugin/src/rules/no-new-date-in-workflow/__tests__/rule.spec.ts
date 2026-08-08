@@ -8,7 +8,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // No Date use at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -17,7 +17,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // new Date() inside a nested createStep callback is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             const now = new Date()
@@ -30,7 +30,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date.now() inside a nested transform callback is fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, () => {
             return Date.now()
@@ -42,7 +42,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // new Date() inside a createStep nested inside a when().then() callback is fine.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const step = createStep("s", () => {
@@ -67,7 +67,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date use outside any workflow constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         const startedAt = new Date()
         const ts = Date.now()
         createWorkflow("my-workflow", (input) => input)
@@ -78,7 +78,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // new Date() directly in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const now = new Date()
           return input
@@ -89,7 +89,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // new Date(arg) directly in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const d = new Date(input.timestamp)
           return d
@@ -100,7 +100,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date.now() directly in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const ts = Date.now()
           return input
@@ -111,7 +111,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Function-expression constructor with new Date().
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           const now = new Date()
           return input
@@ -122,7 +122,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Aliased createWorkflow import binding.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           const now = new Date()
           return input
@@ -133,7 +133,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Both forms together — each flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const now = new Date()
           const ts = Date.now()
@@ -148,7 +148,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // new Date() directly inside a when().then() callback is also flagged.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const now = new Date()
@@ -160,7 +160,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date.parse(...) directly in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const t = Date.parse("2020-01-01")
           return input
@@ -173,7 +173,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date.UTC(...) directly in the constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const t = Date.UTC(2020, 0, 1)
           return input
@@ -184,7 +184,7 @@ ruleTester.run("no-new-date-in-workflow", rule, {
     // Date.now() directly inside a when().then() callback (aliased `when` import).
     {
       code: `
-        import { createWorkflow, when as w } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when as w } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           w({ input }, (data) => data.input.foo).then(() => {
             const ts = Date.now()

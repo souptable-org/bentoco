@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Triage Dependabot alerts: keep only those whose vulnerable package is in the
-// PRODUCTION dependency closure of a published (@medusajs/*, private!==true) package.
+// PRODUCTION dependency closure of a published (@bentoco/*, private!==true) package.
 // Everything else in the root yarn.lock (integration-tests, build tooling like
 // redoc, devDependencies) is auto-dismissed as "not_used".
 //

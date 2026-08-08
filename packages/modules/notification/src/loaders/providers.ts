@@ -1,11 +1,11 @@
-import { Lifetime, asFunction, asValue } from "@medusajs/framework/awilix"
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
-import { LoaderOptions, ModulesSdkTypes } from "@medusajs/framework/types"
+import { Lifetime, asFunction, asValue } from "@bentoco/framework/awilix"
+import { moduleProviderLoader } from "@bentoco/framework/modules-sdk"
+import { LoaderOptions, ModulesSdkTypes } from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   lowerCaseFirst,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { NotificationProvider } from "@models"
 import { NotificationProviderService } from "@services"
 import {

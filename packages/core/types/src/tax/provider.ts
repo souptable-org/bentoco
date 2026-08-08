@@ -69,7 +69,7 @@ export type ItemTaxCalculationLine = {
  * import {
  *   ITaxProvider,
  *   Logger
- * } from "@medusajs/framework/types"
+ * } from "@bentoco/framework/types"
  * 
  * type InjectedDependencies = {
  *   logger: Logger

@@ -1,9 +1,9 @@
 import {
   TrackAnalyticsEventDTO,
   IdentifyAnalyticsEventDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import AnalyticsProviderService from "./provider-service"
-import { MedusaError } from "@medusajs/framework/utils"
+import { MedusaError } from "@bentoco/framework/utils"
 
 type InjectedDependencies = {
   analyticsProviderService: AnalyticsProviderService

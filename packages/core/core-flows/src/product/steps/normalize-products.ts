@@ -1,6 +1,6 @@
-import type { HttpTypes } from "@medusajs/framework/types"
-import { CSVNormalizer, productValidators } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import type { HttpTypes } from "@bentoco/framework/types"
+import { CSVNormalizer, productValidators } from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 import { convertCsvToJson } from "../utils"
 
 /**

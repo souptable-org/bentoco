@@ -1,7 +1,7 @@
 import React from "react"
 import { InlineCode } from "../../../InlineCode"
-import { Text } from "@medusajs/ui"
-import { Bolt, CursorArrowRays, InformationCircle } from "@medusajs/icons"
+import { Text } from "@bentoco/ui"
+import { Bolt, CursorArrowRays, InformationCircle } from "@bentoco/icons"
 
 type WorkflowDiagramLegendProps = {
   hideLegend?: boolean

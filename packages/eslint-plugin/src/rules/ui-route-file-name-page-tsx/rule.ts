@@ -8,7 +8,7 @@ type MessageIds = "wrongFileName"
 const ADMIN_ROUTES_RE = /(?:^|\/)src\/admin\/routes\//
 const ADMIN_ROUTES_RE_NO_SRC = /(?:^|\/)admin\/routes\//
 const PAGE_BASENAMES = new Set(["page.tsx", "page.jsx"])
-const ADMIN_SDK_SOURCE = "@medusajs/admin-sdk"
+const ADMIN_SDK_SOURCE = "@bentoco/admin-sdk"
 const DEFINE_ROUTE_CONFIG = "defineRouteConfig"
 
 function isUnderAdminRoutesDir(filename: string): boolean {

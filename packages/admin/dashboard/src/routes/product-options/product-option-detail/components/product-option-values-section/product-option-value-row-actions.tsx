@@ -1,6 +1,6 @@
-import { Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { toast, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"

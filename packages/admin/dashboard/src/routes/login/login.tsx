@@ -1,8 +1,18 @@
 import { useState, useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import { useSignInWithEmailPass } from "../../hooks/api"
 import { isFetchError } from "../../lib/is-fetch-error"
 import GlassSurface from "./GlassSurface"
+import {
+  agencyUidToDigits,
+  clearAgencyInviteCookie,
+  getAgencyInviteCookie,
+  parseAgencyInviteFromSearch,
+  setAgencyInviteCookie,
+  type AgencyInvitePayload,
+} from "../../lib/agency-invite-cookie"
+import { MerchantStoreOnboardingModal } from "../../components/modals/merchant-store-onboarding-modal"
+import { AgencyInviteConfirmModal } from "../../components/modals/agency-invite-confirm-modal"
 
 // WebGL Canvas component for high-fidelity glass refraction & chromatic aberrations
 const WebGLGlassBackground = () => {
@@ -136,14 +146,37 @@ const WebGLGlassBackground = () => {
 
 export const Login = () => {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const [view, setView] = useState<'login' | 'signup' | 'onboarding'>('login')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [accountType, setAccountType] = useState<'merchant' | 'agency' | null>(null)
+  /** Soft hint after email blur/change — where this account will land after login */
+  const [destinationHint, setDestinationHint] = useState<
+    null | { mode: "agency" | "merchant"; label: string }
+  >(null)
 
   const { mutateAsync: signIn } = useSignInWithEmailPass()
+
+  // Agency invite (from email link) — merchant cannot be skipped; code prefilled
+  const [agencyInvite, setAgencyInvite] = useState<AgencyInvitePayload | null>(
+    null
+  )
+  const [agencyCodeDigits, setAgencyCodeDigits] = useState("")
+  /**
+   * Shared MerchantStoreOnboardingModal (Store→Shipping→Payment→Catalog).
+   * Used after agency invite (NEW only) AND organic merchant signup.
+   */
+  const [storeOnboarding, setStoreOnboarding] = useState<{
+    tenantId: string
+    storeName: string
+    agencyUid?: string
+    agencyName?: string
+  } | null>(null)
+  /** Medusa FocusModal: agency 6-digit code confirm (replaces dark login step UI) */
+  const [inviteConfirmOpen, setInviteConfirmOpen] = useState(false)
 
   // Onboarding Step management state
   const [onboardingStep, setOnboardingStep] = useState<number>(0) // 0 = role select, 1+ = custom role steps
@@ -159,105 +192,319 @@ export const Login = () => {
   const [agencyName, setAgencyName] = useState('')
   const [agencyWebsite, setAgencyWebsite] = useState('')
 
+  /**
+   * Only arm invite flow from the invite URL (agency_invite=…).
+   * Do NOT re-open the modal on every login just because a stale cookie exists.
+   */
+  useEffect(() => {
+    const fromUrl = parseAgencyInviteFromSearch(
+      searchParams.toString()
+        ? `?${searchParams.toString()}`
+        : window.location.search
+    )
+    if (!fromUrl) {
+      // Normal /login — drop leftover invite so merchant login stays clean
+      if (!searchParams.get("agency_invite")) {
+        clearAgencyInviteCookie()
+        setAgencyInvite(null)
+        setInviteConfirmOpen(false)
+      }
+      return
+    }
+
+    setAgencyInviteCookie(fromUrl)
+    setAgencyInvite(fromUrl)
+    setAgencyCodeDigits(agencyUidToDigits(fromUrl.agencyUid))
+    if (fromUrl.email) setEmail(fromUrl.email)
+    if (fromUrl.storeDisplayName) {
+      setStoreName(fromUrl.storeDisplayName)
+      setStoreDomain(
+        fromUrl.storeDisplayName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .slice(0, 32)
+      )
+    }
+    setAccountType("merchant")
+    setView("signup")
+  }, [searchParams])
+
+  /** Invite applies only if URL/cookie invite matches this email (or invite has no email). */
+  const resolveActiveInvite = (loginEmail: string) => {
+    const invite = agencyInvite || getAgencyInviteCookie()
+    if (!invite?.inviteToken) return null
+    const inviteEmail = (invite.email || "").trim().toLowerCase()
+    const user = loginEmail.trim().toLowerCase()
+    if (inviteEmail && inviteEmail !== user) {
+      // Different account — ignore stale invite for this login
+      return null
+    }
+    return invite
+  }
+
+  /**
+   * Single login page: after auth, resolve email → agency membership
+   * and send the user to the correct dashboard (no manual mode pick).
+   */
+  const routeAfterAuth = async (loginEmail: string) => {
+    const invite = resolveActiveInvite(loginEmail)
+    if (invite) {
+      setAgencyInvite(invite)
+      localStorage.setItem("bentoco_admin_mode", "merchant")
+      setAccountType("merchant")
+      setInviteConfirmOpen(true)
+      return "merchant" as const
+    }
+    // No valid invite for this user — clear leftovers and go home
+    clearAgencyInviteCookie()
+    setAgencyInvite(null)
+    setInviteConfirmOpen(false)
+
+    const { fetchAgencyMe, persistAgencySession } = await import(
+      "../../lib/agency-session"
+    )
+    try {
+      const me = await fetchAgencyMe(loginEmail)
+      persistAgencySession(me)
+      if (me.isAgency) {
+        navigate("/agency/dashboard", { replace: true })
+        return "agency" as const
+      }
+    } catch (agencyErr) {
+      console.warn(
+        "[login] agency me failed, defaulting to merchant",
+        agencyErr
+      )
+      localStorage.setItem("bentoco_admin_mode", "merchant")
+    }
+    navigate("/", { replace: true })
+    return "merchant" as const
+  }
+
   const handleAuthSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email || !password) return
 
     setIsLoading(true)
-    setErrorMsg('')
+    setErrorMsg("")
 
     try {
-      if (view === 'login') {
-        // Real Medusa email/password auth (session or JWT via SDK)
-        await signIn({ email, password })
-
-        // Resolve agency membership from Bentoco tables (Stage 5)
-        const { fetchAgencyMe, persistAgencySession } = await import(
-          "../../lib/agency-session"
-        )
-        const me = await fetchAgencyMe(email)
-        persistAgencySession(me)
-
-        if (me.isAgency) {
-          navigate("/agency/dashboard", { replace: true })
-        } else {
-          navigate("/orders", { replace: true })
+      if (view === "login") {
+        try {
+          await signIn({ email, password })
+        } catch (authErr: any) {
+          console.error("[login] signIn failed", authErr)
+          throw new Error(
+            authErr?.message ||
+              authErr?.cause?.message ||
+              "Login request failed (auth). Is the API up on :9000?"
+          )
         }
+        await routeAfterAuth(email)
       } else {
-        // Sign-up flow simulation
-        setView('onboarding')
-        setOnboardingStep(0)
+        // Sign-up
+        if (agencyInvite) {
+          // Create auth account then Medusa modal for code (not dark glass steps)
+          try {
+            await signIn({ email, password })
+          } catch {
+            // New user — register via emailpass if available, else continue to modal
+            try {
+              const reg = await fetch("/auth/user/emailpass/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password }),
+              })
+              if (reg.ok) {
+                await signIn({ email, password })
+              }
+            } catch {
+              // Modal still runs register-role + complete-invite
+            }
+          }
+          localStorage.setItem("bentoco_admin_mode", "merchant")
+          setAccountType("merchant")
+          setInviteConfirmOpen(true)
+        } else {
+          setView("onboarding")
+          setOnboardingStep(0)
+        }
       }
     } catch (err: any) {
+      console.error("[login] error", err)
       const message =
         err?.message ||
         (typeof err === "string" ? err : null) ||
-        "Sign-in failed. Check email/password and that the API is running."
+        "Sign-in failed. Check email/password and that API + UI are running."
       setErrorMsg(message)
     } finally {
       setIsLoading(false)
     }
   }
 
+  // Soft destination hint while typing email (no password needed)
+  useEffect(() => {
+    if (view !== "login") {
+      setDestinationHint(null)
+      return
+    }
+    const normalized = email.trim().toLowerCase()
+    if (!normalized.includes("@") || normalized.length < 5) {
+      setDestinationHint(null)
+      return
+    }
+
+    let cancelled = false
+    const t = window.setTimeout(async () => {
+      try {
+        const { fetchAgencyMe } = await import("../../lib/agency-session")
+        const me = await fetchAgencyMe(normalized)
+        if (cancelled) return
+        if (me.isAgency && me.agency) {
+          setDestinationHint({
+            mode: "agency",
+            label: me.agency.name
+              ? `Agency console · ${me.agency.name}`
+              : "Agency console",
+          })
+        } else if (me.user) {
+          setDestinationHint({
+            mode: "merchant",
+            label: "Merchant store admin",
+          })
+        } else {
+          // Unknown email — don't leak existence; generic hint
+          setDestinationHint(null)
+        }
+      } catch {
+        if (!cancelled) setDestinationHint(null)
+      }
+    }, 450)
+
+    return () => {
+      cancelled = true
+      window.clearTimeout(t)
+    }
+  }, [email, view])
+
   const handleOnboardingSubmit = async () => {
     setIsLoading(true)
+    setErrorMsg("")
     try {
-      const selectedRole = accountType === 'agency' ? 'AGENCY' : 'MERCHANT'
-      
-      // Post role selection
-      await fetch('http://localhost:9000/api/auth/register-role', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, role: selectedRole })
+      const selectedRole = accountType === "agency" ? "AGENCY" : "MERCHANT"
+
+      await fetch("/api/auth/register-role", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, role: selectedRole }),
       })
 
-      // If Merchant onboarding, hit store creation api logic
-      if (selectedRole === 'MERCHANT') {
-        await fetch('http://localhost:9000/api/agency/transfer-store', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            storeId: storeDomain || 'store_live_01',
-            name: storeName,
-            metadata: {
-              states: targetStates,
-              gateway: selectedGateway,
-              importSource: importSource
-            }
-          })
+      // Organic merchant: Medusa store setup modal
+      if (selectedRole === "MERCHANT") {
+        localStorage.setItem("bentoco_admin_mode", "merchant")
+        setStoreOnboarding({
+          tenantId: "pending",
+          storeName: storeName || "",
         })
+        return
       }
 
-      if (selectedRole === 'AGENCY') {
-        navigate('/agency/dashboard', { replace: true })
+      if (selectedRole === "AGENCY") {
+        localStorage.setItem("bentoco_admin_mode", "agency")
+        navigate("/agency/dashboard", { replace: true })
       } else {
-        navigate('/orders', { replace: true })
+        localStorage.setItem("bentoco_admin_mode", "merchant")
+        navigate("/", { replace: true })
       }
     } catch (err: any) {
-      setErrorMsg('Failed to initialize workspace. Please retry.')
+      setErrorMsg(err?.message || "Failed to initialize workspace. Please retry.")
     } finally {
       setIsLoading(false)
     }
   }
 
+  /** After Medusa agency-code modal: NEW → setup; ACTIVE already showed success → home. */
+  const handleInviteConfirmed = (result: {
+    tenantId: string
+    status: string
+    needsOnboarding: boolean
+    agencyUid?: string
+    agencyName?: string
+    storeName?: string
+  }) => {
+    clearAgencyInviteCookie()
+    setAgencyInvite(null)
+    setInviteConfirmOpen(false)
+    localStorage.setItem("bentoco_admin_mode", "merchant")
+    if (result.tenantId) {
+      localStorage.setItem("bentoco_active_tenant_id", result.tenantId)
+    }
+
+    if (result.needsOnboarding || result.status === "NEW") {
+      setStoreOnboarding({
+        tenantId: result.tenantId,
+        storeName: result.storeName || "",
+        agencyUid: result.agencyUid,
+        agencyName: result.agencyName,
+      })
+      return
+    }
+    // Existing merchant / already set up — end after code confirm
+    navigate("/", { replace: true })
+  }
+
   const handleNextStep = () => {
-    if (accountType === 'merchant') {
-      if (onboardingStep < 4) {
-        setOnboardingStep(prev => prev + 1)
-      } else {
-        handleOnboardingSubmit()
-      }
-    } else if (accountType === 'agency') {
+    if (accountType === "merchant") {
+      void handleOnboardingSubmit()
+    } else if (accountType === "agency") {
       if (onboardingStep < 1) {
-        setOnboardingStep(prev => prev + 1)
+        setOnboardingStep((prev) => prev + 1)
       } else {
-        handleOnboardingSubmit()
+        void handleOnboardingSubmit()
       }
     }
   }
 
   return (
     <div className="relative min-h-screen w-full bg-[#000000] flex overflow-hidden font-sans text-white">
+      {agencyInvite && (
+        <AgencyInviteConfirmModal
+          open={inviteConfirmOpen}
+          onOpenChange={(open) => {
+            setInviteConfirmOpen(open)
+            if (!open) {
+              // Dismiss without completing → clear so normal logins stay clean
+              clearAgencyInviteCookie()
+              setAgencyInvite(null)
+            }
+          }}
+          invite={agencyInvite}
+          merchantEmail={email}
+          onConfirmed={handleInviteConfirmed}
+        />
+      )}
+      {storeOnboarding && (
+        <MerchantStoreOnboardingModal
+          open={!!storeOnboarding}
+          onOpenChange={(open) => {
+            if (!open) {
+              setStoreOnboarding(null)
+              navigate("/", { replace: true })
+            }
+          }}
+          tenantId={storeOnboarding.tenantId}
+          agencyId={storeOnboarding.agencyUid}
+          agencyName={storeOnboarding.agencyName}
+          configuredByEmail={email}
+          initialStoreName={storeOnboarding.storeName}
+          mode="merchant"
+          onComplete={() => {
+            setStoreOnboarding(null)
+            navigate("/", { replace: true })
+          }}
+        />
+      )}
       <style>{`
         .panel-transition {
           transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.9s ease;
@@ -322,7 +569,9 @@ export const Login = () => {
               {view === 'login' ? 'Login' : 'Sign Up'}
             </h1>
             <p className="text-[#A3A3A3] text-sm">
-              {view === 'login' ? 'Enter your details below to login' : 'Enter your details to create an account'}
+              {view === 'login'
+                ? 'One login for merchants and agencies. We open the right dashboard from your email.'
+                : 'Create an account, then choose merchant or agency workspace.'}
             </p>
           </div>
 
@@ -338,11 +587,30 @@ export const Login = () => {
               <input
                 type="email"
                 required
+                autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="team@mynaui.com"
+                placeholder="you@brand.com"
                 className="w-full px-3 py-2 bg-black border border-[#262626] rounded-md focus:outline-none focus:border-[#FF5A36] text-white placeholder-[#525252] transition-colors text-sm"
               />
+              {view === "login" && destinationHint && (
+                <p
+                  className={`text-[11px] mt-1.5 flex items-center gap-1.5 ${
+                    destinationHint.mode === "agency"
+                      ? "text-[#FF8A4C]"
+                      : "text-[#A3A3A3]"
+                  }`}
+                >
+                  <span
+                    className={`inline-block size-1.5 rounded-full ${
+                      destinationHint.mode === "agency"
+                        ? "bg-[#FF5A36]"
+                        : "bg-[#2FAE66]"
+                    }`}
+                  />
+                  After login → {destinationHint.label}
+                </p>
+              )}
             </div>
 
             <div className="space-y-1.5">
@@ -350,6 +618,7 @@ export const Login = () => {
               <input
                 type="password"
                 required
+                autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="•••••••••"
@@ -387,12 +656,13 @@ export const Login = () => {
             </p>
             {view === 'login' && (
               <p className="text-xs text-[#A3A3A3]">
-                Are you an agent?{' '}
-                <button 
+                Temporary staff code?{' '}
+                <button
+                  type="button"
                   onClick={() => navigate('/agency/login')}
                   className="text-white hover:text-[#FF5A36] transition-colors"
                 >
-                  Log in as Agency
+                  Enter access code
                 </button>
               </p>
             )}
@@ -432,8 +702,19 @@ export const Login = () => {
             ${view === 'onboarding' ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95 pointer-events-none absolute'}
           `}
         >
-          {/* STEP 0: Role Selection */}
-          {onboardingStep === 0 && (
+          {/* Agency invite banner */}
+          {agencyInvite && view === "onboarding" && (
+            <div className="mb-4 rounded-lg border border-[#FF5A36]/40 bg-[#FF5A36]/10 px-3 py-2 text-xs text-[#FFB199]">
+              Invited by agency{" "}
+              <span className="font-mono font-bold text-white">
+                {agencyInvite.agencyUid}
+              </span>
+              . You create the store; they get access after you confirm the code.
+            </div>
+          )}
+
+          {/* STEP 0: Role Selection — skipped when agency invite forces merchant */}
+          {onboardingStep === 0 && !agencyInvite && (
             <>
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-[#FF5A36] font-bold mb-3">
@@ -562,57 +843,17 @@ export const Login = () => {
                 disabled={!accountType || isLoading}
                 className="w-full py-3 bg-[#FF5A36] hover:bg-[#E04E2D] text-white font-bold rounded-lg shadow-lg transition-colors flex justify-center items-center h-12 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Proceed Setup
+                {accountType === "merchant"
+                  ? "Continue to store setup"
+                  : "Proceed Setup"}
               </button>
             </>
           )}
 
-          {/* MERCHANT FLOW */}
-          {accountType === 'merchant' && onboardingStep === 1 && (
-            <div className="space-y-6">
-              <div className="text-center">
-                <div className="text-xs text-[#FF5A36] font-mono tracking-widest uppercase mb-1">Step 1 of 4</div>
-                <h3 className="text-xl font-bold text-white">Store Metadata Setup</h3>
-                <p className="text-xs text-[#A3A3A3] mt-1">This setup configuration is mandatory for your storefront instance.</p>
-              </div>
-              <div className="space-y-4">
-                <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-neutral-400">Store Name</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Urban Threads"
-                    value={storeName}
-                    onChange={(e) => setStoreName(e.target.value)}
-                    className="w-full px-3 py-2 bg-black/60 border border-white/10 rounded-lg text-white text-sm focus:outline-none focus:border-[#FF5A36]"
-                  />
-                </div>
-                <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-neutral-400">Subdomain Prefix</label>
-                  <div className="flex items-center bg-black/60 border border-white/10 rounded-lg overflow-hidden focus-within:border-[#FF5A36]">
-                    <input
-                      type="text"
-                      required
-                      placeholder="urbanthreads"
-                      value={storeDomain}
-                      onChange={(e) => setStoreDomain(e.target.value)}
-                      className="flex-1 px-3 py-2 bg-transparent text-white text-sm focus:outline-none"
-                    />
-                    <span className="px-3 py-2 bg-white/5 border-l border-white/10 text-xs text-neutral-400 font-mono">.bentoco.in</span>
-                  </div>
-                </div>
-              </div>
-              <button
-                onClick={handleNextStep}
-                disabled={!storeName || !storeDomain}
-                className="w-full py-3 bg-[#FF5A36] hover:bg-[#E04E2D] text-white font-bold rounded-lg shadow-lg"
-              >
-                Next Step
-              </button>
-            </div>
-          )}
-
-          {accountType === 'merchant' && onboardingStep === 2 && (
+          {/* Agency invite uses AgencyInviteConfirmModal (Medusa FocusModal) — not these glass steps */}
+          {false && accountType === "merchant" &&
+            !agencyInvite &&
+            onboardingStep === 2 && (
             <div className="space-y-6 animate-fade-in">
               <div className="text-center">
                 <div className="text-xs text-[#FF5A36] font-mono tracking-widest uppercase mb-1">Step 2 of 4</div>
@@ -821,7 +1062,7 @@ export const Login = () => {
             </div>
           )}
 
-          {accountType === 'merchant' && onboardingStep === 3 && (
+          {false && accountType === 'merchant' && onboardingStep === 3 && (
             <div className="space-y-6">
               <div className="text-center">
                 <div className="text-xs text-[#FF5A36] font-mono tracking-widest uppercase mb-1">Step 3 of 4</div>
@@ -880,7 +1121,7 @@ export const Login = () => {
             </div>
           )}
 
-          {accountType === 'merchant' && onboardingStep === 4 && (
+          {false && accountType === 'merchant' && onboardingStep === 4 && (
             <div className="space-y-6">
               <div className="text-center">
                 <div className="text-xs text-[#FF5A36] font-mono tracking-widest uppercase mb-1">Step 4 of 4</div>

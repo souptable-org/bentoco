@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { ReactNode, useState } from "react"
 import { UseFormReturn } from "react-hook-form"
 import {

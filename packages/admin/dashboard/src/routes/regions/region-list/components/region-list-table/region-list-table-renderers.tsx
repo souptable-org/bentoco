@@ -1,4 +1,4 @@
-import type { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@bentoco/types"
 import { CountriesCell } from "../../../../../components/table/table-cells/region/countries-cell"
 import { PaymentProvidersCell } from "../../../../../components/table/table-cells/region/payment-providers-cell"
 import { defineCellRenderer } from "../../../../../lib/table/cell-renderers"

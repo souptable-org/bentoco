@@ -1,5 +1,5 @@
-import { InferEntityType } from "@medusajs/framework/types"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { InferEntityType } from "@bentoco/framework/types"
+import { toMikroORMEntity } from "@bentoco/framework/utils"
 import { IndexData, IndexMetadata, IndexRelation, IndexSync } from "@models"
 import { IndexMetadataStatus } from "@utils"
 import {

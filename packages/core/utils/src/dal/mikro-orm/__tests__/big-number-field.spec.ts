@@ -1,6 +1,6 @@
-import { BigNumberRawValue } from "@medusajs/types"
-import { Entity, MikroORM, PrimaryKey } from "@medusajs/deps/mikro-orm/core"
-import { defineConfig } from "@medusajs/deps/mikro-orm/postgresql"
+import { BigNumberRawValue } from "@bentoco/types"
+import { Entity, MikroORM, PrimaryKey } from "@bentoco/deps/mikro-orm/core"
+import { defineConfig } from "@bentoco/deps/mikro-orm/postgresql"
 import { BigNumber } from "../../../totals/big-number"
 import { MikroOrmBigNumberProperty } from "../big-number-field"
 

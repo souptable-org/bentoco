@@ -1,12 +1,12 @@
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 import type {
   ComputeActionContext,
   OrderDTO,
   OrderPreviewDTO,
   ProductDTO,
   ShippingOptionDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
 /**
  * The details of the order to prepare compute actions for.

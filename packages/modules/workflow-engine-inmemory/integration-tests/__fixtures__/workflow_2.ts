@@ -1,9 +1,9 @@
-import { isPresent } from "@medusajs/framework/utils"
+import { isPresent } from "@bentoco/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 const step_1 = createStep(
   "step_1",

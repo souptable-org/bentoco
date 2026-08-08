@@ -1,4 +1,4 @@
-import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk";
+import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk";
 import { ModuleDebitAccount } from "../../../types/store-credit";
 import { debitAccountStep } from "../steps/debit-account";
 

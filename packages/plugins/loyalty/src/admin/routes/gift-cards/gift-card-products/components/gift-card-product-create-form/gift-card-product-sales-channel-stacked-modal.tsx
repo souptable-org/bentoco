@@ -1,9 +1,9 @@
-import { AdminSalesChannel, HttpTypes } from "@medusajs/types";
+import { AdminSalesChannel, HttpTypes } from "@bentoco/types";
 import {
   Button,
   createDataTableColumnHelper,
   DataTableRowSelectionState,
-} from "@medusajs/ui";
+} from "@bentoco/ui";
 import { useEffect, useMemo, useState } from "react";
 import { UseFormReturn } from "react-hook-form";
 

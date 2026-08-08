@@ -38,7 +38,7 @@ Get the version deltas from two sources and reconcile them:
   `direct:development`, or `indirect`) — note it, direct-production bumps matter
   most.
 - **Diff** (`get_pr_diff.sh`): confirm which `package.json` files changed (direct
-  deps of published `@medusajs/*` packages) versus lockfile-only changes
+  deps of published `@bentoco/*` packages) versus lockfile-only changes
   (transitive). A dep that changes only in `yarn.lock` is transitive; a dep that
   changes in a `packages/**/package.json` is a direct dependency of that package.
 
@@ -93,7 +93,7 @@ changes worth testing, not as "safe", when Medusa feeds the relevant input.
 A change only matters if Medusa exercises the affected surface. For each hard
 breaking or behavior change, find the call sites and read them with `Read`:
 
-- Identify which `@medusajs/*` package(s) declare or import the dependency.
+- Identify which `@bentoco/*` package(s) declare or import the dependency.
 - Read the actual usage: which functions/options Medusa calls, and whether the
   changed behavior is on that path.
 - Where practical, reason about whether Medusa's specific usage is affected. If

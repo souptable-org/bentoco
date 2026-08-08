@@ -1,10 +1,10 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   Modules,
   ProductStatus,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   createAdminUser,
   generatePublishableKey,
@@ -16,7 +16,7 @@ import {
   updateCampaignsWorkflow,
   updatePromotionRulesWorkflow,
   updatePromotionsWorkflow,
-} from "@medusajs/core-flows"
+} from "@bentoco/core-flows"
 
 jest.setTimeout(500000)
 

@@ -1,4 +1,4 @@
-import { Migration } from "@medusajs/framework/mikro-orm/migrations";
+import { Migration } from "@bentoco/framework/mikro-orm/migrations";
 
 export class Migration20260604120000 extends Migration {
 

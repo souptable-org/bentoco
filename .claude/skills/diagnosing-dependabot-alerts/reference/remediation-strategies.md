@@ -104,7 +104,7 @@ Only when no in-package option exists. The repo already uses this pattern for so
 ```
 
 Critical caveats to always state:
-- **Does not ship.** `resolutions`/`overrides` are honored only at THIS repo's install root. They are not part of a published package's metadata, so a downstream `npm install @medusajs/<pkg>` re-resolves the transitive freshly and can get the vulnerable version again.
+- **Does not ship.** `resolutions`/`overrides` are honored only at THIS repo's install root. They are not part of a published package's metadata, so a downstream `npm install @bentoco/<pkg>` re-resolves the transitive freshly and can get the vulnerable version again.
 - Therefore this fixes only the repo's own alert, not consumers. If the vulnerable dep reaches a published package, note that Tier 2 is incomplete and the real fix is Tier 1b (or an upstream release).
 - Forcing a version outside a parent's declared range (e.g. `~3.7.6`) works mechanically but can break that parent — confirm API compatibility.
 

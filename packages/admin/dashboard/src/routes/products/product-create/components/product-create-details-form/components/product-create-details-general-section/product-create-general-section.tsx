@@ -1,4 +1,4 @@
-import { Input, Textarea } from "@medusajs/ui"
+import { Input, Textarea } from "@bentoco/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 

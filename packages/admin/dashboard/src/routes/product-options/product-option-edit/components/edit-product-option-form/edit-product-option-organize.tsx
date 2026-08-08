@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@bentoco/ui"
 import { useMemo } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"

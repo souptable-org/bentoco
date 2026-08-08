@@ -15,7 +15,7 @@ import {
   UpdateStockLocationInput,
   UpsertStockLocationAddressInput,
   UpsertStockLocationInput,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   EmitEvents,
   InjectManager,
@@ -25,7 +25,7 @@ import {
   MedusaService,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { joinerConfig } from "../joiner-config"
 import { StockLocation, StockLocationAddress } from "../models"
 

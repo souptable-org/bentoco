@@ -24,8 +24,8 @@ async function main() {
     })
   }
 
-  // copy colors from the `@medusajs/ui-preset` package
-  const resolvedURL = import.meta.resolve("@medusajs/ui-preset")
+  // copy colors from the `@bentoco/ui-preset` package
+  const resolvedURL = import.meta.resolve("@bentoco/ui-preset")
   const resolvedPath = fileURLToPath(resolvedURL)
   const originalPath = path.join(
     resolvedPath,

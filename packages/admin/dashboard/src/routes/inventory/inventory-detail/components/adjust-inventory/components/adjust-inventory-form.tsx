@@ -3,8 +3,8 @@ import {
   AdminInventoryLevel,
   AdminStockLocation,
   HttpTypes,
-} from "@medusajs/types"
-import { Button, Input, Text, toast } from "@medusajs/ui"
+} from "@bentoco/types"
+import { Button, Input, Text, toast } from "@bentoco/ui"
 import { useForm, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"

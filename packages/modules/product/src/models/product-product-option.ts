@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 import Product from "./product"
 import ProductOption from "./product-option"
 import ProductOptionValue from "./product-option-value"

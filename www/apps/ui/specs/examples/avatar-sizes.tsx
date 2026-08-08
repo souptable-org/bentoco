@@ -1,4 +1,4 @@
-import { Avatar } from "@medusajs/ui"
+import { Avatar } from "@bentoco/ui"
 
 export default function AvatarSizes() {
   return (

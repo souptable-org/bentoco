@@ -1,8 +1,8 @@
 import {
   batchShippingOptionRulesWorkflow,
   createShippingOptionsWorkflow,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   BatchWorkflowInput,
   CreateShippingOptionRuleDTO,
@@ -13,13 +13,13 @@ import {
   ServiceZoneDTO,
   ShippingProfileDTO,
   UpdateShippingOptionRuleDTO,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   RuleOperator,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 
 jest.setTimeout(100000)
 

@@ -96,7 +96,7 @@ function getExecutionCodeTabs({
 ${beautifyCode(`import type {
   MedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { ${workflowName} } from "${packageName}"
 
 export async function POST(
@@ -117,7 +117,7 @@ export async function POST(
 ${beautifyCode(`import {
   type SubscriberConfig,
   type SubscriberArgs,
-} from "@medusajs/framework"
+} from "@bentoco/framework"
 import { ${workflowName} } from "${packageName}"
 
 export default async function handleOrderPlaced({
@@ -138,7 +138,7 @@ export const config: SubscriberConfig = {
     <CodeTab label="Scheduled Job" value="scheduled-job">
     
 \`\`\`ts title="src/jobs/message-daily.ts"
-${beautifyCode(`import { MedusaContainer } from "@medusajs/framework/types"
+${beautifyCode(`import { MedusaContainer } from "@bentoco/framework/types"
 import { ${workflowName} } from "${packageName}"
 
 export default async function myCustomJob(
@@ -159,7 +159,7 @@ export const config = {
     <CodeTab label="Another Workflow" value="another-workflow">
     
 \`\`\`ts title="src/workflows/my-workflow.ts"
-${beautifyCode(`import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+${beautifyCode(`import { createWorkflow } from "@bentoco/framework/workflows-sdk"
 import { ${workflowName} } from "${packageName}"
 
 const myWorkflow = createWorkflow(

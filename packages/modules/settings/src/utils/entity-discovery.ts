@@ -10,7 +10,7 @@ import {
   pluralize,
   print,
   singularize,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 
 /**
  * Joiner config interface (subset of what we need).

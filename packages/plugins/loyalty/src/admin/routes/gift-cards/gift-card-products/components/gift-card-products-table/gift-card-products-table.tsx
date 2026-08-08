@@ -1,8 +1,8 @@
-import { Container } from "@medusajs/ui";
+import { Container } from "@bentoco/ui";
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 
-import { AdminProduct } from "@medusajs/framework/types";
+import { AdminProduct } from "@bentoco/framework/types";
 import { DataTable } from "../../../../../components/data-table";
 import { useProducts } from "../../../../../hooks/api/products";
 import { useGiftCardProductsTableColumns } from "./columns";

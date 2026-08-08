@@ -7,7 +7,7 @@ import {
   InlineTip,
   Label,
   Text,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import {
   FieldArrayWithId,
   useFieldArray,
@@ -27,7 +27,7 @@ import { decorateVariantsWithDefaultValues } from "../../../../utils"
 import { productOptionsQueryKeys } from "../../../../../../../hooks/api"
 import { useComboboxData } from "../../../../../../../hooks/use-combobox-data"
 import { sdk } from "../../../../../../../lib/client"
-import { AdminProductOption, HttpTypes } from "@medusajs/types"
+import { AdminProductOption, HttpTypes } from "@bentoco/types"
 
 type ProductCreateVariantsSectionProps = {
   form: UseFormReturn<ProductCreateSchemaType>

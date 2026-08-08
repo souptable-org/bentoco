@@ -10,13 +10,13 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret_bentoco_cookie",
       storeCors:
         process.env.STORE_CORS ||
-        "http://localhost:8000,http://localhost:3000",
+        "http://localhost:8000,http://localhost:3000,http://127.0.0.1:8000,http://127.0.0.1:3000",
       adminCors:
         process.env.ADMIN_CORS ||
-        "http://localhost:7001,http://agency.localhost:7001,http://app.localhost:7001",
+        "http://localhost:7001,http://127.0.0.1:7001,http://agency.localhost:7001,http://app.localhost:7001",
       authCors:
         process.env.AUTH_CORS ||
-        "http://localhost:7001,http://agency.localhost:7001,http://app.localhost:7001",
+        "http://localhost:7001,http://127.0.0.1:7001,http://agency.localhost:7001,http://app.localhost:7001",
     },
   },
   // Admin UI is developed separately via Vite on :7001

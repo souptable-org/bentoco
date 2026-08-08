@@ -1,7 +1,7 @@
-import { createOrderCreditLinesWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IOrderModuleService, OrderDTO } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { createOrderCreditLinesWorkflow } from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IOrderModuleService, OrderDTO } from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 import { createOrderFixture, prepareDataFixtures } from "./__fixtures__"
 
 jest.setTimeout(50000)

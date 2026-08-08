@@ -1,6 +1,6 @@
-/* eslint-disable @medusajs/widget-must-have-default-export */
-/* eslint-disable @medusajs/widget-must-export-config */
-import { HttpTypes } from "@medusajs/types";
+/* eslint-disable @bentoco/widget-must-have-default-export */
+/* eslint-disable @bentoco/widget-must-export-config */
+import { HttpTypes } from "@bentoco/types";
 import { useQueryParams } from "../../hooks/common/use-query-params";
 
 type UseGiftCardProductsTableQueryProps = {

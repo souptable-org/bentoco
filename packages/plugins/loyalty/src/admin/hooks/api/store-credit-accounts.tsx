@@ -1,4 +1,4 @@
-import { ClientHeaders, FetchError } from "@medusajs/js-sdk";
+import { ClientHeaders, FetchError } from "@bentoco/js-sdk";
 import {
   QueryKey,
   useMutation,

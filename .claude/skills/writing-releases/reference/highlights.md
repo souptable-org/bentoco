@@ -51,7 +51,7 @@ Body prose here.
 
 🚧 Breaking change
 
-Zod has been moved from a peer dependency to a direct dependency of `@medusajs/framework`. If you previously installed Zod explicitly in your project to satisfy the peer dependency requirement, you can remove it.
+Zod has been moved from a peer dependency to a direct dependency of `@bentoco/framework`. If you previously installed Zod explicitly in your project to satisfy the peer dependency requirement, you can remove it.
 
 [#14441](https://github.com/medusajs/medusa/pull/14441)
 ```

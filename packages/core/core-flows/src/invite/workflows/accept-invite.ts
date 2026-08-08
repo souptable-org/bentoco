@@ -1,12 +1,12 @@
-import type { InviteWorkflow, UserDTO } from "@medusajs/framework/types"
-import { InviteWorkflowEvents } from "@medusajs/framework/utils"
+import type { InviteWorkflow, UserDTO } from "@bentoco/framework/types"
+import { InviteWorkflowEvents } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { setAuthAppMetadataStep } from "../../auth"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createUsersWorkflow } from "../../user"

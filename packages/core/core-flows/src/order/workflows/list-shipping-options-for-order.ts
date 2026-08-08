@@ -3,8 +3,8 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import type { ListShippingOptionsForOrderWorkflowInput } from "@medusajs/framework/types"
+} from "@bentoco/framework/workflows-sdk"
+import type { ListShippingOptionsForOrderWorkflowInput } from "@bentoco/framework/types"
 
 import { useQueryGraphStep, validatePresenceOfStep } from "../../common"
 

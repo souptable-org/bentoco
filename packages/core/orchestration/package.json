@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/orchestration",
+  "name": "@bentoco/orchestration",
   "version": "2.18.0",
   "description": "Medusa utilities to orchestrate modules",
   "main": "dist/index.js",
@@ -29,11 +29,11 @@
   "author": "Medusa",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/types": "2.18.0"
+    "@bentoco/types": "2.18.0"
   },
   "dependencies": {
-    "@medusajs/deps": "2.18.0",
-    "@medusajs/utils": "2.18.0",
+    "@bentoco/deps": "2.18.0",
+    "@bentoco/utils": "2.18.0",
     "ulid": "^2.3.0"
   },
   "scripts": {

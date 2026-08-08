@@ -1,13 +1,13 @@
 import type {
   IProductModuleService,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   getSelectsAndRelationsFromObjectArray,
   MedusaError,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to identify and update the product options.

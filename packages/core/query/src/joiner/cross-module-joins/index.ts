@@ -1,4 +1,4 @@
-import { CrossModuleJoinSpec, RemoteJoinerQuery } from "@medusajs/types"
+import { CrossModuleJoinSpec, RemoteJoinerQuery } from "@bentoco/types"
 import { GraphCatalog } from "../catalog"
 import {
   InternalJoinerServiceConfig,

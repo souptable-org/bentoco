@@ -8,7 +8,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // No return at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = input
         })
@@ -17,7 +17,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Bare \`return;\` (no value) is fine.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return
         })
@@ -26,7 +26,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // \`return undefined\` is fine.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return undefined
         })
@@ -35,7 +35,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Returning a WorkflowResponse is fine.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return new WorkflowResponse({ ok: true })
         })
@@ -44,7 +44,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Aliased WorkflowResponse import is tracked.
     {
       code: `
-        import { createWorkflow, WorkflowResponse as WR } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse as WR } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return new WR({ ok: true })
         })
@@ -53,7 +53,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Return inside a nested createStep callback is irrelevant to this rule.
     {
       code: `
-        import { createWorkflow, createStep, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             return { plain: "object" }
@@ -65,7 +65,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Returns in unrelated functions are not flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         function helper() {
           return { plain: "object" }
         }
@@ -85,14 +85,14 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Returning a plain object — autofix wraps it.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return { ok: true }
         })
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return new WorkflowResponse({ ok: true })
         })
@@ -101,7 +101,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Returning an identifier — autofix wraps it.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = input
           return value
@@ -109,7 +109,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = input
           return new WorkflowResponse(value)
@@ -119,14 +119,14 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Aliased WorkflowResponse — autofix uses the alias.
     {
       code: `
-        import { createWorkflow, WorkflowResponse as WR } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse as WR } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return { ok: true }
         })
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse as WR } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse as WR } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return new WR({ ok: true })
         })
@@ -135,14 +135,14 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Function-expression constructor.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           return input
         })
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           return new WorkflowResponse(input)
         })
@@ -151,14 +151,14 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Aliased createWorkflow import.
     {
       code: `
-        import { createWorkflow as cw, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           return input
         })
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow as cw, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           return new WorkflowResponse(input)
         })
@@ -167,7 +167,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Returning new <SomethingElse>(...) — not WorkflowResponse.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         class Other {}
         createWorkflow("my-workflow", (input) => {
           return new Other()
@@ -175,7 +175,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         class Other {}
         createWorkflow("my-workflow", (input) => {
           return new WorkflowResponse(new Other())
@@ -185,7 +185,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // Multiple returns — each is flagged and fixed.
     {
       code: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           if (input) {
             return { early: true }
@@ -198,7 +198,7 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
         { messageId: "missingWorkflowResponse" },
       ],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           if (input) {
             return new WorkflowResponse({ early: true })
@@ -210,14 +210,14 @@ ruleTester.run("workflow-must-return-workflow-response", rule, {
     // WorkflowResponse is not yet imported — autofix inserts it into the existing import.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
       `,
       errors: [{ messageId: "missingWorkflowResponse" }],
       output: `
-        import { createWorkflow, WorkflowResponse } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, WorkflowResponse } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return new WorkflowResponse(input)
         })

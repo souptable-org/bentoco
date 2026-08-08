@@ -3,8 +3,8 @@ import {
   ITaxModuleService,
   TaxRateDTO,
   UpdateTaxRateDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 import {
   StepResponse,
   WorkflowData,
@@ -12,7 +12,7 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   createTaxRateRulesStep,
   deleteTaxRateRulesStep,

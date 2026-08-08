@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { PriceListStatus, PriceListType } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { PriceListStatus, PriceListType } from "@bentoco/utils"
 import {
   createAdminUser,
   generatePublishableKey,

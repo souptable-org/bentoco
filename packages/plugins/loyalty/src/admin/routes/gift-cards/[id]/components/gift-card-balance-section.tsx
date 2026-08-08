@@ -1,4 +1,4 @@
-import { Container, Text } from "@medusajs/ui";
+import { Container, Text } from "@bentoco/ui";
 import { AdminGiftCard, ModuleStoreCreditAccount } from "../../../../../types";
 import { formatAmount } from "../../../../utils/format-amount";
 

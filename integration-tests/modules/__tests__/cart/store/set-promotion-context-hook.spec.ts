@@ -1,13 +1,13 @@
-import { updateCartPromotionsWorkflow } from "@medusajs/core-flows"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ICartModuleService, IPromotionModuleService } from "@medusajs/types"
+import { updateCartPromotionsWorkflow } from "@bentoco/core-flows"
+import { StepResponse } from "@bentoco/framework/workflows-sdk"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { ICartModuleService, IPromotionModuleService } from "@bentoco/types"
 import {
   Modules,
   PromotionActions,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

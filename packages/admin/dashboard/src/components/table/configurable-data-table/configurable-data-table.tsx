@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Button, DataTableRowSelectionState } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Button, DataTableRowSelectionState } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { DataTable } from "../../data-table"
 import { SaveViewDialog } from "../save-view-dialog"

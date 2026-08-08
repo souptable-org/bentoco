@@ -1,7 +1,7 @@
 import {
   CustomFieldModel,
   isValidCustomFieldModel,
-} from "@medusajs/admin-shared"
+} from "@bentoco/admin-shared"
 import {
   ExportDefaultDeclaration,
   isCallExpression,

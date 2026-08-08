@@ -3,10 +3,10 @@ import {
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
-import type { WorkflowTypes } from "@medusajs/framework/types"
-import { ReservationItemWorkflowEvents } from "@medusajs/framework/utils"
+import type { WorkflowTypes } from "@bentoco/framework/types"
+import { ReservationItemWorkflowEvents } from "@bentoco/framework/utils"
 import { emitEventStep } from "../../common"
 import { createReservationsStep } from "../steps"
 

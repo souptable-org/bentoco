@@ -1,13 +1,13 @@
 import type {
   AdditionalData,
   UpdateCampaignDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { updateCampaignsStep } from "../steps"
 
 /**

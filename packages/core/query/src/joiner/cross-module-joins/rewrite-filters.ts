@@ -1,5 +1,5 @@
-import { JoinerArgument, RemoteJoinerQuery } from "@medusajs/types"
-import { isObject } from "@medusajs/utils"
+import { JoinerArgument, RemoteJoinerQuery } from "@bentoco/types"
+import { isObject } from "@bentoco/utils"
 import { GraphCatalog } from "../catalog"
 import { resolveFieldAliasEntry } from "../helpers"
 import {

@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/deps",
+  "name": "@bentoco/deps",
   "version": "2.18.0",
   "description": "Dependencies for Medusa",
   "main": "dist/index.js",

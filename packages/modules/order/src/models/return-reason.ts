@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 
 const _ReturnReason = model
   .define("ReturnReason", {

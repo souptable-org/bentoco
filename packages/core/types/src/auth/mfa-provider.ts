@@ -51,8 +51,8 @@ export interface IAuthMfaProvider {
  * #### Example
  *
  * ```ts
- * import { AuthMfaProvider } from "@medusajs/framework/types"
- * import { Logger, ModulesSdkTypes } from "@medusajs/framework/types"
+ * import { AuthMfaProvider } from "@bentoco/framework/types"
+ * import { Logger, ModulesSdkTypes } from "@bentoco/framework/types"
  *
  * type InjectedDependencies = {
  *   logger: Logger
@@ -326,8 +326,8 @@ export interface AuthMfaProvider extends IAuthMfaProvider {
  * invalidating codes).
  *
  * ```ts
- * import { RecoveryCodeAuthMfaProvider } from "@medusajs/framework/types"
- * import { Logger, ModulesSdkTypes } from "@medusajs/framework/types"
+ * import { RecoveryCodeAuthMfaProvider } from "@bentoco/framework/types"
+ * import { Logger, ModulesSdkTypes } from "@bentoco/framework/types"
  *
  * type InjectedDependencies = {
  *   logger: Logger

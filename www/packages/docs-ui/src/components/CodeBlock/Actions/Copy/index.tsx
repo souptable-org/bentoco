@@ -5,7 +5,7 @@ import { CopyButton } from "../../../CopyButton"
 import { DocsTrackingEvents } from "../../../../constants"
 import { useAnalytics } from "../../../../providers/Analytics"
 import clsx from "clsx"
-import { CheckMini, SquareTwoStack } from "@medusajs/icons"
+import { CheckMini, SquareTwoStack } from "@bentoco/icons"
 import { CodeBlockStyle } from "../.."
 
 export type CodeBlockCopyActionProps = {

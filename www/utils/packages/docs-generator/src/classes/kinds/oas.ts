@@ -2760,7 +2760,7 @@ class OasKindGenerator extends FunctionKindGenerator {
       return
     }
 
-    // retrieve workflows imported from `@medusajs/core-flows`
+    // retrieve workflows imported from `@bentoco/core-flows`
     // since there could be multiple import statements from the
     // same package, put them in an array
     const coreFlowsImports: ts.ImportClause[] = []
@@ -2769,7 +2769,7 @@ class OasKindGenerator extends FunctionKindGenerator {
         !importNode.parent ||
         !ts.isImportDeclaration(importNode.parent) ||
         !importNode.parent.importClause?.namedBindings ||
-        importNode.getText() !== `"@medusajs/core-flows"`
+        importNode.getText() !== `"@bentoco/core-flows"`
       ) {
         return
       }
@@ -2777,7 +2777,7 @@ class OasKindGenerator extends FunctionKindGenerator {
       coreFlowsImports.push(importNode.parent.importClause)
     })
 
-    // if no imports found from `@medusajs/core-flows`, return
+    // if no imports found from `@bentoco/core-flows`, return
     if (!coreFlowsImports.length) {
       return
     }

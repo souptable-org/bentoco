@@ -1,4 +1,4 @@
-# @medusajs/eslint-plugin
+# @bentoco/eslint-plugin
 
 ## 2.18.0
 

@@ -8,7 +8,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Constructor with super(...arguments).
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
             super(...arguments)
@@ -19,7 +19,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Constructor with a bare super() call also satisfies the rule.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(container) {
             super(container)
@@ -30,7 +30,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // No constructor defined — nothing to flag.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           async create() {}
         }
@@ -56,7 +56,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Class extends something other than MedusaService.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends SomethingElse {
           constructor() {}
         }
@@ -65,7 +65,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Honors aliased MedusaService import.
     {
       code: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           constructor() {
             super(...arguments)
@@ -76,7 +76,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // super() call interleaved with other statements is still fine.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(container) {
             this.foo = "bar"
@@ -90,13 +90,13 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Empty constructor body.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() { super(...arguments) }
         }
@@ -107,7 +107,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // not jam everything on the opening-brace line.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
 
@@ -115,7 +115,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
             super(...arguments)
@@ -127,7 +127,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Constructor body with statements but no super call.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(container) {
             this.container = container
@@ -135,7 +135,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor(container) {
             super(...arguments)
@@ -148,13 +148,13 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Aliased MedusaService import.
     {
       code: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           constructor() {}
         }
       `,
       output: `
-        import { MedusaService as MS } from "@medusajs/framework/utils"
+        import { MedusaService as MS } from "@bentoco/framework/utils"
         class FooService extends MS({}) {
           constructor() { super(...arguments) }
         }
@@ -164,13 +164,13 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Class expression.
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         const FooService = class extends MedusaService({}) {
           constructor() {}
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         const FooService = class extends MedusaService({}) {
           constructor() { super(...arguments) }
         }
@@ -180,7 +180,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
     // Constructor calls something that looks like super but isn't (e.g. a method named super-something).
     {
       code: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
             this.init()
@@ -188,7 +188,7 @@ ruleTester.run("service-constructor-must-call-super", rule, {
         }
       `,
       output: `
-        import { MedusaService } from "@medusajs/framework/utils"
+        import { MedusaService } from "@bentoco/framework/utils"
         class FooService extends MedusaService({}) {
           constructor() {
             super(...arguments)

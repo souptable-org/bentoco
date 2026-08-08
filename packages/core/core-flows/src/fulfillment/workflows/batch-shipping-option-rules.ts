@@ -4,14 +4,14 @@ import {
   CreateShippingOptionRuleDTO,
   ShippingOptionRuleDTO,
   UpdateShippingOptionRuleDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   createWorkflow,
   parallelize,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   createShippingOptionRulesStep,
   deleteShippingOptionRulesStep,

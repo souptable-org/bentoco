@@ -2,7 +2,7 @@ import {
   AdminOrderLineItem,
   AdminProductVariant,
   AdminProductVariantInventoryItemLink,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 /**
  * Check if the line item has inventory kit.

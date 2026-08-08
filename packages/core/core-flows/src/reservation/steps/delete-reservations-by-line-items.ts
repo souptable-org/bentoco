@@ -1,7 +1,7 @@
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
-import type { IInventoryService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import type { IInventoryService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 
 /**
  * The IDs of the line items to delete reservations for.

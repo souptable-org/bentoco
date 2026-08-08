@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { XMarkMini } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Button, Heading, IconButton, Input, Label, toast } from "@medusajs/ui"
+import { XMarkMini } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Button, Heading, IconButton, Input, Label, toast } from "@bentoco/ui"
 import i18next from "i18next"
 import {
   useFieldArray,

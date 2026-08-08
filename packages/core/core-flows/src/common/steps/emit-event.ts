@@ -1,13 +1,13 @@
 import {
   EventBusTypes,
   IEventBusModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 import {
   StepExecutionContext,
   StepResponse,
   createStep,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 /**
  * The event's details.

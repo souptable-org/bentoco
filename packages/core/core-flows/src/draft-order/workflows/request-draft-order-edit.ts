@@ -1,10 +1,10 @@
-import { OrderChangeStatus } from "@medusajs/framework/utils"
+import { OrderChangeStatus } from "@bentoco/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import type { OrderChangeDTO, OrderDTO } from "@medusajs/framework/types"
+} from "@bentoco/framework/workflows-sdk"
+import type { OrderChangeDTO, OrderDTO } from "@bentoco/framework/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrUpdateOrderPaymentCollectionWorkflow,

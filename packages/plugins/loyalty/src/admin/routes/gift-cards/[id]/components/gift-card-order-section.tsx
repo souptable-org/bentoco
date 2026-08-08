@@ -1,5 +1,5 @@
-import { ShoppingCart } from "@medusajs/icons";
-import { Container } from "@medusajs/ui";
+import { ShoppingCart } from "@bentoco/icons";
+import { Container } from "@bentoco/ui";
 import { AdminGiftCard } from "../../../../../types";
 import { Header } from "../../../../components/header";
 import { SidebarLink } from "../../../../components/sidebar-link";

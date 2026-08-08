@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 
 export const LayoutConfiguration = model
   .define("layout_configuration", {

@@ -3,8 +3,8 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/medusa",
-      "packages/medusa-test-utils",
+      "packages/bentoco",
+      "packages/bentoco-test-utils",
       "packages/modules/*",
       "packages/modules/providers/*",
       "packages/plugins/*",
@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@atomico/rollup-plugin-sizes": "^1.1.4",
+    "@bentoco/eslint-plugin": "workspace:^",
     "@faker-js/faker": "^9.2.0",
-    "@medusajs/eslint-plugin": "workspace:^",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-replace": "^5.0.2",
     "@storybook/addon-essentials": "^8.3.5",
@@ -78,6 +78,8 @@
     "chromatic": "^6.20.0",
     "configstore": "^5.0.1",
     "cross-env": "^5.2.1",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
     "esbuild": "^0.25.0",
     "eslint": "^8.40.0",
     "eslint-config-google": "^0.14.0",
@@ -154,8 +156,8 @@
     "test:integration:packages": "turbo run test:integration --concurrency=1 --no-daemon --no-cache --force --filter='./packages/core/*' --filter='./packages/medusa' --filter='./packages/modules/*' --filter='./packages/modules/providers/*'",
     "test:integration:http": "turbo run test:integration:chunk --no-daemon --no-cache --force --filter=integration-tests-http",
     "test:integration:modules": "turbo run test:integration:chunk --no-daemon --no-cache --force --filter=integration-tests-modules",
-    "generate:http-types": "yarn workspace @medusajs/http-types-generator generate:http-types",
-    "validate:http-types": "yarn workspace @medusajs/http-types-generator validate:http-types",
+    "generate:http-types": "yarn workspace @bentoco/http-types-generator generate:http-types",
+    "validate:http-types": "yarn workspace @bentoco/http-types-generator validate:http-types",
     "openapi:generate": "yarn ./packages/cli/oas/oas-github-ci run ci --with-full-file",
     "medusa-oas": "yarn ./packages/cli/oas/medusa-oas-cli run medusa-oas",
     "release:snapshot": "changeset publish --no-git-tags --snapshot --tag snapshot",
@@ -165,6 +167,7 @@
     "version": "changeset version && yarn install --no-immutable"
   },
   "dependencies": {
+    "@bentoco/medusa": "workspace:*",
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.0",
     "import-from": "^3.0.0"

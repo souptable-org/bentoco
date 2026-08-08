@@ -2,7 +2,7 @@ import {
   CrossModuleJoinSpec,
   ModuleJoinerConfig,
   RemoteJoinerQuery,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import { toRemoteQuery } from "../../query/to-remote-query"
 import { toRemoteJoinerQuery } from "../../query/to-remote-joiner-query"
 import { crossModuleJoinerConfigs } from "../__fixtures__/cross-module-joins"

@@ -1,4 +1,4 @@
-import type { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@bentoco/types"
 import { TFunction } from "i18next"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"

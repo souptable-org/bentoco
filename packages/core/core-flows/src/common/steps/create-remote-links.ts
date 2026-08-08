@@ -1,7 +1,7 @@
-import { Link } from "@medusajs/framework/modules-sdk"
-import type { LinkDefinition } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Link } from "@bentoco/framework/modules-sdk"
+import type { LinkDefinition } from "@bentoco/framework/types"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 export const createLinksStepId = "create-remote-links"
 /**

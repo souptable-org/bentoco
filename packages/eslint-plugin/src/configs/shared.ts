@@ -29,7 +29,7 @@ export const ignoresBlock: Linter.Config = {
 
 /**
  * Register the plugin globally (no `files` key) so that EVERY file ESLint
- * processes can resolve `@medusajs/*` rule references — including `.js`/`.mjs`/
+ * processes can resolve `@bentoco/*` rule references — including `.js`/`.mjs`/
  * `.cjs`/`.jsx` files matched by directory-scoped rule blocks, and the
  * `eslint.config.js` file itself. If this registration were scoped to
  * `.ts,.tsx` only, linting a matched `.js` file would fail with

@@ -1,4 +1,4 @@
-import { Badge } from "@medusajs/ui"
+import { Badge } from "@bentoco/ui"
 
 type CellProps = {
   is_combinable: boolean

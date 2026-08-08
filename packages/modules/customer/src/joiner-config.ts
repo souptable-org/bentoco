@@ -1,3 +1,3 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@bentoco/framework/utils"
 
 export const joinerConfig = defineJoinerConfig(Modules.CUSTOMER)

@@ -20,7 +20,7 @@ vi.mock("fs/promises", () => ({
 
 const mockFileContents = [
   `
-    import { defineWidgetConfig } from "@medusajs/admin-sdk"
+    import { defineWidgetConfig } from "@bentoco/admin-sdk"
 
     const Widget = () => {
         return <div>Widget 1</div>
@@ -90,7 +90,7 @@ describe("generateWidgets", () => {
 
     vi.mocked(fs.readFile).mockImplementation(async () =>
       Promise.resolve(`
-        import { defineWidgetConfig } from "@medusajs/admin-sdk"
+        import { defineWidgetConfig } from "@bentoco/admin-sdk"
 
         const Widget = () => <div>Widget</div>
 

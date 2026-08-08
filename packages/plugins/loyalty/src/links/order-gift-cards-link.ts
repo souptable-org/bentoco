@@ -1,5 +1,5 @@
-import { defineLink } from "@medusajs/framework/utils";
-import OrderModule from "@medusajs/medusa/order";
+import { defineLink } from "@bentoco/framework/utils";
+import OrderModule from "@bentoco/medusa/order";
 import LoyaltyModule from "../modules/loyalty";
 
 export default defineLink(

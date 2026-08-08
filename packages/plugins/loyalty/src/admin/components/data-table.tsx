@@ -14,7 +14,7 @@ import {
   DataTable as Primitive,
   Text,
   useDataTable,
-} from "@medusajs/ui";
+} from "@bentoco/ui";
 import React, { ReactNode, useCallback, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 

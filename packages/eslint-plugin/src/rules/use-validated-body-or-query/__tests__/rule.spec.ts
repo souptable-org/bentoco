@@ -15,7 +15,7 @@ const MIDDLEWARES_BODY_POST = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({ name: z.string() })
@@ -35,7 +35,7 @@ const MIDDLEWARES_BODY_ON_GET = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})
@@ -55,7 +55,7 @@ const MIDDLEWARES_QUERY_GET = `
 import {
   defineMiddlewares,
   validateAndTransformQuery,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({ q: z.string() })
@@ -75,7 +75,7 @@ const MIDDLEWARES_NO_METHOD = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})
@@ -94,7 +94,7 @@ const MIDDLEWARES_PARAM = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})
@@ -114,7 +114,7 @@ const MIDDLEWARES_WILDCARD = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})
@@ -134,7 +134,7 @@ const MIDDLEWARES_METHODS_ARRAY = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})
@@ -154,7 +154,7 @@ const MIDDLEWARES_DIFFERENT_ROUTE = `
 import {
   defineMiddlewares,
   validateAndTransformBody,
-} from "@medusajs/framework/http"
+} from "@bentoco/framework/http"
 import { z } from "zod"
 
 const schema = z.object({})

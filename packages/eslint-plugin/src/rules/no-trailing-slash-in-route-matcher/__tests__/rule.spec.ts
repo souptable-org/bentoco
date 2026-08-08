@@ -8,7 +8,7 @@ ruleTester.run("no-trailing-slash-in-route-matcher", rule, {
     // No trailing slash — canonical form.
     {
       code: `
-        import { defineMiddlewares } from "@medusajs/framework/http"
+        import { defineMiddlewares } from "@bentoco/framework/http"
         export default defineMiddlewares({
           routes: [
             { matcher: "/store/custom", middlewares: [] },

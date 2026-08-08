@@ -1,13 +1,13 @@
 import * as zod from "zod"
 
-import { Button, Heading, Input, Text, Textarea, toast } from "@medusajs/ui"
+import { Button, Heading, Input, Text, Textarea, toast } from "@bentoco/ui"
 import {
   RouteFocusModal,
   useRouteModal,
 } from "../../../../../components/modals"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import React from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"

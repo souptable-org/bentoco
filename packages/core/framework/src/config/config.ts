@@ -1,4 +1,4 @@
-import { deepCopy, isDefined, isProduction } from "@medusajs/utils"
+import { deepCopy, isDefined, isProduction } from "@bentoco/utils"
 import { logger } from "../logger"
 import { ConfigModule } from "./types"
 

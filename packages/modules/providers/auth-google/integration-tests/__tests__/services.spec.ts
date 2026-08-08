@@ -1,4 +1,4 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { MedusaError } from "@bentoco/framework/utils"
 import crypto from "crypto"
 import jwt from "jsonwebtoken"
 import { GoogleAuthService } from "../../src/services/google"

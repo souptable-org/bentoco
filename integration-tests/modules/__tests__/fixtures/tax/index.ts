@@ -1,4 +1,4 @@
-import { ITaxModuleService } from "@medusajs/types"
+import { ITaxModuleService } from "@bentoco/types"
 
 export const setupTaxStructure = async (service: ITaxModuleService) => {
   // Setup for this specific test

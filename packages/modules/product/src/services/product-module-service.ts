@@ -11,8 +11,8 @@ import {
   ProductTypes,
   RestoreReturn,
   SoftDeleteReturn,
-} from "@medusajs/framework/types"
-import { CreateProductOptionDTO } from "@medusajs/types"
+} from "@bentoco/framework/types"
+import { CreateProductOptionDTO } from "@bentoco/types"
 import {
   Product,
   ProductCategory,
@@ -52,8 +52,8 @@ import {
   promiseAll,
   removeUndefined,
   toHandle,
-} from "@medusajs/framework/utils"
-import { EntityManager } from "@medusajs/framework/mikro-orm/core"
+} from "@bentoco/framework/utils"
+import { EntityManager } from "@bentoco/framework/mikro-orm/core"
 import { ProductRepository } from "../repositories"
 import {
   UpdateCategoryInput,

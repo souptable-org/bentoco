@@ -1,1 +1,1 @@
-export * from "@medusajs/deps/opentelemetry/instrumentation-pg"
+export * from "@bentoco/deps/opentelemetry/instrumentation-pg"

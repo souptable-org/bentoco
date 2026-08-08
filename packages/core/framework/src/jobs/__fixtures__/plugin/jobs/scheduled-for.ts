@@ -1,4 +1,4 @@
-import { MedusaContainer } from "@medusajs/types"
+import { MedusaContainer } from "@bentoco/types"
 import { ScheduledJobContext } from "../../../types"
 
 declare global {

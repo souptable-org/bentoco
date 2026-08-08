@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types";
-import { StatusBadge } from "@medusajs/ui";
+import { HttpTypes } from "@bentoco/types";
+import { StatusBadge } from "@bentoco/ui";
 
 type ProductStatusCellProps = {
   status: HttpTypes.AdminProductStatus;

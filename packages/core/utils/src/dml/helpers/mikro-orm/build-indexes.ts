@@ -1,5 +1,5 @@
-import { DMLSchema, EntityConstructor, EntityIndex } from "@medusajs/types"
-import { MetadataStorage } from "@medusajs/deps/mikro-orm/core"
+import { DMLSchema, EntityConstructor, EntityIndex } from "@bentoco/types"
+import { MetadataStorage } from "@bentoco/deps/mikro-orm/core"
 import { arrayDifference } from "../../../common"
 
 /*

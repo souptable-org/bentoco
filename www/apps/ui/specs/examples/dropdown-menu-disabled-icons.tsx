@@ -1,5 +1,5 @@
-import { DropdownMenu, IconButton } from "@medusajs/ui"
-import { Trash, BarsThree } from "@medusajs/icons"
+import { DropdownMenu, IconButton } from "@bentoco/ui"
+import { Trash, BarsThree } from "@bentoco/icons"
 
 export default function DropdownMenuDisabledAndIcons() {
   return (

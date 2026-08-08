@@ -1,4 +1,4 @@
-import { OtpInput, Text } from "@medusajs/ui"
+import { OtpInput, Text } from "@bentoco/ui"
 import { useState } from "react"
 
 export default function OtpInputOnComplete() {

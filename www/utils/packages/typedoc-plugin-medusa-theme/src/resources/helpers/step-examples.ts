@@ -39,7 +39,7 @@ function generateStepExample(stepReflection: DeclarationReflection): string {
   // generate example
   return `
 \`\`\`ts title="src/workflows/my-workflow.ts"
-${beautifyCode(`import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+${beautifyCode(`import { createWorkflow } from "@bentoco/framework/workflows-sdk"
 import { ${stepReflection.name} } from "${packageName}"
 
 const myWorkflow = createWorkflow(

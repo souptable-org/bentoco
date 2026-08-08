@@ -1,11 +1,11 @@
-import type { OrderDetailDTO, OrderDTO } from "@medusajs/framework/types"
-import { deduplicate } from "@medusajs/framework/utils"
+import type { OrderDetailDTO, OrderDTO } from "@bentoco/framework/types"
+import { deduplicate } from "@bentoco/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import {
   getLastFulfillmentStatus,

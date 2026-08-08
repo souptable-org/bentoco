@@ -1,6 +1,6 @@
 import type { ReactElement } from "react"
 import { LayoutComponentProps } from "../../../layout-composer/types"
-import { clx } from "@medusajs/ui"
+import { clx } from "@bentoco/ui"
 
 export const SingleRowLayoutComponent = ({
   sections,

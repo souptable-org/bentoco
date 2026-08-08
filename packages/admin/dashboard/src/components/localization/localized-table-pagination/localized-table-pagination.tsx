@@ -1,4 +1,4 @@
-import { Table } from "@medusajs/ui"
+import { Table } from "@bentoco/ui"
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "react"
 import { useTranslation } from "react-i18next"
 

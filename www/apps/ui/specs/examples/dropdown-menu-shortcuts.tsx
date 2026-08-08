@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react"
-import { DropdownMenu, IconButton, toast, Toaster } from "@medusajs/ui"
-import { Keyboard } from "@medusajs/icons"
+import { DropdownMenu, IconButton, toast, Toaster } from "@bentoco/ui"
+import { Keyboard } from "@bentoco/icons"
 
 function getOsShortcut() {
   const isMacOs =

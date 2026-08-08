@@ -3,7 +3,7 @@
 import React from "react"
 import Link from "next/link"
 import clsx from "clsx"
-import { MarkdownSolid } from "@medusajs/icons"
+import { MarkdownSolid } from "@bentoco/icons"
 
 export type ViewAsMarkdownProps = {
   /**

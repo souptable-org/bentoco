@@ -1,7 +1,7 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
-import { ICachingModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { MedusaModule } from "@bentoco/framework/modules-sdk"
+import { ICachingModuleService } from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { setTimeout } from "timers/promises"
 import { EventBusServiceMock } from "../../__fixtures__/event-bus-mock"
 

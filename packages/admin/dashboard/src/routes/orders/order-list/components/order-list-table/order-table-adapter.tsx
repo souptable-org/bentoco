@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import {
   createTableAdapter,
   TableAdapter,

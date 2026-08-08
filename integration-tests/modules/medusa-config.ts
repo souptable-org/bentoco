@@ -1,6 +1,6 @@
-import { defineConfig } from "@medusajs/utils"
+import { defineConfig } from "@bentoco/utils"
 
-const { Modules } = require("@medusajs/utils")
+const { Modules } = require("@bentoco/utils")
 
 const DB_HOST = process.env.DB_HOST
 const DB_USERNAME = process.env.DB_USERNAME
@@ -12,20 +12,20 @@ process.env.LOG_LEVEL = "error"
 
 const customTaxProviderRegistration = {
   resolve: {
-    services: [require("@medusajs/tax/dist/providers/system").default],
+    services: [require("@bentoco/tax/dist/providers/system").default],
   },
   id: "system_2",
 }
 
 const customPaymentProvider = {
   resolve: {
-    services: [require("@medusajs/payment/dist/providers/system").default],
+    services: [require("@bentoco/payment/dist/providers/system").default],
   },
   id: "default_2",
 }
 
 const customFulfillmentProvider = {
-  resolve: "@medusajs/fulfillment-manual",
+  resolve: "@bentoco/fulfillment-manual",
   id: "test-provider",
 }
 
@@ -41,7 +41,7 @@ module.exports = defineConfig({
   },
   plugins: [
     {
-      resolve: "@medusajs/loyalty-plugin",
+      resolve: "@bentoco/loyalty-plugin",
       options: {},
     },
   ],
@@ -61,12 +61,12 @@ module.exports = defineConfig({
     },
     {
       key: "auth",
-      resolve: "@medusajs/auth",
+      resolve: "@bentoco/auth",
       options: {
         providers: [
           {
             id: "emailpass",
-            resolve: "@medusajs/auth-emailpass",
+            resolve: "@bentoco/auth-emailpass",
           },
         ],
       },
@@ -74,95 +74,95 @@ module.exports = defineConfig({
     {
       key: Modules.USER,
       scope: "internal",
-      resolve: "@medusajs/user",
+      resolve: "@bentoco/user",
       options: {
         jwt_secret: "test",
       },
     },
     {
       key: Modules.CACHE,
-      resolve: "@medusajs/cache-inmemory",
+      resolve: "@bentoco/cache-inmemory",
       options: { ttl: 0 }, // Cache disabled
     },
     {
       key: Modules.LOCKING,
-      resolve: "@medusajs/locking",
+      resolve: "@bentoco/locking",
     },
     {
       key: Modules.STOCK_LOCATION,
-      resolve: "@medusajs/stock-location",
+      resolve: "@bentoco/stock-location",
       options: {},
     },
     {
       key: Modules.INVENTORY,
-      resolve: "@medusajs/inventory",
+      resolve: "@bentoco/inventory",
       options: {},
     },
     {
       key: Modules.PRODUCT,
-      resolve: "@medusajs/product",
+      resolve: "@bentoco/product",
     },
     {
       key: Modules.PRICING,
-      resolve: "@medusajs/pricing",
+      resolve: "@bentoco/pricing",
     },
     {
       key: Modules.PROMOTION,
-      resolve: "@medusajs/promotion",
+      resolve: "@bentoco/promotion",
     },
     {
       key: Modules.REGION,
-      resolve: "@medusajs/region",
+      resolve: "@bentoco/region",
     },
     {
       key: Modules.CUSTOMER,
-      resolve: "@medusajs/customer",
+      resolve: "@bentoco/customer",
     },
     {
       key: Modules.SALES_CHANNEL,
-      resolve: "@medusajs/sales-channel",
+      resolve: "@bentoco/sales-channel",
     },
     {
       key: Modules.CART,
-      resolve: "@medusajs/cart",
+      resolve: "@bentoco/cart",
     },
     {
       key: Modules.WORKFLOW_ENGINE,
-      resolve: "@medusajs/workflow-engine-inmemory",
+      resolve: "@bentoco/workflow-engine-inmemory",
     },
     {
       key: Modules.API_KEY,
-      resolve: "@medusajs/api-key",
+      resolve: "@bentoco/api-key",
     },
     {
       key: Modules.STORE,
-      resolve: "@medusajs/store",
+      resolve: "@bentoco/store",
     },
     {
       key: Modules.TAX,
-      resolve: "@medusajs/tax",
+      resolve: "@bentoco/tax",
       options: {
         providers: [customTaxProviderRegistration],
       },
     },
     {
       key: Modules.CURRENCY,
-      resolve: "@medusajs/currency",
+      resolve: "@bentoco/currency",
     },
     {
       key: Modules.ORDER,
-      resolve: "@medusajs/order",
+      resolve: "@bentoco/order",
     },
     {
       key: Modules.PAYMENT,
-      resolve: "@medusajs/payment",
+      resolve: "@bentoco/payment",
       options: {
         providers: [customPaymentProvider],
       },
     },
     {
       key: Modules.FULFILLMENT,
-      resolve: "@medusajs/fulfillment",
+      resolve: "@bentoco/fulfillment",
       options: {
         providers: [
           customFulfillmentProvider,
@@ -175,7 +175,7 @@ module.exports = defineConfig({
       options: {
         providers: [
           {
-            resolve: "@medusajs/notification-local",
+            resolve: "@bentoco/notification-local",
             id: "local-notification-provider",
             options: {
               name: "Local Notification Provider",
@@ -187,7 +187,7 @@ module.exports = defineConfig({
     },
     {
       key: Modules.INDEX,
-      resolve: "@medusajs/index",
+      resolve: "@bentoco/index",
       disable: process.env.ENABLE_INDEX_MODULE !== "true",
     },
     {
@@ -196,7 +196,7 @@ module.exports = defineConfig({
     },
     {
       key: Modules.RBAC,
-      resolve: "@medusajs/rbac",
+      resolve: "@bentoco/rbac",
     },
   ],
 })

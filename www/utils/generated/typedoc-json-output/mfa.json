@@ -35,7 +35,7 @@
 					},
 					{
 						"kind": "code",
-						"text": "```ts\nimport { AuthMfaProvider } from \"@medusajs/framework/types\"\nimport { Logger, ModulesSdkTypes } from \"@medusajs/framework/types\"\n\ntype InjectedDependencies = {\n  logger: Logger\n  authMfaFactorService: ModulesSdkTypes.IMedusaInternalService<any>\n}\n\ntype Options = {\n  issuer?: string\n}\n\nclass MyAuthMfaProviderService implements AuthMfaProvider {\n  static identifier = \"my-mfa\"\n  readonly method = MyAuthMfaProviderService.identifier\n\n  protected logger_: Logger\n  protected authMfaFactorService_: ModulesSdkTypes.IMedusaInternalService<any>\n  protected options_: Options\n  // assuming you're initializing a client\n  protected client\n\n  constructor (\n    { logger, authMfaFactorService }: InjectedDependencies,\n    options: Options\n  ) {\n    this.logger_ = logger\n    this.authMfaFactorService_ = authMfaFactorService\n    this.options_ = options\n\n    // assuming you're initializing a client\n    this.client = new Client(options)\n  }\n\n  // ...\n}\n\nexport default MyAuthMfaProviderService\n```"
+						"text": "```ts\nimport { AuthMfaProvider } from \"@bentoco/framework/types\"\nimport { Logger, ModulesSdkTypes } from \"@bentoco/framework/types\"\n\ntype InjectedDependencies = {\n  logger: Logger\n  authMfaFactorService: ModulesSdkTypes.IMedusaInternalService<any>\n}\n\ntype Options = {\n  issuer?: string\n}\n\nclass MyAuthMfaProviderService implements AuthMfaProvider {\n  static identifier = \"my-mfa\"\n  readonly method = MyAuthMfaProviderService.identifier\n\n  protected logger_: Logger\n  protected authMfaFactorService_: ModulesSdkTypes.IMedusaInternalService<any>\n  protected options_: Options\n  // assuming you're initializing a client\n  protected client\n\n  constructor (\n    { logger, authMfaFactorService }: InjectedDependencies,\n    options: Options\n  ) {\n    this.logger_ = logger\n    this.authMfaFactorService_ = authMfaFactorService\n    this.options_ = options\n\n    // assuming you're initializing a client\n    this.client = new Client(options)\n  }\n\n  // ...\n}\n\nexport default MyAuthMfaProviderService\n```"
 					},
 					{
 						"kind": "text",
@@ -112,7 +112,7 @@
 							"qualifiedName": "AuthMfaProviderMethod"
 						},
 						"name": "AuthMfaProviderMethod",
-						"package": "@medusajs/types"
+						"package": "@bentoco/types"
 					},
 					"overwrites": {
 						"type": "reference",
@@ -287,7 +287,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -506,7 +506,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -665,7 +665,7 @@
 											"qualifiedName": "AuthMfaStartDTO"
 										},
 										"name": "AuthMfaStartDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -691,7 +691,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -709,7 +709,7 @@
 											"qualifiedName": "AuthMfaStartResponse"
 										},
 										"name": "AuthMfaStartResponse",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -839,7 +839,7 @@
 											"qualifiedName": "AuthMfaVerifyDTO"
 										},
 										"name": "AuthMfaVerifyDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								},
 								{
@@ -865,7 +865,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -883,7 +883,7 @@
 											"qualifiedName": "AuthMfaDTO"
 										},
 										"name": "AuthMfaDTO",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								],
 								"name": "Promise",
@@ -923,7 +923,7 @@
 					"type": "reference",
 					"target": -1,
 					"name": "IAuthMfaProvider",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		},
@@ -957,7 +957,7 @@
 					},
 					{
 						"kind": "code",
-						"text": "```ts\nimport { RecoveryCodeAuthMfaProvider } from \"@medusajs/framework/types\"\nimport { Logger, ModulesSdkTypes } from \"@medusajs/framework/types\"\n\ntype InjectedDependencies = {\n  logger: Logger\n  authMfaRecoveryCodeService: ModulesSdkTypes.IMedusaInternalService<any>\n}\n\nclass MyRecoveryCodeProviderService implements RecoveryCodeAuthMfaProvider {\n  static identifier = \"recovery_code\"\n  readonly method = \"recovery_code\" as const\n\n  protected logger_: Logger\n  protected authMfaRecoveryCodeService_: ModulesSdkTypes.IMedusaInternalService<any>\n\n  constructor ({\n    logger,\n    authMfaRecoveryCodeService,\n  }: InjectedDependencies) {\n    this.logger_ = logger\n    this.authMfaRecoveryCodeService_ = authMfaRecoveryCodeService\n  }\n\n  // ...\n}\n\nexport default MyRecoveryCodeProviderService\n```"
+						"text": "```ts\nimport { RecoveryCodeAuthMfaProvider } from \"@bentoco/framework/types\"\nimport { Logger, ModulesSdkTypes } from \"@bentoco/framework/types\"\n\ntype InjectedDependencies = {\n  logger: Logger\n  authMfaRecoveryCodeService: ModulesSdkTypes.IMedusaInternalService<any>\n}\n\nclass MyRecoveryCodeProviderService implements RecoveryCodeAuthMfaProvider {\n  static identifier = \"recovery_code\"\n  readonly method = \"recovery_code\" as const\n\n  protected logger_: Logger\n  protected authMfaRecoveryCodeService_: ModulesSdkTypes.IMedusaInternalService<any>\n\n  constructor ({\n    logger,\n    authMfaRecoveryCodeService,\n  }: InjectedDependencies) {\n    this.logger_ = logger\n    this.authMfaRecoveryCodeService_ = authMfaRecoveryCodeService\n  }\n\n  // ...\n}\n\nexport default MyRecoveryCodeProviderService\n```"
 					},
 					{
 						"kind": "text",
@@ -1204,7 +1204,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1423,7 +1423,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1642,7 +1642,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@bentoco/types"
 									}
 								}
 							],
@@ -1697,7 +1697,7 @@
 					"type": "reference",
 					"target": -1,
 					"name": "IAuthMfaProvider",
-					"package": "@medusajs/types"
+					"package": "@bentoco/types"
 				}
 			]
 		}
@@ -1711,7 +1711,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@bentoco/types",
 	"symbolIdMap": {
 		"64296": {
 			"sourceFileName": "../../../../packages/core/types/src/auth/mfa-provider.ts",

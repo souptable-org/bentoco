@@ -1,6 +1,6 @@
-import { Container } from "@medusajs/ui";
+import { Container } from "@bentoco/ui";
 
-import { Share } from "@medusajs/icons";
+import { Share } from "@bentoco/icons";
 import { Header } from "../../../../components/header";
 
 function StoreCreditAccountCodeSection({ code }: { code?: string }) {

@@ -1,4 +1,4 @@
-import { Context } from "@medusajs/types"
+import { Context } from "@bentoco/types"
 import { MedusaContextType } from "./context-parameter"
 
 export function InjectSharedContext(): MethodDecorator {

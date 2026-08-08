@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 export interface StaticCountry
   extends Required<Omit<HttpTypes.AdminRegionCountry, "id">> {}

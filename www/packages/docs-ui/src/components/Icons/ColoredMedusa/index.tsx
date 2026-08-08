@@ -1,5 +1,5 @@
-import { Medusa } from "@medusajs/icons"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { Medusa } from "@bentoco/icons"
+import { IconProps } from "@bentoco/icons/dist/types"
 import clsx from "clsx"
 import React from "react"
 

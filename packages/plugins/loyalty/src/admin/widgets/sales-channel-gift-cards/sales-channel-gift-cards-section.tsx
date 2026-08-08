@@ -1,8 +1,8 @@
-/* eslint-disable @medusajs/widget-must-have-default-export */
-/* eslint-disable @medusajs/widget-must-export-config */
-import { PencilSquare, Trash } from "@medusajs/icons";
-import { AdminSalesChannel, HttpTypes } from "@medusajs/types";
-import { Checkbox, Container, toast, usePrompt } from "@medusajs/ui";
+/* eslint-disable @bentoco/widget-must-have-default-export */
+/* eslint-disable @bentoco/widget-must-export-config */
+import { PencilSquare, Trash } from "@bentoco/icons";
+import { AdminSalesChannel, HttpTypes } from "@bentoco/types";
+import { Checkbox, Container, toast, usePrompt } from "@bentoco/ui";
 import { RowSelectionState, createColumnHelper } from "@tanstack/react-table";
 import { useMemo, useState } from "react";
 

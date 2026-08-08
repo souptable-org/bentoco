@@ -8,9 +8,9 @@ import {
   ICurrencyModuleService,
   InternalModuleDeclaration,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 
-import { MedusaService, normalizeCurrencyCode } from "@medusajs/framework/utils"
+import { MedusaService, normalizeCurrencyCode } from "@bentoco/framework/utils"
 import { Currency } from "@models"
 
 type InjectedDependencies = {

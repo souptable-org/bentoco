@@ -1,5 +1,5 @@
-import { XCircle } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { XCircle } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
 import {
   Container,
   Copy,
@@ -8,7 +8,7 @@ import {
   Text,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useCancelOrder } from "../../../../../hooks/api/orders"

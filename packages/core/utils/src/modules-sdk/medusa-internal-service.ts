@@ -8,13 +8,13 @@ import {
   ModulesSdkTypes,
   PerformedActions,
   UpsertWithReplaceConfig,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   EventType,
   type EntityClass,
   type EntityManager,
   type EntitySchema,
-} from "@medusajs/deps/mikro-orm/core"
+} from "@bentoco/deps/mikro-orm/core"
 import {
   isDefined,
   isObject,

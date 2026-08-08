@@ -20,13 +20,13 @@ import {
 } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ThumbnailBadge } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Button, Checkbox, clx, CommandBar, toast, Tooltip } from "@medusajs/ui"
+import { ThumbnailBadge } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Button, Checkbox, clx, CommandBar, toast, Tooltip } from "@bentoco/ui"
 import { Fragment, useCallback, useState } from "react"
 import { useFieldArray, useForm } from "react-hook-form"
 import { Link } from "react-router-dom"
-import { z } from "@medusajs/framework/zod"
+import { z } from "@bentoco/framework/zod"
 import { KeyboundForm } from "../../../../../../../components/keybound-form"
 import {
   RouteFocusModal,

@@ -1,6 +1,6 @@
-import { IPromotionModuleService } from "@medusajs/framework/types"
-import { CampaignBudgetType, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner, SuiteOptions } from "@medusajs/test-utils"
+import { IPromotionModuleService } from "@bentoco/framework/types"
+import { CampaignBudgetType, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner, SuiteOptions } from "@bentoco/test-utils"
 import { createCampaigns } from "../../../__fixtures__/campaigns"
 import { createDefaultPromotion } from "../../../__fixtures__/promotion"
 

@@ -1,5 +1,5 @@
-import { DAL, ITaxProvider, Logger, TaxTypes } from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+import { DAL, ITaxProvider, Logger, TaxTypes } from "@bentoco/framework/types"
+import { ModulesSdkUtils } from "@bentoco/framework/utils"
 
 import TaxProvider from "../models/tax-provider"
 

@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IStoreModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IStoreModuleService } from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -8,7 +8,7 @@ import {
 import {
   createStoresWorkflow,
   updateStoresWorkflow,
-} from "@medusajs/core-flows"
+} from "@bentoco/core-flows"
 
 jest.setTimeout(90000)
 

@@ -1,4 +1,4 @@
-import { isDefined, isString } from "@medusajs/utils"
+import { isDefined, isString } from "@bentoco/utils"
 
 export type ResolvedFieldAlias = {
   path: string

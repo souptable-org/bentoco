@@ -3,7 +3,7 @@ import {
   AuthenticationResponse,
   AuthIdentityProviderService,
   IAuthProvider,
-} from "@medusajs/types"
+} from "@bentoco/types"
 
 /**
  * ### constructor
@@ -16,8 +16,8 @@ import {
  * #### Example
  *
  * ```ts
- * import { AbstractAuthModuleProvider } from "@medusajs/framework/utils"
- * import { Logger } from "@medusajs/framework/types"
+ * import { AbstractAuthModuleProvider } from "@bentoco/framework/utils"
+ * import { Logger } from "@bentoco/framework/types"
  *
  * type InjectedDependencies = {
  *   logger: Logger
@@ -151,7 +151,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -193,7 +193,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -262,8 +262,8 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * } from "@bentoco/framework/types"
+   * import { MedusaError } from "@bentoco/framework/utils"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -329,8 +329,8 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * } from "@bentoco/framework/types"
+   * import { MedusaError } from "@bentoco/framework/utils"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -395,7 +395,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@bentoco/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {

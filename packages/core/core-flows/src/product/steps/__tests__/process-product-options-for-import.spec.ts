@@ -1,7 +1,7 @@
-import { MedusaContainer } from "@medusajs/framework"
-import { asFunction, createContainer } from "@medusajs/framework/awilix"
-import { Modules } from "@medusajs/framework/utils"
-import { createWorkflow, WorkflowResponse } from "@medusajs/workflows-sdk"
+import { MedusaContainer } from "@bentoco/framework"
+import { asFunction, createContainer } from "@bentoco/framework/awilix"
+import { Modules } from "@bentoco/framework/utils"
+import { createWorkflow, WorkflowResponse } from "@bentoco/workflows-sdk"
 import { processProductOptionsForImportStep } from "../process-product-options-for-import"
 
 const buildContainer = (

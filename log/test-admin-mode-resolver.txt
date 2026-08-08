@@ -1,0 +1,7 @@
+=== Admin Mode Resolver Audit Log [2026-07-31T06:53:44.254Z] ===
+
+--- Starting Phase 5 Step 2: Admin Mode & Domain Resolution Audit ---
+Host "agency.bentoco.com:3000" Path "/agency/dashboard": Mode = AGENCY
+Host "app.bentoco.com:3000" Path "/dashboard": Mode = MERCHANT
+Host "app.bentoco.com:3000" Path "/agency/billing": Blocked Routes = ["/agency/billing"]
+✅ ADMIN MODE RESOLVER AUDIT PASSED: Domain mode resolution & route isolation verified!

@@ -1,16 +1,16 @@
-import { addShippingMethodToCartWorkflow } from "@medusajs/core-flows"
+import { addShippingMethodToCartWorkflow } from "@bentoco/core-flows"
 import {
   AdminInventoryItem,
   AdminProduct,
   AdminShippingProfile,
   AdminStockLocation,
   MedusaContainer,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   ProductStatus,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   generatePublishableKey,

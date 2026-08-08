@@ -1,5 +1,5 @@
-import { Component, GlobeEurope, PencilSquare, Trash } from "@medusajs/icons"
-import { Badge, Container, Heading, usePrompt } from "@medusajs/ui"
+import { Component, GlobeEurope, PencilSquare, Trash } from "@bentoco/icons"
+import { Badge, Container, Heading, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 

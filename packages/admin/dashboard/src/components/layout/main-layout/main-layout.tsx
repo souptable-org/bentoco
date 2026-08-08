@@ -1,6 +1,7 @@
 import {
   Buildings,
   BuildingStorefront,
+  ChartBar,
   CogSixTooth,
   CurrencyDollar,
   EllipsisHorizontal,
@@ -11,9 +12,9 @@ import {
   SquaresPlus,
   Tag,
   Users,
-} from "@medusajs/icons"
-import { CORE_LAYOUT_IDS } from "@medusajs/admin-shared"
-import { Avatar, clx, Divider, DropdownMenu, Text } from "@medusajs/ui"
+} from "@bentoco/icons"
+import { CORE_LAYOUT_IDS } from "@bentoco/admin-shared"
+import { Avatar, clx, Divider, DropdownMenu, Text } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 
 import { useStore } from "../../../hooks/api/store"
@@ -182,6 +183,12 @@ const useCoreRoutes = (): Omit<INavItem, "pathname">[] => {
   const { t } = useTranslation()
 
   return [
+    {
+      icon: <ChartBar />,
+      label: "Overview",
+      to: "/",
+      items: [],
+    },
     {
       icon: <ShoppingCart />,
       label: t("orders.domain"),

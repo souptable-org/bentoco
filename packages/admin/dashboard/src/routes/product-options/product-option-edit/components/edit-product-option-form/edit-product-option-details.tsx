@@ -1,4 +1,4 @@
-import { Input } from "@medusajs/ui"
+import { Input } from "@bentoco/ui"
 import { useEffect } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"

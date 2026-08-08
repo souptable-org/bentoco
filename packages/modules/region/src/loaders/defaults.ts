@@ -2,11 +2,11 @@ import {
   LoaderOptions,
   Logger,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   DefaultsUtils,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { Country } from "@models"
 
 export default async ({ container }: LoaderOptions): Promise<void> => {

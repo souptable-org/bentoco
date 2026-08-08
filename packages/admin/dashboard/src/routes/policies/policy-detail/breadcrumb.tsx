@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { UIMatch } from "react-router-dom"
 
 import { useRbacPolicy } from "../../../hooks/api/rbac-policies"

@@ -1,6 +1,6 @@
-import type { CartDTO, CartWorkflowDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import type { CartDTO, CartWorkflowDTO } from "@bentoco/framework/types"
+import { MedusaError } from "@bentoco/framework/utils"
+import { createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The details of the cart to validate.

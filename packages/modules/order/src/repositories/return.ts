@@ -1,4 +1,4 @@
-import { DALUtils } from "@medusajs/framework/utils"
+import { DALUtils } from "@bentoco/framework/utils"
 import { Return } from "@models"
 import { setFindMethods } from "../utils/base-repository-find"
 

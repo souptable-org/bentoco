@@ -1,4 +1,4 @@
-import { XMark } from "@medusajs/icons";
+import { XMark } from "@bentoco/icons";
 import {
   Button,
   clx,
@@ -7,7 +7,7 @@ import {
   Input,
   Kbd,
   Text,
-} from "@medusajs/ui";
+} from "@bentoco/ui";
 import { Dialog as RadixDialog } from "radix-ui";
 import { useMemo, useState } from "react";
 

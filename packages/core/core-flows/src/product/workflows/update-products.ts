@@ -5,13 +5,13 @@ import {
   CreateMoneyAmountDTO,
   ProductTypes,
   UpdateProductVariantWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   Modules,
   ProductWorkflowEvents,
   arrayDifference,
   isDefined,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -19,7 +19,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   dismissRemoteLinkStep,

@@ -1,5 +1,5 @@
-import { IModuleService, MedusaContainer } from "@medusajs/types"
-import { lowerCaseFirst, toPascalCase } from "@medusajs/utils"
+import { IModuleService, MedusaContainer } from "@bentoco/types"
+import { lowerCaseFirst, toPascalCase } from "@bentoco/utils"
 import {
   IRemoteDataFetcher,
   RemoteExpandProperty,

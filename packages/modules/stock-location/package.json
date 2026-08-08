@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/stock-location",
+  "name": "@bentoco/stock-location",
   "version": "2.18.0",
   "description": "Stock Location Module for Medusa",
   "main": "dist/index.js",
@@ -26,11 +26,11 @@
   "author": "Medusa",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.18.0",
-    "@medusajs/test-utils": "2.18.0"
+    "@bentoco/framework": "2.18.0",
+    "@bentoco/test-utils": "2.18.0"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.18.0"
+    "@bentoco/framework": "2.18.0"
   },
   "scripts": {
     "watch": "yarn run -T tsc --build --watch",

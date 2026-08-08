@@ -22,7 +22,7 @@ Thank you for the report! To help us investigate, could you please provide:
 - [ ] Steps to reproduce the issue
 - [ ] Expected behavior
 - [ ] Actual behavior / error message (include full stack trace if available)
-- [ ] Medusa version (`@medusajs/medusa` version and any relevant package versions)
+- [ ] Medusa version (`@bentoco/medusa` version and any relevant package versions)
 - [ ] Node.js version
 - [ ] Any relevant configuration or custom code
 

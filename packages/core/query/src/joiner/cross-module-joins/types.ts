@@ -2,7 +2,7 @@ import {
   CrossModuleJoinSpec,
   JoinerRelationship,
   JoinerServiceConfigAlias,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import { InternalJoinerServiceConfig } from "../types"
 
 export type InternalRelationMetadata = NonNullable<

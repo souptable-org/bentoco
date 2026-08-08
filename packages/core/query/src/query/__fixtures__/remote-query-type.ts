@@ -477,6 +477,6 @@ export interface FixtureEntryPoints {
   shipping_option_price_sets: LinkShippingOptionPriceSet
 }
 
-declare module "@medusajs/types" {
+declare module "@bentoco/types" {
   export interface RemoteQueryEntryPoints extends FixtureEntryPoints {}
 }

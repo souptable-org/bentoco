@@ -1,4 +1,4 @@
-import { ITaxProvider, TaxTypes } from "@medusajs/framework/types"
+import { ITaxProvider, TaxTypes } from "@bentoco/framework/types"
 
 export class TaxDataProviderService implements ITaxProvider {
   static identifier = "tax-data-provider"

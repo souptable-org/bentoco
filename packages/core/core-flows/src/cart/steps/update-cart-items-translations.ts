@@ -1,16 +1,16 @@
-import { MedusaContainer } from "@medusajs/framework"
+import { MedusaContainer } from "@bentoco/framework"
 import {
   ICartModuleService,
   ProductVariantDTO,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   deduplicate,
   FeatureFlag,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 import { applyTranslationsToItems } from "../../common/utils/apply-translations-to-items"
 import { productVariantsFields } from "../utils/fields"
 

@@ -92,11 +92,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -129,7 +129,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -164,7 +164,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -207,7 +207,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -235,7 +235,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -243,7 +243,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -322,11 +322,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -359,7 +359,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -392,7 +392,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -434,13 +434,13 @@
 																"qualifiedName": "PriceListStatus"
 															},
 															"name": "PriceListStatus",
-															"package": "@medusajs/utils",
+															"package": "@bentoco/utils",
 															"preferValues": true
 														}
 													}
 												],
 												"name": "EnumProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -482,13 +482,13 @@
 																"qualifiedName": "PriceListType"
 															},
 															"name": "PriceListType",
-															"package": "@medusajs/utils",
+															"package": "@bentoco/utils",
 															"preferValues": true
 														}
 													}
 												],
 												"name": "EnumProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -523,7 +523,7 @@
 													"qualifiedName": "DateTimeProperty"
 												},
 												"name": "DateTimeProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -558,7 +558,7 @@
 													"qualifiedName": "DateTimeProperty"
 												},
 												"name": "DateTimeProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -593,7 +593,7 @@
 													"qualifiedName": "NumberProperty"
 												},
 												"name": "NumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -636,7 +636,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -679,7 +679,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -714,7 +714,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -749,7 +749,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -757,7 +757,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -836,11 +836,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -873,7 +873,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -908,7 +908,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -941,7 +941,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -969,7 +969,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -977,7 +977,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -1056,11 +1056,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1093,7 +1093,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1126,7 +1126,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1168,13 +1168,13 @@
 																"qualifiedName": "PricingRuleOperator"
 															},
 															"name": "PricingRuleOperator",
-															"package": "@medusajs/utils",
+															"package": "@bentoco/utils",
 															"preferValues": true
 														}
 													}
 												],
 												"name": "EnumProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1207,7 +1207,7 @@
 													"qualifiedName": "NumberProperty"
 												},
 												"name": "NumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1250,7 +1250,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1280,7 +1280,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -1288,7 +1288,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -1367,11 +1367,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1414,7 +1414,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1440,7 +1440,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -1448,7 +1448,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -1527,11 +1527,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@bentoco/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1566,7 +1566,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1599,7 +1599,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1632,7 +1632,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1667,7 +1667,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1702,7 +1702,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1737,7 +1737,7 @@
 													"qualifiedName": "NumberProperty"
 												},
 												"name": "NumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1780,7 +1780,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1823,7 +1823,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1868,7 +1868,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@bentoco/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1902,7 +1902,7 @@
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@bentoco/utils"
 					},
 					{
 						"type": "literal",
@@ -1910,7 +1910,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@bentoco/utils"
 			},
 			"defaultValue": "..."
 		}
@@ -1928,7 +1928,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/pricing",
+	"packageName": "@bentoco/pricing",
 	"symbolIdMap": {
 		"12445": {
 			"sourceFileName": "../../../../packages/modules/pricing/src/models/index.ts",

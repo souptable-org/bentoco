@@ -9,7 +9,7 @@ A widget is a React component that can be injected into an existing page in the 
 For example, create the file `src/admin/widgets/product-widget.tsx` with the following content:
 
 ```tsx title="src/admin/widgets/product-widget.tsx"
-import { defineWidgetConfig } from "@medusajs/admin-sdk"
+import { defineWidgetConfig } from "@bentoco/admin-sdk"
 
 // The widget
 const ProductWidget = () => {

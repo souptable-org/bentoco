@@ -1,7 +1,7 @@
 import { LoaderFunctionArgs, UIMatch, useParams } from "react-router-dom"
 
-import { LayoutComposer } from "@medusajs/dashboard/components"
-import { HttpTypes } from "@medusajs/types"
+import { LayoutComposer } from "@bentoco/dashboard/components"
+import { HttpTypes } from "@bentoco/types"
 import { PageSkeleton } from "../../../components/common/page-skeleton"
 import { ActiveOrderChange } from "../../../components/draft-orders/active-order-changes"
 import { ActivitySection } from "../../../components/draft-orders/activity-section"

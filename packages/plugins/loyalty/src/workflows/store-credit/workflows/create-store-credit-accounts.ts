@@ -1,9 +1,9 @@
-import { isPresent, MedusaError } from "@medusajs/framework/utils";
+import { isPresent, MedusaError } from "@bentoco/framework/utils";
 import {
   createStep,
   createWorkflow,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk";
+} from "@bentoco/framework/workflows-sdk";
 import { ModuleCreateStoreCreditAccount } from "../../../types/store-credit";
 import { createStoreCreditAccountsStep } from "../steps/create-store-credit-accounts";
 

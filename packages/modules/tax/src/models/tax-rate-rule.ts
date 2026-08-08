@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 import TaxRate from "./tax-rate"
 
 const TaxRateRule = model

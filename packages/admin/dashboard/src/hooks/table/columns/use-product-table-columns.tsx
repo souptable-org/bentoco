@@ -21,7 +21,7 @@ import {
   VariantCell,
   VariantHeader,
 } from "../../../components/table/table-cells/product/variant-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminProduct>()
 

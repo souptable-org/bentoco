@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 
-import { LayoutComposer } from "@medusajs/dashboard/components"
+import { LayoutComposer } from "@bentoco/dashboard/components"
 import { JsonViewSection } from "../../../../components/json-view-section"
 import { useProduct } from "../../../../hooks/api/products"
 import { ProductGeneralSection } from "./components/product-general-section"

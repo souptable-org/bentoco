@@ -1,8 +1,8 @@
-import { Link } from "@medusajs/framework/modules-sdk"
+import { Link } from "@bentoco/framework/modules-sdk"
 import {
   IPaymentModuleService,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   LINKS,
@@ -11,8 +11,8 @@ import {
   arrayDifference,
   isDefined,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { StepResponse, createStep } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to set the payment providers available in regions.

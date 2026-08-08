@@ -2,16 +2,16 @@ import {
   CustomerDTO,
   OrderCreditLineDTO,
   OrderDTO,
-} from "@medusajs/framework/types"
-import { MathBN, MedusaError } from "@medusajs/framework/utils"
-import { useQueryGraphStep } from "@medusajs/medusa/core-flows"
+} from "@bentoco/framework/types"
+import { MathBN, MedusaError } from "@bentoco/framework/utils"
+import { useQueryGraphStep } from "@bentoco/medusa/core-flows"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import {
   IStoreCreditModuleService,
   ModuleStoreCreditAccount,

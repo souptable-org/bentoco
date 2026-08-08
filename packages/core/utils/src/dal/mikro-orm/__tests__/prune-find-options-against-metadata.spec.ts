@@ -6,8 +6,8 @@ import {
   OneToMany,
   PrimaryKey,
   Property,
-} from "@medusajs/deps/mikro-orm/core"
-import { defineConfig } from "@medusajs/deps/mikro-orm/postgresql"
+} from "@bentoco/deps/mikro-orm/core"
+import { defineConfig } from "@bentoco/deps/mikro-orm/postgresql"
 import { pruneFindOptionsAgainstMetadata } from "../prune-find-options-against-metadata"
 
 @Entity()

@@ -3,8 +3,8 @@ import {
   HttpTypes,
   PricingTypes,
   RegionTypes,
-} from "@medusajs/framework/types"
-import { MedusaError, upperCaseFirst } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { MedusaError, upperCaseFirst } from "@bentoco/framework/utils"
 
 /**
  * Normalizes product data for export, creating one row per product variant.

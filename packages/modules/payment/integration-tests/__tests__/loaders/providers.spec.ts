@@ -1,7 +1,7 @@
-import { IPaymentModuleService } from "@medusajs/framework/types"
+import { IPaymentModuleService } from "@bentoco/framework/types"
 
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
+import { Modules } from "@bentoco/framework/utils"
 
 jest.setTimeout(30000)
 

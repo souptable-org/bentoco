@@ -20,7 +20,7 @@ export const config = { name: "sync-products", schedule: "0 0 * * *" }`,
     },
     // Typed config export.
     {
-      code: `import type { MedusaContainer } from "@medusajs/framework/types"
+      code: `import type { MedusaContainer } from "@bentoco/framework/types"
 export const config = { name: "daily", schedule: "* * * * *" }`,
       filename: JOB,
     },

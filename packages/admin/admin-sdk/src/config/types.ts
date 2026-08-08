@@ -6,7 +6,7 @@ import type {
   InjectionZone,
   LayoutSection,
   NestedRoutePosition,
-} from "@medusajs/admin-shared"
+} from "@bentoco/admin-shared"
 import type { ComponentType } from "react"
 import { ZodFirstPartySchemaTypes } from "zod"
 

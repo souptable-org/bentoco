@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* Local fallbacks (Stack Sans loads from Google Fonts in index.html) */
   @font-face {
     font-family: "Inter";
     font-weight: 400;
@@ -27,22 +28,695 @@
     src: url("./assets/fonts/RobotoMono-Medium.ttf") format("truetype");
   }
 
+  /*
+   * Bridge shadcn semantic tokens → Medusa UI tokens.
+   * Medusa injects --bg-*, --fg-*, --border-* on :root / .dark via @bentoco/ui-preset.
+   * Agency shell + shadcn components read --background, --primary, etc.
+   */
   :root {
+    --font-sans: "Stack Sans Text", Inter, ui-sans-serif, system-ui, sans-serif;
+    --font-headline: "Stack Sans Headline", "Stack Sans Text", Inter, sans-serif;
+    --font-notes: "Permanent Marker", cursive;
+    --font-mono: "Roboto Mono", ui-monospace, monospace;
+    /* Bentoco Design Tokens (Light Theme Secondary Mode) — shadcn / agency */
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+
+    --card: #fff8f6;
+    --card-foreground: #1a1a1a;
+
+    --popover: #fff8f6;
+    --popover-foreground: #1a1a1a;
+
+    --primary: #ff5a36; /* Ember */
+    --primary-foreground: #ffffff;
+
+    --secondary: #f1d2d7; /* Blush */
+    --secondary-foreground: #5c4a4e;
+
+    --muted: #d9c5cf; /* Mist */
+    --muted-foreground: #5c4a4e;
+
+    --accent: #ff8a4c; /* Solar */
+    --accent-foreground: #ffffff;
+
+    --destructive: #f31b48; /* Crimson */
+    --destructive-foreground: #ffffff;
+
+    --border: #d9c5cf; /* Mist */
+    --input: #d9c5cf;
+    --ring: #f31b48; /* Crimson */
+
+    --radius: 0.5rem;
+
+    --sidebar-width: 16rem;
+    --sidebar-width-icon: 3rem;
+    --sidebar-background: #fff8f6;
+    --sidebar-foreground: #1a1a1a;
+    --sidebar-primary: #ff5a36;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f1d2d7;
+    --sidebar-accent-foreground: #5c4a4e;
+    --sidebar-border: #d9c5cf;
+    --sidebar-ring: #f31b48;
+
+    --agency-main-bg: #ffffff;
+    --agency-canvas-bg: #fff8f6;
+
     @apply bg-ui-bg-subtle text-ui-fg-base antialiased;
     text-rendering: optimizeLegibility;
+    font-family: var(--font-sans);
+  }
+
+  html,
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .font-notes {
+    font-family: var(--font-notes);
+  }
+
+  .font-mono,
+  code,
+  kbd,
+  pre {
+    font-family: var(--font-mono);
+  }
+
+  html.dark,
+  html.dark body,
+  html.dark #root {
+    background-color: #000000 !important;
+    color: var(--foreground);
+  }
+
+  .dark {
+    /* Bentoco dark (primary) — pure black + charcoal, Ember accents.
+       No warm-brown fills (#1A1215 / #2A1B20) on large surfaces. */
+    --background: #000000;
+    --foreground: #f4f4f5;
+
+    --card: #141414;
+    --card-foreground: #f4f4f5;
+
+    --popover: #141414;
+    --popover-foreground: #f4f4f5;
+
+    --primary: #ff5a36; /* Ember */
+    --primary-foreground: #ffffff;
+
+    --secondary: #141414;
+    --secondary-foreground: #f5edef;
+
+    --muted: #141414;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #ff8a4c; /* Solar */
+    --accent-foreground: #f5edef;
+
+    --destructive: #f31b48; /* Crimson */
+    --destructive-foreground: #f5edef;
+
+    --border: rgba(255, 255, 255, 0.1);
+    --input: rgba(255, 255, 255, 0.1);
+    --ring: #ff5a36; /* Ember focus, matches agency CTAs */
+
+    --sidebar-background: #000000;
+    --sidebar-foreground: #f4f4f5;
+    --sidebar-primary: #ff5a36;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: rgba(255, 90, 54, 0.12); /* Ember wash for selected */
+    --sidebar-accent-foreground: #f4f4f5;
+    --sidebar-border: rgba(255, 255, 255, 0.08);
+    --sidebar-ring: #ff5a36;
+
+    --agency-main-bg: #000000;
+    --agency-canvas-bg: #000000;
   }
 }
 
+/*
+ * Merchant Medusa UI tokens (--bg-*, --fg-*, --border-*, --button-*)
+ * remapped to the same Bentoco palette as the agency dashboard.
+ * Outside @layer so these win over ui-preset addBase zinc defaults.
+ * Source: desgineTocken/Bentoco — DESIGN.md
+ */
+:root {
+  /* Surfaces */
+  --bg-base: #ffffff;
+  --bg-base-hover: #fff8f6;
+  --bg-base-pressed: #f1d2d7;
+  --bg-subtle: #fff8f6;
+  --bg-subtle-hover: #f1d2d7;
+  --bg-subtle-pressed: #d9c5cf;
+  --bg-component: #fff8f6;
+  --bg-component-hover: #f1d2d7;
+  --bg-component-pressed: #d9c5cf;
+  --bg-field: #ffffff;
+  --bg-field-hover: #fff8f6;
+  --bg-field-component: #ffffff;
+  --bg-field-component-hover: #fff8f6;
+  --bg-interactive: #ff5a36; /* Ember */
+  --bg-highlight: #ffefeb; /* ember-50 */
+  --bg-highlight-hover: #ffccc1; /* ember-100 */
+  --bg-disabled: #f1d2d7;
+  --bg-overlay: rgba(26, 16, 18, 0.45);
+  --bg-switch-off: #d9c5cf;
+  --bg-switch-off-hover: #c5b3bc;
+
+  /* Text */
+  --fg-base: #1a1a1a;
+  --fg-subtle: #5c4a4e;
+  --fg-muted: #857476;
+  --fg-disabled: #c5b3bc;
+  --fg-on-color: #ffffff;
+  --fg-on-inverted: #ffffff;
+  --fg-interactive: #ff5a36; /* Ember */
+  --fg-interactive-hover: #e85231; /* ember-600 */
+  --fg-error: #f31b48; /* Crimson */
+
+  /* Borders */
+  --border-base: #d9c5cf; /* Mist */
+  --border-strong: #c5b3bc;
+  --border-interactive: #ff5a36;
+  --border-error: #f31b48;
+  --border-danger: #dd1942;
+  --border-transparent: rgba(255, 255, 255, 0);
+  --border-menu-top: #f1d2d7;
+  --border-menu-bot: #ffffff;
+
+  /* Buttons */
+  --button-inverted: #ff5a36;
+  --button-inverted-hover: #e85231;
+  --button-inverted-pressed: #b54026;
+  --button-neutral: #ffffff;
+  --button-neutral-hover: #fff8f6;
+  --button-neutral-pressed: #f1d2d7;
+  --button-danger: #f31b48;
+  --button-danger-hover: #dd1942;
+  --button-danger-pressed: #ad1333;
+  --button-transparent: rgba(255, 255, 255, 0);
+  --button-transparent-hover: #fff8f6;
+  --button-transparent-pressed: #f1d2d7;
+
+  /* Tags (warm-shifted neutrals + brand accents) */
+  --tag-neutral-bg: #f3edf0;
+  --tag-neutral-bg-hover: #e6d8df;
+  --tag-neutral-text: #5c4a4e;
+  --tag-neutral-icon: #857476;
+  --tag-neutral-border: #d9c5cf;
+  --tag-blue-bg: #ffefeb;
+  --tag-blue-bg-hover: #ffccc1;
+  --tag-blue-text: #b54026;
+  --tag-blue-icon: #ff5a36;
+  --tag-blue-border: #ffb3a3;
+  --tag-green-bg: #ecfdf5;
+  --tag-green-bg-hover: #d1fae5;
+  --tag-green-text: #065f46;
+  --tag-green-icon: #10b981;
+  --tag-green-border: #a7f3d0;
+  --tag-orange-bg: #fff3ed;
+  --tag-orange-bg-hover: #ffdbc8;
+  --tag-orange-text: #9a3412;
+  --tag-orange-icon: #ff8a4c;
+  --tag-orange-border: #ffc9ad;
+  --tag-red-bg: #fee8ed;
+  --tag-red-bg-hover: #fbb8c6;
+  --tag-red-text: #9f1239;
+  --tag-red-icon: #f31b48;
+  --tag-red-border: #f996ab;
+  --tag-purple-bg: #ffecf1;
+  --tag-purple-bg-hover: #ffc3d4;
+  --tag-purple-text: #b52c52;
+  --tag-purple-icon: #ff3e74;
+  --tag-purple-border: #ffa6bf;
+
+  --contrast-bg-base: #1a1215;
+  --contrast-bg-base-hover: #2a1b20;
+  --contrast-bg-base-pressed: #3a2830;
+  --contrast-bg-subtle: #141414;
+  --contrast-fg-primary: rgba(245, 237, 239, 0.92);
+  --contrast-fg-secondary: rgba(245, 237, 239, 0.56);
+  --contrast-border-base: rgba(255, 255, 255, 0.12);
+  --contrast-border-top: #1a1215;
+  --contrast-border-bot: rgba(255, 255, 255, 0.08);
+
+  --alpha-250: rgba(26, 16, 18, 0.1);
+  --alpha-400: rgba(26, 16, 18, 0.24);
+}
+
+html.dark,
+.dark {
+  /*
+   * Merchant Medusa tokens — same as agency dark shell:
+   * pure black canvas, neutral #141414 surfaces, Ember accents.
+   * !important so these always beat ui-preset addBase (zinc/brown).
+   */
+  --bg-base: #141414 !important;
+  --bg-base-hover: #1c1c1c !important;
+  --bg-base-pressed: #262626 !important;
+  --bg-subtle: #000000 !important;
+  --bg-subtle-hover: #0a0a0a !important;
+  --bg-subtle-pressed: #141414 !important;
+  --bg-component: #141414 !important;
+  --bg-component-hover: #1c1c1c !important;
+  --bg-component-pressed: #262626 !important;
+  --bg-field: rgba(255, 255, 255, 0.04) !important;
+  --bg-field-hover: rgba(255, 255, 255, 0.08) !important;
+  --bg-field-component: #141414 !important;
+  --bg-field-component-hover: #1c1c1c !important;
+  --bg-interactive: #ff5a36 !important; /* Ember */
+  --bg-highlight: rgba(255, 90, 54, 0.12) !important;
+  --bg-highlight-hover: rgba(255, 90, 54, 0.18) !important;
+  --bg-disabled: #141414 !important;
+  --bg-overlay: rgba(0, 0, 0, 0.72) !important;
+  --bg-switch-off: #262626 !important;
+  --bg-switch-off-hover: #333333 !important;
+
+  /* Semantic Bentoco tokens (if anything reads --color-bg-*) */
+  --color-bg-base: #000000 !important;
+  --color-bg-surface: #141414 !important;
+  --color-bg-subtle: #0a0a0a !important;
+  --color-bg-muted: #1c1c1c !important;
+  --color-border-default: rgba(255, 255, 255, 0.1) !important;
+
+  /* Text — cool neutrals on dark (not warm blush/orange cast) */
+  --fg-base: #f4f4f5 !important;
+  --fg-subtle: #a1a1aa !important;
+  --fg-muted: #71717a !important;
+  --fg-disabled: #52525b !important;
+  --fg-on-color: #ffffff !important;
+  --fg-on-inverted: #000000 !important;
+  /* Interactive stays Ember for real links/CTAs only */
+  --fg-interactive: #ff5a36 !important;
+  --fg-interactive-hover: #ff8a4c !important; /* Solar */
+  --fg-error: #fb7185 !important;
+
+  /* Borders — cool white alpha, not brown */
+  --border-base: rgba(255, 255, 255, 0.1) !important;
+  --border-strong: rgba(255, 255, 255, 0.16) !important;
+  --border-interactive: #ff5a36 !important;
+  --border-error: #f31b48 !important;
+  --border-danger: #e11d48 !important;
+  --border-transparent: rgba(255, 255, 255, 0) !important;
+  --border-menu-top: #141414 !important;
+  --border-menu-bot: rgba(255, 255, 255, 0.08) !important;
+
+  /* Buttons */
+  --button-inverted: #ff5a36 !important;
+  --button-inverted-hover: #e85231 !important;
+  --button-inverted-pressed: #b54026 !important;
+  --button-neutral: rgba(255, 255, 255, 0.06) !important;
+  --button-neutral-hover: rgba(255, 255, 255, 0.1) !important;
+  --button-neutral-pressed: rgba(255, 255, 255, 0.14) !important;
+  --button-danger: #e11d48 !important;
+  --button-danger-hover: #be123c !important;
+  --button-danger-pressed: #f31b48 !important;
+  --button-transparent: rgba(255, 255, 255, 0) !important;
+  --button-transparent-hover: rgba(255, 255, 255, 0.08) !important;
+  --button-transparent-pressed: rgba(255, 255, 255, 0.12) !important;
+
+  /* Tags — neutral charcoal + brand accents */
+  --tag-neutral-bg: rgba(255, 255, 255, 0.08) !important;
+  --tag-neutral-bg-hover: rgba(255, 255, 255, 0.12) !important;
+  --tag-neutral-text: #e4e4e7 !important;
+  --tag-neutral-icon: #a1a1aa !important;
+  --tag-neutral-border: rgba(255, 255, 255, 0.08) !important;
+  --tag-blue-bg: rgba(255, 90, 54, 0.12) !important;
+  --tag-blue-bg-hover: rgba(255, 90, 54, 0.2) !important;
+  --tag-blue-text: #ffb3a3 !important;
+  --tag-blue-icon: #ff5a36 !important;
+  --tag-blue-border: rgba(255, 90, 54, 0.35) !important;
+  --tag-green-bg: rgba(47, 174, 102, 0.15) !important;
+  --tag-green-bg-hover: rgba(47, 174, 102, 0.25) !important;
+  --tag-green-text: #6ee7b7 !important;
+  --tag-green-icon: #2fae66 !important;
+  --tag-green-border: rgba(47, 174, 102, 0.35) !important;
+  --tag-orange-bg: rgba(255, 138, 76, 0.12) !important;
+  --tag-orange-bg-hover: rgba(255, 138, 76, 0.2) !important;
+  --tag-orange-text: #fdba74 !important;
+  --tag-orange-icon: #ff8a4c !important;
+  --tag-orange-border: rgba(255, 138, 76, 0.35) !important;
+  --tag-red-bg: rgba(243, 27, 72, 0.12) !important;
+  --tag-red-bg-hover: rgba(243, 27, 72, 0.2) !important;
+  --tag-red-text: #fda4af !important;
+  --tag-red-icon: #f31b48 !important;
+  --tag-red-border: rgba(243, 27, 72, 0.35) !important;
+  --tag-purple-bg: rgba(255, 62, 116, 0.12) !important;
+  --tag-purple-bg-hover: rgba(255, 62, 116, 0.2) !important;
+  --tag-purple-text: #ffc3d4 !important;
+  --tag-purple-icon: #ff3e74 !important;
+  --tag-purple-border: rgba(255, 62, 116, 0.35) !important;
+
+  --contrast-bg-base: #141414 !important;
+  --contrast-bg-base-hover: #1c1c1c !important;
+  --contrast-bg-base-pressed: #262626 !important;
+  --contrast-bg-subtle: rgba(255, 255, 255, 0.04) !important;
+  --contrast-fg-primary: rgba(245, 237, 239, 0.92) !important;
+  --contrast-fg-secondary: rgba(245, 237, 239, 0.56) !important;
+  --contrast-border-base: rgba(255, 255, 255, 0.16) !important;
+  --contrast-border-top: #141414 !important;
+  --contrast-border-bot: rgba(255, 255, 255, 0.08) !important;
+
+  --alpha-250: rgba(255, 255, 255, 0.1) !important;
+  --alpha-400: rgba(255, 255, 255, 0.24) !important;
+
+  /* Elevation shadows — cool zinc ring, not warm brown */
+  --elevation-card-rest: 0px -1px 0px 0px rgba(255, 255, 255, 0.06),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.08),
+    0px 0px 0px 1px #1c1c1c,
+    0px 1px 2px 0px rgba(0, 0, 0, 0.4),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.4) !important;
+  --elevation-card-hover: 0px -1px 0px 0px rgba(255, 255, 255, 0.06),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.08),
+    0px 0px 0px 1px #1c1c1c,
+    0px 1px 4px 0px rgba(0, 0, 0, 0.5),
+    0px 2px 8px 0px rgba(0, 0, 0, 0.5) !important;
+  --borders-base: 0px -1px 0px 0px rgba(255, 255, 255, 0.06),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.08),
+    0px 0px 0px 1px #1c1c1c,
+    0px 0px 1px 1.5px rgba(0, 0, 0, 0.3),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+/*
+ * Hard surface paint — pure black canvas, charcoal cards.
+ * Table headers (bg-subtle inside cards) must NOT go pure black.
+ */
+html.dark,
+html.dark body,
+html.dark #root,
+.dark,
+.dark body {
+  background-color: #000000 !important;
+  color: #f4f4f5 !important;
+}
+
+html.dark .bg-ui-bg-subtle,
+.dark .bg-ui-bg-subtle {
+  background-color: #000000 !important;
+}
+
+/* Elevated cards / rows */
+html.dark .bg-ui-bg-base,
+.dark .bg-ui-bg-base {
+  background-color: #141414 !important;
+}
+
+html.dark .bg-ui-bg-component,
+.dark .bg-ui-bg-component {
+  background-color: #141414 !important;
+}
+
+/*
+ * Subtle fills *inside* a card/base surface (table thead, sticky header cells)
+ * → near-charcoal step, not pure black “patch”.
+ */
+html.dark .bg-ui-bg-base .bg-ui-bg-subtle,
+.dark .bg-ui-bg-base .bg-ui-bg-subtle,
+html.dark .bg-ui-bg-base thead tr,
+.dark .bg-ui-bg-base thead tr,
+html.dark .bg-ui-bg-base thead th,
+.dark .bg-ui-bg-base thead th {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .bg-ui-bg-base .hover\:bg-ui-bg-subtle:hover,
+.dark .bg-ui-bg-base .hover\:bg-ui-bg-subtle:hover,
+html.dark .bg-ui-bg-base thead tr:hover,
+.dark .bg-ui-bg-base thead tr:hover {
+  background-color: #1f1f1f !important;
+}
+
+html.dark .bg-ui-bg-field,
+.dark .bg-ui-bg-field {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+html.dark .bg-ui-bg-highlight,
+.dark .bg-ui-bg-highlight {
+  background-color: rgba(255, 90, 54, 0.12) !important;
+}
+
+/*
+ * Cards use neutral elevation only — NO Ember ring on every container.
+ * (Previously .bg-ui-bg-base.shadow-elevation-card-rest painted all cards orange.)
+ */
+html.dark .shadow-elevation-card-rest,
+.dark .shadow-elevation-card-rest {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.35) !important;
+}
+
+/*
+ * Active / selected sidebar nav — aurora gradient fill, no outline.
+ * Palette: Mist → Blush → Solar → Ember → Crimson (Bentoco aurora)
+ */
+aside a.bg-ui-bg-base.shadow-elevation-card-rest,
+nav a.bg-ui-bg-base.shadow-elevation-card-rest,
+aside a[aria-current="page"],
+nav a[aria-current="page"] {
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    135deg,
+    rgba(217, 197, 207, 0.28) 0%,
+    rgba(241, 210, 215, 0.24) 22%,
+    rgba(255, 138, 76, 0.26) 48%,
+    rgba(255, 90, 54, 0.3) 72%,
+    rgba(243, 27, 72, 0.24) 100%
+  ) !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #fafafa !important;
+}
+
+/* Light theme: softer aurora wash, dark text for contrast */
+html:not(.dark) aside a.bg-ui-bg-base.shadow-elevation-card-rest,
+html:not(.dark) nav a.bg-ui-bg-base.shadow-elevation-card-rest,
+html:not(.dark) aside a[aria-current="page"],
+html:not(.dark) nav a[aria-current="page"] {
+  background-image: linear-gradient(
+    135deg,
+    rgba(217, 197, 207, 0.55) 0%,
+    rgba(241, 210, 215, 0.5) 22%,
+    rgba(255, 138, 76, 0.35) 48%,
+    rgba(255, 90, 54, 0.32) 72%,
+    rgba(243, 27, 72, 0.28) 100%
+  ) !important;
+  color: #1a1a1a !important;
+}
+
+aside a.bg-ui-bg-base.shadow-elevation-card-rest:hover,
+nav a.bg-ui-bg-base.shadow-elevation-card-rest:hover,
+aside a[aria-current="page"]:hover,
+nav a[aria-current="page"]:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgba(217, 197, 207, 0.34) 0%,
+    rgba(241, 210, 215, 0.3) 22%,
+    rgba(255, 138, 76, 0.32) 48%,
+    rgba(255, 90, 54, 0.38) 72%,
+    rgba(243, 27, 72, 0.3) 100%
+  ) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+aside a.bg-ui-bg-base.shadow-elevation-card-rest svg,
+nav a.bg-ui-bg-base.shadow-elevation-card-rest svg,
+aside a[aria-current="page"] svg,
+nav a[aria-current="page"] svg,
+aside a.bg-ui-bg-base.shadow-elevation-card-rest [class*="text-ui-fg"],
+nav a.bg-ui-bg-base.shadow-elevation-card-rest [class*="text-ui-fg"] {
+  color: inherit !important;
+}
+
+/* App-wide Stack Sans Text (beats residual Inter in component classes) */
+html,
+body,
+#root,
+[class*="txt-"],
+.font-sans {
+  font-family: var(--font-sans) !important;
+}
+
+/* Cool body / subtle text utilities */
+html.dark .text-ui-fg-base,
+.dark .text-ui-fg-base {
+  color: #f4f4f5 !important;
+}
+
+html.dark .text-ui-fg-subtle,
+.dark .text-ui-fg-subtle {
+  color: #a1a1aa !important;
+}
+
+html.dark .text-ui-fg-muted,
+.dark .text-ui-fg-muted {
+  color: #71717a !important;
+}
+
+/* Ember only for true interactive links (not all table text) */
+html.dark .text-ui-fg-interactive,
+.dark .text-ui-fg-interactive {
+  color: #ff5a36 !important;
+}
+
+html.dark .bg-ui-button-inverted,
+.dark .bg-ui-button-inverted,
+html.dark button.bg-ui-button-inverted,
+.dark button.bg-ui-button-inverted {
+  background-color: #ff5a36 !important;
+  color: #ffffff !important;
+}
+
+/* Focus ring: soft white, not permanent Ember outline on every control */
+html.dark {
+  --borders-focus: 0px 0px 0px 1px #141414, 0px 0px 0px 3px rgba(255, 90, 54, 0.45) !important;
+  --borders-interactive-with-active: 0px 0px 0px 1px #ff5a36,
+    0px 0px 0px 4px rgba(255, 90, 54, 0.2) !important;
+}
+
 @layer components {
+  /* Primary Buttons (agency + merchant Medusa inverted CTAs) */
+  [data-slot="button"][variant="default"],
+  .bg-ui-button-inverted,
+  button.bg-ui-button-inverted {
+    background-color: var(--button-inverted, var(--primary)) !important;
+    color: var(--fg-on-color, var(--primary-foreground)) !important;
+    border-color: transparent !important;
+  }
+
+  [data-slot="button"][variant="default"]:hover,
+  .bg-ui-button-inverted:hover,
+  button.bg-ui-button-inverted:hover {
+    background-color: var(--button-inverted-hover, #e85231) !important;
+    color: var(--fg-on-color, var(--primary-foreground)) !important;
+  }
+
+  /* Secondary Buttons */
+  [data-slot="button"][variant="secondary"],
+  [data-slot="button"][variant="outline"],
+  .bg-ui-button-neutral,
+  button.bg-ui-button-neutral {
+    background-color: var(--button-neutral, var(--secondary)) !important;
+    color: var(--fg-base, var(--secondary-foreground)) !important;
+    border-color: var(--border-base, var(--border)) !important;
+  }
+
+  [data-slot="button"][variant="secondary"]:hover,
+  [data-slot="button"][variant="outline"]:hover,
+  .bg-ui-button-neutral:hover,
+  button.bg-ui-button-neutral:hover {
+    background-color: var(--button-neutral-hover, #dbbfc4) !important;
+    color: var(--fg-base, var(--secondary-foreground)) !important;
+  }
+
+  /* Interactive links / accents used heavily in merchant admin */
+  .text-ui-fg-interactive {
+    color: var(--fg-interactive) !important;
+  }
+
+  .text-ui-fg-interactive:hover,
+  .hover\:text-ui-fg-interactive-hover:hover {
+    color: var(--fg-interactive-hover) !important;
+  }
+
+  .bg-ui-bg-interactive {
+    background-color: var(--bg-interactive) !important;
+  }
+
+  .border-ui-border-interactive {
+    border-color: var(--border-interactive) !important;
+  }
+
+  /* Recessed shell chrome (behind / beside main) */
+  .agency-canvas {
+    background-color: var(--agency-canvas-bg, var(--bg-subtle));
+  }
+
+  /* Elevated main dashboard surface (distinct from canvas + sidebar) */
+  .agency-main-panel {
+    background-color: var(--agency-main-bg, var(--bg-base));
+  }
+
+  /**
+   * Touch target: ≥44×44px hit area (WCAG 2.5.5 / mobile guidance).
+   * Visual control can stay smaller; padding expands the hit box.
+   */
+  .agency-touch-target {
+    box-sizing: border-box;
+    min-width: 2.75rem; /* 44px */
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /**
+   * Scoped scrollbars — only agency shell scroll regions (not global *).
+   * Thin, low-contrast bars stay discoverable for a11y.
+   */
+  .agency-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--fg-muted) 45%, transparent)
+      transparent;
+  }
+
+  .agency-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .agency-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .agency-scroll::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--fg-muted) 35%, transparent);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  .agency-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in srgb, var(--fg-muted) 55%, transparent);
+  }
+
+  /**
+   * prefers-reduced-motion — agency shell only (not global admin).
+   * Sidebar collapse uses transition-[width]/[left,right,width] duration-200;
+   * motion-sensitive users get near-instant state changes instead of animated chrome.
+   * 0.01ms (not 0) preserves transitionend for any listeners while removing perceptible motion.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    .agency-canvas,
+    .agency-canvas *,
+    .agency-main-panel,
+    .agency-main-panel * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   .worfklow-grid {
     background-image: radial-gradient(black 1px, transparent 0);
     background-size: 40px 40px;
     background: repeat;
   }
-}
-
-.worfklow-grid {
-  background-image: radial-gradient(black 1px, transparent 0);
-  background-size: 40px 40px;
-  background: repeat;
 }

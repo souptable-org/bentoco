@@ -1,4 +1,4 @@
-import preset from "@medusajs/ui-preset"
+import preset from "@bentoco/ui-preset"
 import { Config } from "tailwindcss"
 
 const config: Config = {

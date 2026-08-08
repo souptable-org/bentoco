@@ -69,12 +69,12 @@ jobs:
           extension: pipeline
           skip-build: "true"
 
-      # The Medusa-only ESLint config resolves `@medusajs/eslint-plugin` from its
+      # The Medusa-only ESLint config resolves `@bentoco/eslint-plugin` from its
       # built output, so build just that package.
       - name: Build ESLint plugin
-        run: yarn workspace @medusajs/eslint-plugin build
+        run: yarn workspace @bentoco/eslint-plugin build
 
-      # Runs ONLY the @medusajs/eslint-plugin convention rules (scope/rules from
+      # Runs ONLY the @bentoco/eslint-plugin convention rules (scope/rules from
       # the root config, via eslint.medusa.cjs). ESLint exits non-zero on errors,
       # so a Medusa rule error fails this check; warnings do not.
       - name: Lint Medusa rules

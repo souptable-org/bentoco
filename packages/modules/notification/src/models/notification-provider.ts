@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 import { Notification } from "./notification"
 
 export const NotificationProvider = model.define("notificationProvider", {

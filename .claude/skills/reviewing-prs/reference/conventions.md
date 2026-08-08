@@ -7,7 +7,7 @@ Conventions to verify when reviewing code contributions. Focus on areas relevant
 - **Integration tests required**: Changes to `packages/medusa/src/api/` must include corresponding changes in `integration-tests/http/__tests__/`.
 - **Zod validation**: API routes that accept a request body must validate it with a Zod schema. Look for a `validator` middleware or a `.zod.ts` schema file alongside the route.
 - **HTTP types**: Zod schema changes must be reflected in HTTP types. These can be generated using `packages/cli/http-types-generator`. If a Zod schema changed but no HTTP type changed, flag it.
-- **Typed route arguments**: Request and response types for API routes must use type arguments for query params, request body, and response. The types must be HTTP types from `@medusajs/framework/types`. Example:
+- **Typed route arguments**: Request and response types for API routes must use type arguments for query params, request body, and response. The types must be HTTP types from `@bentoco/framework/types`. Example:
   ```typescript
   // Correct
   export const POST = async (

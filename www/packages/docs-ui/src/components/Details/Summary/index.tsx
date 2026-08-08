@@ -1,6 +1,6 @@
 import React from "react"
 import clsx from "clsx"
-import { PlusMini } from "@medusajs/icons"
+import { PlusMini } from "@bentoco/icons"
 
 export type DetailsSummaryProps = {
   title?: React.ReactNode

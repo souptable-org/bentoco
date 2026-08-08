@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/http-types-generator",
+  "name": "@bentoco/http-types-generator",
   "version": "2.18.0",
   "description": "Generate and validate HTTP TypeScript types",
   "main": "dist/index.js",

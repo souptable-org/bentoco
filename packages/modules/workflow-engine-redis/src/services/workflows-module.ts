@@ -9,19 +9,19 @@ import {
   ModulesSdkTypes,
   WorkflowExecutionDTO,
   WorkflowsSdkTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   InjectManager,
   InjectSharedContext,
   isDefined,
   MedusaContext,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import type {
   ReturnWorkflow,
   UnwrapWorkflowInputDataType,
-} from "@medusajs/framework/workflows-sdk"
-import { SqlEntityManager } from "@medusajs/framework/mikro-orm/postgresql"
+} from "@bentoco/framework/workflows-sdk"
+import { SqlEntityManager } from "@bentoco/framework/mikro-orm/postgresql"
 import { WorkflowExecution } from "@models"
 import {
   WorkflowOrchestratorCancelOptions,

@@ -1,4 +1,4 @@
-import { LoaderOptions, Logger, ModulesSdkTypes } from "@medusajs/types"
+import { LoaderOptions, Logger, ModulesSdkTypes } from "@bentoco/types"
 import { setTimeout } from "timers/promises"
 import { mikroOrmCreateConnection } from "../../dal"
 import { loadDatabaseConfig } from "../load-module-database-config"

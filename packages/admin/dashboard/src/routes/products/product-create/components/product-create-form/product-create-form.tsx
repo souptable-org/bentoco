@@ -1,5 +1,5 @@
-import { AdminFile, HttpTypes } from "@medusajs/types"
-import { Button, ProgressStatus, ProgressTabs, toast } from "@medusajs/ui"
+import { AdminFile, HttpTypes } from "@bentoco/types"
+import { Button, ProgressStatus, ProgressTabs, toast } from "@bentoco/ui"
 import { useEffect, useMemo, useState } from "react"
 import { useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"

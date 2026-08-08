@@ -1,5 +1,5 @@
-import { isDefined, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { isDefined, Modules } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 import { setTimeout } from "timers/promises"
 
 /**

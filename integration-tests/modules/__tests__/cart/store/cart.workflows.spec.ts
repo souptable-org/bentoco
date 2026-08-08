@@ -16,9 +16,9 @@ import {
   updateLineItemsStepId,
   updatePaymentCollectionStepId,
   updateTaxLinesWorkflow,
-} from "@medusajs/core-flows"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { StepResponse } from "@bentoco/framework/workflows-sdk"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   ICartModuleService,
   ICustomerModuleService,
@@ -30,7 +30,7 @@ import {
   IRegionModuleService,
   ISalesChannelModuleService,
   IStockLocationService,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   ContainerRegistrationKeys,
   Modules,
@@ -38,7 +38,7 @@ import {
   PriceListType,
   ProductStatus,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

@@ -1,11 +1,11 @@
-import { SettingsTypes } from "@medusajs/framework/types"
+import { SettingsTypes } from "@bentoco/framework/types"
 import {
   GraphQLEnumType,
   GraphQLObjectType,
   isEnumType,
   isScalarType,
   Kind,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { getComputedColumnRegistry } from "./computed-columns"
 import {
   DiscoveredEntity,

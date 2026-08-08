@@ -3,10 +3,10 @@ import {
   LoaderOptions,
   ModuleServiceInitializeCustomDataLayerOptions,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { ModulesSdkUtils } from "@bentoco/framework/utils"
 
-import { EntitySchema } from "@medusajs/framework/mikro-orm/core"
+import { EntitySchema } from "@bentoco/framework/mikro-orm/core"
 
 export function connectionLoader(entity: EntitySchema) {
   return async (

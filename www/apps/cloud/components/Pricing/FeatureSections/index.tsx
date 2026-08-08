@@ -17,7 +17,7 @@ import {
   Users,
   Window,
   WIP,
-} from "@medusajs/icons"
+} from "@bentoco/icons"
 import { config } from "../../../config"
 
 const P = MDXComponents.p

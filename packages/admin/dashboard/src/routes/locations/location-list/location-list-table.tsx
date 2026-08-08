@@ -1,4 +1,4 @@
-import { Container } from "@medusajs/ui"
+import { Container } from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 

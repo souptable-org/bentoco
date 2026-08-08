@@ -8,9 +8,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Canonical read-only link with `field`.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           { linkable: BlogModule.linkable.post, field: "product_id" },
           ProductModule.linkable.product,
@@ -21,9 +21,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Inverse read-only link with `field` + `primaryKey`.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           { linkable: ProductModule.linkable.product, field: "id" },
           { ...BlogModule.linkable.post.id, primaryKey: "product_id" },
@@ -35,9 +35,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // to draft orders, via the `order` linkable re-aliased to `draft_order`).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import QuoteModule from "../modules/quote"
-        import OrderModule from "@medusajs/medusa/order"
+        import OrderModule from "@bentoco/medusa/order"
         export default defineLink(
           { linkable: QuoteModule.linkable.quote, field: "draft_order_id" },
           { ...OrderModule.linkable.order.id, alias: "draft_order" },
@@ -48,8 +48,8 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Read-only link with inline serviceName-based linkable descriptor + primaryKey on inverse not needed (no spread).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import { CMS_MODULE } from "../modules/cms"
         export default defineLink(
           { linkable: ProductModule.linkable.product, field: "id" },
@@ -67,8 +67,8 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Not a read-only link — no `readOnly` key.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           ProductModule.linkable.product,
@@ -79,8 +79,8 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // `readOnly: false` — does not require field.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           ProductModule.linkable.product,
@@ -99,9 +99,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Aliased defineLink import with valid shape.
     {
       code: `
-        import { defineLink as dl } from "@medusajs/framework/utils"
+        import { defineLink as dl } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default dl(
           { linkable: BlogModule.linkable.post, field: "product_id" },
           ProductModule.linkable.product,
@@ -112,8 +112,8 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // `readOnly` is not a literal boolean — out of scope (statically unknown).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         const flag = true
         export default defineLink(
@@ -128,9 +128,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Read-only link, first arg is a bare linkable member chain (no `field`).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           BlogModule.linkable.post,
           ProductModule.linkable.product,
@@ -142,9 +142,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Read-only link, first arg is an object but without `field`.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           { linkable: BlogModule.linkable.post },
           ProductModule.linkable.product,
@@ -156,9 +156,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Inverse read-only: second arg spreads `.linkable.<y>.id` but no `primaryKey`.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           { linkable: ProductModule.linkable.product, field: "id" },
           { ...BlogModule.linkable.post.id },
@@ -170,9 +170,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Inverse read-only: first arg also missing field → two errors.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           { linkable: ProductModule.linkable.product },
           { ...BlogModule.linkable.post.id },
@@ -187,9 +187,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // Aliased import + missing field.
     {
       code: `
-        import { defineLink as dl } from "@medusajs/framework/utils"
+        import { defineLink as dl } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         export default dl(
           BlogModule.linkable.post,
           ProductModule.linkable.product,
@@ -201,9 +201,9 @@ ruleTester.run("read-only-link-requires-field", rule, {
     // First arg is a non-object (e.g. identifier) — still flagged as missing field.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
-        import ProductModule from "@medusajs/medusa/product"
+        import ProductModule from "@bentoco/medusa/product"
         const first = BlogModule.linkable.post
         export default defineLink(
           first,

@@ -8,7 +8,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // No `if` in the constructor at all.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           return input
         })
@@ -17,7 +17,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // `if` inside a nested createStep callback is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const step = createStep("s", () => {
             if (input.foo) {
@@ -32,7 +32,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // `if` inside a nested transform callback is fine.
     {
       code: `
-        import { createWorkflow, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, transform } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           const value = transform({ input }, (data) => {
             if (data.input.foo) return 1
@@ -45,7 +45,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // `if` inside a createStep nested inside a when().then() callback is fine.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             const step = createStep("s", () => {
@@ -72,7 +72,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // `if` outside any workflow constructor.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         function helper(x) {
           if (x) return 1
           return 2
@@ -85,7 +85,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // Arrow constructor with direct `if`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           if (input) {
             return 1
@@ -98,7 +98,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // Function-expression constructor with direct `if`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", function (input) {
           if (input) {
             return 1
@@ -110,7 +110,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // Aliased import binding.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           if (input) {
             return 1
@@ -122,7 +122,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // `if-else`.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           if (input) {
             return 1
@@ -136,7 +136,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // Multiple `if`s — each flagged.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           if (input) {}
           if (input.foo) {}
@@ -151,7 +151,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // callback runs at workflow-definition time, just like the constructor.
     {
       code: `
-        import { createWorkflow, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           when({ input }, (data) => data.input.foo).then(() => {
             if (input) {
@@ -166,7 +166,7 @@ ruleTester.run("no-if-in-workflow-constructor", rule, {
     // Aliased `when` import is tracked too.
     {
       code: `
-        import { createWorkflow, when as w } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, when as w } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           w({ input }, (data) => data.input.foo).then(() => {
             if (input) {

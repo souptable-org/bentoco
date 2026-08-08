@@ -1,0 +1,5 @@
+import { z } from "@bentoco/framework/zod"
+
+export const AdminIndexSyncPayload = z.object({
+  strategy: z.enum(["full", "reset"]).optional(),
+})

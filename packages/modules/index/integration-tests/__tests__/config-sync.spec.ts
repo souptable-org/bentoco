@@ -1,5 +1,5 @@
-import { ModulesSdkTypes } from "@medusajs/framework/types"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { ModulesSdkTypes } from "@bentoco/framework/types"
+import { toMikroORMEntity } from "@bentoco/framework/utils"
 import { IndexData } from "@models"
 import { buildSchemaObjectRepresentation, Configuration } from "@utils"
 import { baseGraphqlSchema } from "../../src/utils/base-graphql-schema"

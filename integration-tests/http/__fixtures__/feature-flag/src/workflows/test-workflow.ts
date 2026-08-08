@@ -1,5 +1,5 @@
-import { defineFileConfig, FeatureFlag } from "@medusajs/framework/utils"
-import { createStep, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { defineFileConfig, FeatureFlag } from "@bentoco/framework/utils"
+import { createStep, createWorkflow } from "@bentoco/framework/workflows-sdk"
 
 const testWorkflowHandler = jest.fn()
 

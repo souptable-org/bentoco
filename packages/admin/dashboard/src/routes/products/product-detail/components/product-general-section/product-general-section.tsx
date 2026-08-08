@@ -1,6 +1,6 @@
-import { GlobeEurope, PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, StatusBadge, toast, usePrompt } from "@medusajs/ui"
+import { GlobeEurope, PencilSquare, Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading, StatusBadge, toast, usePrompt } from "@bentoco/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 

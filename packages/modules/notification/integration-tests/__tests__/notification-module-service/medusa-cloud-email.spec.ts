@@ -1,6 +1,6 @@
-import { INotificationModuleService } from "@medusajs/framework/types"
-import { Modules, NotificationStatus } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { INotificationModuleService } from "@bentoco/framework/types"
+import { Modules, NotificationStatus } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 import { resolve } from "path"
 
 jest.setTimeout(30000)

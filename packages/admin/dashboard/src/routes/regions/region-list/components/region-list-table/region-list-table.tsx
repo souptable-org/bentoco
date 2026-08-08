@@ -1,5 +1,5 @@
-import type { HttpTypes } from "@medusajs/types"
-import { Button, Container, Heading, Text } from "@medusajs/ui"
+import type { HttpTypes } from "@bentoco/types"
+import { Button, Container, Heading, Text } from "@bentoco/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"

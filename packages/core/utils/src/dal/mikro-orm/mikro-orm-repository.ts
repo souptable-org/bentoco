@@ -8,8 +8,8 @@ import {
   FilterQuery as MikroFilterQuery,
   FindOptions as MikroOptions,
   ReferenceKind,
-} from "@medusajs/deps/mikro-orm/core"
-import { SqlEntityManager } from "@medusajs/deps/mikro-orm/postgresql"
+} from "@bentoco/deps/mikro-orm/core"
+import { SqlEntityManager } from "@bentoco/deps/mikro-orm/postgresql"
 import {
   Context,
   DAL,
@@ -22,7 +22,7 @@ import {
   RepositoryService,
   RepositoryTransformOptions,
   UpsertWithReplaceConfig,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   arrayDifference,
   isObject,

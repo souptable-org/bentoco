@@ -1,13 +1,13 @@
 import {
   IPromotionModuleService,
   LinkWorkflowInput,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { Modules } from "@bentoco/framework/utils"
 import {
   StepResponse,
   WorkflowData,
   createStep,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 
 export const addOrRemoveCampaignPromotionsStepId =
   "add-or-remove-campaign-promotions"

@@ -4,7 +4,7 @@ import {
   CreateProductWorkflowInputDTO,
   ProductTypes,
   UpdateProductWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   createWorkflow,
   parallelize,
@@ -12,7 +12,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { createProductsWorkflow } from "./create-products"
 import { deleteProductsWorkflow } from "./delete-products"
 import { updateProductsWorkflow } from "./update-products"

@@ -1,5 +1,5 @@
-import { EventBusTypes, InferEntityType } from "@medusajs/framework/types"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { EventBusTypes, InferEntityType } from "@bentoco/framework/types"
+import { toMikroORMEntity } from "@bentoco/framework/utils"
 import { IndexData, IndexRelation } from "@models"
 import {
   createIndexTestBed,

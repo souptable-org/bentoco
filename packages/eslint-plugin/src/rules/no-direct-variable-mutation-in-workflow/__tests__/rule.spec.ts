@@ -8,7 +8,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // No mutations or recomputations in the constructor.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => 1)
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -19,7 +19,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Mutation/recomputation INSIDE a nested transform callback is fine.
     {
       code: `
-        import { createWorkflow, createStep, transform } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, transform } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -34,7 +34,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Mutation inside a nested createStep callback is fine (it's runtime, not def-time).
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -50,7 +50,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Pass-through usage is fine (no mutation, no recomputation).
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => 1)
         const step2 = createStep("s2", (data) => data + 1)
         createWorkflow("my-workflow", (input) => {
@@ -63,7 +63,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Template literal with no interpolation is fine.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => 1)
         createWorkflow("my-workflow", (input) => {
           const result = step1(\`hello world\`)
@@ -89,7 +89,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Object property assignment.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -102,7 +102,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Increment.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -115,7 +115,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Let-reassignment.
     {
       code: `
-        import { createWorkflow } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow } from "@bentoco/framework/workflows-sdk"
         createWorkflow("my-workflow", (input) => {
           let counter = 0
           counter = 5
@@ -127,7 +127,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Arithmetic on a step output.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => 1)
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -140,7 +140,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Arithmetic on the workflow input — also a placeholder.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => 1)
         createWorkflow("my-workflow", (input) => {
           const value = input.value + 1
@@ -153,7 +153,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Template literal interpolating a placeholder.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ name: "x" }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -166,7 +166,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Aliased createWorkflow import still tracked.
     {
       code: `
-        import { createWorkflow as cw } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow as cw } from "@bentoco/framework/workflows-sdk"
         cw("my-workflow", (input) => {
           input.value = 5
           return input
@@ -177,7 +177,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Mutation inside a when().then() callback also flagged.
     {
       code: `
-        import { createWorkflow, createStep, when } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep, when } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)
@@ -192,7 +192,7 @@ ruleTester.run("no-direct-variable-mutation-in-workflow", rule, {
     // Multiple violations in one workflow.
     {
       code: `
-        import { createWorkflow, createStep } from "@medusajs/framework/workflows-sdk"
+        import { createWorkflow, createStep } from "@bentoco/framework/workflows-sdk"
         const step1 = createStep("s1", () => ({ count: 1 }))
         createWorkflow("my-workflow", (input) => {
           const result = step1(input)

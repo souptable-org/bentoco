@@ -1,4 +1,4 @@
-# @medusajs/http-types-generator
+# @bentoco/http-types-generator
 
 CLI tool that generates and validates TypeScript HTTP types from Zod validator schemas.
 
@@ -70,9 +70,9 @@ yarn validate:http-types [options]
 ### Installation
 
 ```bash
-npm install --save-dev @medusajs/http-types-generator
+npm install --save-dev @bentoco/http-types-generator
 # or run without installing:
-npx @medusajs/http-types-generator generate
+npx @bentoco/http-types-generator generate
 ```
 
 ### Configuration
@@ -88,8 +88,8 @@ Place an `http-types.config.json` file in your project root. All fields are opti
   "outputBase": "src/types/http",
   "tsconfig": "tsconfig.json",
   "importSources": {
-    "commonRequest": "@medusajs/framework/types",
-    "dal": "@medusajs/framework/types"
+    "commonRequest": "@bentoco/framework/types",
+    "dal": "@bentoco/framework/types"
   },
   "validatorPathPattern": "/api/([^/]+)/([^/]+)/validators\\.ts$",
   "publicPrefixes": ["Admin", "Store"]
@@ -101,8 +101,8 @@ Place an `http-types.config.json` file in your project root. All fields are opti
 | `validatorGlobs` | Glob patterns (relative to project root) keyed by area name. | `{ admin: "**/api/admin/*/validators.ts", store: "**/api/store/*/validators.ts" }` |
 | `outputBase` | Root directory for generated files, relative to project root. | `"src/types/http"` |
 | `tsconfig` | tsconfig filename at the project root used when creating the TypeScript program. | `"tsconfig.json"` |
-| `importSources.commonRequest` | Module that exports `FindParams` and `SelectParams`. | `"@medusajs/framework/types"` |
-| `importSources.dal` | Module that exports `BaseFilterable` and `OperatorMap`. | `"@medusajs/framework/types"` |
+| `importSources.commonRequest` | Module that exports `FindParams` and `SelectParams`. | `"@bentoco/framework/types"` |
+| `importSources.dal` | Module that exports `BaseFilterable` and `OperatorMap`. | `"@bentoco/framework/types"` |
 | `validatorPathPattern` | Regex (no surrounding `/`) with two capture groups: `(area, routeDir)`. | `"/api/([^/]+)/([^/]+)/validators\\.ts$"` |
 | `publicPrefixes` | Only schemas whose name starts with one of these prefixes are processed. | `["Admin", "Store"]` |
 
@@ -126,10 +126,10 @@ Export names must start with one of the `publicPrefixes`. The suffix determines 
 
 ```bash
 # Generate
-npx @medusajs/http-types-generator generate --dry-run
-npx @medusajs/http-types-generator generate --domain products
+npx @bentoco/http-types-generator generate --dry-run
+npx @bentoco/http-types-generator generate --domain products
 
 # Validate
-npx @medusajs/http-types-generator validate
-npx @medusajs/http-types-generator validate --ci
+npx @bentoco/http-types-generator validate
+npx @bentoco/http-types-generator validate --ci
 ```

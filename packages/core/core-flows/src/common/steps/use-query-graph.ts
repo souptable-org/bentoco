@@ -3,9 +3,9 @@ import {
   RemoteJoinerOptions,
   RemoteQueryFunction,
   RemoteQueryInput,
-} from "@medusajs/framework/types"
-import { createStep, StepFunction, StepResponse } from "@medusajs/workflows-sdk"
-import { ContainerRegistrationKeys } from "@medusajs/utils"
+} from "@bentoco/framework/types"
+import { createStep, StepFunction, StepResponse } from "@bentoco/workflows-sdk"
+import { ContainerRegistrationKeys } from "@bentoco/utils"
 
 export type UseQueryGraphStepInput<
   TEntry extends string,

@@ -1,8 +1,8 @@
 import type {
   AuthenticatedMedusaRequest,
   MedusaResponse,
-} from "@medusajs/framework";
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils";
+} from "@bentoco/framework";
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils";
 import { AdminGetTransactionsParams, AdminTransactionsResponse } from "../../../../../types";
 
 export const GET = async (

@@ -1,5 +1,5 @@
-import { SalesChannelDTO } from "@medusajs/types";
-import { Tooltip } from "@medusajs/ui";
+import { SalesChannelDTO } from "@bentoco/types";
+import { Tooltip } from "@bentoco/ui";
 import { PlaceholderCell } from "../../placeholder-cell";
 
 type SalesChannelsCellProps = {

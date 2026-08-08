@@ -1,5 +1,5 @@
 // TODO: Comment temporarely and we will re enable it in the near future #14478
-// import { EventOptions } from "@medusajs/types"
+// import { EventOptions } from "@bentoco/types"
 
 /**
  * @category Cart
@@ -1151,7 +1151,7 @@ export const ReservationItemWorkflowEvents = {
 } as const
 
 // TODO: Comment temporarely and we will re enable it in the near future #14478
-// declare module "@medusajs/types" {
+// declare module "@bentoco/types" {
 //   export interface EventBusEventsOptions {
 //     // Cart events
 //     [CartWorkflowEvents.CREATED]?: EventOptions

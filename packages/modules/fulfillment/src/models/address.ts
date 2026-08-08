@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@bentoco/framework/utils"
 
 export const FulfillmentAddress = model.define("fulfillment_address", {
   id: model.id({ prefix: "fuladdr" }).primaryKey(),

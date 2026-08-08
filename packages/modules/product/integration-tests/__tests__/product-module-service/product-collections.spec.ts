@@ -1,12 +1,12 @@
-import { IProductModuleService } from "@medusajs/framework/types"
+import { IProductModuleService } from "@bentoco/framework/types"
 import {
   Modules,
   ProductStatus,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@bentoco/test-utils"
 import { Product, ProductCollection } from "@models"
 import { createCollections } from "../../__fixtures__/product"
 

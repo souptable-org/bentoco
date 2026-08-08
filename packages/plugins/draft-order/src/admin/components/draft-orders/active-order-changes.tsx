@@ -1,5 +1,5 @@
-import { ExclamationCircleSolid } from "@medusajs/icons"
-import { Button, Container, Divider, Heading, Text, toast } from "@medusajs/ui"
+import { ExclamationCircleSolid } from "@bentoco/icons"
+import { Button, Container, Divider, Heading, Text, toast } from "@bentoco/ui"
 import { useLocation } from "react-router-dom"
 import { useDraftOrderCancelEdit } from "../../hooks/api/draft-orders"
 import { useOrderPreview } from "../../hooks/api/orders"

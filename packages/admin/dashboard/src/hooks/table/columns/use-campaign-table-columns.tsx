@@ -1,6 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table"
 
-import { AdminCampaign } from "@medusajs/types"
+import { AdminCampaign } from "@bentoco/types"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { DateCell } from "../../../components/table/table-cells/common/date-cell"

@@ -1,1 +1,1 @@
-# `@medusajs/admin-bundler`
+# `@bentoco/admin-bundler`

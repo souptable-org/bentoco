@@ -1,13 +1,13 @@
-import type { ProjectConfigOptions } from "@medusajs/framework/types"
+import type { ProjectConfigOptions } from "@bentoco/framework/types"
 import {
   AuthWorkflowEvents,
   generateJwtToken,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { createPasswordResetTokenStep } from "../steps"
 

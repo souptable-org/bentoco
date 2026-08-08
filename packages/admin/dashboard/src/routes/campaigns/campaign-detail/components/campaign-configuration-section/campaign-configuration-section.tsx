@@ -1,7 +1,7 @@
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Container, Heading } from "@bentoco/ui"
 
-import { PencilSquare } from "@medusajs/icons"
+import { PencilSquare } from "@bentoco/icons"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { DateRangeDisplay } from "../../../../../components/common/date-range-display"

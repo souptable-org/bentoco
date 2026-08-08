@@ -1,12 +1,12 @@
 import type {
   CreateTaxRateRuleDTO,
   TaxRateRuleDTO,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { createTaxRateRulesStep } from "../steps"
 
 /**

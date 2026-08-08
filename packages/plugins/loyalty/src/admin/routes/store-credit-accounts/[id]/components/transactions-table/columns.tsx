@@ -1,4 +1,4 @@
-import { createDataTableColumnHelper, Text } from "@medusajs/ui";
+import { createDataTableColumnHelper, Text } from "@bentoco/ui";
 import { useMemo } from "react";
 import { AdminTransaction } from "../../../../../../types";
 import DisplayId from "../../../../../components/display-id";

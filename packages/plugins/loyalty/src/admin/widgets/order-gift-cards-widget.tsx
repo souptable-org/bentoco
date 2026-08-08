@@ -1,6 +1,6 @@
-import { defineWidgetConfig } from "@medusajs/admin-sdk";
-import { Gift, TriangleRightMini } from "@medusajs/icons";
-import { Container, StatusBadge } from "@medusajs/ui";
+import { defineWidgetConfig } from "@bentoco/admin-sdk";
+import { Gift, TriangleRightMini } from "@bentoco/icons";
+import { Container, StatusBadge } from "@bentoco/ui";
 import { useParams } from "react-router-dom";
 import { AdminGiftCard } from "../../types";
 import { Header } from "../components/header";

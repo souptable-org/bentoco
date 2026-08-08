@@ -8,14 +8,14 @@ ruleTester.run("prefer-modules-enum", rule, {
     // Canonical: Modules.PRODUCT.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         const productModule = req.scope.resolve(Modules.PRODUCT)
       `,
     },
     // Bare resolve with enum.
     {
       code: `
-        import { Modules } from "@medusajs/framework/utils"
+        import { Modules } from "@bentoco/framework/utils"
         const order = resolve(Modules.ORDER)
       `,
     },
@@ -46,13 +46,13 @@ ruleTester.run("prefer-modules-enum", rule, {
           data: { key: "product", enumMember: "PRODUCT" },
         },
       ],
-      output: `import { Modules } from "@medusajs/framework/utils"\nconst productModule = req.scope.resolve(Modules.PRODUCT)`,
+      output: `import { Modules } from "@bentoco/framework/utils"\nconst productModule = req.scope.resolve(Modules.PRODUCT)`,
     },
     // Single quotes — still autofixes (literal replaced).
     {
       code: `const order = container.resolve('order')`,
       errors: [{ messageId: "preferModulesEnum" }],
-      output: `import { Modules } from "@medusajs/framework/utils"\nconst order = container.resolve(Modules.ORDER)`,
+      output: `import { Modules } from "@bentoco/framework/utils"\nconst order = container.resolve(Modules.ORDER)`,
     },
     // Bare resolve identifier (destructured from container).
     {
@@ -63,7 +63,7 @@ ruleTester.run("prefer-modules-enum", rule, {
           data: { key: "cart", enumMember: "CART" },
         },
       ],
-      output: `import { Modules } from "@medusajs/framework/utils"\nconst cart = resolve(Modules.CART)`,
+      output: `import { Modules } from "@bentoco/framework/utils"\nconst cart = resolve(Modules.CART)`,
     },
     // Multi-word module value → underscored enum member.
     {
@@ -74,48 +74,48 @@ ruleTester.run("prefer-modules-enum", rule, {
           data: { key: "sales_channel", enumMember: "SALES_CHANNEL" },
         },
       ],
-      output: `import { Modules } from "@medusajs/framework/utils"\nconst sc = container.resolve(Modules.SALES_CHANNEL)`,
+      output: `import { Modules } from "@bentoco/framework/utils"\nconst sc = container.resolve(Modules.SALES_CHANNEL)`,
     },
     // Existing framework/utils import — append to specifier list.
     {
       code: `
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
 const payment = req.scope.resolve("payment")
       `,
       errors: [{ messageId: "preferModulesEnum" }],
       output: `
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/framework/utils"
 const payment = req.scope.resolve(Modules.PAYMENT)
       `,
     },
     // Modules already imported — reuse the binding.
     {
       code: `
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@bentoco/framework/utils"
 const fulfillment = req.scope.resolve("fulfillment")
       `,
       errors: [{ messageId: "preferModulesEnum" }],
       output: `
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@bentoco/framework/utils"
 const fulfillment = req.scope.resolve(Modules.FULFILLMENT)
       `,
     },
     // Aliased Modules import — use the alias.
     {
       code: `
-import { Modules as M } from "@medusajs/framework/utils"
+import { Modules as M } from "@bentoco/framework/utils"
 const p = req.scope.resolve("pricing")
       `,
       errors: [{ messageId: "preferModulesEnum" }],
       output: `
-import { Modules as M } from "@medusajs/framework/utils"
+import { Modules as M } from "@bentoco/framework/utils"
 const p = req.scope.resolve(M.PRICING)
       `,
     },
     // Multi-violation file — both rewritten, single import added.
     {
       code: `
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@bentoco/framework/utils"
 const p = req.scope.resolve("product")
 const o = req.scope.resolve("order")
       `,
@@ -124,7 +124,7 @@ const o = req.scope.resolve("order")
         { messageId: "preferModulesEnum" },
       ],
       output: `
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@bentoco/framework/utils"
 const p = req.scope.resolve(Modules.PRODUCT)
 const o = req.scope.resolve(Modules.ORDER)
       `,

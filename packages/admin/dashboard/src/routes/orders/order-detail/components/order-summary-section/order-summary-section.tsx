@@ -12,7 +12,7 @@ import {
   PencilSquare,
   ReceiptPercent,
   TriangleDownMini,
-} from "@medusajs/icons"
+} from "@bentoco/icons"
 import {
   AdminClaim,
   AdminExchange,
@@ -25,7 +25,7 @@ import {
   AdminReturn,
   AdminReturnItem,
   AdminReturnReason,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   Badge,
   Button,
@@ -38,9 +38,9 @@ import {
   toast,
   Tooltip,
   usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 
-import { AdminReservation } from "@medusajs/types/src/http"
+import { AdminReservation } from "@bentoco/types/src/http"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import DisplayId from "../../../../../components/common/display-id/display-id"
 import { Thumbnail } from "../../../../../components/common/thumbnail"

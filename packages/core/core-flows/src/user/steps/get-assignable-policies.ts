@@ -1,6 +1,6 @@
-import { resolvePermissions } from "@medusajs/framework"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { resolvePermissions } from "@bentoco/framework"
+import { ContainerRegistrationKeys } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * @ignore

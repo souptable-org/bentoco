@@ -1,4 +1,4 @@
-import { InferEntityType, PromotionDTO } from "@medusajs/framework/types"
+import { InferEntityType, PromotionDTO } from "@bentoco/framework/types"
 import { Promotion } from "@models"
 
 export interface CreateCampaignDTO {

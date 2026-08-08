@@ -1,4 +1,4 @@
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@bentoco/js-sdk"
 import {
   UseMutationOptions,
   UseQueryOptions,

@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IPromotionModuleService } from "@medusajs/types"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
+import { IPromotionModuleService } from "@bentoco/types"
 import {
   ClaimReason,
   ClaimType,
@@ -9,7 +9,7 @@ import {
   PromotionStatus,
   PromotionType,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import {
   adminHeaders,
   createAdminUser,

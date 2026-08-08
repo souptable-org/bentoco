@@ -12,7 +12,7 @@ import {
   RemoteQueryInput,
   RemoteQueryObjectConfig,
   RemoteQueryObjectFromStringResult,
-} from "@medusajs/types"
+} from "@bentoco/types"
 import {
   MedusaError,
   applyTranslations,
@@ -22,7 +22,7 @@ import {
   remoteQueryObjectFromString,
   unflattenObjectKeys,
   isString,
-} from "@medusajs/utils"
+} from "@bentoco/utils"
 import { RelationMap, RemoteJoiner } from "../joiner"
 import { queryCacheDecoratorOptions } from "./cache"
 import { ModuleDataFetcher } from "./module-data-fetcher"

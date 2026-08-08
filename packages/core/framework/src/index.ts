@@ -14,6 +14,6 @@ export * from "./telemetry"
 export * from "./workflows"
 export * from "./zod"
 
-export const MEDUSA_CLI_PATH = require.resolve("@medusajs/cli")
+export const MEDUSA_CLI_PATH = require.resolve("@bentoco/cli")
 
-export { Query } from "@medusajs/modules-sdk"
+export { Query } from "@bentoco/modules-sdk"

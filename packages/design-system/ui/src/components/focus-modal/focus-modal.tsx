@@ -1,6 +1,6 @@
 "use client"
 
-import { XMark } from "@medusajs/icons"
+import { XMark } from "@bentoco/icons"
 import { Dialog as RadixDialog } from "radix-ui"
 import * as React from "react"
 
@@ -70,7 +70,8 @@ const FocusModalOverlay = React.forwardRef<
     <RadixDialog.Overlay
       ref={ref}
       className={clx(
-        "bg-ui-bg-overlay fixed inset-0",
+        // z-[100] so the modal sits above app shells (agency sidebar, merchant nav, drawers)
+        "bg-ui-bg-overlay fixed inset-0 z-[100]",
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
         className
       )}
@@ -97,7 +98,8 @@ const FocusModalContent = React.forwardRef<
       <RadixDialog.Content
         ref={ref}
         className={clx(
-          "bg-ui-bg-base shadow-elevation-modal fixed inset-2 flex flex-col overflow-hidden rounded-lg border outline-none",
+          // z-[100] + full viewport: open OVER the app shell, not nested in the main panel
+          "bg-ui-bg-base shadow-elevation-modal fixed inset-2 z-[100] flex flex-col overflow-hidden rounded-lg border outline-none",
           "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-0 data-[state=closed]:slide-in-from-bottom-2  duration-200",
           className
         )}

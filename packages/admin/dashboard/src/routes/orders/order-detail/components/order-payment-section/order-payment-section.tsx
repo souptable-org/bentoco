@@ -1,6 +1,6 @@
-import { OrderCreditLineDTO } from "@medusajs/types"
-import { ArrowDownRightMini, DocumentText, XCircle } from "@medusajs/icons"
-import { AdminOrder, AdminPayment, HttpTypes } from "@medusajs/types"
+import { OrderCreditLineDTO } from "@bentoco/types"
+import { ArrowDownRightMini, DocumentText, XCircle } from "@bentoco/icons"
+import { AdminOrder, AdminPayment, HttpTypes } from "@bentoco/types"
 import {
   Badge,
   Button,
@@ -11,7 +11,7 @@ import {
   toast,
   Tooltip,
   usePrompt,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { format } from "date-fns"
 import { Trans, useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"

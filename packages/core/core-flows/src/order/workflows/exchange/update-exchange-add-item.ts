@@ -6,15 +6,15 @@ import {
   PromotionDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus, MedusaError } from "@medusajs/framework/utils"
+} from "@bentoco/framework/types"
+import { ChangeActionType, OrderChangeStatus, MedusaError } from "@bentoco/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   previewOrderChangeStep,

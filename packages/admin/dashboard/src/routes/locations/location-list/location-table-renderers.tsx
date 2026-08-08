@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { StatusBadge } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { StatusBadge } from "@bentoco/ui"
 
 import { ListSummary } from "../../../components/common/list-summary"
 import { PlaceholderCell } from "../../../components/table/table-cells/common/placeholder-cell"

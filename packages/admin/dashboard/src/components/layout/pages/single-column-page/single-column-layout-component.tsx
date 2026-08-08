@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import { clx } from "@medusajs/ui"
+import { clx } from "@bentoco/ui"
 import { LayoutComponentProps } from "../../../layout-composer/types"
 
 export const SingleColumnLayoutComponent = ({

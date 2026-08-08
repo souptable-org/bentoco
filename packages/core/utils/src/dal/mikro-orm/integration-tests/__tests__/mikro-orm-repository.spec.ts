@@ -13,9 +13,9 @@ import {
   Property,
   Unique,
   wrap,
-} from "@medusajs/deps/mikro-orm/core"
-import { defineConfig } from "@medusajs/deps/mikro-orm/postgresql"
-import { BigNumberRawValue } from "@medusajs/types"
+} from "@bentoco/deps/mikro-orm/core"
+import { defineConfig } from "@bentoco/deps/mikro-orm/postgresql"
+import { BigNumberRawValue } from "@bentoco/types"
 import BigNumber from "bignumber.js"
 import { dropDatabase } from "pg-god"
 import { MikroOrmBigNumberProperty } from "../../big-number-field"

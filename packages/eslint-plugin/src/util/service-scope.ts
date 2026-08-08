@@ -17,7 +17,7 @@ export function createMedusaServiceBindings(): MedusaServiceBindings {
 
 /**
  * Records local names bound to `MedusaService` from
- * `@medusajs/framework/utils` (honors `import { MedusaService as MS }`).
+ * `@bentoco/framework/utils` (honors `import { MedusaService as MS }`).
  *
  * Call from an `ImportDeclaration` visitor.
  */
@@ -65,7 +65,7 @@ export function isMedusaServiceSuper(
 
 /**
  * Generic import tracker for named specifiers from
- * `@medusajs/framework/utils`. Given a map of canonical imported names to
+ * `@bentoco/framework/utils`. Given a map of canonical imported names to
  * `Set<string>` buckets, populates each bucket with the *local* name a
  * consumer bound that import to (honors `import { Foo as F }`).
  *

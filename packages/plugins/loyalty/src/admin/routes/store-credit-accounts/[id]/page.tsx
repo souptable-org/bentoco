@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { LayoutComposer } from "@medusajs/dashboard/components"
+import { LayoutComposer } from "@bentoco/dashboard/components"
 import { useStoreCreditAccount } from "../../../hooks/api/store-credit-accounts"
 import StoreCreditAccountBalanceSection from "./components/store-credit-account-balance-section"
 import StoreCreditAccountDetailsSection from "./components/store-credit-account-details-section"

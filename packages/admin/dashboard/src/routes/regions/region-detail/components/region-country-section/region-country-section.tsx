@@ -1,6 +1,6 @@
-import { PlusMini, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Checkbox, Container, Heading, toast, usePrompt } from "@medusajs/ui"
+import { PlusMini, Trash } from "@bentoco/icons"
+import { HttpTypes } from "@bentoco/types"
+import { Checkbox, Container, Heading, toast, usePrompt } from "@bentoco/ui"
 import {
   ColumnDef,
   RowSelectionState,

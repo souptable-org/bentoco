@@ -1,4 +1,4 @@
-import { FocusModal, clx } from "@medusajs/ui"
+import { FocusModal, clx } from "@bentoco/ui"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { RouteModalForm } from "../route-modal-form"

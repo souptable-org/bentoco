@@ -2,7 +2,7 @@ import { ErrorRequestHandler, NextFunction, Response } from "express"
 import createHttpError from "http-errors"
 import { fromZodIssue } from "zod-validation-error"
 
-import { ContainerRegistrationKeys, MedusaError } from "@medusajs/utils"
+import { ContainerRegistrationKeys, MedusaError } from "@bentoco/utils"
 import { MedusaRequest } from "../types"
 import { formatException } from "./exception-formatter"
 

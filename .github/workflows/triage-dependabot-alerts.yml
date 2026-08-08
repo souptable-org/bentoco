@@ -1,7 +1,7 @@
 name: Triage Dependabot Alerts
 
 # Dismisses open Dependabot alerts on the root yarn.lock whose vulnerable package
-# is NOT in the production dependency tree of any published @medusajs/* package
+# is NOT in the production dependency tree of any published @bentoco/* package
 # (i.e. build tooling, integration-tests, devDependencies). Runs weekly and on demand.
 
 on:

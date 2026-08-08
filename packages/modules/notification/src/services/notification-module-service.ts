@@ -7,7 +7,7 @@ import {
   Logger,
   ModulesSdkTypes,
   NotificationTypes,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   EmitEvents,
   generateEntityId,
@@ -17,7 +17,7 @@ import {
   MedusaService,
   NotificationStatus,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import { Notification } from "@models"
 import NotificationProviderService from "./notification-provider"
 

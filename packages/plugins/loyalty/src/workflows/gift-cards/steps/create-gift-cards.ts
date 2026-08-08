@@ -1,5 +1,5 @@
-import { isPresent } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { isPresent } from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 import {
   ILoyaltyModuleService,
   ModuleCreateGiftCard,

@@ -2,9 +2,9 @@ import {
   ContainerRegistrationKeys,
   Modules,
   PromotionActions,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import type { IPromotionModuleService } from "@medusajs/framework/types"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
+import type { IPromotionModuleService } from "@bentoco/framework/types"
 
 export const updateDraftOrderPromotionsStepId = "update-draft-order-promotions"
 
@@ -37,7 +37,7 @@ export interface UpdateDraftOrderPromotionsStepInput {
  * const data = updateDraftOrderPromotionsStep({
  *   id: "order_123",
  *   promo_codes: ["PROMO_123", "PROMO_456"],
- *   // Import from "@medusajs/framework/utils"
+ *   // Import from "@bentoco/framework/utils"
  *   action: PromotionActions.ADD,
  * })
  */

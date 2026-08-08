@@ -145,7 +145,7 @@ jobs:
           PREVIOUS_TAG="${{ steps.previous.outputs.tag }}"
 
           # Method 1: changeset files with a minor bump
-          # ("@medusajs/package-name": minor)
+          # ("@bentoco/package-name": minor)
           MINOR_CHANGESETS=$(
             git log "${PREVIOUS_TAG}..${RANGE_END}" --diff-filter=A --format="%H" -- ".changeset/*.md" \
               | while read -r hash; do

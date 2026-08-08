@@ -1,1 +1,1 @@
-# @medusajs/admin-vite-plugin
+# @bentoco/admin-vite-plugin

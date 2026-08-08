@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { castNumber } from "../../../lib/cast-number"
 import { ProductCreateSchemaType } from "./types"
 

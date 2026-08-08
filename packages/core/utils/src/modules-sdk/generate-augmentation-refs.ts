@@ -1,4 +1,4 @@
-import { LoadedModule, PluginDetails } from "@medusajs/types"
+import { LoadedModule, PluginDetails } from "@bentoco/types"
 import { existsSync } from "fs"
 import fs from "fs/promises"
 import path from "path"
@@ -99,7 +99,7 @@ function getModuleReferenceSpecifier(module: LoadedModule): string | undefined {
 
   if (canonical) {
     return isBareSpecifier(resolvePath) &&
-      resolvePath.startsWith("@medusajs/medusa/")
+      resolvePath.startsWith("@bentoco/medusa/")
       ? resolvePath
       : canonical
   }

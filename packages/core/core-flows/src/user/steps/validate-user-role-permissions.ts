@@ -1,9 +1,9 @@
-import { hasPermission } from "@medusajs/framework"
+import { hasPermission } from "@bentoco/framework"
 import {
   ContainerRegistrationKeys,
   MedusaError,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * @ignore

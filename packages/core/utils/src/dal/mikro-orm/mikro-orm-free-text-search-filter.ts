@@ -4,9 +4,9 @@ import type {
   FindOneOptions,
   FindOptions,
   EntityMetadata,
-} from "@medusajs/deps/mikro-orm/core"
-import { raw, ReferenceKind } from "@medusajs/deps/mikro-orm/postgresql"
-import { SqlEntityManager } from "@medusajs/deps/mikro-orm/postgresql"
+} from "@bentoco/deps/mikro-orm/core"
+import { raw, ReferenceKind } from "@bentoco/deps/mikro-orm/postgresql"
+import { SqlEntityManager } from "@bentoco/deps/mikro-orm/postgresql"
 
 export const FreeTextSearchFilterKeyPrefix = "freeTextSearch_"
 

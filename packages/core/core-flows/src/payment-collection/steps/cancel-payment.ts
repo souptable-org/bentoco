@@ -1,10 +1,10 @@
-import type { IPaymentModuleService, Logger } from "@medusajs/framework/types"
+import type { IPaymentModuleService, Logger } from "@bentoco/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/utils"
+import { createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 /**
  * The data to cancel payments.

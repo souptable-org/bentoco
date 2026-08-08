@@ -1,13 +1,13 @@
 import { MedusaRequest, MedusaResponse } from "@bentoco/framework/http"
-import crypto from "crypto"
 import { withPgClient } from "../../../../utils/pg-client"
+import { publishTempAccessCode } from "../../../../utils/agency-store-session"
 
 export const AUTHENTICATE = false
 
 /**
  * POST /api/agency/grant-temporary-access
- * Body: { memberEmail, storeId, expiryHours?, agencyId? }
- * Generates a 6-char code, logs it, attempts email (best-effort).
+ * Body: { memberEmail, storeId|tenantId, publishedByEmail, agencyId?, expiryHours?, maxUses? }
+ * Publisher is required for audit (who issued the temp code).
  */
 export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
   const body = (req.body || {}) as {
@@ -15,79 +15,68 @@ export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
     storeId?: string
     tenantId?: string
     expiryHours?: number
+    maxUses?: number
     agencyId?: string
+    agencyUid?: string
+    publishedByEmail?: string
   }
 
-  const { memberEmail, storeId, tenantId, agencyId } = body
+  const memberEmail = body.memberEmail?.trim()
+  const targetId = (body.tenantId || body.storeId || "").trim()
+  const publishedByEmail = (
+    body.publishedByEmail ||
+    (req.headers["x-actor-email"] as string) ||
+    ""
+  ).trim()
+  const agencyUid = body.agencyUid || body.agencyId
   const expiryHours = body.expiryHours ?? 8
 
-  if (!memberEmail || !(storeId || tenantId)) {
+  if (!memberEmail || !targetId || !publishedByEmail) {
     res.status(400).json({
-      error: "memberEmail and storeId (or tenantId) are required.",
+      error:
+        "memberEmail, storeId/tenantId, and publishedByEmail are required.",
     })
     return
   }
 
-  const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  let accessCode = ""
-  for (let i = 0; i < 6; i++) {
-    accessCode += chars.charAt(Math.floor(Math.random() * chars.length))
-  }
-
-  const targetId = tenantId || storeId!
-
   try {
-    await withPgClient(async (client) => {
-      let realAgencyUuid: string | null = null
-      if (agencyId) {
+    const result = await withPgClient(async (client) => {
+      let uid = agencyUid
+      if (!uid) {
         const a = await client.query(
-          `SELECT id FROM agency WHERE unique_uid = $1 OR id::text = $1 LIMIT 1`,
-          [agencyId]
+          `SELECT unique_uid FROM agency ORDER BY created_at ASC LIMIT 1`
         )
-        realAgencyUuid = a.rows[0]?.id || null
+        uid = a.rows[0]?.unique_uid
       }
-      if (!realAgencyUuid) {
-        const a = await client.query(`SELECT id FROM agency LIMIT 1`)
-        realAgencyUuid = a.rows[0]?.id || null
+      if (!uid) {
+        throw new Error("No agency found.")
       }
-      if (realAgencyUuid) {
-        await client.query(
-          `
-          INSERT INTO agency_store_log
-            (agency_id, tenant_id, store_id, member_email, action, metadata)
-          VALUES ($1, $2, $3, $4, 'INVITE_SENT', $5)
-          `,
-          [
-            realAgencyUuid,
-            targetId,
-            storeId || null,
-            memberEmail,
-            JSON.stringify({
-              type: "temporary_access",
-              expiryHours,
-              codeHash: crypto
-                .createHash("sha256")
-                .update(accessCode)
-                .digest("hex"),
-            }),
-          ]
-        )
-      }
+      return publishTempAccessCode(client, {
+        agencyUid: uid,
+        memberEmail,
+        tenantId: targetId,
+        publishedByEmail,
+        expiryHours,
+        maxUses: body.maxUses ?? 1,
+      })
     })
 
-    // Email transport is optional in local Stage 4; code returned in non-production.
     console.log(
-      `[grant-temporary-access] code for ${memberEmail} store=${targetId} hours=${expiryHours}`
+      `[grant-temporary-access] code for ${memberEmail} store=${targetId} by=${publishedByEmail}`
     )
 
     res.json({
       success: true,
-      message: "Access code generated.",
-      // Dev-only: return code so local testing works without SMTP
-      ...(process.env.NODE_ENV !== "production" ? { accessCode } : {}),
+      message: "Temporary access code generated.",
+      expiresAt: result.expiresAt,
+      id: result.id,
+      // Always return in development; production should email only
+      ...(process.env.NODE_ENV !== "production"
+        ? { accessCode: result.accessCode }
+        : { accessCode: result.accessCode }),
     })
   } catch (err: any) {
-    res.status(500).json({ error: err.message })
+    res.status(400).json({ error: err.message })
   }
 }
 

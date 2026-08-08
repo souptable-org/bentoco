@@ -8,8 +8,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Canonical: both args are direct linkable member chains.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           ProductModule.linkable.product,
@@ -20,8 +20,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Object form with linkable property (isList).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           ProductModule.linkable.product,
@@ -32,8 +32,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Both args in object form (many-to-many).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           { linkable: ProductModule.linkable.product, isList: true },
@@ -44,8 +44,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Third options arg is ignored (database renaming).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import ArticleModule from "../modules/article"
         export default defineLink(
           ProductModule.linkable.product,
@@ -57,8 +57,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Aliased defineLink import.
     {
       code: `
-        import { defineLink as dl } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink as dl } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default dl(ProductModule.linkable.product, BlogModule.linkable.post)
       `,
@@ -73,8 +73,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Inverse read-only link form: second arg spreads `<X>.linkable.<y>.id`.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           { linkable: ProductModule.linkable.product, field: "id" },
@@ -86,8 +86,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Read-only link with inline serviceName-based linkable descriptor.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import { CMS_MODULE } from "../modules/cms"
         export default defineLink(
           { linkable: ProductModule.linkable.product, field: "id" },
@@ -106,9 +106,9 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // (e.g. the only way to link to draft orders, via `order.id`).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import MarketplaceModule from "../modules/marketplace"
-        import OrderModule from "@medusajs/medusa/order"
+        import OrderModule from "@bentoco/medusa/order"
         export default defineLink(
           MarketplaceModule.linkable.vendor,
           { linkable: OrderModule.linkable.order.id, isList: true }
@@ -118,7 +118,7 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Deeper module chain (e.g. namespace import).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import * as Modules from "../modules"
         export default defineLink(
           Modules.Product.linkable.product,
@@ -131,8 +131,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Bare object literal without linkable property.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           ProductModule.linkable.product,
           { foo: "bar" }
@@ -143,7 +143,7 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // String literal participant.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
         export default defineLink("product", BlogModule.linkable.post)
       `,
@@ -152,8 +152,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Direct module reference without .linkable.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(ProductModule, BlogModule.linkable.post)
       `,
@@ -162,8 +162,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Object form whose `linkable` value is not a linkable member chain.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         export default defineLink(
           ProductModule.linkable.product,
           { linkable: "post", isList: true }
@@ -174,7 +174,7 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Both args invalid — two errors.
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
+        import { defineLink } from "@bentoco/framework/utils"
         export default defineLink("product", "post")
       `,
       errors: [
@@ -185,7 +185,7 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Aliased import + invalid arg.
     {
       code: `
-        import { defineLink as dl } from "@medusajs/framework/utils"
+        import { defineLink as dl } from "@bentoco/framework/utils"
         import BlogModule from "../modules/blog"
         export default dl({ foo: "bar" }, BlogModule.linkable.post)
       `,
@@ -194,8 +194,8 @@ ruleTester.run("link-uses-linkable-properties", rule, {
     // Direct module's .linkable property without sub-model (`ProductModule.linkable`).
     {
       code: `
-        import { defineLink } from "@medusajs/framework/utils"
-        import ProductModule from "@medusajs/medusa/product"
+        import { defineLink } from "@bentoco/framework/utils"
+        import ProductModule from "@bentoco/medusa/product"
         import BlogModule from "../modules/blog"
         export default defineLink(
           ProductModule.linkable,

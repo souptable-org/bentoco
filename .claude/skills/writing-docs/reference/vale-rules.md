@@ -112,7 +112,7 @@ This applies to code blocks inside MDX files. Break long lines:
 
 ```ts
 // ❌ Too long
-import { createWorkflow, WorkflowResponse, createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { createWorkflow, WorkflowResponse, createStep, StepResponse } from "@bentoco/framework/workflows-sdk"
 
 // ✅ Break imports
 import {
@@ -120,7 +120,7 @@ import {
   WorkflowResponse,
   createStep,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@bentoco/framework/workflows-sdk"
 ```
 
 ## TypeScript Preference

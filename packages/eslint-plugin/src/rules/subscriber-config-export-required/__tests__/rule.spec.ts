@@ -20,7 +20,7 @@ export const config = { event: "order.placed" }`,
     },
     // Typed config export.
     {
-      code: `import type { SubscriberConfig } from "@medusajs/framework"
+      code: `import type { SubscriberConfig } from "@bentoco/framework"
 export const config: SubscriberConfig = { event: "order.placed" }`,
       filename: SUBSCRIBER,
     },

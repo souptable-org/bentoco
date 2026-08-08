@@ -4,8 +4,8 @@ import {
   InformationCircle,
   Spinner,
   XCircle,
-} from "@medusajs/icons"
-import { Button, toast } from "@medusajs/ui"
+} from "@bentoco/icons"
+import { Button, toast } from "@bentoco/ui"
 
 export default function ToasterAllVariants() {
   return (

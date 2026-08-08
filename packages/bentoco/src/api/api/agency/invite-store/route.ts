@@ -6,47 +6,38 @@ export const AUTHENTICATE = false
 
 /**
  * POST /api/agency/invite-store
- * Body: { agencyId, merchantEmail, storeDisplayName }
+ * Agency invites merchant — does NOT create the store.
+ * Body: { agencyId, merchantEmail, storeDisplayName, inviteType? }
  */
 export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
   const body = (req.body || {}) as {
     agencyId?: string
     merchantEmail?: string
     storeDisplayName?: string
+    inviteType?: "new_merchant" | "existing_merchant"
   }
   const { agencyId, merchantEmail, storeDisplayName } = body
+  const inviteType = body.inviteType || "new_merchant"
 
-  if (!agencyId || !merchantEmail || !storeDisplayName) {
+  if (!agencyId || !merchantEmail) {
     res.status(400).json({
-      error: "agencyId, merchantEmail, and storeDisplayName are required.",
+      error: "agencyId and merchantEmail are required.",
     })
     return
   }
 
+  const name =
+    storeDisplayName?.trim() ||
+    (inviteType === "existing_merchant"
+      ? "Existing store"
+      : merchantEmail.split("@")[0] || "New store")
+
   try {
-    const result = await withPgClient(async (client) => {
-      try {
-        return await inviteStore(
-          agencyId,
-          merchantEmail,
-          storeDisplayName,
-          client
-        )
-      } catch (err: any) {
-        // Email transport may fail in local dev â€” still return invite if DB wrote
-        if (err?.message?.includes("Invalid login") || err?.code === "EAUTH") {
-          // re-run DB portion only is hard; surface partial success
-          throw err
-        }
-        throw err
-      }
-    })
+    const result = await withPgClient((client) =>
+      inviteStore(agencyId, merchantEmail, name, client, inviteType)
+    )
     res.json(result)
   } catch (err: any) {
-    // Soft-fail email: if invite was created but SMTP failed, helpers throw after insert
-    // Callers can still use inviteToken when present
-    res.status(500).json({ error: err.message })
+    res.status(400).json({ error: err.message })
   }
 }
-
-

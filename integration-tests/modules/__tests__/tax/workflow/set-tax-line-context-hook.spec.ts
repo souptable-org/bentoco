@@ -2,15 +2,15 @@ import {
   updateOrderTaxLinesWorkflow,
   updateTaxLinesWorkflow,
   upsertTaxLinesWorkflow,
-} from "@medusajs/core-flows"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { StepResponse } from "@bentoco/framework/workflows-sdk"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   ICartModuleService,
   IOrderModuleService,
   ITaxModuleService,
-} from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+} from "@bentoco/types"
+import { Modules } from "@bentoco/utils"
 
 jest.setTimeout(100000)
 

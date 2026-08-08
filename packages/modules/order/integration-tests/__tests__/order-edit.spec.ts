@@ -3,9 +3,9 @@ import {
   CreateOrderChangeDTO,
   CreateOrderDTO,
   IOrderModuleService,
-} from "@medusajs/framework/types"
-import { BigNumber, ChangeActionType, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/framework/types"
+import { BigNumber, ChangeActionType, Modules } from "@bentoco/framework/utils"
+import { moduleIntegrationTestRunner } from "@bentoco/test-utils"
 
 jest.setTimeout(100000)
 

@@ -460,7 +460,7 @@ export interface IPaymentProvider {
    * @since 2.11.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -499,7 +499,7 @@ export interface IPaymentProvider {
    * @since 2.5.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -547,7 +547,7 @@ export interface IPaymentProvider {
    * @since 2.5.1
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -588,7 +588,7 @@ export interface IPaymentProvider {
    * @since 2.5.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -627,7 +627,7 @@ export interface IPaymentProvider {
    * @returns The list of payment methods saved for the account holder. If an error occurs, throw it.
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options
@@ -670,7 +670,7 @@ export interface IPaymentProvider {
    * @returns The result of saving the payment method. If an error occurs, throw it.
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options
@@ -715,7 +715,7 @@ export interface IPaymentProvider {
    * @since 2.16.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { MedusaError } from "@bentoco/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options

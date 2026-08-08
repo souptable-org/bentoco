@@ -5,14 +5,14 @@ import {
   createShipmentWorkflowId,
   updateFulfillmentWorkflow,
   updateFulfillmentWorkflowId,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@bentoco/core-flows"
+import { medusaIntegrationTestRunner } from "@bentoco/test-utils"
 import {
   IFulfillmentModuleService,
   MedusaContainer,
   StockLocationDTO,
-} from "@medusajs/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+} from "@bentoco/types"
+import { ContainerRegistrationKeys, Modules } from "@bentoco/utils"
 import {
   generateCreateFulfillmentData,
   generateCreateShippingOptionsData,

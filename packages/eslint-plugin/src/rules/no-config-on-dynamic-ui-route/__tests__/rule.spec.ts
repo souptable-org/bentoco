@@ -13,7 +13,7 @@ ruleTester.run("no-config-on-dynamic-ui-route", rule, {
   valid: [
     // Static (non-dynamic) route — defineRouteConfig is fine here.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const CustomPage = () => null
 export const config = defineRouteConfig({ label: "Custom" })
 export default CustomPage`,
@@ -45,7 +45,7 @@ export default ProductPage`,
   invalid: [
     // Dynamic route exporting config via defineRouteConfig — reported on the call.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const ProductPage = () => null
 export const config = defineRouteConfig({ label: "Product" })
 export default ProductPage`,
@@ -54,7 +54,7 @@ export default ProductPage`,
     },
     // The variable name doesn't matter — any defineRouteConfig usage is flagged.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const ProductPage = () => null
 export const routeConfig = defineRouteConfig({ label: "Product" })
 export default ProductPage`,
@@ -64,7 +64,7 @@ export default ProductPage`,
     // Not exported at all — still a pointless defineRouteConfig call on a
     // dynamic route.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const ProductPage = () => null
 const config = defineRouteConfig({ label: "Product" })
 export default ProductPage`,
@@ -73,7 +73,7 @@ export default ProductPage`,
     },
     // Aliased defineRouteConfig import.
     {
-      code: `import { defineRouteConfig as drc } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig as drc } from "@bentoco/admin-sdk"
 const ProductPage = () => null
 export const config = drc({ label: "Product" })
 export default ProductPage`,
@@ -82,7 +82,7 @@ export default ProductPage`,
     },
     // Nested dynamic segment deeper in the path.
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const StepPage = () => null
 export const config = defineRouteConfig({ label: "Step" })
 export default StepPage`,
@@ -91,7 +91,7 @@ export default StepPage`,
     },
     // Bare `admin/routes/...` layout (no `src/` prefix).
     {
-      code: `import { defineRouteConfig } from "@medusajs/admin-sdk"
+      code: `import { defineRouteConfig } from "@bentoco/admin-sdk"
 const OrderPage = () => null
 export const config = defineRouteConfig({ label: "Order" })
 export default OrderPage`,

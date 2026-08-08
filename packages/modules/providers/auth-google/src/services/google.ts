@@ -5,11 +5,11 @@ import {
   AuthIdentityProviderService,
   GoogleAuthProviderOptions,
   Logger,
-} from "@medusajs/framework/types"
+} from "@bentoco/framework/types"
 import {
   AbstractAuthModuleProvider,
   MedusaError,
-} from "@medusajs/framework/utils"
+} from "@bentoco/framework/utils"
 import jwt, { type JwtHeader, type JwtPayload } from "jsonwebtoken"
 import jwksClient, { JwksClient } from "jwks-rsa"
 import { promisify } from "util"

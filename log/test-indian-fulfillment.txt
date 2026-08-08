@@ -1,0 +1,7 @@
+=== Indian Fulfillment Adapter Audit Log [2026-07-30T17:15:17.185Z] ===
+
+--- Starting Western Logistics Gutting & Indian Fulfillment Audit ---
+Pincode 400001 Valid: true
+Pincode 012345 Valid: false
+Generated Shiprocket/Delhivery AWB: AWB9618398180
+✅ INDIAN FULFILLMENT AUDIT PASSED: Shiprocket/Delhivery AWB & Pincode serviceability verified!

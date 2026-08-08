@@ -2,8 +2,8 @@ import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { TextCell } from "../../../components/table/table-cells/common/text-cell"
-import { HttpTypes } from "@medusajs/types"
-import { Badge } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { Badge } from "@bentoco/ui"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminProductOption>()
 

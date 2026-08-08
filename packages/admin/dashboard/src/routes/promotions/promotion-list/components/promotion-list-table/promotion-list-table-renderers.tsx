@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { TextCell } from "../../../../../components/table/table-cells/common/text-cell"
 import { StatusCell } from "../../../../../components/table/table-cells/promotion/status-cell"
 import {

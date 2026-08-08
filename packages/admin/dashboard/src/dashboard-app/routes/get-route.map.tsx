@@ -1,10 +1,11 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@bentoco/types"
 import { t } from "i18next"
 import { Outlet, RouteObject, UIMatch } from "react-router-dom"
 import { ProtectedRoute } from "../../components/authentication/protected-route"
 import { RoutePermissionGuard } from "../../components/authentication/route-permission-guard"
 import { MainLayout } from "../../components/layout/main-layout"
 import { PublicLayout } from "../../components/layout/public-layout"
+import { AgencyLayout } from "../../components/layout/agency-layout/agency-layout"
 import { SettingsLayout } from "../../components/layout/settings-layout"
 import { ErrorBoundary } from "../../components/utilities/error-boundary"
 
@@ -16,6 +17,40 @@ export function getRouteMap({
   coreRoutes: RouteObject[]
 }) {
   return [
+    {
+      path: "/agency",
+      element: <AgencyLayout />,
+      children: [
+        {
+          path: "",
+          lazy: () => import("../../routes/agency/dashboard"),
+        },
+        {
+          path: "dashboard",
+          lazy: () => import("../../routes/agency/dashboard"),
+        },
+        {
+          path: "stores",
+          lazy: () => import("../../routes/agency/stores"),
+        },
+        {
+          path: "team",
+          lazy: () => import("../../routes/agency/team"),
+        },
+        {
+          path: "billing",
+          lazy: () => import("../../routes/agency/billing"),
+        },
+        {
+          path: "referral",
+          lazy: () => import("../../routes/agency/referral"),
+        },
+        {
+          path: "audit",
+          lazy: () => import("../../routes/agency/audit"),
+        },
+      ],
+    },
     {
       element: <ProtectedRoute />,
       errorElement: <ErrorBoundary />,
@@ -2259,6 +2294,10 @@ export function getRouteMap({
               handle: {
                 breadcrumb: () => t("invite.title"),
               },
+            },
+            {
+              path: "/agency/login",
+              lazy: () => import("../../routes/agency/login"),
             },
             {
               path: "*",

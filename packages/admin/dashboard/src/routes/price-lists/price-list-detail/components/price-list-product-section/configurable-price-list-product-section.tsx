@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { DataTableCommand, toast, usePrompt } from "@medusajs/ui"
+import { HttpTypes } from "@bentoco/types"
+import { DataTableCommand, toast, usePrompt } from "@bentoco/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"

@@ -6,11 +6,11 @@ import {
   Heading,
   RadioGroup,
   toast,
-} from "@medusajs/ui"
+} from "@bentoco/ui"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { useParams } from "react-router-dom"
-import { z } from "@medusajs/framework/zod"
+import { z } from "@bentoco/framework/zod"
 import { AdminGiftCard } from "../../../../../types"
 import { Form } from "../../../../components/form"
 import { KeyboundForm } from "../../../../components/keybound-form"
