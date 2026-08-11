@@ -1,0 +1,13 @@
+﻿# Bentoco product repo: Medusa platform CI workflows were removed.
+name: CI disabled (Bentoco)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notice
+        run: |
+          echo "GitHub Actions CI is intentionally disabled for this Bentoco product repository."
