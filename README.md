@@ -1,8 +1,17 @@
-# Bentoco
+<p align="center">
+  <img src="docs/assets/bentoco-mark.svg" alt="Bentoco" width="160" />
+</p>
 
-**Multi-tenant commerce for agencies and merchants** — API, admin, themed storefront, and marketing site.
+<h1 align="center">Bentoco</h1>
+
+<p align="center">
+  <strong>Multi-tenant commerce for agencies and merchants</strong><br />
+  API · Admin · Themed storefront · Marketing
+</p>
 
 Bentoco is built on a Medusa-based monorepo, customized for **tenant isolation**, **agency tooling**, **Razorpay**, and a **theme engine** that drives live storefront branding.
+
+Brand mark and wordmark come from the marketing site (`apps/marketing`) and are also at `docs/assets/bentoco-mark.svg` / `docs/assets/bentoco-wordmark.svg`.
 
 ---
 
