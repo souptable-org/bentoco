@@ -64,6 +64,7 @@ import { storePaymentCollectionsMiddlewares } from "./store/payment-collections/
 import { storePaymentProvidersMiddlewares } from "./store/payment-providers/middlewares"
 import { storeRazorpayMiddlewares } from "./store/razorpay/middlewares"
 import { adminByogRazorpayMiddlewares } from "./admin/byog/razorpay/middlewares"
+import { adminStoreThemeMiddlewares } from "./admin/store-theme/middlewares"
 import { storeProductCategoryRoutesMiddlewares } from "./store/product-categories/middlewares"
 import { storeProductOptionRoutesMiddlewares } from "./store/product-options/middlewares"
 import { storeProductTagRoutesMiddlewares } from "./store/product-tags/middlewares"
@@ -78,14 +79,19 @@ import { adminIndexRoutesMiddlewares } from "./admin/index/middlewares"
 import { setSecretApiKeyContext } from "@bentoco/framework"
 import { adminLocalesRoutesMiddlewares } from "./admin/locales/middlewares"
 import { adminTranslationsRoutesMiddlewares } from "./admin/translations/middlewares"
+import { tenantMiddleware } from "./tenant-middleware"
 import { agencyStoreGate } from "./middlewares/agency-store-gate"
 
 export default defineMiddlewares([
-  ...storeRoutesMiddlewares,
+  {
+    matcher: "/store*",
+    middlewares: [tenantMiddleware],
+  },
   {
     matcher: "/admin*",
-    middlewares: [setSecretApiKeyContext, agencyStoreGate],
+    middlewares: [setSecretApiKeyContext, tenantMiddleware, agencyStoreGate],
   },
+  ...storeRoutesMiddlewares,
   ...adminCustomerGroupRoutesMiddlewares,
   ...adminCustomerRoutesMiddlewares,
   ...adminPropertyLabelsMiddlewares,
@@ -102,6 +108,7 @@ export default defineMiddlewares([
   ...storePaymentProvidersMiddlewares,
   ...storeRazorpayMiddlewares,
   ...adminByogRazorpayMiddlewares,
+  ...adminStoreThemeMiddlewares,
   ...storeShippingOptionRoutesMiddlewares,
   ...storePaymentCollectionsMiddlewares,
   ...storeOrderRoutesMiddlewares,

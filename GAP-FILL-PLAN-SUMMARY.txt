@@ -1,0 +1,60 @@
+================================================================================
+BENTOCO THEME ENGINE (BENT-4) — WORKSTREAM STATUS SUMMARY
+================================================================================
+
+Date: August 11, 2026
+Status: IN PROGRESS — WORKSTREAMS W1–W6 IMPLEMENTED & BUILDS VERIFIED
+
+Authoritative path to 100%:
+  docs/bent-4-theme-engine/PATH-TO-100-PERCENT.md
+
+Merchant guide:
+  docs/bent-4-theme-engine/MERCHANT-THEME.md
+
+--------------------------------------------------------------------------------
+1. COMPLETED WORKSTREAMS BREAKDOWN
+--------------------------------------------------------------------------------
+
+[W1: Draft-Only Save (P0)]
+- Refactored updateTenantThemeOverrides in packages/bentoco/src/utils/theme-engine/tenant-theme-db.ts.
+- "Save draft" writes to theme_config.draft snapshot ONLY.
+- Published snapshot and history ring buffer are preserved UNTOUCHED on draft save.
+- Customer-facing requests (GET /store/tenant/theme without ?preview=1) continue serving published theme.
+- Admin editor and iframe (?preview=1) render draft CSS.
+
+[W2: Default Preview Base URL :3001 (P0)]
+- Updated getStorefrontBaseUrl() in packages/admin/dashboard/src/lib/storefront-preview.ts
+  to return "http://localhost:3001" by default (matching storefront dev server port).
+
+[W3: Tenant Identity Hard Scope (P1)]
+- Implemented resolveAdminThemeTenantId(req, explicitTenantId) in packages/bentoco/src/api/admin/store-theme/route.ts.
+- Fails closed in production/staging (400 Bad Request) if tenant ID is missing from session/request.
+- Applied across GET, POST, /publish, /discard, and /rollback handlers.
+
+[W4: Editor & Hub Trust UI (P1)]
+- Added Discard and Rollback buttons in packages/admin/dashboard/src/routes/store-theme/editor/store-theme-editor.tsx.
+- Added confirmation dialogs for Discard ("Discard unpublished draft?") and Rollback ("Rollback to previous version?").
+- Updated Hub status badge in store-theme.tsx to display "Unpublished draft" (orange) when draft exists, or "Published" (green).
+
+[W5: Shell Unification (P1)]
+- Extracted TenantChrome layout wrapper in apps/storefront/components/tenant-chrome.tsx.
+- Applied TenantChrome across storefront routes:
+  - Homepage / (TenantStorefront)
+  - Shop /shop (ShopPage)
+  - Product /product/[slug] (ProductPage)
+  - Cart /cart (CartPage)
+  - Track Order /track-order (TrackOrderPage)
+  - FAQ /faq (FAQPage)
+
+[W6: Smoke Test & Merchant Guide (P2)]
+- Created merchant documentation guide: docs/bent-4-theme-engine/MERCHANT-THEME.md
+- Updated automated smoke test script: scripts/smoke-theme-gaps.ts
+
+--------------------------------------------------------------------------------
+2. BUILD VERIFICATION
+--------------------------------------------------------------------------------
+- packages/bentoco         -> yarn build (Exit Code 0, Clean)
+- packages/admin/dashboard -> yarn build (Exit Code 0, Clean)
+- apps/storefront          -> npm run build (Exit Code 0, Clean)
+
+================================================================================

@@ -13,9 +13,11 @@ import { withGstInclusive } from '@/lib/pricing';
 import { Check, Truck, ShieldCheck, MapPin, Star, Plus, Minus, Heart, ChevronLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 
+import { TenantChrome } from '@/components/tenant-chrome';
+
 export default function ProductPage() {
   const params = useParams();
-  const slug = params.slug as string;
+  const slug = (params?.slug as string) || '';
   const router = useRouter();
   const { addToCart, toggleWishlist, isInWishlist } = useApp();
   
@@ -31,22 +33,35 @@ export default function ProductPage() {
   useEffect(() => {
     let cancelled = false;
     setProduct(undefined);
-    getProductBySlug(slug).then(async (p) => {
-      if (cancelled) return;
-      setProduct(p ?? null);
-      if (p) {
-        const related = await getRelatedProducts(p.id);
-        if (!cancelled) setRelatedProducts(related);
-      }
-    });
-    return () => { cancelled = true; };
+    getProductBySlug(slug)
+      .then(async (p) => {
+        if (cancelled) return;
+        setProduct(p ?? null);
+        if (p) {
+          try {
+            const related = await getRelatedProducts(p.id);
+            if (!cancelled) setRelatedProducts(related);
+          } catch {
+            if (!cancelled) setRelatedProducts([]);
+          }
+        }
+      })
+      .catch((e) => {
+        console.warn("[product page] load failed", e);
+        if (!cancelled) setProduct(null);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
   if (product === undefined) {
     return (
-      <div className="w-full max-w-7xl mx-auto px-4 py-24 text-center text-muted-foreground">
-        Loading product…
-      </div>
+      <TenantChrome tenant={{ store_name: "Storefront" }}>
+        <div className="w-full max-w-7xl mx-auto px-4 py-24 text-center text-muted-foreground">
+          Loading product…
+        </div>
+      </TenantChrome>
     );
   }
   if (!product) return notFound();
@@ -89,12 +104,19 @@ export default function ProductPage() {
     }, 1000);
   };
 
+  // Theme editor fonts: Display → headings, Text → body copy
+  const fontDisplay = {
+    fontFamily: "var(--font-display), var(--font-sans), system-ui, sans-serif",
+  } as const
+  const fontText = {
+    fontFamily: "var(--font-text), var(--font-sans), system-ui, sans-serif",
+  } as const
+
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Breadcrumb / Back Navigation */}
-      <div className="flex items-center justify-between mb-8 pb-4 border-b border-border/50">
-        <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-          <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+    <TenantChrome tenant={{ store_name: product.name || "Storefront" }}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12" style={fontText}>
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-border/50">
+          <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
           <span>/</span>
           <Link href="/shop" className="hover:text-foreground transition-colors">Shop</Link>
           <span>/</span>
@@ -133,8 +155,18 @@ export default function ProductPage() {
 
         {/* Product Info */}
         <div className="w-full lg:w-1/2 flex flex-col">
-          <div className="mb-2 text-sm text-accent font-bold tracking-wider uppercase">{product.category}</div>
-          <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4 text-balance">{product.name}</h1>
+          <div
+            className="mb-2 text-sm text-accent font-bold tracking-wider uppercase"
+            style={fontText}
+          >
+            {product.category}
+          </div>
+          <h1
+            className="text-3xl md:text-5xl font-bold mb-4 text-balance"
+            style={fontDisplay}
+          >
+            {product.name}
+          </h1>
           
           <div className="flex items-center gap-4 mb-6 flex-wrap">
             <PriceLabel
@@ -159,7 +191,12 @@ export default function ProductPage() {
             <span className="text-muted-foreground">({product.reviews} reviews)</span>
           </div>
 
-          <p className="text-muted-foreground leading-relaxed mb-8 text-lg">{product.description}</p>
+          <p
+            className="text-muted-foreground leading-relaxed mb-8 text-lg"
+            style={fontText}
+          >
+            {product.description}
+          </p>
 
           {/* Variants */}
           {product.colors && (
@@ -271,7 +308,9 @@ export default function ProductPage() {
 
           {/* Details Accordion (Mocked static for brevity) */}
           <div className="bg-card rounded-md p-6 border border-border/50">
-            <h3 className="font-serif text-xl font-bold mb-6">Product Details</h3>
+            <h3 className="text-xl font-bold mb-6" style={fontDisplay}>
+              Product Details
+            </h3>
             <ul className="space-y-4 mb-8">
               {product.features.map((f, i) => (
                 <li key={i} className="flex gap-3 text-muted-foreground text-sm font-medium">
@@ -295,7 +334,12 @@ export default function ProductPage() {
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="py-12 border-t border-border">
-          <h2 className="font-serif text-3xl font-semibold mb-10 text-center">You May Also Like</h2>
+          <h2
+            className="text-3xl font-semibold mb-10 text-center"
+            style={fontDisplay}
+          >
+            You May Also Like
+          </h2>
           <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
             {relatedProducts.map(p => (
               <div key={p.id} className="min-w-[260px] sm:min-w-0 snap-start">
@@ -307,5 +351,6 @@ export default function ProductPage() {
       )}
 
     </div>
+    </TenantChrome>
   );
 }

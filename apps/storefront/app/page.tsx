@@ -1,169 +1,217 @@
-'use client';
+import { headers } from "next/headers"
+import { Header } from "@/components/layout/Header"
+import { Footer } from "@/components/layout/Footer"
+import {
+  TenantStorefront,
+  type HomepageCategorySectionView,
+} from "@/components/tenant-storefront"
+import { StoreNotFound } from "@/components/store-not-found"
+import { fetchStorefrontTheme } from "@/lib/theme"
+import { fetchStoreProductsByIds } from "@/lib/medusa"
+import {
+  orderProductsByIds,
+  sliceSectionProductIds,
+  sortCategorySections,
+} from "@/lib/homepage-theme"
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Truck, RefreshCcw } from 'lucide-react';
-import { getProducts } from '@/lib/data';
-import type { Product } from '@/lib/types';
-import { ProductCard } from '@/components/product/ProductCard';
+/**
+ * Tenant homepage data flow:
+ *   page.tsx (server) → fetchStorefrontTheme → pass branding/homepage props
+ *   → TenantStorefront (client). CSS inject remains in ThemeStyles (layout).
+ *
+ * Editor iframe uses ?tenant_id=&preview=1 on localhost so middleware sets x-tenant-id.
+ */
+export default async function Home({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const headerList = await headers()
+  const host =
+    headerList.get("x-forwarded-host") || headerList.get("host") || ""
+  const sp = (await searchParams) || {}
+  const queryTenant = Array.isArray(sp.tenant_id)
+    ? sp.tenant_id[0]
+    : sp.tenant_id
+  const tenantId = headerList.get("x-tenant-id") || queryTenant || null
+  const isNotFound =
+    headerList.get("x-tenant-not-found") === "1" && !tenantId
+  const hostWithoutPort = host.split(":")[0].toLowerCase().trim()
+  const isSubdomain =
+    hostWithoutPort !== "localhost" &&
+    hostWithoutPort !== "127.0.0.1" &&
+    hostWithoutPort !== "bentoco.in" &&
+    hostWithoutPort !== "www.bentoco.in"
+  const isPreview =
+    headerList.get("x-theme-preview") === "1" ||
+    sp.preview === "1" ||
+    Boolean(queryTenant)
 
-export default function Home() {
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
+  if (isNotFound) {
+    const subdomain = hostWithoutPort.split(".")[0]
+    return <StoreNotFound domain={host} subdomain={subdomain} />
+  }
 
-  useEffect(() => {
-    getProducts().then(({ products }) => {
-      setFeaturedProducts(products.slice(0, 4));
-    });
-  }, []);
+  if (isSubdomain || tenantId || isPreview) {
+    const subdomain = hostWithoutPort.split(".")[0]
+    let tenant: {
+      tenant_id?: string
+      store_name: string
+      subdomain?: string | null
+      custom_domain?: string | null
+    } | null = null
 
+    const backend =
+      process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || "http://localhost:9000"
+    const publishableKey =
+      process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY ||
+      "pk_60d15336d7c41922c4ac354c4a90da700f0d785c6bb83269983167f444672f49"
+
+    try {
+      // Prefer domain resolve (subdomain hosts). For editor iframe on localhost
+      // we only have tenant_id — theme API still works with tenant_id alone.
+      const res = await fetch(
+        `${backend}/store/tenant/resolve?domain=${encodeURIComponent(host)}`,
+        {
+          headers: { "x-publishable-api-key": publishableKey },
+          cache: "no-store",
+        }
+      )
+
+      if (res.ok) {
+        const data = await res.json()
+        if (data?.tenant_id) {
+          tenant = data
+        }
+      }
+    } catch (err) {
+      console.warn("[page.tsx] Failed to fetch tenant metadata", err)
+    }
+
+    // Editor preview: construct minimal tenant from id + theme payload
+    if (!tenant && tenantId) {
+      tenant = {
+        tenant_id: tenantId,
+        store_name: "Store",
+        subdomain: null,
+        custom_domain: null,
+      }
+    }
+
+    if (!tenant) {
+      return <StoreNotFound domain={host} subdomain={subdomain} />
+    }
+
+    const resolvedTenantId = tenant.tenant_id || tenantId || null
+
+    // Single theme load for homepage content (always fresh in preview/dev)
+    const theme = await fetchStorefrontTheme({
+      tenantId: resolvedTenantId,
+      host,
+      preview: isPreview || process.env.NODE_ENV === "development",
+    })
+
+    // Enrich store name from theme API when domain resolve skipped
+    if (theme.store_name && tenant.store_name === "Store") {
+      tenant = { ...tenant, store_name: theme.store_name }
+    }
+
+    const branding = theme.theme_config?.branding
+    const banners = theme.theme_config?.homepage?.banners
+    const promises = theme.theme_config?.homepage?.promises
+
+    const rawSections = sortCategorySections(
+      theme.theme_config?.homepage?.category_sections || []
+    )
+
+    let categorySections: HomepageCategorySectionView[] = []
+    try {
+      categorySections = await Promise.all(
+        rawSections.map(async (sec) => {
+          const ids = sliceSectionProductIds(sec.product_ids, {
+            source: sec.source,
+            category_id: sec.category_id,
+            limit: sec.limit,
+          })
+          let products: HomepageCategorySectionView["products"] = []
+          if (ids.length) {
+            try {
+              const fetched = await fetchStoreProductsByIds(ids, {
+                tenantId: resolvedTenantId,
+              })
+              const ordered = orderProductsByIds(fetched, ids)
+              products = ordered.map((p) => ({
+                id: p.id,
+                title: p.name,
+                price: `₹${p.price.toLocaleString("en-IN")}`,
+                image: p.images?.[0] || "",
+                tag: p.tags?.[0] || p.category,
+                slug: p.slug,
+              }))
+            } catch {
+              products = []
+            }
+          }
+          return {
+            title: sec.title || "Collection",
+            products,
+          }
+        })
+      )
+    } catch {
+      categorySections = []
+    }
+
+    return (
+      <TenantStorefront
+        tenant={tenant}
+        branding={branding}
+        banners={banners}
+        promises={promises}
+        categorySections={categorySections}
+      />
+    )
+  }
+
+  // Apex domain → platform landing
   return (
-    <div className="flex flex-col min-h-screen">
-      
-      {/* Hero Section */}
-      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
-        <Image 
-          src="https://picsum.photos/seed/heroind1/1920/1080"
-          alt="Premium Indian Fashion"
-          fill
-          className="object-cover"
-          priority
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center text-white px-4 flex flex-col items-center max-w-4xl mx-auto">
-          <span className="uppercase tracking-[0.3em] text-sm mb-6 font-bold text-white/90">Festive Edit &apos;26</span>
-          <h1 className="font-serif text-5xl md:text-8xl font-bold mb-6 leading-[0.86] tracking-[-0.44px]">
-            The Art of Elegance
-          </h1>
-          <p className="text-lg md:text-2xl text-white/90 mb-10 max-w-2xl font-medium">
-            Discover our curated collection of handcrafted timeless pieces, designed for the modern connoisseur.
-          </p>
-          <Link 
-            href="/shop"
-            className="group flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-8 py-4 font-bold uppercase tracking-widest text-sm shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:bg-primary/90 transition-all duration-300"
+    <main className="flex min-h-screen flex-col justify-between bg-slate-950 font-sans text-slate-100 selection:bg-emerald-500/30 selection:text-white">
+      <Header />
+
+      <div className="mx-auto max-w-7xl px-4 py-24 text-center sm:px-6 lg:px-8">
+        <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3.5 py-1 text-xs font-semibold text-emerald-400">
+          Bentoco Multi-Tenant E-Commerce Platform
+        </span>
+
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+          Next-Gen Commerce Engine <br />
+          <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+            For Indian Merchants
+          </span>
+        </h1>
+
+        <p className="mx-auto mt-6 max-w-2xl text-base text-slate-400 sm:text-lg">
+          High-performance multi-tenant storefront engine with native UPI, COD
+          verification, Shiprocket logistics, and zero app tax.
+        </p>
+
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <a
+            href="http://alpha.localhost:3000"
+            className="rounded-xl bg-emerald-500 px-6 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-emerald-500/20 transition-colors hover:bg-emerald-400"
           >
-            Explore Collection
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
-          </Link>
+            Preview Demo Storefront (alpha.localhost)
+          </a>
+          <a
+            href="http://localhost:7001"
+            className="rounded-xl border border-slate-700 bg-slate-800 px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-slate-700"
+          >
+            Open Merchant Dashboard
+          </a>
         </div>
-      </section>
+      </div>
 
-      {/* Trust Badges */}
-      <section className="border-b border-border bg-card py-6 md:py-8 shadow-sm relative z-20">
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-2 md:gap-8 text-center divide-x divide-border">
-            <div className="flex flex-col items-center justify-center">
-              <Truck className="w-6 h-6 md:w-8 md:h-8 mb-2 md:mb-3 text-accent" />
-              <h3 className="font-bold text-[10px] md:text-base tracking-wide uppercase mb-1 text-card-foreground">Pan India Delivery</h3>
-              <p className="text-muted-foreground text-[10px] md:text-sm font-medium hidden sm:block">Free shipping on orders above ₹2999</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <ShieldCheck className="w-6 h-6 md:w-8 md:h-8 mb-2 md:mb-3 text-accent" />
-              <h3 className="font-bold text-[10px] md:text-base tracking-wide uppercase mb-1 text-card-foreground">Secure Checkout</h3>
-              <p className="text-muted-foreground text-[10px] md:text-sm font-medium hidden sm:block">UPI & Cash on Delivery Available</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <RefreshCcw className="w-6 h-6 md:w-8 md:h-8 mb-2 md:mb-3 text-accent" />
-              <h3 className="font-bold text-[10px] md:text-base tracking-wide uppercase mb-1 text-card-foreground">Easy Returns</h3>
-              <p className="text-muted-foreground text-[10px] md:text-sm font-medium hidden sm:block">7-day hassle-free exchange policy</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Categories */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="flex justify-between items-end mb-8 md:mb-12">
-          <div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 tracking-[-0.44px]">Shop by Category</h2>
-            <p className="text-muted-foreground max-w-xl text-lg font-medium">Explore our curated selection of heritage crafts and modern silhouettes.</p>
-          </div>
-        </div>
-        
-        <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
-          <Link href="/shop?category=women" className="min-w-[280px] sm:min-w-0 snap-start group relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted rounded-[6px] shadow-lg transition-all hover:-translate-y-2 hover:shadow-2xl">
-            <Image src="https://picsum.photos/seed/catwomen/800/1000" alt="Women" fill className="object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-8 left-8">
-              <h3 className="text-white font-serif text-3xl font-bold mb-2">Women&apos;s Wear</h3>
-              <span className="text-white/90 text-sm tracking-widest font-bold uppercase flex items-center gap-2 group-hover:text-white transition-colors">
-                Discover <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
-              </span>
-            </div>
-          </Link>
-          <Link href="/shop?category=men" className="min-w-[280px] sm:min-w-0 snap-start group relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted rounded-[6px] shadow-lg transition-all hover:-translate-y-2 hover:shadow-2xl">
-            <Image src="https://picsum.photos/seed/catmen/800/1000" alt="Men" fill className="object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-8 left-8">
-              <h3 className="text-white font-serif text-3xl font-bold mb-2">Men&apos;s Wear</h3>
-              <span className="text-white/90 text-sm tracking-widest font-bold uppercase flex items-center gap-2 group-hover:text-white transition-colors">
-                Discover <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
-              </span>
-            </div>
-          </Link>
-          <Link href="/shop?category=jewelry" className="min-w-[280px] sm:min-w-0 snap-start group relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-muted rounded-[6px] shadow-lg transition-all hover:-translate-y-2 hover:shadow-2xl">
-            <Image src="https://picsum.photos/seed/catjewel/800/1000" alt="Jewelry" fill className="object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-8 left-8">
-              <h3 className="text-white font-serif text-3xl font-bold mb-2">Fine Jewelry</h3>
-              <span className="text-white/90 text-sm tracking-widest font-bold uppercase flex items-center gap-2 group-hover:text-white transition-colors">
-                Discover <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
-              </span>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="flex justify-between items-end mb-8 md:mb-12">
-          <div>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 tracking-[-0.44px]">Curated Selection</h2>
-            <p className="text-muted-foreground max-w-xl text-lg font-medium">Handpicked essentials for your sophisticated wardrobe.</p>
-          </div>
-          <Link href="/shop" className="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-accent hover:text-accent/80 transition-colors">
-            View All <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        
-        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-x-6 sm:gap-y-12 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
-          {featuredProducts.map(product => (
-            <div key={product.id} className="min-w-[260px] sm:min-w-0 snap-start">
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-12 text-center md:hidden">
-          <Link href="/shop" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-accent hover:text-accent/80 transition-colors">
-            View All Collection <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Editorial Section */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center bg-card rounded-[24px] md:rounded-[32px] p-6 md:p-12 shadow-lg border border-border/50">
-          <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl">
-             <Image src="https://picsum.photos/seed/heritage/1000/1200" alt="Heritage Craftsmanship" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
-          <div className="max-w-lg lg:pl-12">
-            <span className="text-accent text-sm tracking-widest uppercase font-bold mb-4 block">The Heritage</span>
-            <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-6 leading-tight tracking-[-0.44px]">Preserving Indian Craftsmanship</h2>
-            <p className="text-muted-foreground leading-relaxed mb-10 text-lg font-medium">
-              We work directly with artisan clusters across India to bring you authentic weaves and handcrafted pieces. Every garment tells a story of generations of skill, reimagined for the contemporary aesthetic.
-            </p>
-            <Link 
-              href="/about"
-              className="inline-block bg-primary text-primary-foreground rounded-full px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              Our Story
-            </Link>
-          </div>
-        </div>
-      </section>
-      
-    </div>
-  );
+      <Footer />
+    </main>
+  )
 }

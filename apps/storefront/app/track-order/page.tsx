@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { PackageSearch, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { motion } from 'motion/react';
-import Grainient from '@/components/ui/Grainient';
+import { TenantChrome } from '@/components/tenant-chrome';
 import OrderTrackingModal from '@/components/ui/OrderTrackingModal';
 
 export default function TrackOrderPage() {
@@ -20,19 +19,8 @@ export default function TrackOrderPage() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen">
-      <div className="fixed inset-0 z-0">
-        <Grainient 
-          color1="#FF9FFC" 
-          color2="#5227FF" 
-          color3="#B497CF" 
-          timeSpeed={0.2}
-          warpStrength={1.5}
-          blendSoftness={0.5}
-          contrast={1.5}
-        />
-      </div>
-
+    <TenantChrome tenant={{ store_name: "Storefront" }}>
+      <div className="relative flex flex-col min-h-screen bg-background">
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full flex-1 flex flex-col">
         <div className="text-center mb-12 md:mb-16">
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-4 md:mb-6 tracking-[-0.44px] text-foreground">Track Your Order</h1>
@@ -68,7 +56,8 @@ export default function TrackOrderPage() {
         onClose={() => setStatus('idle')} 
         orderId={orderId} 
       />
-    </div>
-    </div>
+      </div>
+      </div>
+    </TenantChrome>
   );
 }

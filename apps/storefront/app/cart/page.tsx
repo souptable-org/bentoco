@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useApp } from '@/lib/store';
 import { X, Minus, Plus, ShoppingBag, ArrowRight } from 'lucide-react';
-import { motion } from 'motion/react';
+import { TenantChrome } from '@/components/tenant-chrome';
 
 export default function CartPage() {
   const {
@@ -31,22 +31,25 @@ export default function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
-        <ShoppingBag className="w-16 h-16 opacity-20 mb-6" />
-        <h1 className="font-serif text-3xl font-semibold mb-4">Your Shopping Bag is Empty</h1>
-        <p className="text-muted-foreground mb-8 max-w-md">Looks like you haven&apos;t added anything yet. Discover our premium collection and find something you love.</p>
-        <Link 
-          href="/shop"
-          className="bg-primary text-primary-foreground px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors"
-        >
-          Explore Collection
-        </Link>
-      </div>
+      <TenantChrome tenant={{ store_name: "Storefront" }}>
+        <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
+          <ShoppingBag className="w-16 h-16 opacity-20 mb-6" />
+          <h1 className="font-serif text-3xl font-semibold mb-4">Your Shopping Bag is Empty</h1>
+          <p className="text-muted-foreground mb-8 max-w-md">Looks like you haven&apos;t added anything yet. Discover our premium collection and find something you love.</p>
+          <Link 
+            href="/shop"
+            className="bg-primary text-primary-foreground px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors"
+          >
+            Explore Collection
+          </Link>
+        </div>
+      </TenantChrome>
     );
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+    <TenantChrome tenant={{ store_name: "Storefront" }}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
       <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-2">Shopping Bag</h1>
       <p className="text-xs uppercase tracking-widest text-muted-foreground mb-12">
         {cartSource === 'medusa'
@@ -147,5 +150,6 @@ export default function CartPage() {
         </div>
       </div>
     </div>
+    </TenantChrome>
   );
 }

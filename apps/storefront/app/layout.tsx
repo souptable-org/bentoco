@@ -1,45 +1,32 @@
-import type {Metadata} from 'next';
-import { Bricolage_Grotesque, Nunito_Sans } from 'next/font/google';
-import './globals.css';
-import { AppProvider } from '@/lib/store';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { CartDrawer } from '@/components/cart/CartDrawer';
-import { ThemeProvider } from '@/components/theme-provider';
-
-const displayFont = Bricolage_Grotesque({ 
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const bodyFont = Nunito_Sans({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
+import type { Metadata } from "next"
+import "./globals.css"
+import { AppProvider } from "@/lib/store"
+import { ThemeStyles } from "@/components/theme-styles"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: 'Aura | Premium Indian Ecommerce',
-  description: 'Curating premium Indian aesthetics for the modern connoisseur.',
-};
+  title: "Bentoco Storefront",
+  description: "Tenant storefront for Bentoco merchants.",
+}
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+/** Theme + tenant homepage must never be statically cached */
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased min-h-screen flex flex-col" suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <AppProvider>
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-            <CartDrawer />
-          </AppProvider>
+    // suppressHydrationWarning: next-themes may set class="dark" on <html> before hydrate
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans antialiased" suppressHydrationWarning>
+        <ThemeProvider>
+          <ThemeStyles />
+          <AppProvider>{children}</AppProvider>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
-

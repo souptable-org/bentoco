@@ -1092,8 +1092,30 @@ export function getRouteMap({
                 },
               ],
             },
+            {
+              path: "/store",
+              errorElement: <ErrorBoundary />,
+              lazy: () => import("../../routes/store-theme"),
+              handle: {
+                breadcrumb: () => t("store.domain", "Store"),
+              },
+            },
             ...coreRoutes,
           ],
+        },
+      ],
+    },
+    /**
+     * Theme Config Editor — full-viewport shell (no MainLayout / generic sidebar).
+     */
+    {
+      element: <ProtectedRoute />,
+      errorElement: <ErrorBoundary />,
+      children: [
+        {
+          path: "/store/editor",
+          errorElement: <ErrorBoundary />,
+          lazy: () => import("../../routes/store-theme/editor"),
         },
       ],
     },
@@ -1231,6 +1253,7 @@ export function getRouteMap({
                 },
               ],
             },
+
             {
               path: "users",
               errorElement: <ErrorBoundary />,

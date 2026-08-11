@@ -6,6 +6,8 @@ import type { Product } from "@/lib/types"
 import { ProductCard } from "@/components/product/ProductCard"
 import { SlidersHorizontal, ChevronDown } from "lucide-react"
 
+import { TenantChrome } from "@/components/tenant-chrome"
+
 export default function ShopPage() {
   const [products, setProducts] = useState<Product[]>([])
   const [source, setSource] = useState<"medusa" | "mock" | "loading">(
@@ -60,7 +62,8 @@ export default function ShopPage() {
   }, [products, activeCategory, sortBy])
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <TenantChrome tenant={{ store_name: "Merchant Catalog" }}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col items-center justify-center text-center mb-16">
         <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">
           Collection
@@ -230,5 +233,6 @@ export default function ShopPage() {
         </div>
       )}
     </div>
+    </TenantChrome>
   )
 }
